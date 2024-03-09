@@ -1,0 +1,67 @@
+3: Je eerste programma
+
+<!--
+<table style="table-layout: auto;">
+    <tbody>
+        <tr>
+            <td>
+-->
+<!-- HIER BEGINT PAGINA INHOUD -->
+
+<!--
+<p>3: Je eerste programma</p>
+
+<h1 id="H12">Je eerste programma</h1>
+-->
+
+<p class="cursor-hover">Als je een nieuwe programmeeromgeving test begin je altijd eerst met een
+    programma te schrijven dat ''Hello, world!'' afdrukt. Dit om te controleren
+    dat alles juist ingesteld is en werkt. Dat programma schrijf je met de
+    volgende code:</p>
+
+<p class="opdracht cursor-hover" id="opgave121">Opgave 1.3 Hello world!</p>
+<p class="cursor-hover">Je gaat nu je eerste programma runnen. Het programma print de tekst ''Hello, world!''. De code die je hiervoor nodig hebt is:</p>
+<pre class="python cursor-hover">print( "Hello, world!" ) </pre>
+
+<ol style="list-style-type: lower-alpha">
+    <li class="cursor-hover">Typ het bovenstaande code over.</li>
+    <li class="cursor-hover">Voer het programma uit: druk op <b>''run"</b>. Als je een foutmelding krijgt, herstel deze.</li>
+
+    <li>Controleer de uitvoer: Zie je dat de tekst ''Hello, world!'' getoond is in de console.</li>
+    <li>Inleveren en opslaan: Druk op de knop <b>''submit"</b>.</li>
+    <li>Controleer je eigen oplossing met de uitwerking: Open de voorbeeld oplossing in een nieuw tabblad en vergelijk deze met jouw oplossing.</li>
+</ol>
+
+
+<!--<iframe frameborder="0" width="100%" height="600px" src="https://repl.it/student_embed/assignment/1208971/78b9ba52994f004d7e4347e49c942a09"></iframe>-->
+
+<p><iframe width="100%" height="600px" src="https://repl.it/team/InformaticaActief/121-Hello-World" data-dashlane-frameid="108" class="cursor-hover"></iframe></p>
+
+<!-- ANTWOORD:
+<pre class=""python">
+print( "Hello, world!" )
+</pre>
+-->
+
+<p>Bekijk <a href="https://course.cs.ru.nl/pythonVO/Teams/IA_uitwerkingen/IA_H1_oplossingen.html#opgave121" target="_blank">hier</a> de voorbeelduitwerking.</p>
+
+<!-- HIER EINDIGT PAGINA INHOUD -->
+<!--
+            </td>
+            <td class="menu_zijkant">
+              
+                <p>1: Eenmalig een Replit account aanmaken</p>
+                <p>2: Je oplossing runnen en testen</p>
+                <p>3: Je eerste programma</p>
+                <p>4: Inspringen heeft een betekenis</p>
+                <p>5: Commentaar toevoegen aan je code</p>
+                <p>6: Tekenen met turtle</p>
+                <p>7: Handige Turtle functies</p>
+
+                <p>H1: Afsluitende opdrachten</p>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+-->

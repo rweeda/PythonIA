@@ -1,0 +1,140 @@
+7: Handige Turtle-functies
+
+<!--
+<table style="table-layout: auto;">
+    <tbody>
+        <tr>
+            <td>
+-->
+<!-- HIER BEGINT PAGINA INHOUD -->
+
+<!--
+<p>7: Handige Turtle functies</p>
+
+
+<h2 id="H13">Handige Turtle functies</h2>
+-->
+
+<p class="cursor-hover">Een paar handige <code>Turtle</code>-functies zijn:</p>
+
+<pre class="python cursor-hover">import turtle  # importeer Turtle-module, code altijd hiermee beginnen
+
+turtle.pendown()  			# Zet pen op papier, bewegingen hierna zijn onzichtbaar
+turtle.penup()   			# Haal pen van papier, bewegingen hierna zijn onzichtbaar
+turtle.pencolor("darkViolet")       # Kleur van de pen. Je kunt ook kiezen uit black, tan, gold, blue, red, ...
+
+turtle.shape("turtle")                     # Maakt een schildpadje van de cursor in plaats van een pijltje
+
+turtle.right(90)                               # Draai 90 graden naar rechts
+turtle.left(45)                                 # Draai 45 graden naar links
+turtle.forward(10)                          # Loop 10 stappen vooruit
+
+turtle.goto(40, 40)                         # Zet de schildpad op positie (x,y). (0,0) is het midden van het scherm
+turtle.setheading(90)                     # Kijkrichting. 90 is naar boven, 0 is naar rechts
+
+turtle.fillcolor("red")                     # Kleur om figuur mee in te kleuren
+turtle.begin_fill()                           # Dit zet je aan het begin van het figuur dat ingekleurd moet worden.
+turtle.end_fill()                              # Dit zet je aan het eind van het figuur dat ingekleurd moet worden. </pre>
+
+<p>Als je begint, staat Turtle altijd op (0,0), kijkend naar rechts.</p>
+
+<p>
+
+    <a href="https://docs.python.org/3/library/turtle.html#special-turtle-methods" target="_blank">Hier</a> vind je nog veel meer Turtle-functies.
+</p>
+
+
+
+<p class="opdracht" id="opgave142">Opgave 1.7 Een zeshoek tekenen</p>
+
+<p>Het doel van deze opdracht is om een blauwe zeshoek te tekenen.</p>
+
+<p>Bekijk eerst het volgende filmpje waarin deze opdracht uitgelegd wordt:</p>
+<!-- [VIDEOUITLEG van deze
+opdracht](https://web.microsoftstream.com/video/a56370a9-3be4-46d5-89f5-4113cdc76423)-->
+
+<!-- <iframe width="640" height="360"
+src="https://web.microsoftstream.com/embed/video/a56370a9-3be4-46d5-89f5-4113cdc76423?autoplay=false&amp;showinfo=true"
+allowfullscreen style="border:none;"></iframe><br> -->
+<p><iframe width="640" height="360" src="https://www.youtube.com/embed/qns1ZKaXY44" title="YouTube
+video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-dashlane-frameid="275"></iframe></p>
+
+
+
+
+<img src="http://course.cs.ru.nl/pythonVO/Jupyter/img/Python1_Blauwe6hoek.png" alt="Blauwe zeshoek">
+
+<ol style="list-style-type: lower-alpha">
+
+    <li class="cursor-hover">Teken eerst een zeshoek op papier, schrijf de lengtes en de hoeken erbij.
+    </li> <img src="http://course.cs.ru.nl/pythonVO/Jupyter/img/Python1_Schets6hoek.jpg" alt="zeshoek" class="pointer-hover">
+    <li class="cursor-hover">Bedenk een strategie:
+
+        <pre class="python cursor-hover">Gebruik een Turtle
+Zet pen op papier
+Kies vulkleur blauw
+
+# begin hier met tekenen van zeshoek. Herhaal 6 keer:
+        Vooruit 100
+        Draai 60 graden
+# einde figuur tekenen
+</pre>
+
+    </li>
+    <li>Schrijf code en test;</li>
+    <li class="cursor-hover">Gebruik commentaar in je code om aan te geven wat een reeks code doet. Bijvoorbeeld, geef aan met welke regels echt de zeshoek tekenen;</li>
+    <li>Maak de zeshoek blauw:</li>
+
+    <ul class="cursor-hover">
+        <li class="cursor-hover">Geef kleur aan met <code>turtle.fillcolor("blue")</code>;</li>
+        <li>Geef aan waar je figuur begint <code>turtle.begin_fill()</code> en eindigt <code>turtle.end_fill()</code>;</li>
+    </ul>
+    <li>Test je code opnieuw (altijd na elke wijziging).</li>
+</ol>
+
+
+<!--    <p><iframe width="100%" height="600px" src="https://repl.it/team/InformaticaActief/142-Zeshoek-tekenen"></iframe></p>-->
+<p><iframe width="100%" height="600px" src="https://repl.it/team/InformaticaActief/H1142-Zeshoek-tekenen-t#main.py" data-dashlane-frameid="276" class="cursor-hover"></iframe></p>
+<p>Bekijk <a href="https://course.cs.ru.nl/pythonVO/Teams/IA_uitwerkingen/IA_H1_oplossingen.html#opgave142" target="_blank">hier</a> de voorbeelduitwerking.</p>
+
+<!-- [Voorbeeld
+uitwerking](http://course.cs.ru.nl/pythonVO/Jupyter/H1_oplossingen.html#opgave131)-->
+<!-- ANTWOORD: <pre class="python"> import turtle
+
+turtle.pendown()
+
+turtle.fillcolor("blue") turtle.begin_fill() #begin invullen kleur
+
+#teken een 6-hoek turtle.forward(100) turtle.right(60) turtle.forward(100)
+turtle.right(60) turtle.forward(100) turtle.right(60) turtle.forward(100)
+turtle.right(60) turtle.forward(100) turtle.right(60) turtle.forward(100)
+turtle.right(60)
+
+turtle.end_fill() #einde invullen kleur
+
+turtle.done()
+
+</pre>
+
+-->
+
+<!-- HIER EINDIGT PAGINA INHOUD -->
+<!--
+            </td>
+            <td class="menu_zijkant">
+                <p>1: Eenmalig een Replit account aanmaken</p>
+                <p>2: Je oplossing runnen en testen</p>
+                <p>3: Je eerste programma</p>
+                <p>4: Inspringen heeft een betekenis</p>
+                <p>5: Commentaar toevoegen aan je code</p>
+                <p>6: Tekenen met turtle</p>
+                <p>7: Handige Turtle functies</p>
+
+                <p>H1: Afsluitende opdrachten</p>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+-->

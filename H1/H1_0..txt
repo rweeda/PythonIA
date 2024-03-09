@@ -1,0 +1,21 @@
+<h4 id="H1">Hoofdstuk 1 - Instructies geven</h4>
+
+<p>Programmeren leer je door te doen! We gaan dus steeds kleine stukjes uitleg geven en je tussendoor laten oefenen met het lezen, aanpassen en schrijven van code. We gaan aan de slag met Python, een wereldwijd veelgebruikte programmeertaal.</p>
+<p>Alle lesmateriaal vind je op deze site terug. Om de opgaven te kunnen maken moet je eerst een login maken bij Repl.it. Dat ga je in hoofdstuk '1: Eenmalig een Replit-account aanmaken' doen.&nbsp;</p>
+<p>Daarna ga je in '2: Je oplossing runnen en testen'
+    al meteen aan de slag met het schrijven van je eerste programma.</p>
+
+<p><span style="font-size: 1rem;">In dit onderwerp:</span></p>
+<ul>
+    <li>leer je hoe je (eenmalig) in Replit een account maakt zodat je toegang krijgt tot een programmeeromgeving om de opdrachten in te maken;</li>
+    <li>leer je een computerprogramma schrijven in de taal Python;</li>
+    <li>leer je hoe je code kan schrijven en runnen;</li>
+    <li>leer je met <code>Turtle</code> een figuur te tekenen;</li>
+    <li>leer je met commentaar aan te geven wat het doel van een blokje code is;</li>
+    <li>leer je dat het belangrijk is dat de code netjes onder elkaar staat.
+    </li>
+</ul>
+
+
+
+<div class="fa fa-clock-o fa-3x"></div><br> <b>1 uur</b>

@@ -1,0 +1,55 @@
+5: Commentaar toevoegen aan je code
+
+<!--
+<table style="table-layout: auto;">
+    <tbody>
+        <tr>
+            <td>
+-->
+<!-- HIER BEGINT PAGINA INHOUD -->
+
+<!--
+<p>5: Commentaar toevoegen aan je code</p>
+
+
+<h2 id="commentaar">Commentaar</h2>
+-->
+<p><span style="font-size: calc(0.90375rem + 0.045vw);">Met commentaar maak je aantekeningen
+        in code. Zo kun je toelichten wat het doel van een blok code is. De computer
+        negeert code die in commentaar staat. Je kunt het dus ook handig gebruiken om
+        delen van je code te testen.</span><br></p>
+
+<ul>
+    <li>Commentaar begint in Python met een hekje (#);</li>
+    <li>Je kunt <b>Ctrl + /</b> gebruiken om een regel in commentaar te zetten (of er juist uit te halen).</li>
+</ul>
+
+<p class="opdracht" id="opgave132">Opgave 1.5 Commentaar toevoegen</p>
+<!--Voeg een regel
+commentaar toe dat toelicht wat de regel code doet.</p>--> Voeg achter elk
+regel commentaar toe dat toelicht wat de regel code doet.
+
+<!--<iframe frameborder="0" width="100%" height="600px" src="https://repl.it/student_embed/assignment/1208970/02e092a2be939df872d1d2d3b02d8333"></iframe>-->
+<p><iframe width="100%" height="600px" src="https://repl.it/team/InformaticaActief/132-Commentaar-toevoegen" data-dashlane-frameid="134"></iframe></p>
+
+<p>Bekijk <a href="https://course.cs.ru.nl/pythonVO/Teams/IA_uitwerkingen/IA_H1_oplossingen.html#opgave132" target="_blank">hier</a> de
+    voorbeelduitwerking.</p>
+
+<!-- ANTWOORD: <pre class="python"> print("Hoi! Jij zit vast in klas")      #
+dit drukt een tekst af print(4)                        # dit drukt het getal
+4 af </pre> -->
+
+
+<!-- HIER EINDIGT PAGINA INHOUD -->
+
+<!--
+<p>1: Eenmalig een Replit account aanmaken</p>
+<p>2: Je oplossing runnen en testen</p>
+<p>3: Je eerste programma</p>
+<p>4: Inspringen heeft een betekenis</p>
+<p>5: Commentaar toevoegen aan je code</p>
+<p>6: Tekenen met turtle</p>
+<p>7: Handige Turtle functies</p>
+
+<p>H1: Afsluitende opdrachten</p>
+-->

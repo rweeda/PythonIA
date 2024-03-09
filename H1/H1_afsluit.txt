@@ -1,0 +1,190 @@
+H1: Afsluitende opdrachten
+
+<!--
+<table style="table-layout: auto;">
+    <tbody>
+        <tr>
+            <td>
+-->
+<!-- HIER BEGINT PAGINA INHOUD -->
+
+<!--
+
+<p>H1: Afsluitende opdrachten</p>
+
+<h1 id="H1AfOpgave">H1 - Afsluitende Opdrachten</h1>
+-->
+<p>Tip: Turtle-functies vind je bij <a href="https://moodle.informatica-actief.nl/mod/page/view.php?id=73985" target="_blank">onderdeel 7: Handige Turtle-functies</a>.</p>
+
+<p class="opdracht" id="AfOpgave11">Afsluitende Opdracht 1.1 Huisje tekenen</p>
+<ol style="list-style-type: lower-alpha">
+    <li> Teken een dak op je vierkant om zo een huisje te maken. Tip: teken eerst je huisje op papier, schrijf de lengtes en de hoeken erbij.</li>
+    <li>
+        Gebruik commentaar in je code om aan te geven wat een reeks code doet. Bijvoorbeeld, geef aan welke regels het dak tekenen.</li>
+    <li> Maak het dak rood.</li>
+</ol>
+
+<!--<p><iframe width="100%" height="1000px" src="https://repl.it/team/InformaticaActief/Af11-Huisje-tekenen"></iframe></p>-->
+<p><iframe width="100%" height="1000px" src="https://repl.it/team/InformaticaActief/H1Af11-Huisje-tekenen-t#main.py" class="cursor-hover"></iframe></p>
+<!--[Voorbeeld
+uitwerking](http://course.cs.ru.nl/pythonVO/Jupyter/H1_oplossingen.html#opgave132)-->
+<p>Bekijk <a href="https://course.cs.ru.nl/pythonVO/Teams/IA_uitwerkingen/IA_H1_oplossingen.html#AfOpgave11" target="_blank">hier</a> de voorbeelduitwerking.</p>
+
+
+
+<!-- ANTWOORD:
+<pre class="python">
+import turtle
+
+turtle.pendown()
+
+#TEKEN ZWARTE VIERKANT:
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(300)
+
+turtle.fillcolor("red")  # vul met rood
+turtle.begin_fill()
+
+# TEKEN DRIEHOEK:
+turtle.right(30)
+turtle.forward(300)
+turtle.right(120)
+turtle.forward(300)
+turtle.end_fill()
+
+turtle.done()
+</pre>
+
+ -->
+
+<p class="opdracht" id="AfOpgave12">Afsluitende Opdracht 1.2 Nederlandse vlag</p>
+<p>Teken de Nederlandse vlag tekenen zoals hier is afgebeeld. Gebruik commentaar in je code om overzichtelijk te houden wat bij welk deel van de vlag hoort. <br> Tip: het is handig om de klus op te delen in taken: teken eerst een rechthoek
+    voor rood. Gebruik deze zelfde code voor wit en blauw. Als laatste teken je de mast.
+</p> <img src="https://moodle.informatica-actief.nl/draftfile.php/147455/user/draft/89415106/NL_flag_klein.png" alt="Nederlandse vlag" width="303" height="246" class="img-responsive atto_image_button_text-bottom"><br>
+<!-- <p><iframe width="100%" height="1200px" src="https://repl.it/team/InformaticaActief/Af12-Nederlandse-vlag"></iframe></p>-->
+<p><iframe width="100%" height="1200px" src="https://repl.it/team/InformaticaActief/H1Af12-Nederlandse-vlag-t#main.py" data-dashlane-frameid="169"></iframe></p>
+
+<!-- ANTWOORD:
+<pre class="python">
+import turtle
+
+# NAAR BEGINPOSITIE:
+turtle.penup()
+turtle.goto(0, 0)
+turtle.pendown()
+
+# TEKEN RODE VLAK:
+turtle.color("red")
+turtle.begin_fill()
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(40)
+turtle.right(90)
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(40)
+turtle.right(90)
+turtle.end_fill()
+
+# TEKEN WITTE VLAK
+turtle.penup()
+turtle.goto(0, -40)
+turtle.pendown()
+
+turtle.color("white")
+turtle.begin_fill()
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(40)
+turtle.right(90)
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(40)
+turtle.right(90)
+turtle.end_fill()
+
+# TEKEN BLAUWE VLAK:
+turtle.penup()
+turtle.goto(0, -80)
+turtle.pendown()
+
+turtle.color("blue")
+turtle.begin_fill()
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(40)
+turtle.right(90)
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(40)
+turtle.right(90)
+turtle.end_fill()
+
+# OMLIJNING VAN ROOD-WIT-BLAUW VLAKKEN:
+turtle.penup()
+turtle.goto(0, 0)
+turtle.pendown()
+turtle.color("black")
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(120)
+turtle.right(90)
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(120)
+
+# TEKEN MAST:
+turtle.right(180)
+turtle.forward(320)
+
+
+turtle.done()
+</pre>
+
+
+ -->
+
+<p>Bekijk <a href="https://course.cs.ru.nl/pythonVO/Teams/IA_uitwerkingen/IA_H1_oplossingen.html#AfOpgave12" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<!-- [Voorbeeld uitwerking](http://course.cs.ru.nl/pythonVO/Jupyter/H1_oplossingen.html#opgave133)-->
+
+
+
+<p class="opdracht" id="AfOpgave13">(Optioneel) Afsluitende Opdracht 1.3 Eigen creatie</p>
+<p>Je mag nu zelf iets door Turtle laten tekenen.</p>
+
+<ol style="list-style-type: lower-alpha">
+    <li>Maak eerst een ontwerp/tekening op papier;
+    </li>
+    <li>Geef Turtle de juiste instructies om deze te tekenen. Test steeds tussendoor;
+    </li>
+    <li>Voeg commentaar toe aan je code.
+    </li>
+</ol>
+
+<p>Ik ben benieuwd naar het resultaat!</p>
+<p><iframe width="100%" height="1800px" src="https://repl.it/team/InformaticaActief/H1Af13-Eigen-creatie-t#main.py" data-dashlane-frameid="170"></iframe></p>
+<!--     <p><iframe width="100%" height="1800px" src="https://repl.it/team/InformaticaActief/Af13-Eigen-creatie"></iframe></p>-->
+<!-- HIER EINDIGT PAGINA INHOUD -->
+<!--
+            </td>
+            <td class="menu_zijkant">
+                <p>1: Eenmalig een Replit account aanmaken</p>
+                <p>2: Je oplossing runnen en testen</p>
+                <p>3: Je eerste programma</p>
+                <p>4: Inspringen heeft een betekenis</p>
+                <p>5: Commentaar toevoegen aan je code</p>
+                <p>6: Tekenen met turtle</p>
+                <p>7: Handige Turtle functies</p>
+
+                <p>H1: Afsluitende opdrachten</p>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+-->

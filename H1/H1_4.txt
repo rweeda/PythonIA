@@ -1,0 +1,73 @@
+4: Inspringen heeft een betekenis
+
+<!--
+<table style="table-layout: auto;">
+    <tbody>
+        <tr>
+            <td>
+-->
+<!-- HIER BEGINT PAGINA INHOUD -->
+
+<!--
+<p>4: Inspringen heeft een betekenis</p>
+<h1 id="H13">Inspringen en Commentaar</h1>
+-->
+<p class="cursor-hover">Inspringen (oftewel, de ruimte links van je code regels)
+    heeft bij Python een belangrijke betekenis. Code dat even ver naar rechts
+    inspringt hoort bij elkaar. Waar je dat precies voor moet gebruiken leren we
+    later. Voor nu is het belangrijk dat je al je code zo ver mogelijk naar links
+    zet.</p>
+<p>Goed:</p>
+<pre class="python">print("Hallo")
+print("Hoe is het?")
+</pre>
+<p>NIET goed:</p>
+<pre class="python">     print("Hallo")
+ print("Hoe is het?")
+</pre>
+
+
+<p class="opdracht" id="opgave131">Opgave 1.4 Inspringen</p>
+
+Deze code levert een foutmelding. Run het programma, bekijk de
+foutmelding en herstel de fout.
+
+<!--<p>Deze code levert een foutmelding. Run het programma, bekijk de
+foutmelding en herstel de fout.</p> <pre class="python"> print("Welkom bij
+deze Python cursus. De twee belangrijkste regels zijn:")
+    print("Help elkaar, daar leer je zelf ook veel van.")
+    print("… geef niet op!")
+</pre>-->
+
+<p><iframe width="100%" height="600px" src="https://repl.it/team/InformaticaActief/131-Inspringen" data-dashlane-frameid="120" class="cursor-hover"></iframe></p>
+
+<!-- ANTWOORD:
+<pre class="python">
+print("Welkom bij deze Python cursus. De twee belangrijkste regels zijn:")
+print("Help elkaar, daar leer je zelf ook veel van.")
+print("… geef niet op!")
+</pre>
+-->
+
+<p>Bekijk <a href="https://course.cs.ru.nl/pythonVO/Teams/IA_uitwerkingen/IA_H1_oplossingen.html#opgave131" target="_blank">hier</a> de voorbeelduitwerking.</p>
+
+
+<!-- HIER EINDIGT PAGINA INHOUD -->
+<!--
+            </td>
+            <td class="menu_zijkant">
+                <p>1: Eenmalig een Replit account aanmaken</p>
+                <p>2: Je oplossing runnen en testen</p>
+                <p>3: Je eerste programma</p>
+                <p>4: Inspringen heeft een betekenis</p>
+                <p>5: Commentaar toevoegen aan je code</p>
+                <p>6: Tekenen met turtle</p>
+                <p>7: Handige Turtle functies</p>
+
+                <p>H1: Afsluitende opdrachten</p>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+-->

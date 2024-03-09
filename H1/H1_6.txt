@@ -1,0 +1,121 @@
+6: Tekenen met Turtle
+
+<!--
+<table style="table-layout: auto;">
+    <tbody>
+        <tr>
+            <td>
+-->
+<!-- HIER BEGINT PAGINA INHOUD -->
+
+<!--
+<p>6: Tekenen met turtle</p>
+
+	
+
+<h1 id="H14">H1.4 - Tekenen met turtle</h1>
+-->
+<p class="cursor-hover">In deze opdracht gaan we tekenen! Hiervoor gebruiken we de Turtle-module, waarmee je met Python een schildpad kunt 'besturen', die vervolgens lijntjes tekent.</p>
+<p class="cursor-hover">Je kunt een Turtle commando's laten uitvoeren, zoals <code>turtle.pendown()</code> om de pen neer te zetten, <code class="cursor-hover">turtle.forward()</code> om vooruit te lopen of <code>turtle.right(90)</code> om 90 graden naar rechts te draaien.</p>
+<p>Code met Turtle begint altijd met <code>import turtle</code>.</p>
+
+<img src="http://course.cs.ru.nl/pythonVO/Jupyter/img/Python1_WereldTurtle.jpg" alt="Wereld van Turtle">
+<p>Hierboven zie je een plaatje van de wereld waarin Turtle woont. Turtle begint altijd op coördinaat (0,0), kijkend naar rechts.
+    <!--&‌ouml;-->
+
+
+</p>
+<p class="opdracht" id="opgave141">Opgave 1.6 Vierkantje tekenen</p>
+
+
+<p>Het doel van deze opdracht is om een vierkant te tekenen.</p>
+
+<p>Bekijk eerst het volgende filmpje waarin deze opdracht uitgelegd wordt:</p>
+<!--[VIDEOUITLEG van deze opdracht](https://web.microsoftstream.com/video/3880e0f4-3826-4b68-9124-5b6b984310c0)-->
+<!--<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/3880e0f4-3826-4b68-9124-5b6b984310c0?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+-->
+<p><iframe width="640" height="360" src="https://www.youtube.com/embed/IWvkVL3UtVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-dashlane-frameid="259"></iframe>
+</p>
+
+<ol style="list-style-type: lower-alpha">
+    <li>Voer de code hieronder uit door op de 'Run' knop te drukken;</li>
+    <li>Breid de code uit vanaf regel 7 zodat er een vierkant getekend wordt;</li>
+    <li>Pas de code daarna aan zodat een vierkant getekend wordt dat twee keer zo groot is.</li>
+</ol>
+<!--              <p><iframe width="100%" height="600px" src="https://repl.it/team/InformaticaActief/141"></iframe></p>-->
+<p><iframe width="100%" height="600px" src="https://repl.it/team/InformaticaActief/H1141-t#main.py" data-dashlane-frameid="260" class="cursor-hover"></iframe></p>
+
+<!--
+[Voorbeeld uitwerking](http://course.cs.ru.nl/pythonVO/Jupyter/H1_oplossingen.html#opgave121)-->
+
+<!--GEGEVEN CODE:
+import turtle       # importeer turtle module
+
+turtle.pendown()    # zet pen neer
+turtle.forward(50) # 50 stappen vooruit
+turtle.right(90)    # draai 90 graden naar rechts
+turtle.forward(50) # 50 stappen vooruit
+
+
+
+turtle.done()       # klaar met tekenen, maar sluit het tekenvenster niet meteen af
+-->
+
+<p>Bekijk <a href="https://course.cs.ru.nl/pythonVO/Teams/IA_uitwerkingen/IA_H1_oplossingen.html#opgave141" target="_blank">hier</a> de voorbeelduitwerking.</p>
+
+<!--- ANTWOORD:
+Stap 2:
+<pre class="python">
+import turtle       # importeer turtle module
+
+turtle.pendown()    # zet pen neer
+turtle.forward(150) # 150 stappen vooruit
+turtle.right(90)    # draai 90 graden naar rechts
+turtle.forward(150)
+turtle.right(90)
+turtle.forward(150)
+turtle.right(90)
+turtle.forward(150)
+turtle.right(90)
+
+turtle.done()       # klaar
+</pre>
+Stap 3:
+<pre class="python">
+import turtle       # importeer turtle module
+
+turtle.pendown()    # zet pen neer
+turtle.forward(300) # 300 stappen vooruit (2x zo groot)
+turtle.right(90)    # draai 90 graden naar rechts
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(300)
+turtle.right(90)
+turtle.forward(300)
+turtle.right(90)
+
+turtle.done()       # klaar
+</pre>
+
+
+-->
+
+<!-- HIER EINDIGT PAGINA INHOUD -->
+<!--
+            </td>
+            <td class="menu_zijkant">
+                <p>1: Eenmalig een Replit account aanmaken</p>
+                <p>2: Je oplossing runnen en testen</p>
+                <p>3: Je eerste programma</p>
+                <p>4: Inspringen heeft een betekenis</p>
+                <p>5: Commentaar toevoegen aan je code</p>
+                <p>6: Tekenen met turtle</p>
+                <p>7: Handige Turtle functies</p>
+
+                <p>H1: Afsluitende opdrachten</p>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+-->

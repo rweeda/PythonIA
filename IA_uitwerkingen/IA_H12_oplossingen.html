@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Python - Informatica Actief</title>
+    <!--css import-->
+    <link rel="stylesheet" href="../style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="content">
+<h1 id="H9oplossingen">H12 - Geneste loops:  Uitwerkingen</h1>
+
+<hr>
+
+<p class="opdracht" id="opgave1221">Opdracht 12.1 Oefenen met <code>for</code> loop</p>
+<pre class="python"> for teller in range(1, 4):
+	print("^"*teller)
+</pre>
+
+
+<p class="opdracht" id="opgave1222">Opdracht 12.2 Oefenen met lijsten</p>
+<pre class="python">
+#DEEL A cijferLijst = [3.4, 8.0, 6.9, 7.0, 8.2]
+cijferLijst[0] = 5.5 #vervang eerste cijfer met 5.5
+print(cijferLijst)
+
+#DEEL B:
+letterLijst = ["k", "a", "_"] #vervang _ met t
+letterLijst [2] = "t"
+print(letterLijst)
+
+#DEEL C: laatste =
+cijferLijst[ len(cijferLijst)-1 ] #fout was: -1 ontbrak
+</pre>
+
+
+
+
+<p class="opdracht" id="opgave1231">Opdracht 12.3 Co&ouml;rdinaten</p>
+<pre class="python">
+for x_coordinaat in range(4):
+        for y_coordinaat in range(5):
+                print("(" , x_coordinaat, ",", y_coordinaat, ")")
+</pre>
+
+
+<p class="opdracht" id="opgave1232">Opdracht 12.4 Co&ouml;rdinaten tabel</p>
+<pre class="python">
+for x_coordinaat in range(4):
+	for y_coordinaat in range(5):
+		print("(" , x_coordinaat, ",", y_coordinaat, ")", end="")
+    print()
+</pre>
+
+
+
+<p class="opdracht" id="opgave1233">Opdracht 12.5 McCombi's</p>
+DEEL A:
+<pre class="python">
+drankLijst = ["water", "ijsthee", "McShake", "McCafe", "cola"]
+etenLijst = [ "BigMac", "McChicken", "McNuggets", "Frietjes", "McSalad"]
+
+for drinken in drankLijst:
+	for eten in etenLijst:
+		print("Combinatie:", drinken, "&", eten)
+</pre>
+
+DEEL B:
+<pre class="python">
+etenLijst = [ "BigMac", "McChicken", "McNuggets", "Frietjes", "McSalad"]
+drankLijst = ["water", "ijsthee", "McShake", "McCafe", "cola"]
+
+teller = 0
+for drinken in etenLijst:
+	for eten in drankLijst:
+		teller +=1  #teller ophogen
+		print("Combinatie", teller, drinken, "&", eten)
+</pre>
+
+
+<p class="opdracht" id="opgave1241">Opdracht 12.6 Winnen met Boter-Kaas-Eieren</p>
+Win het spel hieronder door op regel 3 een regel code toe te voegen. Gebruik de coordinaten/indexen om een '-' in een 'X' te veranderen.
+
+<pre class="python">
+bord = [ ["X", "O", "-"], ["X", "O", "O"], ["-", "X", "-"] ]
+
+bord[2][0]="X" #Win het spel door hier 1 regel code toe te voegen om een - in een X te veranderen
+
+print( bord[0][0], bord[0][1],bord[0][2] ) print( bord[1][0], bord[1][1], bord[1][2] )
+print( bord[2][0], bord[2][1],
+bord[2][2] )
+</pre>
+
+<p class="opdracht" id="opgave1242">Opdracht 12.7 Smiley</p>
+<pre class="python">
+plaatje = [ [" ","X", " ", "X", " "],
+		   [" ","X", " ", "X", " "],
+		   [" "," ", " ", " ", " "],
+		   [" ","X", "X", "X", " "],
+	           ["X"," ", " ", " ", "X"] ]
+				
+#VOEG HIER CODE TOE OM Xjes OP COORDINATEN AAN TE PASSEN
+plaatje[3][0] = "X"
+plaatje[4][0] = " "
+#... enz.
+
+#DRUK PLAATJE AF
+for rij in range(5):
+	for teken in range(5):
+		print( plaatje[rij][teken], end="")
+	print()
+</pre>
+
+<p class="opdracht" id="AfOpgave121">Afsluitende opdracht 12.1 Stok kaarten afdrukken</p>
+<pre class="python">
+kleurLijst = ["Harten", "Schoppen", "Klaveren", "Ruiten"]
+waardeLijst = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Boer", "Vrouw", "Heer", "Aas"]
+
+for kleur in kleurLijst:
+	for waarde in waardeLijst:
+		print(kleur,waarde)
+</pre>
+
+
+
+<p class="opdracht" id="AfOpgave122">Afsluitende opdracht 12.2 Alle mogelijkheden (met for)</p>
+<pre class="python">
+kleurenLijst = ["Rood", "Blauw", "Groen", "Paars"]
+combinatieTeller = 0
+
+
+for kleur1 in kleurenLijst:
+	for kleur2 in kleurenLijst:
+		for kleur3 in kleurenLijst:
+			for kleur4 in kleurenLijst:
+				print( kleur1, kleur2, kleur3, kleur4)
+				combinatieTeller += 1
+					
+print("Aantal mogelijkheden:", combinatieTeller)
+</pre>
+
+<p class="opdracht" id="AfOpgave123">Afsluitende opdracht 12.3 Feestinkopen (met for)</p>
+<pre class="python">
+aantal_mogelijkheden = 0
+for cola in range(1,11):
+	for chips in range (1,11):
+		for chocola in range (1,11):
+			if(cola+chips+chocola==12):
+				if(cola!=chips and chips!=chocola):#niet alle drie hetzelfde
+					aantal_mogelijkheden+=1
+					print("cola",cola,"chips", chips, "chocola", chocola,  "aantal mogelijkheden:", aantal_mogelijkheden)
+</pre>
+
+
+<br>
+</div>
+<br>
+<br>
+</body>
+</html>

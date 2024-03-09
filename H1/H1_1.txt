@@ -1,0 +1,70 @@
+<!--<table style="table-layout: auto;">
+    <tbody>
+        <tr>
+            <td>
+->
+                <!-- HIER BEGINT PAGINA INHOUD -->
+<!--
+<p>1: Eenmalig een Replit account aanmaken</p>
+<h1 id="H11">Inloggen</h1>
+
+<h2 id="gebruik-van-repl.it">Repl.it account  aanmaken</h2>
+-->
+<!-- <ol>
+<li>Gebruik Google <b>Chrome</b> als browser.</li>
+<li>Maak een login: Klik op de knop 'Sign up'. Gebruik hiervoor je school emailadres.
+
+ <img src="http://course.cs.ru.nl/pythonVO/img/replit_signup.JPG" alt="Sign up" width="200" />.</li>
+ <li>Sla de link op: Voeg de website <a href="http://course.cs.ru.nl/pythonVO/">http://course.cs.ru.nl/pythonVO/</a> toe aan je favorieten door op het sterretje te klikken:  <img src="http://course.cs.ru.nl/pythonVO/img/chromeFav.JPG" alt="Opslaan als favoriete webpagina"/>.</li>
+ </ol>
+ -->
+<p>Voor het maken van de opdrachten gebruiken we Replit. Je moet hiervoor eenmalig een account aanmaken en dit koppelen aan het Informatica-Actief (IA)-team.</p>
+
+
+<p class="opdracht" id="opgave112">Opgave 1.1 Account aanmaken voor Replit en koppelen aan het IA-team</p>
+<ol style="list-style-type: lower-alpha">
+    <li>Gebruik het liefst Google <strong>Chrome</strong> als browser;</li>
+    <li>Let op: zorg dat je browser alle cookies toestaat!</li>
+    <li>Meld je aan voor het Team 'IA'. <span><strong>Klik </strong><a href="https://replit.com/teams/join/fknuosnbehmhtwooetoifihwythqnfbr-InformaticaActief" target="_blank" style="font-weight: bold;">hier</a>;</span></li>
+    <li>Maak een account door op <strong>'Sign up'</strong> te klikken:<br>
+        <img src="http://course.cs.ru.nl/pythonVO/img/replit_login.JPG" alt="Sign up" width="200">.
+    </li>
+    <li>Voer je naam, <strong>school-emailadres</strong> en wachtwoord in:<br>
+        <img src="http://course.cs.ru.nl/pythonVO/img/replit_login.JPG" alt="Log in" width="200">.
+    </li>
+
+
+    <li>Zet de mails van repl.it uit:
+        <ol>
+            <li> Ga in repl.it naar je <strong>Account</strong>:<br>
+                <img src="http://course.cs.ru.nl/pythonVO/Jupyter/img/replit_profile.jpg" alt="Repl.it profile">
+            </li>
+            <li>Zoek 'Email settings' en zet het vinkje UIT:<br>
+                <img src="http://course.cs.ru.nl/pythonVO/Jupyter/img/replit_email.jpg" alt="Repl.it email" width="600" height="139" class="img-responsive atto_image_button_text-bottom">
+            </li>
+        </ol>
+    </li>
+    <li>Je krijgt op je school-emailadres een mailtje. Klik in het mailtje op de link om te bevestigen dat je emailadres juist is;</li>
+    <li>Je gaat daarna gewoon in de cursus van Informatica-Actief verder.</li>
+</ol>
+
+<!-- HIER EINDIGT PAGINA INHOUD -->
+<!--
+            </td>
+            <td class="menu_zijkant">
+       
+                <p>1: Eenmalig een Replit account aanmaken</p>
+                <p>2: Je oplossing runnen en testen</p>
+                <p>3: Je eerste programma</p>
+                <p>4: Inspringen heeft een betekenis</p>
+                <p>5: Commentaar toevoegen aan je code</p>
+                <p>6: Tekenen met turtle</p>
+                <p>7: Handige Turtle functies</p>
+
+                <p>H1: Afsluitende opdrachten</p>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+-->

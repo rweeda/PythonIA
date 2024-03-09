@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Python - Informatica Actief</title>
+    <!--css import-->
+    <link rel="stylesheet" href="../style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="content">
+<h1 id="H13oplossingen">H13 - Strings:  Uitwerkingen</h1>
+
+<hr>
+
+
+<h3 id="opgave1331">Opgave 13.1 Nieuwe regel</h3>
+<pre class="python">
+print("Hoi\nHallo")
+</pre>
+
+
+<h3 id="opgave1332">Opgave 13.2 Letters uit een woord</h3>
+<pre class="python">
+woord = "fiets"
+eerste_letter = woord[0]
+print(eerste_letter)
+laatste_letter =  woord[ len(woord)-1 ]
+print( laatste_letter )
+</pre>
+
+
+<h3 id="opgave1333">Opgave 13.3 Dagen van de week verkort</h3>
+<pre class="python">
+dagenVanDeWeek =  [ 'maandag', 'dinsdag', 'woensdag']
+
+for dag in dagenVanDeWeek:
+	print( dag[0]+dag[1] )
+</pre>
+
+
+<h3 id="opgave1334">Opgave 13.4 Print klinkers uit woorden in een lijst/h3>
+<pre class="python">
+tekst = "Een Nederlander heeft programmeertaal Python bedacht."
+
+for letter in tekst:
+	if letter in "aeiou":
+		print( letter )
+</pre>
+OF
+<pre class="python">	
+tekst = "Een Nederlander heeft programmeertaal Python bedacht."
+	
+for letter in tekst:
+	if letter in ["a", "e", "i", "o", "u"]:
+		print( letter )
+</pre>
+
+
+<h3 id="opgave1325">Opgave 13.5 Aantal voorkomens in een woord</h3>
+<pre class="python">
+ingevoerde_woord = input( "Typ een woord:" )
+
+letter_teller = 0
+for letter in range( 0, len( ingevoerde_woord ) ):
+    if( ingevoerde_woord[letter]=="e" ):
+        letter_teller += 1
+print("De letter e komt", letter_teller,"keer voor")
+</pre>
+
+<h3 id="opgave1326">Opgave 13.6 <code>upper()</code> en <code>lower()</code></h3>
+<pre class="python">
+tekst = "Dikkertje Dap klom op de trap."
+print( tekst )
+print( tekst.upper() )
+print( tekst.lower() )
+</pre>
+
+
+<h3 id="opgave1327">Opgave 13.7 <code>find()</code></h3>
+<pre class="python">
+tekst = "Lang zal hij leven, Lang zal hij leven, Lang zal hij leven in de gloria, In de gloria, in de gloria"
+
+print( tekst.find("Lang") )
+print( tekst.find("lang") )
+print( tekst.find("leven") )
+</pre>
+
+
+<h3 id="opgave1328">Opgave 13.8 <code>replace()</code></h3>
+<pre class="python">
+tekst = "Humpty Dumpty zat op de muur"
+print( tekst.replace( "zat op" , "viel van" ) )
+print(tekst)
+
+tekst = tekst.replace( "zat op" , "viel van" )
+print(tekst)
+</pre>
+
+
+<h3 id="opgave1329">Opgave 13.9 Het alfabet afdrukken</h3>
+<pre class="python">
+for i in range( 26 ):
+	letter = chr (i+65)
+	print(letter, end=" ")
+</pre>
+
+
+<div class="content">
+<h1 id="H13oplossingen">H14 - Extra verdieping:  Uitwerkingen</h1>
+
+<hr>
+<h3 id="opgave1311">Opgave 14.1 Meerdere waarden teruggeven</h3>
+<pre class="python">
+import random
+
+jaarlaag = [4,5,6]
+klas = ["a", "b", "c", "d"]
+
+def kiesWillekeurigeKlas():
+  willekeurige_jaarlaag = random.choice( jaarlaag )
+  willekeurige_klas = random.choice( klas )
+  return willekeurige_jaarlaag, willekeurige_klas
+
+### HOOFDPROGRAMMA
+jaar, klas = kiesWillekeurigeKlas()
+print(jaar)
+print(klas)
+</pre>
+
+
+
+<h3 id="opgave1331">Opgave 14.2 Prijs inclusief BTW</h3>
+<pre class="python">
+### GLOBALE VARIABELEN
+BTW = 0.21 # 21% BTW
+
+### FUNCTIE DEFINITIES
+def berekenPrijsInclBTW(prijs_zonder_BTW):
+	prijs_incl_BTW = prijs_zonder_BTW * (1+BTW) #vermenigvuligen met 1,21
+	afgeronde_prijs_incl_BTW = round(prijs_incl_BTW,2)
+	return afgeronde_prijs_incl_BTW
+
+### HOOFDPROGRAMMA
+prijs_verf_exclBTW = 19.90
+prijs = berekenPrijsInclBTW(prijs_verf_exclBTW)
+print("Prijs inclusief BTW is:", prijs)
+</pre>
+
+
+
+<h3 id="opgave1332">Opgave 14.3 Cijfer voor engels opleuken</h3>
+<pre class="python">
+### GLOBALE VARIABELEN
+cijfer_engels = 3.4
+
+### FUNCTIEDEFINITIES
+def cijferVerbeteren():
+        global cijfer_engels
+	cijfer_engels = 9.8
+	print("Cijfer binnen functie:", cijfer_engels)
+
+### HOOFDPROGRAMMA
+cijferVerbeteren()
+print("Cijfer na functie:", cijfer_engels)
+</pre>
+
+
+<br>
+</div>
+<br>
+<br>
+</body>
+</html>

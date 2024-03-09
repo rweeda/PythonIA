@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Python - Informatica Actief</title>
+    <!--css import-->
+    <link rel="stylesheet" href="../style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="content">
+<h1 id="H8oplossingen">H8 - Iteraties: For-loop: Uitwerkingen</h1>
+<hr>
+
+
+<p class="opdracht" id="opgave811">Opdracht 8.1 Cirkel tekenen</p>
+
+<pre class="python">
+import turtle
+
+turtle.pendown()
+
+#Teken cirkel
+for aantal_herhalingen in range(40):
+    turtle.forward(20)
+    turtle.right(10)
+
+turtle.done()
+</pre>
+
+
+<p class="opdracht" id="opgave812">Opdracht 8.2 Strafregels</p>
+
+<pre class="python">
+for teller in range( 100 ):
+    print( "Ik zal nooit meer vergeten om mijn informaticahuiswerk te maken." )
+print( "Dat beloof ik." )
+</pre>
+
+<p class="opdracht" id="opgave813">Opdracht 8.3 Vierkantje tekenen</p>
+<pre class="python">
+import turtle
+
+### FUNCTIEDEFINITIE
+
+#tekent een vierkant door 4 keer vooruit de gegeven lengte vooruit te lopen en 90 graden te draaien.
+def tekenVierkant( lengte ):
+    for aantal_zijdes_getekend in range(4): #herhaal 4 keer
+        turtle.forward( lengte )
+        turtle.right( 90 )
+
+### HOOFDPROGRAMMA
+turtle.pendown()
+tekenVierkant( 100 )
+turtle.done()
+</pre>
+
+<p class="opdracht" id="opgave814">Opdracht 8.4 Drie lievelingskleuren</p>
+
+<pre class="python">
+for i in range(3):
+    print("Geef een kleur op:")
+    kleur = input ()
+
+print("Dat zijn drie mooie kleuren!")
+</pre>
+
+<p class="opdracht" id="opgave821">Opdracht 8.5 Getallen 100 t/m 106</p>
+
+<pre class="python">
+for teller in range( 102, 107 ):
+  print( teller )
+print("Klaar!")
+</pre>
+
+
+
+<p class="opdracht" id="opgave831">Opdracht 8.6  3...2...1...Af!</p>
+
+<pre class="python">
+
+for teller in range (3, 0, -1):
+    print(teller)
+print("Af!")
+ </pre>
+
+
+<p class="opdracht" id="opgave832">Opdracht 8.7  Veelvouden afdrukken met 3 parameters</p>
+
+<pre class="python">
+for getal in range(21, 3, -4):
+	print(getal)
+</pre>
+
+<p class="opdracht" id="opgave841">Opdracht 8.8 Honderdvouden</p>
+
+<pre class="python">
+for teller in range(100,1001,100):
+        print(teller)
+</pre>
+
+
+<p class="opdracht" id="opgave842">Opdracht 8.9 Een bepaald aantal honderdvouden</p>
+
+
+<pre class="python">
+for aantal in range(5):
+        print(aantal*100)
+</pre>
+<h1 id="H8AfOpgaven">H8 - For-loop: Afsluitende Opdrachten: Uitwerkingen</h1>
+
+<p class="opdracht" id="AfOpgave81">Afsluitende opdracht 8.1 Veelvouden van vijf onder de 100</p>
+
+<pre class="python">
+# Drukt alle 5-vouden van 0 t/m 100 af
+# bv. 0 5 10 ... 100
+for teller in range(0, 101, 5):
+  print(teller)
+</pre>
+
+<!-- WHILE ALTERNATIEF
+
+# Drukt alle 5-vouden van 0 t/m 100 af
+# bv. 0 5 10 ... 100
+teller = 0
+antwoord = teller * 5
+
+while antwoord < 100:
+    antwoord = teller * 5
+    print (antwoord)
+    teller +=1
+</pre>
+-->
+
+
+<p class="opdracht" id="AfOpgave82">Afsluitende opdracht 8.2 Traceertabel</p>
+A.
+<table cellspacing="" cellpadding="" border="" width="" align="">
+        <tr>
+          <th><code>teller</th>
+          <th><code>antwoord</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>10</td>
+        </tr>
+</table>
+
+B.
+<!--
+<pre class="python">
+def printWaarden (getal):
+    antwoord = 0
+    for teller in range (0,getal):
+        antwoord += teller
+        print ("teller:", teller, "antwoord:", antwoord)
+    return antwoord
+
+printWaarden(5)
+</pre>-->
+Samenvatting van <code>doeIets()</code>: Dit programma telt de getallen tussen 0 en het opgegeven getal bij elkaar op.
+<pre class="python">
+#Dit programma telt de getallen tussen 0 en het opgegeven getal bij elkaar op.
+def doeIets (getal):
+	antwoord = 0
+	for teller in range (0,getal):
+		antwoord += teller
+	return antwoord
+</pre>
+
+<p class="opdracht" id="AfOpgave83">Afsluitende opdracht 8.3 Spirograaf</p>
+
+<pre class="python">
+import turtle
+
+### FUNCTIEDEFINITIE
+
+#tekent een vierkant door 4 keer vooruit de gegeven lengte vooruit te lopen en 90 graden te draaien.
+def tekenVierkant( lengte ):
+    for aantal_zijdes in range(4): #herhaal 4 keer
+        turtle.forward( lengte )
+        turtle.right( 90 )
+
+
+### HOOFDPROGRAMMA
+turtle.pendown()
+for aantal_vierkantjes in range(25):
+    tekenVierkant( 100 )
+    turtle.right( 15 )
+
+turtle.done()
+</pre>
+
+
+
+
+<p class="opdracht" id="AfOpgave84">Afsluitende opdracht 8.4 Aftellen tussen getallen gekozen door gebruiker</p>
+
+<pre class="python">
+### FUNCTIEDEFINITIES
+def vraagGebruikerOmGetal():
+    print( "Geef een getal: " )
+    invoer = input()
+    ingevoerde_getal = int( invoer )
+    print( "Het ingevoerde getal is " + str(ingevoerde_getal) )
+    return ingevoerde_getal
+
+#### HOOFDPROGRAMMA
+getal1 = vraagGebruikerOmGetal()
+getal2 = vraagGebruikerOmGetal()
+if getal1 > getal2:
+    for teller in range ( getal1, getal2, -1):
+        print (teller)
+else:
+    for teller in range ( getal2, getal1, -1):
+        print (teller)
+</pre>
+
+<p class="opdracht" id="AfOpgave85">Afsluitende opdracht 8.5 Een bepaald aantal even getallen</p>
+<pre class="python">
+print("Hoeveel even getallen wil je hebben?")
+invoer = input()
+aantal_even_getallen = int( invoer )
+
+for teller in range( aantal_even_getallen ):
+        print(teller*2)
+</pre>
+
+
+<p class="opdracht" id="AfsluiteindeOpgave86">Afsluitende opdracht 8.6 Som van vier getallen</p>
+<pre class="python">
+som = 0
+for teller in range(4):
+    invoer = input ( "Geef een getal: " ) #vraag de gebruiker om invoer
+    ingevoerde_getal = int( invoer ) #zet de invoer om in een getal
+    print("Ingevoerde getal:", ingevoerde_getal)
+    som += ingevoerde_getal
+
+print( "Som is", som )
+</pre>
+
+<p class="opdracht" id="AfsluiteindeOpgave87">Afsluitende opdracht 8.7 Driehoekje van sterretjes</p>
+<pre class="python">
+def printSterretjesDriehoekje(aantal):
+    for tellerOmhoog in range(1,aantal):
+        print (tellerOmhoog * "*")
+    for tellerOmlaag in range(aantal,0,-1):
+        print (tellerOmlaag * "*")
+
+printSterretjesDriehoekje(3)
+</pre>
+
+Alternatief:
+<pre class="python">
+def tekenSterretjes(aantal):
+  for i in range(aantal):
+    print(i * "*")
+  for i in range(aantal, 0, -1):
+    print(i * "*")
+
+
+gevraagdGetal = int(input("Geef een getal:"))
+print("We tekenen een driehoek van sterretjes...\n")
+tekenSterretjes(gevraagdGetal)
+print("\n Klaar!")
+</pre>
+
+
+<br>
+<br>
+</div>
+</p>
+</p>
+</body>
+</html>

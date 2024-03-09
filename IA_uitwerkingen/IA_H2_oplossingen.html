@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Python - Informatica Actief</title>
+
+    <!--css import-->
+    <link rel="stylesheet" href="../style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<div class="content">	
+<h1 id="H2">Hoofdstuk 2 - Interactie: UITWERKINGEN</h1>
+<hr>
+
+
+<h3 id="opgave221">Opdracht 2.1 Floats (kommagetallen) afdrukken</h3>
+<pre class="python">
+print( 3.14 )
+</pre>
+
+
+<h3 id="opgave222">Opdracht 2.2 Verbeter de fout</h3>
+<pre class="python">
+print( "Een boodschap" )
+print( "Een boodschap" )
+print( "Een boodschap" )
+</pre>
+of
+<pre class="python">
+print( "Een boodschap" )
+print( "Een boodschap" )
+print( 'Een boodschap' )
+</pre>
+
+<h3 id="opgave223">Opdracht 2.3 Uitroeptekens afdrukken</h3>
+<pre class="python">
+print( 5*"!" )
+ </pre>
+
+
+<h3 id="opgave224">Opdracht 2.4 Strings plakken zonder spatie</h3>
+<pre class="python">
+woord1= "goede"
+woord2 = "morgen"
+print( woord1 + woord2 )
+ </pre>
+
+
+<h3 id="opgave225">
+Opdracht 2.5 Getallen en Strings aan elkaar plakken</h3>
+<pre class="python">
+print( "Ik heb " + str(2) + " fietsen.")
+</pre>
+
+<h3 id="opgave226">
+Opdracht 2.6 (Komma)Getallen en Strings aan elkaar plakken</h3>
+<pre class="python">
+print( str(3.0) + "gram")
+</pre>
+
+<h3 id="opgave227">
+Opdracht 2.7 Een getal in tekst omzetten</h3>
+<pre class="python">
+zakgeld = 20
+print( "Ik krijg " + str(zakgeld) + ".00 euro zakgeld.")
+</pre>
+
+
+<h3 id="opgave231">Opdracht 2.8 Gebruiker persoonlijk groeten</h3>
+<pre class="python">
+print( "Hoe heet jij?" )
+naam = input()	# vraag gebruiker om invoer en sla invoer op in variabele 'naam'
+print ( "Hallo,", naam )			# print de variabele naam
+</pre>
+
+
+<h3 id="opgave232">Opdracht 2.9 Leeftijd vragen</h3>
+<pre class="python">
+print( "Hoe oud ben je?" )
+invoer = input( "Hoe oud ben je?" )
+leeftijd = int( invoer )
+print( "Je bent", leeftijd, "jaar oud." )
+</pre>
+
+<h3 id="opgave233">Opdracht 2.10 Sterretjes afdrukken</h3>
+<pre class="python">
+print( "Hoeveel sterretjes wil je zien?" )
+invoer = input( "Hoeveel sterretjes wil je zien?" )
+aantal_sterretjes = int( invoer )
+print("Hier zijn de", aantal_sterretjes, "sterretjes:")
+print( aantal_sterretjes * "*" )
+</pre>
+
+<h3 id="opgave234">Opdracht 2.11  Gebruiker kiest lengte</h3>
+<pre class="python">
+import turtle       # importeer turtle module
+
+print("Hoe lang?")
+invoer = input()
+lengte = int( invoer )
+print( "Je wilt een lijn van lengte " +str(lengte) )
+
+turtle.pendown()    # zet pen neer
+turtle.forward(lengte) # 150 stappen vooruit
+
+turtle.done()       # klaar
+</pre>
+
+
+<h3 id="opgave241">Opdracht 2.12 Haakjes gebruiken</h3>
+<pre class="python">
+antwoord = (6 + 4) / 2
+print( antwoord )
+</pre>
+
+
+<h3 id="opgave242">Opdracht 2.13 Aantal seconden per week</h3>
+<pre class="python">
+antwoord = (24*7*60*60)
+print( "Er zitten", antwoord, "seconden in 1 week.")
+</pre>
+
+
+<h3 id="opgave243">Opdracht 2.14 Verdubbelaar</h3>
+<pre class="python">
+print( "Welkom bij de verdubbelaar. Geef een getal: " )
+invoer = input()
+getal = int( invoer )
+print("Het ingevoerde getal is:" + str(getal) )
+
+antwoord = getal * 2
+print( "Het dubbele van " + str(getal) + " is: " + str(antwoord) )
+</pre>
+
+<h3 id="opgave244">Opdracht 2.15 Klokrekenen</h3>
+<pre class="python">
+print( "Geef een 24-uursaanduiding: " )
+invoer = input()
+oude_aanduiding = int( invoer )
+print("De 24-uursaanduiding is: " + str(oude_aanduiding) )
+
+nieuwe_aanduiding = oude_aanduiding%12
+print( "De 12-uursaanduiding is: " + str(nieuwe_aanduiding) )
+</pre>
+
+<hr>
+<h1 id="H2AfOpgaven">H2 - Afsluitende Opdrachten: UITWERKINGEN</h1>
+
+<hr>
+
+<h3 id="AfOpgave21">Afsluitende Opdracht 2.1 Geld
+maakt gelukkig</h3>
+<pre class="python">
+euro = 10
+cent = 25
+print("Dat kost " + str(euro) + "." + str(cent) , "euro.")
+</pre>
+
+
+<h3 id="AfOpgave22">Afsluitende Opdracht 2.2  Gebruiker kiest kleur</h3>
+<pre class="python">
+import turtle       # importeer turtle module
+
+print("Kies een kleur (bijvoorbeeld: black, tan, gold, blue, red):")
+kleur = input()
+print("Je krijgt een " + kleur + " vierkant.")
+
+turtle.color(kleur) # geef pen de gekozen kleur
+
+turtle.pendown()    # zet pen neer
+turtle.forward(150) # 150 stappen vooruit
+turtle.right(90)    # draai 90 graden naar rechts
+turtle.forward(150)
+turtle.right(90)
+turtle.forward(150)
+turtle.right(90)
+turtle.forward(150)
+turtle.right(90)
+
+turtle.done()       # klaar
+</pre>
+
+<h3 id="AfOpgave23">Afsluitende Opdracht 2.3 Bonus op de toets</h3>
+<pre class="python">
+print( "Wat was jouw cijfer?" )
+invoer = input()
+cijfer = float(invoer)
+print("Jouw cijfer was" + str(cijfer) )
+
+print( "Gefeliciteerd, met de bonus heb je nu een" + str(cijfer + 0.5) + "!" )
+</pre>
+OF
+<pre class="python">
+print( "Wat was jouw cijfer?" )
+invoer = input()
+cijfer_zonder_bonus = float(invoer)
+print("Jouw cijfer was" + str(cijfer_zonder_bonus) )
+
+cijfer_met_bonus = cijfer_zonder_bonus + 0.5
+print( "Gefeliciteerd, met de bonus heb je nu een" + str(cijfer_met_bonus) + "!" )
+</pre>
+
+<h3 id="AfOpgave24">Afsluitende Opdracht 2.4 Centimeters naar meters</h3>
+<pre class="python">
+print("Hoeveel centimeters moet ik naar meters omrekenen?")
+invoer = input()
+aantal_centimeters = int(invoer)
+print( "Het aantal centimeters is:", aantal_centimeters )
+
+aantal_meters = aantal_centimeters / 100
+print( str(aantal_centimeters)= " is " + str(aantal_meters) , "meter" )
+</pre>
+OF
+<pre class="python">
+print("Hoeveel centimeters moet ik naar meters omrekenen?")
+invoer = input()
+aantal_centimeters = int(invoer)
+print( "Het aantal centimeters is:", aantal_centimeters )
+
+print( "Dat is " + str(aantal_centimeters / 100) + "meter" )
+</pre>
+
+<h3 id="AfOpgave25">Afsluitende Opdracht 2.5: BMI berekenen</h3>
+<pre class="python">
+invoer = input( "Hoeveel kilogram weeg je? ")
+gewicht_in_kg = int(invoer)
+print("Je gewicht is " + str(gewicht_in_kg))
+
+invoer = input( "Wat is je lengte in meters? ")
+lengte_in_m = float(invoer)
+print("Je lengte is " + str(lengte_in_m))
+
+BMI = gewicht_in_kg / ( lengte_in_m*lengte_in_m )
+BMI_afgerond = round(BMI,1)
+print( "Je BMI is:", BMI_afgerond )
+</pre>
+
+OF
+
+<pre class="python">
+print("Hoeveel kilogram weeg je?")
+invoer = input()
+gewicht_in_kg = int(invoer)
+print("Je gewicht is " + str(gewicht_in_kg))
+
+invoer = input( "Wat is je lengte in meters?")
+lengte_in_m = float(invoer)
+print("Je lengte is " + str(lengte_in_m))
+
+print( "Je BMI is:", round( ( gewicht_in_kg / ( lengte_in_m*lengte_in_m ) ),1) )
+
+</pre>
+
+<h3 id="AfOpgave26">
+Afsluitende Opdracht 2.6: Invulverhaal</h3>
+<pre class="python">
+print( "Naam beste vriend" )
+naam_beste_vriend = input()
+print( "kleuterprogramma" )
+kleuterprogramma = input("kleuterprogramma")
+
+print(naam_beste_vriend + " geeft een super pyjamafeestje met als thema " + kleuterprogramma + "kleuterprogramma) dat word dus de hele avond " + kleuterprogramma + " kijken.")
+</pre>
+
+
+<h3 id="AfOpgave27">
+Afsluitende Opdracht 2.7 Hoe lang duurt het nog?</h3>
+Op het scherm moet geprint zijn:<br>
+13:47.28<br>
+Totaal aantal seconden: 49648
+<pre class="python">
+#Dit programma berekent het aantal seconden.
+uren = 13
+minuten = 47
+seconden = 28
+
+#drukt tijdstip af als 13:47.28
+print( str(uren) + ":" + str(minuten) + "." + str(seconden) )
+
+#bereken totaal aantal seconden
+totaal_aantal_seconden = uren * 60 * 60 + minuten * 60 + seconden
+#druk af:
+print("Totaal aantal seconden:", totaal_aantal_seconden)
+</pre>
+
+
+	</div>
+
+</body>
+</html>

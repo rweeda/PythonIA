@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Python - Informatica Actief</title>
+    <!--css import-->
+    <link rel="stylesheet" href="../style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="content">
+<h1 id="H9oplossingen">H9 - Lijsten:  Uitwerkingen</h1>
+
+<hr>
+
+
+<p class="opdracht" id="opgave911">Opdracht 9.1 Lijst maken en afdrukken</p>
+<pre class="python">
+temperatuurlijst = [22.3, 23.0, 25.1, 23.2, 21.9]
+print( temperatuurlijst )
+</pre>
+
+<p class="opdracht" id="opgave921">Opdracht 9.2 Lengte van een lijst</p>
+<pre class="python">
+temperatuurlijst = [22.3, 23.0, 25.1, 23.2, 21.9]
+lengte = len(temperatuurlijst)
+print( "De lengte van de lijst is:", lengte )
+</pre>
+
+<p class="opdracht" id="opgave922">Opdracht 9.3 Lengte van een lege lijst</p>
+<pre class="python">
+legeLijst = []
+lengte = len(legeLijst)
+
+print( "De lengte van een lege lijst is:", lengte )
+</pre>
+
+
+<p class="opdracht" id="opgave931">Opdracht 9.4 Bepaalde elementen afdrukken</p>
+<pre class="python">
+temperatuurlijst = [22.3, 23.0, 25.1, 23.2, 21.9]
+print( temperatuurlijst[1] )
+print( temperatuurlijst[4] )
+</pre>
+
+<p class="opdracht" id="opgave932">Opdracht 9.5 Laatste element afdrukken</p>
+<pre class="python">
+temperatuurlijst = [22.3, 23.0, 25.1, 23.2, 21.9]
+lengte = len( temperatuurlijst )                         #bepaal de lengte van de boodschappenlijst
+print( "De lengte is", lengte )	                        	#druk de lengte van de lijst af
+
+print( "Achteraan staat:", temperatuurlijst[ lengte-1 ] ) #druk laatste element af
+</pre>
+
+<p class="opdracht" id="opgave933">Opdracht 9.6 Index van een element</p>
+<pre class="python">
+alfabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+index_van_w = alfabet.index( "w" )
+
+print( index_van_w )
+</pre>
+
+
+
+<p class="opdracht" id="opgave934">Opdracht 9.7 Jackpot</p>
+<pre class="python">
+lotenlijst = [12254, 45567, 23534, 54546, 65556, 76765]	#maak een lijst met lotnummers
+lotnummer = 45567
+
+if lotnummer in lotenlijst:
+	print("Gefeliciteerd")
+else:
+	print("Jammer")
+</pre>
+
+
+<p class="opdracht" id="opgave941">Opdracht 9.8 Waarde veranderen</p>
+<pre class="python">
+cijferlijst = [6.2, 5.8, 7.3, 4.9, 8.0, 7.0]
+cijferlijst[3] = 5.9
+
+print(cijferlijst)
+</pre>
+
+
+
+<p class="opdracht" id="opgave942">Opdracht 9.9 Gescheurde boodschappenlijst</p>
+<pre class="python">
+eerste_helft = ["brood", "kaas", "appels"]
+tweede_helft = ["chips", "cola"]
+
+boodschappenlijst = eerste_helft + tweede_helft
+print( "De complete lijst is:", boodschappenlijst )
+</pre>
+
+
+<p class="opdracht" id="opgave943">Opdracht 9.10 Boodschappenlijst uitbreiden</p>
+<pre class="python">
+boodschappenlijst = ["brood", "kaas", "appels"]
+boodschappenlijst.append( "cola" )
+
+print( boodschappenlijst )
+</pre>
+
+<p class="opdracht" id="opgave944">Opdracht 9.11 Ranglijst</p>
+<pre class="python">
+ranglijst = [ "eerste", "tweede", "vierde", "vijfde"]
+ranglisjst.insert(2, "derde")
+print( ranglijst )
+</pre>
+
+
+<p class="opdracht" id="opgave951">Opdracht 9.12 Kleurrijke spirograaf</p>
+<pre class="python">
+import turtle
+import random
+
+kleurenlijst = ["red", "green", "blue", "purple"] #lijst met kleuren
+
+turtle.pendown()
+
+for teller in range(50): #teken een spirograaf met 50 zijden
+	kleur = random.choice( kleurenlijst ) #kies een willekeurige kleur uit lijst
+	turtle.pencolor( kleur )
+	
+	turtle.forward(100)
+	turtle.right(65)
+
+turtle.done()
+</pre>
+<p class="opdracht" id="opgave961">Opdracht 9.13 Voorstwaarschuwing</p>
+<pre class="python">
+temperatuurvoorspelling = [1.2, 3.2, 0, -0.1, -1.3, 4.1, -0.2]
+
+for temperatuur in temperatuurvoorspelling:
+	if(temperatuur < 0 ):
+		print("Let op: strooien!")
+</pre>
+
+<h1 id="H9AfOpgaven">H9 - Uitwerkingen Afsluitende Opdrachten</h1>
+
+<p class="opdracht" id="AfOpgave91">Afsluitende opdracht 9.1 Beurten geven</p>
+<pre class="python">
+import random
+klassenlijst = [ "Janneke", "Tim", "Piet", "Ilse", "Luna", "Heleen", "Jan" ]
+
+### FUNCTIE DEFINITIES
+def kiesWillekeurigeLeerling(klassenlijst):
+	gekozen_leerling = random.choice( klassenlijst )
+	print(gekozen_leerling)
+
+def vraagAantalBeurten():
+	print("Hoeveel beurten zijn er?")
+	invoer = input()
+	aantal_beurten = int(invoer)
+	return aantal_beurten
+
+### HOOFDPROGRAMMA	
+aantal_herhalingen = vraagAantalBeurten()
+for teller in range(aantal_herhalingen):	
+	kiesWillekeurigeLeerling(klassenlijst)
+</pre>
+
+<p class="opdracht" id="AfOpgave92">Afsluitende opdracht 9.2 Van achter naar voren</p>
+<pre class="python">
+wachtrij = [ "Janneke", "Tim", "Piet", "Ilse", "Luna", "Heleen", "Jan" ]
+
+laatste_leerling = wachtrij[ len(wachtrij)-1 ] #de naam van de laatste leerling
+wachtrij.insert(0, laatste_leerling)
+print(wachtrij)
+</pre>
+
+<p class="opdracht" id="AfOpgave93">Afsluitende opdracht 9.3 Tweelingen</p>
+<pre class="python">
+import random
+kleurenlijst = ["red", "blue", "yellow", "green", "white"]
+
+### FUNCTIE DEFINTIES
+def maakWillekeurigeKleurenLijst(kleurenlijst):
+	willekeurige_lijst = [] # maak een lege lijst om kleuren in bij te houden
+
+	for teller in range(7): # 7 keer voor 7 dagen
+		willekeurige_kleur = random.choice(kleurenlijst) #kies een willekeurige kleur
+		willekeurige_lijst.append(willekeurige_kleur) #voeg nieuwe kleur toe aan lijst
+
+	return willekeurige_lijst
+
+
+### HOOFDPROGRAMMA
+kleuren_Anton = maakWillekeurigeKleurenLijst(kleurenlijst)
+kleuren_Piet = maakWillekeurigeKleurenLijst(kleurenlijst)
+
+print("Anton", kleuren_Anton)
+print("Piet", kleuren_Piet)
+</pre>
+
+<p class="opdracht" id="AfOpgave94">Afsluitende opdracht 9.4 Regendagen tellen</p>
+<pre class="python">
+regenmetingen = [10, 0, 12, 0, 0, 2, 0]
+
+regenteller = 0
+for meting in regenmetingen:
+	if meting > 0:
+		regenteller += 1
+
+print("Aantal keren geregend:", regenteller)
+</pre>
+
+
+
+<!-- ONDERSTAAND IS MET EEN WHILE
+<p class="opdracht" id="AfOpgave94">Afsluitende opdracht 9.4 Uren bijhouden bijbaantje</p>
+<pre class="python">
+gemaakte_uren = [] #maak een lege lijst aan
+
+klaar_met_invoeren = False
+while (klaar_met_invoeren == False ):
+# Vraag gebruiker om invoer
+	print("Hoeveel uur heb je gewerkt?")
+	invoer = input()
+	ingevoerde_uren = float(invoer) #invoer is een kommagetal
+
+	# Check of invoer geldig is en sla op in lijst
+	if ingevoerde_uren == -1: #gebruiker geeft aan klaar te zijn met invoeren
+		klaar_met_invoeren = True
+	else:
+		if ingevoerde_uren >= 0 and ingevoerde_uren <=10:
+			gemaakte_uren.append(ingevoerde_uren) #voeg aan einde van lijst toe
+		else:
+			print("Foutieve invoer. Voer een waarde tussen 0 en 10 in. Voer -1 in om te stoppen.")
+
+print("Dit zijn de gewerkte uren:", gemaakte_uren)
+</pre>
+
+-->
+<br>
+</div>
+<br>
+<br>
+</body>
+</html>
