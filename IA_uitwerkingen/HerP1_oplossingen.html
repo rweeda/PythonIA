@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Python</title>
+
+	<link rel="shortcut icon" type="image/png" href="../MC_icoon.png">   <!--icoon in browser-->
+
+    <!--css import-->
+    <link rel="stylesheet" href="../style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+	<div class="sidebar"><a href="../index.html"><i class="fa fa-home"></i> Home</a>&nbsp;
+	
+
+	  <a class="active" href="HerP1_index.html">Herhaling Python 1</a>
+	<!--  <a href="H71.html">7.1 - Kennis maken met de <code>while</code>-loop</a>
+	  <a href="H72.html">7.2 - Logische vlag</a>
+          <a href="H73.html">7.3 - While met teller</a>
+	  <a href="H74.html">7.4 - Uitgebreide conditie met logische vlag</a>
+	  <a href="H7_AfOpgaven.html">H7 - Afsluitende Opgaven</a>-->
+	
+	</div>
+
+<div class="content">
+	
+<h1 id="HerP1">Herhaling Python 1 - hoofdstukken 1 t/m 7: UITWERKINGEN</h1>
+	
+<hr>
+
+<h3 id="opgaveHerP11">Herhalingsopgave 1 - Ophoger</h3>
+<pre class="python">
+print("Geef een getal: ")
+invoer = input()
+getal = int(invoer)
+opgehoogd_getal = getal + 1
+print("Eentje meer is", opgehoogd_getal)
+print("Eentje meer is " + str(opgehoogd_getal) + "!")
+</pre>
+
+
+<h3 id="opgaveHerP12">Herhalingsopgave 2 - Geheimzinnig</h3>
+
+Er zijn 3 variabelen:
+<ul>
+	<li><code>WACHTWOORD</code>
+	<li><code>goed_geraden</code>
+	<li><code>invoer</code>
+</ul>
+<code>WACHTWOORD</code> schrijven we met hoofdletters omdat deze tijdens het programma niet mag veranderen, die moet altijd gelijk blijven aan "Geheim". Daarentegen kan <code>invoer</code> wel veranderen, elke keer als de gebruiker iets nieuws intikt krijgt dat een nieuwe waarde.
+
+
+<h3 id="opgaveHerP13">Herhalingsopgave 3 - ID check</h3>
+
+<pre class="python">
+#waarden om mee te testen
+leeftijd = 25
+ID_kaart_mee = True
+
+#hier begint het programma
+if(leeftijd > 25):
+  print("Je mag alcohol kopen.")
+else:
+	if (ID_kaart_mee == True):
+		if(leeftijd >= 18):
+			print("Je mag alcohol kopen.")
+		else:
+			print("Je mag geen alcohol kopen.")
+	else:
+		print("Je mag geen alcohol kopen.")
+</pre>
+
+<h3 id="opgaveHerP14">Herhalingsopgave 4 - Quizvraag</h3>
+<pre class="python">
+print("Wat is de hoofdstad van Frakrijk?")
+print("a. Schiphol")
+print("b. Parijs")
+print("c. London")
+antwoord = input ("Maak je keuze: a, b, c")
+
+if antwoord == 'a' or antwoord == 'c':
+	print("fout")
+elif antwoord == 'b':
+	print("goed")
+else:
+	print("Foutieve invoer")
+</pre>
+
+
+<h3 id="opgaveHerP15">Herhalingsopgave 5 - Algoritme samenvatten</h3>
+Het doel van het programma is om het grootste van drie getallen af te drukken.
+
+
+<h3 id="opgaveHerP16">Herhalingsopgave 6 - Quizspel</h3>
+<pre class="python">
+antwoord_juist = False
+getal1 = 3
+getal2 = 4
+
+while antwoord_juist == False:
+	antwoord = int( input("Wat is " + str(getal1) + "+" + str(getal2) + ""))
+	if antwoord == (getal1 + getal2):
+		antwoord_juist = True
+		print("Goed!")
+	else:
+		print("Fout! Opnieuw")
+
+print("Klaar!")	
+</pre>
+
+
+<h3 id="opgaveHerP17">Herhalingsopgave 7 - ID mee met functie definitie</h3>
+
+<pre class="python">
+### FUNCTIEDEFINITIES
+def checkID(leeftijd, ID_kaart_mee):
+	if(leeftijd > 25):
+		print("Je mag alcohol kopen.")
+	else:
+		if (ID_kaart_mee == True):
+			if(leeftijd >= 18):
+				print("Je mag alcohol kopen.")
+			else:
+				print("Je mag geen alcohol kopen.")
+		else:
+			print("Je mag geen alcohol kopen.")
+
+
+
+### HOOFDPROGRAMMA: hier je functie aanroepen
+checkID(21,True)
+</pre>
+ 
+ 
+<h3 id="opgaveHerP18">Herhalingsopgave 8 - Functie met return</h3>
+
+<pre class="python">
+import random
+
+### FUNCTIE DEFINITIE
+def geefWillekeurigGetal():
+	willekeurig_getal = random.randint(0,10) #maak een willekeurig getal 0-10
+	return willekeurig_getal
+
+### HOOFDPROGRAMMA
+antwoord = geefWillekeurigGetal()
+print(antwoord)
+</pre>
+
+
+
+
+<h3>Antwoorden op samenvatting/inhaalactie</h3>
+<h3 id="opgaveSamen1">OPDRACHT 1B:</h3>
+
+<pre class="python">
+print("Ben je bereid je best te doen? Typ 'j' of 'n'")
+ingevoerde_best = input()
+
+print("Wat sta je nu voor informatica?")
+invoer = input()
+ingevoerde_cijfer = float( invoer )
+
+
+if (ingevoerde_cijfer >= 5.5):
+  print("Voldoende")
+else:
+  print("Onvoldoende")
+</pre>
+
+<h3 id="opgaveSamen1">OPDRACHT 1C:</h3>
+<pre class="python">
+print("Ben je bereid je best te doen? Typ 'j' of 'n'")
+ingevoerde_best = input()
+
+print("Wat sta je nu voor informatica?")
+invoer = input()
+ingevoerde_cijfer = float( invoer )
+
+
+if (ingevoerde_cijfer >= 5.5):
+  print("Voldoende")
+else:
+  if (ingevoerde_best == 'j'):
+    print("je gaat het halen")
+  else:
+    print("jammer")
+</pre>
+
+<h3 id="opgaveSamen2">OPDRACHT 2A:</h3>
+<pre class="python">
+
+### FUNCTIE DEFINITIES  #####
+def bepaalGehaald( cijfer ):
+  if (cijfer >= 5.5): 
+    return True
+  else:
+    return False
+</pre>
+
+<h3 id="opgaveSamen2">OPDRACHT 2B:</h3>
+<pre class="python">
+### FUNCTIE DEFINITIES  #####
+def bepaalGehaald( cijfer ):
+  if (cijfer >= 5.5): 
+    return True
+  else:
+    return False
+	
+### HOOFDPROGRAMMA #####
+cijfer = 6.3
+is_gehaald = bepaalGehaald( cijfer )
+print( is_gehaald )
+</pre>
+
+<h3 id="opgaveSamen3">OPDRACHT 3:</h3>
+<!-- GEGEVEN 
+##### FUNCTIE DEFINITIES ######
+def bepaalSom( ....  ,  ..... ): # welk twee getallen krijgt de functie binnen?
+  antwoord = ... # tel hier getal1 en getal2 bij elkaar op
+  ...... # return hier het antwoord
+
+
+#### HOOFDPROGRAMMA #####
+invoer1 = input ("Geef een getal")
+getal1 = int (invoer1)
+invoer2 = #### vraag hier om een tweede getal
+#### verander invoer2 in een getal en sla dat op in variabele getal2
+
+antwoord = bepaalSom( ..... )  # Welke twee getallen geef je mee?
+print("De som is", ..... ) # welk variabele druk je af?
+-->
+<pre class="python">
+##### FUNCTIE DEFINITIES ######
+def bepaalSom( getal1, getal2 ): # welk twee getallen krijgt de functie binnen?
+  antwoord = getal1 + getal2 # tel hier getal1 en getal2 bij elkaar op
+  return antwoord # return hier het antwoord
+
+
+#### HOOFDPROGRAMMA #####
+invoer1 = input ("Geef een getal")
+getal1 = int (invoer1)
+invoer2 = input ("Geef een tweedegetal")
+getal2 = int (invoer2)
+
+antwoord = bepaalSom( getal1, getal2 )  # Welke twee getallen geef je mee?
+print("De som is", antwoord ) # welk variabele druk je af?
+
+</pre>
+<h3 id="opgaveSamen4">OPDRACHT 4:</h3>
+<pre class="python">
+### FUNCTIE DEFINITIES #####
+def berekenOpp(lengte, breedte):
+  oppervlakte = lengte*breedte
+  return oppervlakte
+
+
+### HOOFDPROGAMMA ####
+lengte = 2
+breedte = 4
+antwoord = berekenOpp(lengte, breedte)
+print(antwoord)
+</pre>
+
+</body>
+</html>

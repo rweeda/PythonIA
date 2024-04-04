@@ -18,7 +18,7 @@
 
 
 
-<p class="opdracht" id="opgave1011">Opdracht 10.1 Weekend!</p>
+<h3 id="opgave1011">Opdracht 10.1 Weekend!</h3>
 <pre class="python">
 dagenlijst = ["ma", "di", "wo", "do", "vr", "za", "zo"]
 
@@ -27,8 +27,7 @@ for dag in dagenlijst:
 		print("Vandaag is het", dag, "dus het is weekend!")
 </pre>
 
-<p class="opdracht" id="opgave1012">Opdracht 10.2 Let op voor de onvoldoendes</p>
-
+<h3 id="opgave1012">Opdracht 10.2 Let op voor de onvoldoendes</h3>
 <pre class="python">
 cijferlijst = [8.2, 6.2, 5.0, 4.9, 7.1]
 
@@ -38,7 +37,7 @@ for cijfer in cijferlijst:
 </pre>	
 
 
-<p class="opdracht" id="opgave1021">Opdracht 10.3 Weg met de onvoldoendes</p>
+<h3 id="opgave1021">Opdracht 10.3 Weg met de onvoldoendes</h3>
 <pre class="python">
 ### FUNCTIEDEFINITIE
 def geefLijstZonderOnvoldoende( lijst_met_onvoldoendes ):
@@ -56,7 +55,7 @@ nieuwelijst = geefLijstZonderOnvoldoende( cijferlijst )
 print( nieuwelijst )
 </pre>
 
-<p class="opdracht" id="opgave1022">Opdracht 10.4 Alleen vorstdagen</p>
+<h3 id="opgave1022">Opdracht 10.4 Alleen vorstdagen</h3>
 
 <pre class="python">
 ### FUNCTIEDEFINITIE
@@ -77,7 +76,7 @@ print( vorstdagenlijst )
 
 
 
-<p class="opdracht" id="opgave1031"><span style="color:red">Opdracht 10.5 Vijf-sterren hotels tellen</p>
+<h3 id="opgave1031"><span style="color:red">Opdracht 10.5 Vijf-sterrenhotels tellen</h3>
 <pre class="python">
 hotellijst = [ "**", "*", "***", "***", "**", "*****", "****", "*****", "**", "****", "*****"]
 
@@ -91,7 +90,7 @@ print(vijfsterren_teller)
 
 
 
-<p class="opdracht" id="opgave1041">Opdracht 10.6 Check op onvoldoendes in cijferlijst</p>
+<h3 id="opgave1041">Opdracht 10.6 Check op onvoldoendes in cijferlijst</h3>
 <pre class="python">
 #de volgende functie geeft True als minstens 1 onvoldoende (cijfer<=5) voorkomt
 def bevatOnvoldoendes(cijferlijst):
@@ -114,7 +113,7 @@ print (onvoldoende) #print resultaat
 
 
 
-<p class="opdracht" id="opgave1051">Opdracht 10.7 De meeste likes</p>
+<h3 id="opgave1051">Opdracht 10.7 De meeste likes</h3>
 <pre class="python">
 likes_lijst = [102, 110, 502, 234, 340, 20]
 
@@ -127,7 +126,7 @@ print("Meeste likes is:", meeste)
 </pre>
 
 
-<p class="opdracht" id="opgave1061">Opdracht 10.8 Totale regenval</p>
+<h3 id="opgave1061">Opdracht 10.8 Totale regenval</h3>
 <pre class="python">
 regenlijst = [ 8, 10, 15, 20, 18, 15, 13, 14, 16, 34, 12, 10, 0, 0, 0, 1, 2, 0, 4, 8, 0, 0, 1, 2, 1, 10, 8, 1 ]
 
@@ -135,13 +134,13 @@ totaal = 0                                      #totaal begint op 0
 for regenmeting in regenlijst:
 	totaal += regenmeting              #tel huidige meting op bij de totaal tot nu toe
 	
-print("Er is " + str(totaal) + "mm regen gevallen.")
+print("Er is " + str(totaal) + " mm regen gevallen.")
 </pre>
 
 <h1 id="H10AfOpgaven">H10 - Afsluitende Opdrachten: UITWERKINGEN</h1>
 
 
-<p class="opdracht" id="AfOpgave101">Afsluitende opgave 10.1 Aantal voldoendes</p>
+<h3 id="AfOpgave101">Afsluitende Opdracht 10.1 Aantal voldoendes</h3>
 
 <pre class="python">
 ### FUNCTIEDEFINITIE
@@ -160,7 +159,7 @@ print("Het aantal voldoendes is:", aantal_voldoendes )
 
 
 
-<p class="opdracht" id="AfOpgave102">Afsluitende opgave 10.2 Stemmingen</p>
+<h3 id="AfOpgave102">Afsluitende Opdracht 10.2 Stemmingen</h3>
 <pre class="python">
 ### FUNCTIE DEFINITIES
 
@@ -189,10 +188,10 @@ print( "En het aantal smileys is:", smiley_teller)
 </pre>
 
 
-<p class="opdracht" id="AfOpgave103">Afsluitende opgave 10.3 Cijferlijst opleuken</p>
+<h3 id="AfOpgave103">Afsluitende Opdracht 10.3 Cijferlijst opleuken</h3>
 
 <pre class="python">
-cijferLijst = [9.8, 5.5, 2.3, 4.6, 6.1, 5.6]
+cijferLijst = [9.8, 5.5, 2.3, 4.6, 6.1, 5.6, 9.8]
 nieuw_cijferLijst = []
 
 for cijfer in cijferLijst:
@@ -206,7 +205,7 @@ print( nieuw_cijferLijst )
 </pre>
 
 
-<p class="opdracht" id="AfOpgave104">Afsluitende opgave 10.4 Meeste regen</p>
+<h3 id="AfOpgave104">Afsluitende Opdracht 10.4 Meeste regen</h3>
 <pre class="python">
 regenlijst = [ 0, 10, 15, 20, 18, 15, 13, 14, 16, 34, 12, 34, 0, 0, 0, 1, 2, 0, 4, 8, 0, 0, 1, 2, 1, 10, 8, 1 ]
 
@@ -224,7 +223,7 @@ for meting  in regenlijst:
 </pre>
 
 
-<p class="opdracht" id="AfOpgave105">Afsluitende opgave 10.5 Loonstrookje</p>
+<h3 id="AfOpgave105">Afsluitende Opdracht 10.5 Loonstrookje</h3>
 <pre class="python">
 loonlijst = [24.00, 28.50, 45.80, 45.80, 23.10, 32.15]
 
@@ -236,7 +235,7 @@ print("totale loon:", som)
 </pre>
 
 
-<p class="opdracht" id="AfOpgave106">Afsluitende opgave 10.6 Foutieve metingen</p>
+<h3 id="AfOpgave106">Afsluitende Opdracht 10.6 Foutieve metingen</h3>
 <pre class="python">
 
 storingenlijst = [ 0, 3, -1, 4, 3, 2, -1 ]
@@ -252,7 +251,7 @@ print("lijst_zonder_neg: ", lijst_zonder_neg)
 </pre>
 
 
-<p class="opdracht" id="AfOpgave107">Afsluitende opgave 10.7 Gemiddelde bepalen</p>
+<h3 id="AfOpgave107">Afsluitende Opdracht 10.7 Gemiddelde bepalen</h3>
 <pre class="python">
 ### FUNCTIEDEFINITIES
 def bepaalGemiddelde( getallenlijst ):

@@ -16,31 +16,32 @@
 
 <hr>
 
-<p class="opdracht" id="opgave1221">Opdracht 12.1 Oefenen met <code>for</code> loop</p>
+<h3 id="opgave1221">Opdracht 12.1 Oefenen met <code>for</code>-loop</h3>
 <pre class="python"> for teller in range(1, 4):
 	print("^"*teller)
 </pre>
 
 
-<p class="opdracht" id="opgave1222">Opdracht 12.2 Oefenen met lijsten</p>
+<h3 id="opgave1222">Opdracht 12.2 Oefenen met lijsten</h3>
 <pre class="python">
 #DEEL A cijferLijst = [3.4, 8.0, 6.9, 7.0, 8.2]
 cijferLijst[0] = 5.5 #vervang eerste cijfer met 5.5
 print(cijferLijst)
 
 #DEEL B:
-letterLijst = ["k", "a", "_"] #vervang _ met t
-letterLijst [2] = "t"
-print(letterLijst)
+tekenLijst = ["k", "a", "_"] #vervang _ met t
+tekenLijst [2] = "t"
+print(tekenLijst)
 
 #DEEL C: laatste =
 cijferLijst[ len(cijferLijst)-1 ] #fout was: -1 ontbrak
+print("Laatste van cijferLijst is:", laatste)
 </pre>
 
 
 
 
-<p class="opdracht" id="opgave1231">Opdracht 12.3 Co&ouml;rdinaten</p>
+<h3 id="opgave1231">Opdracht 12.3 Co&ouml;rdinaten</h3>
 <pre class="python">
 for x_coordinaat in range(4):
         for y_coordinaat in range(5):
@@ -48,7 +49,7 @@ for x_coordinaat in range(4):
 </pre>
 
 
-<p class="opdracht" id="opgave1232">Opdracht 12.4 Co&ouml;rdinaten tabel</p>
+<h3 id="opgave1232">Opdracht 12.4 Co&ouml;rdinatentabel</h3>
 <pre class="python">
 for x_coordinaat in range(4):
 	for y_coordinaat in range(5):
@@ -58,7 +59,7 @@ for x_coordinaat in range(4):
 
 
 
-<p class="opdracht" id="opgave1233">Opdracht 12.5 McCombi's</p>
+<h3 id="opgave1233">Opdracht 12.5 McCombi's</h3>
 DEEL A:
 <pre class="python">
 drankLijst = ["water", "ijsthee", "McShake", "McCafe", "cola"]
@@ -82,8 +83,7 @@ for drinken in etenLijst:
 </pre>
 
 
-<p class="opdracht" id="opgave1241">Opdracht 12.6 Winnen met Boter-Kaas-Eieren</p>
-Win het spel hieronder door op regel 3 een regel code toe te voegen. Gebruik de coordinaten/indexen om een '-' in een 'X' te veranderen.
+<h3 id="opgave1241">Opdracht 12.6 Winnen met Boter-kaas-eieren</h3>
 
 <pre class="python">
 bord = [ ["X", "O", "-"], ["X", "O", "O"], ["-", "X", "-"] ]
@@ -95,7 +95,7 @@ print( bord[2][0], bord[2][1],
 bord[2][2] )
 </pre>
 
-<p class="opdracht" id="opgave1242">Opdracht 12.7 Smiley</p>
+<h3 id="opgave1242">Opdracht 12.7 Smiley</h3>
 <pre class="python">
 plaatje = [ [" ","X", " ", "X", " "],
 		   [" ","X", " ", "X", " "],
@@ -104,9 +104,11 @@ plaatje = [ [" ","X", " ", "X", " "],
 	           ["X"," ", " ", " ", "X"] ]
 				
 #VOEG HIER CODE TOE OM Xjes OP COORDINATEN AAN TE PASSEN
-plaatje[3][0] = "X"
+plaatje[2][0] = "X"
+plaatje[2][4] = "X"
 plaatje[4][0] = " "
-#... enz.
+plaatje[4][4] = " "
+
 
 #DRUK PLAATJE AF
 for rij in range(5):
@@ -115,7 +117,7 @@ for rij in range(5):
 	print()
 </pre>
 
-<p class="opdracht" id="AfOpgave121">Afsluitende opdracht 12.1 Stok kaarten afdrukken</p>
+<h3 id="AfOpgave121">Afsluitende opdracht 12.1 Stok kaarten afdrukken</h3>
 <pre class="python">
 kleurLijst = ["Harten", "Schoppen", "Klaveren", "Ruiten"]
 waardeLijst = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Boer", "Vrouw", "Heer", "Aas"]
@@ -127,7 +129,7 @@ for kleur in kleurLijst:
 
 
 
-<p class="opdracht" id="AfOpgave122">Afsluitende opdracht 12.2 Alle mogelijkheden (met for)</p>
+<h3 id="AfOpgave122">Afsluitende opdracht 12.2 Alle mogelijkheden (met for)</h3>
 <pre class="python">
 kleurenLijst = ["Rood", "Blauw", "Groen", "Paars"]
 combinatieTeller = 0
@@ -143,7 +145,7 @@ for kleur1 in kleurenLijst:
 print("Aantal mogelijkheden:", combinatieTeller)
 </pre>
 
-<p class="opdracht" id="AfOpgave123">Afsluitende opdracht 12.3 Feestinkopen (met for)</p>
+<h3 id="AfOpgave123">Afsluitende opdracht 12.3 Feestinkopen (met <code>for</code>)</h3>
 <pre class="python">
 aantal_mogelijkheden = 0
 for cola in range(1,11):
@@ -152,7 +154,8 @@ for cola in range(1,11):
 			if(cola+chips+chocola==12):
 				if(cola!=chips and chips!=chocola):#niet alle drie hetzelfde
 					aantal_mogelijkheden+=1
-					print("cola",cola,"chips", chips, "chocola", chocola,  "aantal mogelijkheden:", aantal_mogelijkheden)
+					print("cola",cola,"chips", chips, "chocola", chocola)
+print("aantal mogelijkheden:", aantal_mogelijkheden)
 </pre>
 
 

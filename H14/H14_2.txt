@@ -1,0 +1,63 @@
+<!-- HIER BEGINT PAGINA INHOUD -->
+
+<!--IA H14.1
+<p>2: Globale variabelen declareren in Python</p>
+
+<h1 id="H133">H13.3 - Globale variabelen</h1>
+
+<h2>Globale variabelen declareren</h2>
+-->
+<p><iframe width="640" height="360" src="https://www.youtube.com/embed/i_KCjUtqeqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></p>
+
+
+<p><i>Globale variabelen</i> zijn waarden die je door je hele programma heen kunt gebruiken, maar die meestal niet veranderen. Andere variabelen zijn <i>lokale variabelen</i>. Die kun je alleen gebruiken binnen de functie waarin je ze maakt en gebruikt.</p>
+
+
+<p>Het is een goede gewoonte om alleen constanten ("variabelen" die tijdens je programma niet kunnen veranderen) te gebruiken als globale variabelen. Voorbeelden van constante globale variabelen zijn
+    <code>PI=3.14</code> of <code>BTW=21</code>. Die veranderen niet (zomaar). Verandert de waarde van een globale variabele toch een keer wel, dan hoef je in je code dat maar op één plek aan te passen.
+</p>
+
+<p>Je declareert een globale variabele bovenaan in je code. Je kan dan vanuit elke functie bij de waarde.</p>
+
+
+
+<p class="opdracht" id="opgave1331">Opdracht 14.2 Prijs inclusief btw</p>
+<p>Hieronder staat een programma dat de prijs van een product berekent inclusief 19% btw. Op Prinsjesdag wordt het btw-tarief verhoogd naar 21%. Pas de globale variabele in het onderstaande programma op één plek aan zodat het btw-tarief juist is.</p>
+<!-- GIVEN
+
+### GLOBALE VARIABELEN
+BTW = 0.19 # 19% BTW
+
+### FUNCTIE DEFINITIES
+def berekenPrijsInclBTW(prijs_zonder_BTW):
+	prijs_incl_BTW = prijs_zonder_BTW * (1+BTW) #vermenigvuligen met 1,21
+	afgeronde_prijs_incl_BTW = round(prijs_incl_BTW,2)
+	return afgeronde_prijs_incl_BTW
+
+### HOOFDPROGRAMMA
+prijs_verf_exclBTW = 19.90
+prijs = berekenPrijsInclBTW(prijs_verf_exclBTW)
+print("Prijs inclusief BTW is:", prijs)
+
+-->
+
+
+<!-- ANSWER
+### GLOBALE VARIABELEN
+BTW = 0.21 # 21% BTW
+
+### FUNCTIE DEFINITIES
+def berekenPrijsInclBTW(prijs_zonder_BTW):
+	prijs_incl_BTW = prijs_zonder_BTW * (1+BTW) #vermenigvuligen met 1,21
+	afgeronde_prijs_incl_BTW = round(prijs_incl_BTW,2)
+	return afgeronde_prijs_incl_BTW
+
+### HOOFDPROGRAMMA
+prijs_verf_exclBTW = 19.90
+prijs = berekenPrijsInclBTW(prijs_verf_exclBTW)
+print("Prijs inclusief BTW is:", prijs)
+
+-->
+<p><iframe width="100%" height="800px" src="https://replit.com/team/InformaticaActief/142-Glob-BTW"></iframe></p>
+
+Klik <a href="https://course.cs.ru.nl/pythonVO/Teams/IA_uitwerkingen/IA_H14_oplossingen.html#opgave142" target="_blank">hier</a> voor een voorbeelduitwerking.

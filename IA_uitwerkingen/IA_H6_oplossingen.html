@@ -14,7 +14,7 @@
 <div class="content">
 <h1 id="H6oplossingen">H6 - Functies (deel 2): UITWERKINGEN</h1>
 
-<p class="opdracht" id="Opgave611">Opdracht 6.1 Onderdelen van een functie benoemen</p>
+<h3 id="Opgave611">Opdracht 6.1 Onderdelen van een functie benoemen</h3>
 <ol>
 <li>naam van de functie: berekenOppervlakte
 <li>code die bij de functie hoort: regels 2 en 3
@@ -25,12 +25,12 @@
 </ol>
 
 
-<p class="opdracht" id="Opgave612">Opdracht 6.2 Bereik van variabelen</p>
+<h3 id="Opgave612">Opdracht 6.2 Bereik van variabelen</h3>
 
 De variabele <code>kleur</code> wordt op regel 3 gedefinieerd, binnen de functie. De functie eindigt na regel 4. Dat zie je omdat daarna niet meer is ingesprongen. Na regel 4 bestaat de variabele <code>kleur</code> dan ook niet meer. Op regel 7 proberen we die af te drukken, maar omdat die daar buiten de functie is, bestaat die daar niet meer en kan die niet afgedrukt worden.
 
 
-<p class="opdracht" id="Opgave621">Opdracht 6.3 Dobbelen</p>
+<h3 id="Opgave621">Opdracht 6.3 Dobbelen</h3>
 <pre class="python">
 import random
 
@@ -46,7 +46,7 @@ tweedeDobbelworp = gooiDobbelsteen()
 print("Je hebt gegooid", eersteDobbelworp, "en", tweedeDobbelworp )
 </pre>
 
-<p class="opdracht" id="opgave631">Opdracht 6.4 Een berekening retourneren</p>
+<h3 id="opgave631">Opdracht 6.4 Een berekening retourneren</h3>
 <ol>
 <li>Het programma berekent de nieuwe prijs van een artikel, gegeven de oude prijs en het kortingspercentage.
 <li><code>berekenKorting</code>. Zie de code hieronder.
@@ -64,7 +64,7 @@ prijs_met_korting = berekenKorting(20.00, 30)
 print("Met korting kost het product nu " + str(prijs_met_korting) + " euro" )
 </pre>
 
-<p class="opdracht" id="opgave632">Opdracht 6.5 Fietsen en wielen</p>
+<h3 id="opgave632">Opdracht 6.5 Fietsen en wielen</h3>
 <pre class="python">
 ### FUNCTIEDEFINITIE
 def telAantalWielen( aantal_fietsen ):
@@ -76,7 +76,7 @@ berekend_aantal_wielen = telAantalWielen( 10 ) # roep functie aan
 print("Met zoveel fietsen heb je", berekend_aantal_wielen, "wielen." )
 </pre>
 
-<p class="opdracht" id="opgave633">Opdracht 6.6 Toetscijfer berekenen</p>
+<h3 id="opgave633">Opdracht 6.6 Toetscijfer berekenen</h3>
 <pre class="python">
 ### FUNCTIEDEFINITIE
 def berekenCijfer(aantal_punten):
@@ -88,7 +88,7 @@ behaalde_cijfer = berekenCijfer( 40 )
 print(behaalde_cijfer)
 </pre>
 
-<p class="opdracht" id="opgave634">Opdracht 6.7 Volume van een balk</p>
+<h3 id="opgave634">Opdracht 6.7 Volume van een balk</h3>
 <pre class="python">
 ### FUNCTIEDEFINITIE
 #deze functie levert het volume van een balk op
@@ -105,7 +105,7 @@ volume = berekenVolumeBalk(lengte,breedte,hoogte)
 print("Het volume van de balk is: ", volume)
 </pre>
 
-<p class="opdracht" id="Opgave641">Opdracht 6.8 Constanten</p>
+<h3 id="Opgave641">Opdracht 6.8 Constanten</h3>
 <ul>
 <li>Constanten zijn bijvoorbeeld jullie namen en het kopje "keren gewonnen". Die veranderen niet gedurende het spel.
 <li>Variabelen zijn bijvoorbeeld de huidige score, die verandert gedurende het spel.
@@ -113,7 +113,7 @@ print("Het volume van de balk is: ", volume)
 
 <h1 id="H6AfOpgavenUitwerkingen">H6 - Afsluitende opdrachten: UITWERKINGEN</h1>
 
-<p class="opdracht" id="AfOpgave61">Afsluitende opdracht 6.1 Vind de fout</p>
+<h3 id="AfOpgave61">Afsluitende opdracht 6.1 Vind de fout</h3>
 <ol>
 <li>De fout in de code betreft het ontbreken van een returnwaarde in de functie.</li>
 <li>De variabele <code>berekendeOppervlakte</code> krijgt geen waarde vanwege de reden die bij de vorige onderdeel genoemd is. Daarom wordt <code>None</code> afgedrukt.</li>
@@ -131,7 +131,7 @@ berekende_oppervlakte = oppervlakte_van_driehoek( 5, 4 )
 print( "De berekende oppervlakte is:", berekende_oppervlakte )
 </pre>
 
-<p class="opdracht" id="AfOpgave62">Afsluitende opdracht 6.2 Munt opgooien</p>
+<h3 id="AfOpgave62">Afsluitende opdracht 6.2 Munt opgooien</h3>
 <pre class="python">
 import random
 
@@ -148,7 +148,7 @@ opgegooid = gooiMunt()
 print( "Er is gegooid:", opgegooid )
 </pre>
 
-<p class="opdracht" id="AfOpgave63">Afsluitende opdracht 6.3 Geldig emailadres</p>
+<h3 id="AfOpgave63">Afsluitende opdracht 6.3 Geldig emailadres</h3>
 <pre class="python">
 ### FUNCTIEDEFINITIES	
 def vraagInvoer():
@@ -181,7 +181,7 @@ else:
     print("Jammer")
 </pre>	
 	
-<p class="opdracht" id="AfOpgave64">Afsluitende opdracht 6.4 Deelbaar door 7</p>
+<h3 id="AfOpgave64">Afsluitende opdracht 6.4 Deelbaar door 7</h3>
 <pre class="python">
 ### FUNCTIEDEFINITIE
 # Doel van de functie is om te bepalen of een gegeven getal deelbaar is door 7. Werkt ook voor kommagetallen, 0 en negatieve getallen
@@ -210,7 +210,7 @@ antwoord = isDeelbaarDoor7(-7.0)
 print(antwoord)
 </pre>
 
-<p class="opdracht" id="AfOpgave65">Afsluitende opdracht 6.5 BMI</p>
+<h3 id="AfOpgave65">Afsluitende opdracht 6.5 BMI</h3>
 <pre class="python">
 ### FUNCTIEDEFINITIES
 #schrijf hier je def voor BMI berekenen

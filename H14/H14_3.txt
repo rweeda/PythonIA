@@ -1,0 +1,99 @@
+<!-- HIER BEGINT PAGINA INHOUD -->
+
+<!--IA H14.1
+<p>3: Globale variabelen aanpassen in Python</p>
+
+<h1 id="H133">H13.3 - Globale variabelen</h1>
+
+<h2>Globale variabelen declareren</h2>
+
+<h2>Globale variabelen aanpassen</h2>
+-->
+<p>Het is geen goede gewoonte om een globale variabele aan te passen. Daardoor heeft een functie namelijk bijeffecten, wat het moeilijker maakt om over je code te redeneren en dus ook om fouten op te sporen.</p>
+<!--<b>Pas zo min mogelijk globale variabelen in je code aan</b>.-->
+
+<p>Kan je er niet omheen en gebruik je een globale variabele die je in je programma wilt
+    aanpassen, dan geef je binnen de functie met <code>global</code> aan welke globale variabele jevwilt gebruiken. Daarna kan je de waarde aanpassen. Zie het voorbeeld hieronder:</p>
+
+<!-- GIVEN
+
+score = 10
+
+def scoreAanpassen():
+        global score
+	score = 8
+	print("Waarde score binnen functie:", score)
+
+
+scoreAanpassen()
+print("Waarde score na functie:", score)
+
+-->
+
+
+<p><iframe height="400px" width="100%" src="https://repl.it/@smer/H13v1?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+
+
+<p class="opdracht" id="opgave1332">Opdracht 14.3 Cijfer voor Engels opleuken</p>
+<p>Je cijfer voor de toets Engels was nogal bedroevend. Je schrijft een functie om je cijfer op te leuken, maar die doet het niet. Verbeter de fout zodat je toch nog een 9,8 haalt.</p>
+
+<!-- GIVEN
+### GLOBALE VARIABELEN
+cijfer_engels = 3.4
+
+### FUNCTIEDEFINITIES
+def cijferVerbeteren():
+	cijfer_engels = 9.8
+	print("Cijfer binnen functie:", cijfer_engels)
+
+### HOOFDPROGRAMMA
+cijferVerbeteren()
+print("Cijfer na functie:", cijfer_engels)
+-->
+
+<!-- ANSWER
+### GLOBALE VARIABELEN
+cijfer_engels = 3.4
+
+### FUNCTIEDEFINITIES
+def cijferVerbeteren():
+        global cijfer_engels
+	cijfer_engels = 9.8
+	print("Cijfer binnen functie:", cijfer_engels)
+
+### HOOFDPROGRAMMA
+cijferVerbeteren()
+print("Cijfer na functie:", cijfer_engels)
+-->
+<p><iframe width="100%" height="800px" src="https://replit.com/team/InformaticaActief/143-Global"></iframe></p>
+
+Klik <a href="https://course.cs.ru.nl/pythonVO/Teams/IA_uitwerkingen/IA_H14_oplossingen.html#opgave142" target="_blank">hier</a> voor een voorbeelduitwerking.
+
+
+
+
+<!-- 8.3.2 Globale variabelen Ik liet hierboven zien dat variabelen die buiten een functie zijn gecreëerd zichtbaar zijn
+in een functie zolang er maar niet een variabele met dezelfde naam in de functie wordt gecreëerd. Variabelen van
+het hoofdprogramma, die zichtbaar zijn in alle functies, worden wel “globale” variabelen genoemd, als tegenhanger
+van “lokale” variabelen die alleen binnen een functie zichtbaar zijn. Het is een goede gewoonte om functies
+onafhankelijk te maken van het hoofdprogramma, dat wil zeggen, ze geen gebruik te laten maken van globale
+variabelen. Als je waardes van buiten een functie beschikbaar wilt maken voor de functie, kun je dat doen middels
+parameters. Een uitzondering kan gemaakt worden voor globale variabelen die als constanten voor een programma
+gebruikt worden (zie hoofdstuk 4). Als je een functie aan een constante laat refereren, zorg er dan wel voor dat het
+duidelijk is voor eenieder die de functie bekijkt dat het inderdaad een constante is, dus dat de naam van de
+variabele volledig uit hoofdletters bestaat. Je vraagt je misschien af of het mogelijk is de waarde van globale
+variabelen te wijzigen in een functie. Dat is mogelijk, maar dan moet je in de functie expliciet duidelijk maken dat je
+wilt dat een wijziging van een variabele effect moet hebben op een globale variabele. Daarvoor is het gereserveerde
+woord global bedoeld. Het statement global <variabele> geeft aan dat de variabele die je noemt een variabele is die
+in het hoofdprogramma met de opgegeven naam gedefinieerd is. Bijvoorbeeld:
+fruit = "appel" def wijzigFruit(): global
+fruit fruit = "banaan" print( fruit ) wijzigFruit() print( fruit ) 8.4. Grip krijgen op complexiteit 111 Hoewel het mogelijk
+is de waarde van globale variabelen in functies te wijzigen, raad ik deze constructie ten zeerste af aangezien het de
+functie afhankelijk maakt van het hoofdprogramma (en dus is het niet langer een “pure” functie). In essentie maak je
+op deze manier een functie met neveneffecten, en (nu allen in koor:) een functie mag geen neveneffecten hebben.
+Het is nimmer nodig dat een functie globale variabelen gebruikt. Als je wilt dat een functie globale variabelen wijzigt,
+laat de functie dan de nieuwe waarde voor de globale variabele retourneren, zodat die aan de globale variabele kan
+worden toegekend in het hoofdprogramma. Het hoofdprogramma mag dan beslissen of het een variabele die van het
+hoofdprogramma zelf is overschrijft. De enige reden dat ik het gereserveerde woord global hier noem is dat ik soms
+zie dat studenten er hun toevlucht toe nemen als ze onvoldoende begrip hebben van wat return doet. Het
+ontkennen van het bestaan van global is geen effectieve aanpak, ik -->

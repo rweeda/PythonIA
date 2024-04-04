@@ -1,0 +1,15 @@
+<h4>Hoofdstuk 14 - Python-specifieke mogelijkheden</h4>
+
+<p>In dit hoofdstuk bespreken we paar dingen die specifiek voor Python zijn. Omdat we maar een deel van
+    Python behandelen (geen objectoriëntatie) kunnen deze onderwerpen handig zijn als je een PO of groter project gaat maken.</p>
+
+
+
+
+<p><span style="font-size: 1rem;">In dit onderwerp:</span></p>
+<ul>
+    <li>leer je met een functie meerdere waarden retourneren;</li>
+    <li>leer je globale variabelen te gebruiken en aan te passen.</li>
+</ul>
+
+<div class="fa fa-clock-o fa-3x"></div><br> <b>0,5 uur</b>
