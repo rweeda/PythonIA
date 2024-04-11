@@ -1,3 +1,6 @@
+Nieuwe Python cursus: 
+https://moodle.informatica-actief.nl/course/view.php?id=1107 
+
 TODO:
 -python installerne
 
@@ -39,8 +42,7 @@ Handleiding:
 - IA: footer met dat het van InfActief is
 - IA: handleiding docent: leerlingen kunnen hun werk opslaan en ook weer inlezen, docent kan een opdracht aanmaken om leerlingen te laten inleveren
 
-Nieuwe Python cursus: 
-https://moodle.informatica-actief.nl/course/view.php?id=1107 
+
 
 IMAGES:
 https://course.cs.ru.nl/pythonVO/Jupyter/img/
