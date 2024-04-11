@@ -1,0 +1,123 @@
+TODO:
+-python installerne
+
+- hoe je van Markdown terug naar tekst/code gaat (evt sneltoets?)
+- H2.1 input: invoerbalk komt bovenaan te staan
+- H1 uitwerkingen IA updaten op server
+- check tremas en accenten op bsasthon
+- instructie POS en source control
+- docentenhandleiding
+- check chap 11 met bestanden ook zo werkt in VSC/Juypter - uitleg daarop aanpassen
+- PO's in VSC incl versiebeheer uitleg
+- check tijdsklokje
+
+
+H11.4: COde nodig voor openen??
+import os
+os.path.exists()
+
+Openen om te schrijven - FOUT?
+Schrijven met write() - FOUT?
+
+H11 uitwerkingen. Incl screenshots, zoals door Albert voorgesteld
+
+NOG TE DOEN VOOR MC
+
+-https://course.cs.ru.nl/pythonVO/Teams/PO_Galgje/POGalgje_index.html (Inclusief andere subpaginas)
+- aanpassen programmeeromgeving galgje
+https://course.cs.ru.nl/pythonVO/Teams/PO_Zeeslag/POZeeslag_index.html
+(Inclusief andere subpaginas)
+- aanpassen programmeeromgeving zeeslag
+
+Handleiding:
+- MC: VSC en github links for Python 1 cursus
+- MC: vSC en versiebeheer for POs
+- IA: VSC for POs en H11
+- IA: versiebeheer voor POs
+- IA: docs in cursus materiaal, en in docentenkamer. Daarnaast docentenhandleiding aanpassen conform VSC en versiebeheer (zowel voor POs als H11)
+- IA: hoofdstuk -> onderwerp (o.a. titel)
+- IA: footer met dat het van InfActief is
+- IA: handleiding docent: leerlingen kunnen hun werk opslaan en ook weer inlezen, docent kan een opdracht aanmaken om leerlingen te laten inleveren
+
+Nieuwe Python cursus: 
+https://moodle.informatica-actief.nl/course/view.php?id=1107 
+
+IMAGES:
+https://course.cs.ru.nl/pythonVO/Jupyter/img/
+
+HEADERS:
+## 3: Getallen afdrukken
+### Opdracht
+
+FILMPJES IN INF-ACTIEF BASTHON:
+[![Watch the video](https://img.youtube.com/vi/IWvkVL3UtVM/hqdefault.jpg)](https://www.youtube.com/embed/IWvkVL3UtVM)
+
+
+IMAGES:
+<p><img src="https://course.cs.ru.nl/pythonVO/Jupyter/img/H1_datatypes.png" alt="Datatypes in python" width="722" height="114" class="img-responsive atto_image_button_text-bottom"></p>
+
+
+IMAGES NAAST ELKAAR:
+<div style="display:flex">
+<img src="http://course.cs.ru.nl/pythonVO/img/Python611_Stroomdiagram_Hoofdprogramma_dobbelen.jpg" width=30% alt="Stroomdiagram voor hoofdprogramma van <code>dobbelen</code>">
+<img src="http://course.cs.ru.nl/pythonVO/img/Python611_Stroomdiagram_gooiDobbelsteen.jpg" alt="Stroomdiagram voor functie gooiDobbelsteen()" width=70%>
+----------------------
+LINK:
+https://basthon.informatica-actief.nl/?from=https://raw.githubusercontent.com/rweeda/PythonIA/main/H13/H13_IA_1.ipynb
+
+https://basthon.informatica-actief.nl/?from=https://raw.githubusercontent.com/rweeda/PythonIA/main/H1/H1_IA_1.ipynb
+
+
+http://basthon.informatica-actief.nl/?from=https://raw.githubusercontent.com/rweeda/PythonIA/main/H6/H6_IA_afsluit.ipynb
+
+
+===== OUD VAN EELCO ====
+VAN GITHUB NAAR MOODLE: 
+Repository moet in Github op public staan
+
+In Github: RAW drukken en dan de link gebruiken
+
+https://basthon.continuethestory.eu/?from=https://raw.githubusercontent.com/rweeda/PythonIA/main/H2.ipynb
+
+
+
+Appearance: embed
+
+
+Test notebook RAW:\
+https://raw.githubusercontent.com/rweeda/PythonIA/main/Renske_Python_test.ipynb
+
+-----------------------------
+
+VIDEOS
+
+<p> [![Watch the video](https://img.youtube.com/vi/IWvkVL3UtVM/hqdefault.jpg)](https://www.youtube.com/embed/IWvkVL3UtVM)</p>
+
+-------------------------------
+
+https://jupyter.infvo.nl/books/notebook/?from=share/Renske_Python_test.ipynb
+
+
+
+Handleiding van Eelco voor databases:
+https://eelcodijkstra.github.io/db-basthon/intro.html
+
+
+MARKDOWN GUIDE:
+https://about.gitlab.com/handbook/markdown-guide/
+
+Integreren als activity in MOODLE:
+https://moodle.org/plugins/mod_jupyternotebook/2023011800/28482
+
+
+Stap voor stap door code te lopen:
+https://notebook.basthon.fr/?from=examples/python3-pythontutor.ipynb
+
+from tutor import tutor
+tutor()
+
+
+
+https://jupyter.infvo.nl/books/notebook/?kernel=sql&from=sql/opdrachten1.ipynb&module=sql/hr.db&extensions=admonition
+kernel
+from is notebook
