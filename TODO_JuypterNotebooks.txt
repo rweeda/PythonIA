@@ -13,6 +13,8 @@ TODO:
 - check chap 11 met bestanden ook zo werkt in VSC/Juypter - uitleg daarop aanpassen
 - PO's in VSC incl versiebeheer uitleg
 - check tijdsklokje
+- Albert stroop toetsen en POs
+- Albert stroop voorstel afsluitende opgaven
 
 
 H11.4: COde nodig voor openen??
