@@ -63,6 +63,9 @@ IMAGES NAAST ELKAAR:
 <div style="display:flex">
 <img src="http://course.cs.ru.nl/pythonVO/img/Python611_Stroomdiagram_Hoofdprogramma_dobbelen.jpg" width=30% alt="Stroomdiagram voor hoofdprogramma van <code>dobbelen</code>">
 <img src="http://course.cs.ru.nl/pythonVO/img/Python611_Stroomdiagram_gooiDobbelsteen.jpg" alt="Stroomdiagram voor functie gooiDobbelsteen()" width=70%>
+</div>
+
+H9_0.png
 ----------------------
 LINK:
 https://basthon.informatica-actief.nl/?from=https://raw.githubusercontent.com/rweeda/PythonIA/main/H13/H13_IA_1.ipynb
