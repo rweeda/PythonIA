@@ -70,6 +70,10 @@ IMAGES NAAST ELKAAR:
 H9_0.png
 ----------------------
 LINK:
+https://basthon.informatica-actief.nl/?from=https://raw.githubusercontent.com/rweeda/PythonIA/main/H7/H7_IA_2.ipynb
+
+https://basthon.informatica-actief.nl/?from=https://raw.githubusercontent.com/rweeda/PythonIA/main/H8/H8_IA_1.ipynb
+
 https://basthon.informatica-actief.nl/?from=https://raw.githubusercontent.com/rweeda/PythonIA/main/H9/H9_IA_1.ipynb
 
 
