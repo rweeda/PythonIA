@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Python - Informatica Actief</title>
+    <!--css import-->
+    <link rel="stylesheet" href="../style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="content">
+<h1 id="H10oplossingen">H10 - Lijsten Doorlopen:  Uitwerkingen</h1>
+
+<hr>
+
+
+
+<h3 id="opgave1011">Opdracht 10.1 Weekend!</h3>
+<pre class="python">
+dagenlijst = ["ma", "di", "wo", "do", "vr", "za", "zo"]
+
+for dag in dagenlijst:
+	if( dag == "za" or dag == "zo"):
+		print("Vandaag is het", dag, "dus het is weekend!")
+</pre>
+
+<h3 id="opgave1012">Opdracht 10.2 Let op voor de onvoldoendes</h3>
+<pre class="python">
+cijferlijst = [8.2, 6.2, 5.0, 4.9, 7.1]
+
+for cijfer in cijferlijst:
+	if cijfer <= 5.0:
+		print("Let op: een", cijfer, "is onvoldoende!")
+</pre>	
+
+
+<h3 id="opgave1021">Opdracht 10.3 Weg met de onvoldoendes</h3>
+<pre class="python">
+### FUNCTIEDEFINITIE
+def geefLijstZonderOnvoldoende( lijst_met_onvoldoendes ):
+	lijst_zonder_onvoldoendes = []
+
+	for cijfer in lijst_met_onvoldoendes:
+		if cijfer > 5.0:
+			lijst_zonder_onvoldoendes.append( cijfer )
+	
+	return lijst_zonder_onvoldoendes
+
+### HOOFDPROGRAMMA
+cijferlijst = [8.2, 6.2, 5.0, 4.9, 7.1]
+nieuwelijst = geefLijstZonderOnvoldoende( cijferlijst )
+print( nieuwelijst )
+</pre>
+
+<h3 id="opgave1022">Opdracht 10.4 Alleen vorstdagen</h3>
+
+<pre class="python">
+### FUNCTIEDEFINITIE
+def geefLijstVorstdagen( temperatuurlijst ):
+	vorstdagenlijst = []
+
+	for temperatuur in temperatuurlijst:
+		if temperatuur < 0:
+			vorstdagenlijst.append( temperatuur )
+	
+	return vorstdagenlijst
+
+### HOOFDPROGRAMMA
+temperatuurlijst = [ -2.2, 3.1, 0.0, -0.4, 0.2]
+vorstdagenlijst = geefLijstVorstdagen( temperatuurlijst )
+print( vorstdagenlijst )
+</pre>
+
+
+
+<h3 id="opgave1031"><span style="color:red">Opdracht 10.5 Vijf-sterrenhotels tellen</h3>
+<pre class="python">
+hotellijst = [ "**", "*", "***", "***", "**", "*****", "****", "*****", "**", "****", "*****"]
+
+vijfsterren_teller = 0
+for hotel in hotellijst:
+	if hotel == "*****":
+		vijfsterren_teller += 1
+
+print(vijfsterren_teller)
+</pre>
+
+
+
+<h3 id="opgave1041">Opdracht 10.6 Check op onvoldoendes in cijferlijst</h3>
+<pre class="python">
+#de volgende functie geeft True als minstens 1 onvoldoende (cijfer<=5) voorkomt
+def bevatOnvoldoendes(cijferlijst):
+	onvoldoende_gevonden = False
+	for cijfer in cijferlijst:
+		if cijfer <=5.0:
+			onvoldoende_gevonden = True
+			
+	return onvoldoende_gevonden
+	
+	
+###HOOFDPROGRAMMA
+
+cijferLijst = [8.2, 7.4, 6.1, 9.0, 4.9, 8.0]
+#cijferLijst = [8.2, 7.4, 6.1, 9.0, 5.1, 8.0]
+	
+onvoldoende = bevatOnvoldoendes ( cijferLijst )
+print (onvoldoende) #print resultaat
+</pre>
+
+
+
+<h3 id="opgave1051">Opdracht 10.7 De meeste likes</h3>
+<pre class="python">
+likes_lijst = [102, 110, 502, 234, 340, 20]
+
+meeste = likes_lijst[0]
+for aantal in likes_lijst:
+	if aantal > meeste:
+		meeste = aantal
+
+print("Meeste likes is:", meeste)
+</pre>
+
+
+<h3 id="opgave1061">Opdracht 10.8 Totale regenval</h3>
+<pre class="python">
+regenlijst = [ 8, 10, 15, 20, 18, 15, 13, 14, 16, 34, 12, 10, 0, 0, 0, 1, 2, 0, 4, 8, 0, 0, 1, 2, 1, 10, 8, 1 ]
+
+totaal = 0                                      #totaal begint op 0
+for regenmeting in regenlijst:
+	totaal += regenmeting              #tel huidige meting op bij de totaal tot nu toe
+	
+print("Er is " + str(totaal) + " mm regen gevallen.")
+</pre>
+
+<h1 id="H10AfOpgaven">H10 - Afsluitende Opdrachten: UITWERKINGEN</h1>
+
+
+<h3 id="AfOpgave101">Afsluitende Opdracht 10.1 Aantal voldoendes</h3>
+
+<pre class="python">
+### FUNCTIEDEFINITIE
+def telVoldoendes( cijferlijst ):
+	aantal_voldoendes = 0
+	for cijfer in cijferlijst:
+		if cijfer > 5.0:
+			aantal_voldoendes += 1
+	return aantal_voldoendes
+
+### HOOFDPROGRAMMA
+cijferlijst =  [8.2, 7.4, 6.1, 9.0, 4.9, 8.0]
+aantal_voldoendes = telVoldoendes( cijferlijst )
+print("Het aantal voldoendes is:", aantal_voldoendes )
+</pre>
+
+
+
+<h3 id="AfOpgave102">Afsluitende Opdracht 10.2 Stemmingen</h3>
+<pre class="python">
+### FUNCTIE DEFINITIES
+
+#zet de stemming van 5 vrienden in een lijst
+def vraagStemmingZetInLijst():
+	lijst = [] #maak een lege lijst aan om stemmingen in bij te houden
+	for vrienden in range(5):
+		print("Geef met een emoticon aan hoe je je voelt:")
+		invoer = input()
+		lijst.append( invoer ) #voeg invoer toe aan lijst
+	return lijst
+
+#doorloop de lijst en tel aantal smileys
+def telSmileys(lijst):
+	smiley_teller = 0
+	for emoticoon in emoticoonLijst:
+		if emoticoon == ":)":
+			smiley_teller += 1
+	return smiley_teller
+
+### HOOFPROGRAMMA
+emoticoonLijst = vraagStemmingZetInLijst()
+print( "emoticoonLijst:", emoticoonLijst )
+smiley_teller = telSmileys( emoticoonLijst )
+print( "En het aantal smileys is:", smiley_teller)
+</pre>
+
+
+<h3 id="AfOpgave103">Afsluitende Opdracht 10.3 Cijferlijst opleuken</h3>
+
+<pre class="python">
+cijferLijst = [9.8, 5.5, 2.3, 4.6, 6.1, 5.6, 9.8]
+nieuw_cijferLijst = []
+
+for cijfer in cijferLijst:
+	cijfer += 0.5
+	if cijfer >= 10: #geen cijfer boven de 10 toestaan
+		cijfer = 10
+	nieuw_cijferLijst.append(cijfer)
+	
+	
+print( nieuw_cijferLijst )
+</pre>
+
+
+<h3 id="AfOpgave104">Afsluitende Opdracht 10.4 Meeste regen</h3>
+<pre class="python">
+regenlijst = [ 0, 10, 15, 20, 18, 15, 13, 14, 16, 34, 12, 34, 0, 0, 0, 1, 2, 0, 4, 8, 0, 0, 1, 2, 1, 10, 8, 1 ]
+
+meeste_regenval = regenlijst[0]
+for meting in regenlijst:
+	if meting > meeste_regenval:
+		meeste_regenval = meting
+print("Meeste regenval was:", meeste_regenval)
+
+datum = 1
+for meting  in regenlijst:
+	if meting == meeste_regenval:
+		print("Dat is gevallen op", datum, "Februari.")
+	datum += 1
+</pre>
+
+
+<h3 id="AfOpgave105">Afsluitende Opdracht 10.5 Loonstrookje</h3>
+<pre class="python">
+loonlijst = [24.00, 28.50, 45.80, 45.80, 23.10, 32.15]
+
+som = 0
+for loon in loonlijst:
+	som += loon
+
+print("totale loon:", som)
+</pre>
+
+
+<h3 id="AfOpgave106">Afsluitende Opdracht 10.6 Foutieve metingen</h3>
+<pre class="python">
+
+storingenlijst = [ 0, 3, -1, 4, 3, 2, -1 ]
+
+lijst_zonder_neg = []	#lege lijst
+
+for storing in storingenlijst:
+	if( storing >= 0 ):
+		lijst_zonder_neg.append( storing )	#voeg dag toe aan storingenlijst
+
+print("lijst_zonder_neg: ", lijst_zonder_neg)
+
+</pre>
+
+
+<h3 id="AfOpgave107">Afsluitende Opdracht 10.7 Gemiddelde bepalen</h3>
+<pre class="python">
+### FUNCTIEDEFINITIES
+def bepaalGemiddelde( getallenlijst ):
+	#bepaal de som van alle getallen
+	som = 0
+	for getal in getallenlijst:
+		som += getal
+	print("som is:", som)
+
+	aantal = len(getallenlijst)
+	print("aantal is", aantal)
+
+	gemiddelde = som / aantal
+	return gemiddelde
+
+### HOOFDPROGRAMMA
+getallenlijst = [4,5,6,3,5,6]
+
+if len(getallenlijst) == 0: #lijst is leeg, kan geen gemiddelde berekenen
+	print("Fout, geen gegevens.")
+else:
+	gemiddelde = bepaalGemiddelde( getallenlijst )
+	print("Het gemiddelde is:", gemiddelde)
+</pre>
+
+
+<br>
+<br>
+</div>
+</body>
+</html>

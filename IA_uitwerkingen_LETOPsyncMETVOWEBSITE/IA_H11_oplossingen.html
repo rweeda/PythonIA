@@ -12,11 +12,27 @@
 </head>
 <body>
 <div class="content">
-<h1 id="H11oplossingen">Hoofdstuk 11 Tekstbestanden: Uitwerkingen</h1>
+<h1 id="H11oplossingen">Hoofdstuk 14 Tekstbestanden: Uitwerkingen</h1>
 
 <hr>
-<h3 id="opgave1111">Opgave 11.1 - Foutmelding herkennen</h3>
+<h3 id="opgave1111">Opdracht 14.1 - Foutmelding herkennen</h3>
 Geen uitwerking beschikbaar.
+<ol>
+<li>Door de code te runnen zie je dat er in "groet.txt" het volgende staat:<br>
+<i>Hallo!</i><br>
+<i>Hoe gaat het?</i></li>
+<li>Links zie je de map met bestanden staan, waaronder dit Jupyter bestand met de code.
+<li>Door het bestand "groet.txt" te openen zie je dat daarin het volgende staat:<br>
+<i>Hallo!</i><br>
+<i>Hoe gaat het?</i></li>
+<li>
+<li>Je krijgt een foutmelding met bovenaan het volgende:<br>
+FileNotFoundError
+<br>
+De foutmelding geeft aan dat het bestand niet bestaat.</li>
+<li>In "afscheid.txt" staat het volgende:<br>
+<i>Nou, is het alweer tijd om gedag te zeggen?</i></li>
+</ol>
 <!--
 <ol>
 <li>Druk op ‘Open on Replit’. Klik vervolgens op "Open on Replit". Klik vervolgens op dan op  . Wacht enkele seconden tot je project geüpdatet is. Nu kun je op ‘Run’ klikken om te lezen wat er in het bestand “groet.txt’ staat.
@@ -27,7 +43,7 @@ c.	Klik op "groet.txt" om de inhoud van dat bestand zien.
 -->
 
 
-<h3 id="opgave1112">Opgave 11.2 - Inhoud afdrukken</h3>
+<h3 id="opgave1112">Opdracht 14.2 - Inhoud afdrukken</h3>
 
 <pre class="python">
 bestand = open("dikkertjeDap.txt", "r")						#open bestand
@@ -41,7 +57,7 @@ bestand.close()															#sluit bestand
 </pre>
 
 
-<h3 id="opgave1113">Opgave 11.3 - Letters tellen</h3>
+<h3 id="opgave1113">Opdracht 14.3 - Letters tellen</h3>
 
 <pre class="python">
 bestand = open("dikkertjeDap.txt", "r")  #open bestand om te lezen	
@@ -60,17 +76,17 @@ of
 bestand = open("dikkertjeDap.txt", "r")  #open bestand om te lezen	
 tekst = bestand.read()	    #sla inhoud van bestand op in variabele
 
-undercast = tekst.count("a")
-uppercast = tekst.count("A")
+aantal_a = tekst.count("a")
+aantal_A = tekst.count("A")
 
 bestand.close()		            #sluit bestand
 
-print ("In de tekst staan", undercast, "a's en", uppercast, "A's.")
+print ("In de tekst staan", aantal_a, "a's en", aantal_A, "A's.")
 print(inhoud)
 </pre>
 
 
-<h3 id="opgave1121">Opgave 11.4 - In bestand schrijven</h3>
+<h3 id="opgave1121">Opdracht 14.4 - In bestand schrijven</h3>
 <pre class="python">
 tekst = input("Geef een regel tekst om in het bestand te zetten: ")
 
@@ -84,7 +100,7 @@ print("Dit staat er nu in het bestand: ", tekst_in_bestand)
 bestand2.close()
 </pre>
 
-<h3 id="opgave1122">Opgave 11.5 - Bestanden kopi&euml;ren</h3>
+<h3 id="opgave1122">Opdracht 14.5 - Bestanden kopi&euml;ren</h3>
 <pre class="python">
 leesbestand = open("kuikentjePiep.txt", "r")          #open bestand om te lezen	
 tekst = leesbestand.read()	            #sla inhoud van bestand op in een string variabele
@@ -95,7 +111,7 @@ schrijfbestand.write(tekst)                  #schrijf tekst in bestand
 schrijfbestand.close() 	                    #sluit bestand
 </pre>
 
-<h3 id="opgave1123">Opgave 11.6 - Van lijst naar bestand</h3>
+<h3 id="opgave1123">Opdracht 14.6 - Van lijst naar bestand</h3>
 <pre class="python">
 lijst= ["rood\n","wit\n", "blauw"]
 
@@ -106,12 +122,12 @@ bestand.close()
 </pre>
 
 
-<h3 id="opgave1124">Opgave 11.7 - Toevoegen aan een bestand</h3>
+<h3 id="opgave1124">Opdracht 14.7 - Toevoegen aan een bestand</h3>
 Met "a" plak je steeds tekst achteraan bestaande tekst in een bestand. Je overschrijft dus niets.<br>
 
 Met “w” wordt alle oude tekst overschreven.
 
-<h3 id="opgave1131">Opgave 11.8 - Van bestand naar scherm</h3>
+<h3 id="opgave1131">Opdracht 14.8 - Van bestand naar scherm</h3>
 <pre class="python">
 bestand = open("emailadressen.csv", "r")
 
@@ -136,8 +152,11 @@ for persoonsgegevens in bestand_als_lijst:
 
 bestand.close()
 </pre>
+<hr>
 
-<h3 id="AfOpgave111">Afsluitende opgave 11.1 Vat samen</h3>
+<h1 id="11AfOpgaven">H14: Afsluitende opdrachten: UITWERKINGEN</h1>
+
+<h3 id="AfOpgave111">Afsluitende opdracht 14.1 Vat samen</h3>
 <b>Samenvatting:</b> Er wordt een lijst gemaakt van de inhoud van het bestand, waarbij elk woord een apart element in de lijst wordt.<br>
 
 
@@ -146,12 +165,12 @@ Ter informatie, in detail gebeurt het volgende:
 <li>Het programma leest de inhoud van bestand 'invoer_bestand.txt' in.
 <li>Alle returns (of te wel '\n') worden verwijderd.
 <li>Alle komma's worden verwijderd.
-<li> Alle comma's worden verwijderd
-<li>Alle inhoud wordt in een lijstje gezet
-<li>De lijst wordt geprint naar het scherm
+<li>Alle komma's worden verwijderd.
+<li>Alle inhoud wordt in een lijstje gezet.
+<li>De lijst wordt geprint naar het scherm.
 </ol>
 
-<h3 id="AfOpgave112">Afsluitende opgave 11.2 Hoofdletters maken van tekst in een bestand</h3>
+<h3 id="AfOpgave112">Afsluitende opdracht 14.2 Hoofdletters maken van tekst in een bestand</h3>
 <pre class="python">
 leesbestand_handle = open("kuikentjePiep.txt", "r") #open bestand om te lezen	
 tekst = leesbestand_handle.read(#sla inhoud van bestand op in variabele
@@ -164,7 +183,7 @@ schrijfbestand_handle.write(tekst)                  #schrijf tekst in bestand
 schrijfbestand_handle.close() 	                    #sluit bestand
 </pre>
 
-<h3 id="AfOpgave113">Afsluitende opgave 11.3: Gebruikersinvoer opslaan</h3>
+<h3 id="AfOpgave113">Afsluitende opdracht 14.3: Gebruikersinvoer opslaan</h3>
 <pre class="python">
 bestand = open("hobby.txt", "w")
 
@@ -177,7 +196,7 @@ bestand.close()
 </pre>
 
 
-<h3 id="AfOpgave114">Afsluitende opgave 11.4: Het aantal drieletterwoorden</h3>
+<h3 id="AfOpgave114">Afsluitende opdracht 14.4: Het aantal drieletterwoorden</h3>
 <pre class=""python">
 bestand = open("kuikentjePiep.txt", "r")
 
@@ -200,7 +219,7 @@ print(woord_teller)
 bestand.close()
 </pre>
 
-<h3 id="AfOpgave115">Afsluitende opgave 11.5: Persoonlijkebrievengenerator</h3>
+<h3 id="AfOpgave115">Afsluitende opdracht 14.5: Persoonlijkebrievengenerator</h3>
 <pre class="python">
 ### LEES GEGEVENS IN
 bestand = open("abo_gegevens.txt", "r")
@@ -208,6 +227,7 @@ bestand = open("abo_gegevens.txt", "r")
 inhoud = bestand.read()
 inhoud = inhoud.replace('\n'," ")       #vervang alle nieuwe regels door een spatie
 inhoud = inhoud.split(" ")   #zet elk woord als apart element in de lijst
+							#je kunt ook split("\n") gebruiken
 print("Inhoud", inhoud)
 
 voornaam = inhoud[0]

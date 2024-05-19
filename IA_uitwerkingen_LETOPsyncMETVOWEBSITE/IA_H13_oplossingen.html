@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Python - Informatica Actief</title>
+    <!--css import-->
+    <link rel="stylesheet" href="../style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="content">
+<h1 id="H13oplossingen">H12 - Strings:  Uitwerkingen</h1>
+
+<hr>
+
+
+<h3 id="opgave1331">Opdracht 12.1 Nieuwe regel</h3>
+<pre class="python">
+print("Hoi\nHallo")
+</pre>
+
+
+<h3 id="opgave1332">Opdracht 12.2 Letters uit een woord</h3>
+<ol>
+<li>Hoe zou je de eerste letter van een willekeurig woord afdrukken?
+Antwoord: door willekeurigWoord[0] te gebruiken
+<li>En de laatste? 
+Antwoord: door willekeurigWoord[len(willekeurigWoord)-1] te gebruiken
+<li>Kun je iets slims bedenken met de lengte van het woord?
+Antwoord: ja, zie b.
+</ol>
+<pre class="python">
+woord = "fiets"
+eerste_letter = woord[0]
+print(eerste_letter)
+laatste_letter =  woord[ len(woord)-1 ]
+print( laatste_letter )
+</pre>
+Alternatief:
+<pre class="python">
+woord = "fiets"
+print("De eerste letter van het woord '" + woord + "' is", woord[0])
+
+print("De laatste letter van het woord '" + woord + "' is", woord[len(woord)-1])
+</pre>
+
+
+<h3 id="opgave1333">Opdracht 12.3 Dagen van de week verkort</h3>
+<pre class="python">
+dagenVanDeWeek =  [ 'maandag', 'dinsdag', 'woensdag']
+
+for dag in dagenVanDeWeek:
+	print(dag[0]+dag[1]+" ",end="")
+</pre>
+
+
+<h3 id="opgave1334">Opdracht 12.4 Print klinkers uit woorden in een lijst</h3>
+<pre class="python">
+tekst = "een Nederlander heeft programmeertaal Python bedacht."
+
+for letter in tekst:
+	if letter in "aeiouy":
+		print( letter )
+</pre>
+OF
+<pre class="python">	
+tekst = "een Nederlander heeft programmeertaal Python bedacht."
+	
+for letter in tekst:
+	if letter in ["a", "e", "i", "o", "u", "y"]:
+		print( letter )
+</pre>
+
+
+<h3 id="opgave1325">Opdracht 12.5 Aantal voorkomens in een woord</h3>
+<pre class="python">
+ingevoerde_woord = input( "Typ een woord:" )
+
+letter_teller = 0
+for letter in range( 0, len( ingevoerde_woord ) ):
+    if( ingevoerde_woord[letter]=="e" ):
+        letter_teller += 1
+print("De letter e komt", letter_teller,"keer voor")
+</pre>
+
+<h3 id="opgave1326">Opdracht 12.6 <code>upper()</code> en <code>lower()</code></h3>
+<pre class="python">
+tekst = "Dikkertje Dap klom op de trap."
+print( tekst )
+print( tekst.upper() )
+print( tekst.lower() )
+</pre>
+
+
+<h3 id="opgave1327">Opdracht 12.7 <code>find()</code></h3>
+<pre class="python">
+tekst = "Lang zal hij leven, Lang zal hij leven, Lang zal hij leven in de gloria, In de gloria, in de gloria"
+
+print( tekst.find("Lang") )
+print( tekst.find("lang") )
+print( tekst.find("leven") )
+print( tekst.find("f") )
+</pre>
+<p>Uitleg van output: Alleen de eerste verschijning van ieder woord wordt gevonden. Is de index negatief, dan is de string niet gevonden.</p>
+
+
+<h3 id="opgave1328">Opdracht 12.8 <code>replace()</code></h3>
+<pre class="python">
+tekst = "Humpty Dumpty zat op de muur"
+print( tekst.replace( "zat op" , "viel van" ) )
+print(tekst)
+
+tekst = tekst.replace( "zat op" , "viel van" )
+print(tekst)
+</pre>
+
+
+<h3 id="opgave1329">Opdracht 12.9 Het alfabet afdrukken</h3>
+<pre class="python">
+for i in range( 26 ):
+	letter = chr (i+65)
+	print(letter, end=" ")
+</pre>
+
+Alternatief:
+<pre class="python">
+for i in range(65,91):
+	print( chr(i)," ", end="" )
+</pre>
+
+<hr>
+
+<h1 id="H13AfOpgaven">H12 Afsluitende opdrachten: UITWERKINGEN</h1>
+
+<h3 id="AfOpgave131">Afsluitende 0pdracht 12.1 Letterteller</h3>
+<pre class="python">
+letterteller = 0
+woord = input("Geef een woord: ")
+oorspronkelijkeLengte = len(woord)
+
+while len(woord) > 0: #zolang er nog letters overzijn
+    woord = woord[0:len(woord)-1] #vanaf eerste letter tot de eene laatste overlaten
+    print("Het woord is nu:", woord)
+    letterteller += 1
+    print("Het aantal weggegooide letters is:",letterteller)
+
+#check of het weggooien goed geteld is
+if letterteller == oorspronkelijkeLengte:
+  print("Aantal verwijderde letters is", letterteller, "dus je programma werkt goed.")
+else:
+  print("Er moet een foutje in je programma zitten…")
+
+</pre>
+
+<h3 id="AfOpgave132">Afsluitende opdracht 12.2 Mottenbal in het Maleis</h3>
+<pre class="python">
+### FUNCTIEDEFINITIES
+def aNaarO(tekst):
+  print(tekst)
+  print("wordt:")
+  tekst = tekst.replace("a","o")
+  print(tekst)
+  
+### HOOFDPROGRAMMA  
+zin = "Janny Rademakers en Jaap Stam kapen een bal."
+
+aNaarO(zin)
+</pre>
+
+<h3 id="AfOpgave133">Afsluitende opdracht 12.3 Palindroom of nachtmerrie?</h3>
+<pre class="python">
+invoer = input("Geef een woord: ")
+palindroom = ""
+for i in range(len(invoer)):
+  palindroom = invoer[i] + palindroom 
+
+if palindroom == invoer:
+  print(invoer + " is een palindroom.")
+else:
+  print("We hebben helaas geen palindroom te pakken...")
+</pre>
