@@ -1,0 +1,141 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "waardeVanX",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "x wordt 5",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "If",
+                                "content": "x gelijk aan 5?",
+                                "child1": {
+                                    "id": 31,
+                                    "basicTree": {
+                                        "basicTreeType": "Void"
+                                    }
+                                },
+                                "child2": {
+                                    "id": 32,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "print: \"x is 5\"",
+                                        "child": {
+                                            "id": 33,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child3": {
+                                    "id": 90,
+                                    "basicTree": {
+                                        "basicTreeType": "If",
+                                        "content": "x groter dan 4?",
+                                        "child1": {
+                                            "id": 101,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 102,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print: \"x is groter dan 4\"",
+                                                "child": {
+                                                    "id": 103,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child3": {
+                                            "id": 140,
+                                            "basicTree": {
+                                                "basicTreeType": "If",
+                                                "content": "x ongelijk aan 5?",
+                                                "child1": {
+                                                    "id": 151,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                },
+                                                "child2": {
+                                                    "id": 152,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print: \"x is ongelijk aan 5\"",
+                                                        "child": {
+                                                            "id": 153,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child3": {
+                                                    "id": 180,
+                                                    "basicTree": {
+                                                        "basicTreeType": "If",
+                                                        "content": "x kleiner dan 6?",
+                                                        "child1": {
+                                                            "id": 191,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        },
+                                                        "child2": {
+                                                            "id": 192,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Statement",
+                                                                "content": "print: \"x is kleiner dan 6\"",
+                                                                "child": {
+                                                                    "id": 193,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Void"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "child3": {
+                                                            "id": 1,
+                                                            "basicTree": {
+                                                                "basicTreeType": "End"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 220,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

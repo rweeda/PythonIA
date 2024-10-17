@@ -1,0 +1,87 @@
+{
+    "flowchartName": "AO 12.8",
+    "tree": {
+        "id": 0,
+        "basicTree": {
+            "basicTreeType": "Start",
+            "child": {
+                "id": 70,
+                "basicTree": {
+                    "basicTreeType": "Statement",
+                    "content": "maak lijst met woorden",
+                    "child": {
+                        "id": 2,
+                        "basicTree": {
+                            "basicTreeType": "Statement",
+                            "content": "spel_is_afgelopen is False",
+                            "child": {
+                                "id": 20,
+                                "basicTree": {
+                                    "basicTreeType": "While",
+                                    "content": "NIET spel_is_afgelopen",
+                                    "child1": {
+                                        "id": 30,
+                                        "basicTree": {
+                                            "basicTreeType": "Statement",
+                                            "content": "vraag gebruiker om woord",
+                                            "child": {
+                                                "id": 50,
+                                                "basicTree": {
+                                                    "basicTreeType": "If",
+                                                    "content": "woord in lijst",
+                                                    "child1": {
+                                                        "id": 60,
+                                                        "basicTree": {
+                                                            "basicTreeType": "Statement",
+                                                            "content": "spel is afgelopen is True",
+                                                            "child": {
+                                                                "id": 61,
+                                                                "basicTree": {
+                                                                    "basicTreeType": "Void"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "child2": {
+                                                        "id": 62,
+                                                        "basicTree": {
+                                                            "basicTreeType": "Statement",
+                                                            "content": "haal woord uit lijst",
+                                                            "child": {
+                                                                "id": 63,
+                                                                "basicTree": {
+                                                                    "basicTreeType": "Void"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "child3": {
+                                                        "id": 31,
+                                                        "basicTree": {
+                                                            "basicTreeType": "Void"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "child2": {
+                                        "id": 1,
+                                        "basicTree": {
+                                            "basicTreeType": "End"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "currentId": 110,
+    "highlightedBox": "Nothing",
+    "precondition": "",
+    "postcondition": "",
+    "javaComments": ""
+}

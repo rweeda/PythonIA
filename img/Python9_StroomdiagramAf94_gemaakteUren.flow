@@ -1,0 +1,130 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "urenBijhouden",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "gemaakte_uren wordt een lege lijst",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "zet klaar_met_invoeren op False",
+                                "child": {
+                                    "id": 40,
+                                    "basicTree": {
+                                        "basicTreeType": "While",
+                                        "content": "zolang klaar_met_invoeren gelijk is aan False",
+                                        "child1": {
+                                            "id": 50,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "vraag gebruiker om invoer (als kommagetal)",
+                                                "child": {
+                                                    "id": 70,
+                                                    "basicTree": {
+                                                        "basicTreeType": "If",
+                                                        "content": "is ingevoerde_uren -1",
+                                                        "child1": {
+                                                            "id": 80,
+                                                            "basicTree": {
+                                                                "basicTreeType": "If",
+                                                                "content": "is ingevoerde_uren>=0 en <=10",
+                                                                "child1": {
+                                                                    "id": 100,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Statement",
+                                                                        "content": "print foutmelding: \"foutieve invoer\"",
+                                                                        "child": {
+                                                                            "id": 101,
+                                                                            "basicTree": {
+                                                                                "basicTreeType": "Void"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "child2": {
+                                                                    "id": 102,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Statement",
+                                                                        "content": "voeg ingevoerde_uren achteraan lijst gemaakte_uren toe",
+                                                                        "child": {
+                                                                            "id": 103,
+                                                                            "basicTree": {
+                                                                                "basicTreeType": "Void"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "child3": {
+                                                                    "id": 81,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Void"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "child2": {
+                                                            "id": 82,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Statement",
+                                                                "content": "zet klaar_met_invoeren op True",
+                                                                "child": {
+                                                                    "id": 83,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Void"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "child3": {
+                                                            "id": 51,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 130,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print lijst gemaakte_uren",
+                                                "child": {
+                                                    "id": 1,
+                                                    "basicTree": {
+                                                        "basicTreeType": "End"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 150,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

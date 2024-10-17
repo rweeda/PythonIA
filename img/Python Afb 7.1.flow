@@ -1,0 +1,61 @@
+{
+    "flowchartName": "Python Afb 7.1",
+    "tree": {
+        "id": 0,
+        "basicTree": {
+            "basicTreeType": "Start",
+            "child": {
+                "id": 30,
+                "basicTree": {
+                    "basicTreeType": "Statement",
+                    "content": "nummer = 0",
+                    "child": {
+                        "id": 50,
+                        "basicTree": {
+                            "basicTreeType": "While",
+                            "content": "nummer < 5",
+                            "child1": {
+                                "id": 60,
+                                "basicTree": {
+                                    "basicTreeType": "Statement",
+                                    "content": "print( nummer )",
+                                    "child": {
+                                        "id": 80,
+                                        "basicTree": {
+                                            "basicTreeType": "Statement",
+                                            "content": "nummer += 1",
+                                            "child": {
+                                                "id": 61,
+                                                "basicTree": {
+                                                    "basicTreeType": "Void"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "child2": {
+                                "id": 100,
+                                "basicTree": {
+                                    "basicTreeType": "Statement",
+                                    "content": "print( \"Klaar\" )",
+                                    "child": {
+                                        "id": 1,
+                                        "basicTree": {
+                                            "basicTreeType": "End"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "currentId": 120,
+    "highlightedBox": "Nothing",
+    "precondition": "",
+    "postcondition": "",
+    "javaComments": ""
+}

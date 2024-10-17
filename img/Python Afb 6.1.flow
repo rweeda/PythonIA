@@ -1,0 +1,60 @@
+{
+    "flowchartName": "Python Afb 6.1",
+    "tree": {
+        "id": 0,
+        "basicTree": {
+            "basicTreeType": "Start",
+            "child": {
+                "id": 2,
+                "basicTree": {
+                    "basicTreeType": "Statement",
+                    "content": "x = 4",
+                    "child": {
+                        "id": 20,
+                        "basicTree": {
+                            "basicTreeType": "If",
+                            "content": "x > 2",
+                            "child1": {
+                                "id": 30,
+                                "basicTree": {
+                                    "basicTreeType": "Statement",
+                                    "content": "print( \"x <= 2\" )",
+                                    "child": {
+                                        "id": 31,
+                                        "basicTree": {
+                                            "basicTreeType": "Void"
+                                        }
+                                    }
+                                }
+                            },
+                            "child2": {
+                                "id": 32,
+                                "basicTree": {
+                                    "basicTreeType": "Statement",
+                                    "content": "print( \"x > 2\" )",
+                                    "child": {
+                                        "id": 33,
+                                        "basicTree": {
+                                            "basicTreeType": "Void"
+                                        }
+                                    }
+                                }
+                            },
+                            "child3": {
+                                "id": 1,
+                                "basicTree": {
+                                    "basicTreeType": "End"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "currentId": 60,
+    "highlightedBox": "Nothing",
+    "precondition": "",
+    "postcondition": "",
+    "javaComments": ""
+}

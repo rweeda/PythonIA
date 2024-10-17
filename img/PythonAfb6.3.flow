@@ -1,0 +1,122 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "Geneste Beslissingen",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "x = 41",
+                        "child": {
+                            "id": 60,
+                            "basicTree": {
+                                "basicTreeType": "If",
+                                "content": "x is deelbaar door 7",
+                                "child1": {
+                                    "id": 70,
+                                    "basicTree": {
+                                        "basicTreeType": "If",
+                                        "content": "x is deelbaar door 11",
+                                        "child1": {
+                                            "id": 110,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print: niet deelbaar door 7 of 11",
+                                                "child": {
+                                                    "id": 111,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 112,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print: deelbaar door 11, niet 7",
+                                                "child": {
+                                                    "id": 113,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child3": {
+                                            "id": 71,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child2": {
+                                    "id": 72,
+                                    "basicTree": {
+                                        "basicTreeType": "If",
+                                        "content": "x is deelbaar door 11",
+                                        "child1": {
+                                            "id": 80,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print: deelbaar door 7, niet 11",
+                                                "child": {
+                                                    "id": 81,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 82,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print: deelbaar door 7 en 11",
+                                                "child": {
+                                                    "id": 83,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child3": {
+                                            "id": 73,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child3": {
+                                    "id": 1,
+                                    "basicTree": {
+                                        "basicTreeType": "End"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 160,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

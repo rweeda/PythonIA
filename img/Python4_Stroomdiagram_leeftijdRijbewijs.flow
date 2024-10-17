@@ -1,0 +1,77 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "leeftijdRijbewijs",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "vraag gebruiker leeftijd",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "If",
+                                "content": "leeftijd groter dan of gelijk aan 17",
+                                "child1": {
+                                    "id": 30,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "print: \"Nee. Je moet nog even wachten\"",
+                                        "child": {
+                                            "id": 31,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child2": {
+                                    "id": 32,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "print: \"Ja. Je mag je rijbewijs halen\"",
+                                        "child": {
+                                            "id": 33,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child3": {
+                                    "id": 60,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "print: \"Klaar\"",
+                                        "child": {
+                                            "id": 1,
+                                            "basicTree": {
+                                                "basicTreeType": "End"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 80,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

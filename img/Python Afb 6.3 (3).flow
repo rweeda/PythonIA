@@ -1,0 +1,112 @@
+{
+    "flowchartName": "Python Afb 6.3",
+    "tree": {
+        "id": 0,
+        "basicTree": {
+            "basicTreeType": "Start",
+            "child": {
+                "id": 2,
+                "basicTree": {
+                    "basicTreeType": "Statement",
+                    "content": "x = 41",
+                    "child": {
+                        "id": 20,
+                        "basicTree": {
+                            "basicTreeType": "If",
+                            "content": "x is deelbaar door 7",
+                            "child1": {
+                                "id": 30,
+                                "basicTree": {
+                                    "basicTreeType": "If",
+                                    "content": "x is deelbaar door 11",
+                                    "child1": {
+                                        "id": 70,
+                                        "basicTree": {
+                                            "basicTreeType": "Statement",
+                                            "content": "\"niet deelbaar 7of11\"",
+                                            "child": {
+                                                "id": 71,
+                                                "basicTree": {
+                                                    "basicTreeType": "Void"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "child2": {
+                                        "id": 72,
+                                        "basicTree": {
+                                            "basicTreeType": "Statement",
+                                            "content": "\"deelbaar 11,niet 7\"",
+                                            "child": {
+                                                "id": 73,
+                                                "basicTree": {
+                                                    "basicTreeType": "Void"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "child3": {
+                                        "id": 31,
+                                        "basicTree": {
+                                            "basicTreeType": "Void"
+                                        }
+                                    }
+                                }
+                            },
+                            "child2": {
+                                "id": 32,
+                                "basicTree": {
+                                    "basicTreeType": "If",
+                                    "content": "x is deelbaar door 11",
+                                    "child1": {
+                                        "id": 40,
+                                        "basicTree": {
+                                            "basicTreeType": "Statement",
+                                            "content": "\"deelbaar 7,niet 11\"",
+                                            "child": {
+                                                "id": 41,
+                                                "basicTree": {
+                                                    "basicTreeType": "Void"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "child2": {
+                                        "id": 42,
+                                        "basicTree": {
+                                            "basicTreeType": "Statement",
+                                            "content": "\"deelbaar door 7en11\"",
+                                            "child": {
+                                                "id": 43,
+                                                "basicTree": {
+                                                    "basicTreeType": "Void"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "child3": {
+                                        "id": 33,
+                                        "basicTree": {
+                                            "basicTreeType": "Void"
+                                        }
+                                    }
+                                }
+                            },
+                            "child3": {
+                                "id": 1,
+                                "basicTree": {
+                                    "basicTreeType": "End"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "currentId": 100,
+    "highlightedBox": "Nothing",
+    "precondition": "",
+    "postcondition": "",
+    "javaComments": ""
+}

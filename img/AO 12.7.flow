@@ -1,0 +1,61 @@
+{
+    "flowchartName": "AO 12.7",
+    "tree": {
+        "id": 0,
+        "basicTree": {
+            "basicTreeType": "Start",
+            "child": {
+                "id": 2,
+                "basicTree": {
+                    "basicTreeType": "Statement",
+                    "content": "aantal_kleuren ingevoerd is 0       kleuren_lijst is leeg",
+                    "child": {
+                        "id": 20,
+                        "basicTree": {
+                            "basicTreeType": "While",
+                            "content": "nog geen 3 kleuren ingevoerd",
+                            "child1": {
+                                "id": 30,
+                                "basicTree": {
+                                    "basicTreeType": "Statement",
+                                    "content": "vraag gebruiker om een lievelingskleur",
+                                    "child": {
+                                        "id": 50,
+                                        "basicTree": {
+                                            "basicTreeType": "Statement",
+                                            "content": "voeg kleur toe aan kleuren_lijst",
+                                            "child": {
+                                                "id": 70,
+                                                "basicTree": {
+                                                    "basicTreeType": "Statement",
+                                                    "content": "aantal_kleuren ophogen met 1",
+                                                    "child": {
+                                                        "id": 31,
+                                                        "basicTree": {
+                                                            "basicTreeType": "Void"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "child2": {
+                                "id": 1,
+                                "basicTree": {
+                                    "basicTreeType": "End"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "currentId": 90,
+    "highlightedBox": "Nothing",
+    "precondition": "",
+    "postcondition": "",
+    "javaComments": ""
+}

@@ -1,0 +1,77 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "gooiMunt",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "kies willekeurig getal 0 of 1",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "If",
+                                "content": "getal is 0",
+                                "child1": {
+                                    "id": 30,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "worp wordt \"KOP\"",
+                                        "child": {
+                                            "id": 31,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child2": {
+                                    "id": 32,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "worp wordt \"MUNT\"",
+                                        "child": {
+                                            "id": 33,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child3": {
+                                    "id": 60,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "return worp",
+                                        "child": {
+                                            "id": 1,
+                                            "basicTree": {
+                                                "basicTreeType": "End"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 80,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": true
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "Resultaat is string, willekeurig \"MUNT\" of \"KOP\"",
+            "visible": true
+        }
+    }
+}

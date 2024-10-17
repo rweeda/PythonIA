@@ -1,0 +1,138 @@
+{
+    "flowchartName": "Python Afb 6.2",
+    "tree": {
+        "id": 0,
+        "basicTree": {
+            "basicTreeType": "Start",
+            "child": {
+                "id": 2,
+                "basicTree": {
+                    "basicTreeType": "Statement",
+                    "content": "leeftijd = 21",
+                    "child": {
+                        "id": 20,
+                        "basicTree": {
+                            "basicTreeType": "If",
+                            "content": "leeftijd < 12",
+                            "child1": {
+                                "id": 70,
+                                "basicTree": {
+                                    "basicTreeType": "If",
+                                    "content": "leeftijd < 18",
+                                    "child1": {
+                                        "id": 80,
+                                        "basicTree": {
+                                            "basicTreeType": "If",
+                                            "content": "leeftijd < 30",
+                                            "child1": {
+                                                "id": 90,
+                                                "basicTree": {
+                                                    "basicTreeType": "If",
+                                                    "content": "leeftijd < 50",
+                                                    "child1": {
+                                                        "id": 120,
+                                                        "basicTree": {
+                                                            "basicTreeType": "Statement",
+                                                            "content": "print( \"oud\" )",
+                                                            "child": {
+                                                                "id": 121,
+                                                                "basicTree": {
+                                                                    "basicTreeType": "Void"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "child2": {
+                                                        "id": 122,
+                                                        "basicTree": {
+                                                            "basicTreeType": "Statement",
+                                                            "content": "print( \"ouder\" )",
+                                                            "child": {
+                                                                "id": 123,
+                                                                "basicTree": {
+                                                                    "basicTreeType": "Void"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "child3": {
+                                                        "id": 91,
+                                                        "basicTree": {
+                                                            "basicTreeType": "Void"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "child2": {
+                                                "id": 92,
+                                                "basicTree": {
+                                                    "basicTreeType": "Statement",
+                                                    "content": "print( \"jong\" )",
+                                                    "child": {
+                                                        "id": 93,
+                                                        "basicTree": {
+                                                            "basicTreeType": "Void"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "child3": {
+                                                "id": 81,
+                                                "basicTree": {
+                                                    "basicTreeType": "Void"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "child2": {
+                                        "id": 82,
+                                        "basicTree": {
+                                            "basicTreeType": "Statement",
+                                            "content": "print( \"tiener\" )",
+                                            "child": {
+                                                "id": 83,
+                                                "basicTree": {
+                                                    "basicTreeType": "Void"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "child3": {
+                                        "id": 31,
+                                        "basicTree": {
+                                            "basicTreeType": "Void"
+                                        }
+                                    }
+                                }
+                            },
+                            "child2": {
+                                "id": 32,
+                                "basicTree": {
+                                    "basicTreeType": "Statement",
+                                    "content": "print( \"kind\" )",
+                                    "child": {
+                                        "id": 33,
+                                        "basicTree": {
+                                            "basicTreeType": "Void"
+                                        }
+                                    }
+                                }
+                            },
+                            "child3": {
+                                "id": 1,
+                                "basicTree": {
+                                    "basicTreeType": "End"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "currentId": 150,
+    "highlightedBox": "Nothing",
+    "precondition": "",
+    "postcondition": "",
+    "javaComments": ""
+}

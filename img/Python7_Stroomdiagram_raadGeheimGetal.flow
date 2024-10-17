@@ -1,0 +1,118 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "raadGeheimGetal",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 50,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "TE_RADEN_GETAL wordt een willekeurig getal tussen 0 en 100",
+                        "child": {
+                            "id": 2,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "zet vlag goed_geraden op False",
+                                "child": {
+                                    "id": 20,
+                                    "basicTree": {
+                                        "basicTreeType": "While",
+                                        "content": "is NIET goed_geraden?",
+                                        "child1": {
+                                            "id": 70,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "vraag gebruiker om invoer",
+                                                "child": {
+                                                    "id": 210,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "gebruikers_antwoord wordt invoer",
+                                                        "child": {
+                                                            "id": 90,
+                                                            "basicTree": {
+                                                                "basicTreeType": "If",
+                                                                "content": "is gebruikers_antwoord gelijk aan TE_RADEN_GETAL?",
+                                                                "child1": {
+                                                                    "id": 100,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Statement",
+                                                                        "content": "print: \"jammer, probeer het nog een keer\"",
+                                                                        "child": {
+                                                                            "id": 101,
+                                                                            "basicTree": {
+                                                                                "basicTreeType": "Void"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "child2": {
+                                                                    "id": 140,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Statement",
+                                                                        "content": "print: \"goed geraden!\"",
+                                                                        "child": {
+                                                                            "id": 102,
+                                                                            "basicTree": {
+                                                                                "basicTreeType": "Statement",
+                                                                                "content": "zet vlag goed_geraden op True",
+                                                                                "child": {
+                                                                                    "id": 103,
+                                                                                    "basicTree": {
+                                                                                        "basicTreeType": "Void"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "child3": {
+                                                                    "id": 31,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Void"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 180,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print: \"Bedankt voor het spelen\"",
+                                                "child": {
+                                                    "id": 1,
+                                                    "basicTree": {
+                                                        "basicTreeType": "End"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 230,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

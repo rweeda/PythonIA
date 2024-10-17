@@ -1,0 +1,148 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "6.2",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "leeftijd = 21",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "If",
+                                "content": "leeftijd < 12",
+                                "child1": {
+                                    "id": 30,
+                                    "basicTree": {
+                                        "basicTreeType": "If",
+                                        "content": "leeftijd < 18",
+                                        "child1": {
+                                            "id": 40,
+                                            "basicTree": {
+                                                "basicTreeType": "If",
+                                                "content": "leeftijd < 30",
+                                                "child1": {
+                                                    "id": 50,
+                                                    "basicTree": {
+                                                        "basicTreeType": "If",
+                                                        "content": "leeftijd < 50 ",
+                                                        "child1": {
+                                                            "id": 60,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Statement",
+                                                                "content": "print: oud",
+                                                                "child": {
+                                                                    "id": 61,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Void"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "child2": {
+                                                            "id": 62,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Statement",
+                                                                "content": "print: ouder",
+                                                                "child": {
+                                                                    "id": 63,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Void"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "child3": {
+                                                            "id": 51,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child2": {
+                                                    "id": 52,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print: jong",
+                                                        "child": {
+                                                            "id": 53,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child3": {
+                                                    "id": 41,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 42,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print: tiener",
+                                                "child": {
+                                                    "id": 43,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child3": {
+                                            "id": 31,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child2": {
+                                    "id": 32,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "print: kind",
+                                        "child": {
+                                            "id": 33,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child3": {
+                                    "id": 1,
+                                    "basicTree": {
+                                        "basicTreeType": "End"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 120,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

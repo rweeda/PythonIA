@@ -1,0 +1,117 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "gewichtApp",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "vraag gebruiker vorige_gewicht (kg)",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "vraag gebruiker huidige_gewicht (kg)",
+                                "child": {
+                                    "id": 40,
+                                    "basicTree": {
+                                        "basicTreeType": "If",
+                                        "content": "vorige_gewicht gelijk aan huidige_gewicht?",
+                                        "child1": {
+                                            "id": 50,
+                                            "basicTree": {
+                                                "basicTreeType": "If",
+                                                "content": "huidige_gewicht groter dan vorige_gewicht?",
+                                                "child1": {
+                                                    "id": 70,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "verschil wordt (vorige_gewicht min huidige_gewicht) * 1000",
+                                                        "child": {
+                                                            "id": 150,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Statement",
+                                                                "content": "print: \"afgevallen met\" verschil",
+                                                                "child": {
+                                                                    "id": 71,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Void"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child2": {
+                                                    "id": 110,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "verschil wordt (huidige_gewicht min vorige_gewicht) * 1000",
+                                                        "child": {
+                                                            "id": 72,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Statement",
+                                                                "content": "print: \"aangekomen met\" verschil",
+                                                                "child": {
+                                                                    "id": 73,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Void"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child3": {
+                                                    "id": 51,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 52,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print: \"gewicht is hetzelfde gebleven\"",
+                                                "child": {
+                                                    "id": 53,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child3": {
+                                            "id": 1,
+                                            "basicTree": {
+                                                "basicTreeType": "End"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 170,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

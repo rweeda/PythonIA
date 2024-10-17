@@ -1,0 +1,82 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "dubbeleIf",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "If",
+                        "content": "kleur is gelijk aan groen?",
+                        "child1": {
+                            "id": 11,
+                            "basicTree": {
+                                "basicTreeType": "Void"
+                            }
+                        },
+                        "child2": {
+                            "id": 12,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "print: \"Groen is mooi\"",
+                                "child": {
+                                    "id": 13,
+                                    "basicTree": {
+                                        "basicTreeType": "Void"
+                                    }
+                                }
+                            }
+                        },
+                        "child3": {
+                            "id": 30,
+                            "basicTree": {
+                                "basicTreeType": "If",
+                                "content": "vervoer is gelijk aan fiets?",
+                                "child1": {
+                                    "id": 41,
+                                    "basicTree": {
+                                        "basicTreeType": "Void"
+                                    }
+                                },
+                                "child2": {
+                                    "id": 42,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "print: \"fietsen is fijn\"",
+                                        "child": {
+                                            "id": 43,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child3": {
+                                    "id": 1,
+                                    "basicTree": {
+                                        "basicTreeType": "End"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 80,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

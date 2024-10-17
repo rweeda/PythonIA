@@ -1,0 +1,96 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "geefAdvies(BMI)",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "If",
+                        "content": "BMI kleiner of gelijk aan 18.5",
+                        "child1": {
+                            "id": 10,
+                            "basicTree": {
+                                "basicTreeType": "If",
+                                "content": "BMI groter of gelijk aan 25",
+                                "child1": {
+                                    "id": 30,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "advies wordt \"blijf op dit gewicht\"",
+                                        "child": {
+                                            "id": 31,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child2": {
+                                    "id": 32,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "advies wordt \"afvallen\"",
+                                        "child": {
+                                            "id": 33,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child3": {
+                                    "id": 11,
+                                    "basicTree": {
+                                        "basicTreeType": "Void"
+                                    }
+                                }
+                            }
+                        },
+                        "child2": {
+                            "id": 12,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "advies wordt \"aankomen\"",
+                                "child": {
+                                    "id": 13,
+                                    "basicTree": {
+                                        "basicTreeType": "Void"
+                                    }
+                                }
+                            }
+                        },
+                        "child3": {
+                            "id": 60,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "return advies",
+                                "child": {
+                                    "id": 1,
+                                    "basicTree": {
+                                        "basicTreeType": "End"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 80,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "Gegeven een BMI",
+            "visible": true
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "Resultaat is een advies (tekst)",
+            "visible": true
+        }
+    }
+}
