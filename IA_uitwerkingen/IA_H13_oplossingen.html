@@ -4,7 +4,7 @@
 <head>
 	<title>Python - Informatica Actief</title>
     <!--css import-->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
 	<!-- Add icon library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,7 +27,7 @@ print("Hoi\nHallo")
 <ol>
 <li>Hoe zou je de eerste letter van een willekeurig woord afdrukken?
 Antwoord: door willekeurigWoord[0] te gebruiken
-<li>En de laatste? 
+<li>En de laatste?
 Antwoord: door willekeurigWoord[len(willekeurigWoord)-1] te gebruiken
 <li>Kun je iets slims bedenken met de lengte van het woord?
 Antwoord: ja, zie b.
@@ -163,8 +163,8 @@ def aNaarO(tekst):
   print("wordt:")
   tekst = tekst.replace("a","o")
   print(tekst)
-  
-### HOOFDPROGRAMMA  
+
+### HOOFDPROGRAMMA
 zin = "Janny Rademakers en Jaap Stam kapen een bal."
 
 aNaarO(zin)
@@ -175,7 +175,7 @@ aNaarO(zin)
 invoer = input("Geef een woord: ")
 palindroom = ""
 for i in range(len(invoer)):
-  palindroom = invoer[i] + palindroom 
+  palindroom = invoer[i] + palindroom
 
 if palindroom == invoer:
   print(invoer + " is een palindroom.")

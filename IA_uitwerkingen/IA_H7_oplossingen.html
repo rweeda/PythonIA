@@ -4,7 +4,7 @@
 <head>
 	<title>Python - Informatica Actief</title>
     <!--css import-->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
 	<!-- Add icon library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -321,14 +321,14 @@ while not spel_afgelopen: #zolang spel nog niet is afgelopen, herhaal dan:
     if antwoord == (getal1 * getal2):
         punten += 10 #antwoord goed, 10 punten er bij
         print("Goed zo! Je score is nu" + str(punten) +".")
-        print("Je krijgt nog een opgave.")  
+        print("Je krijgt nog een opgave.")
 
     else: #antwoord fout, spel afgelopen
         punten -= 10 #antwoord goed, 10 punten eraf
         print("Jammer, fout")
         print("Je score is nu" + str(punten) +".")
         print("Het goede antwoord was: "+ str(getal1) + " * " + str(getal2) + " = " + str(getal1 + getal2) )
-  
+
 
     if punten == 0:
         spel_afgelopen = True #pas vlag aan, spel is nu afgelopen
@@ -356,7 +356,7 @@ while not spel_afgelopen:
     if antwoord == getal1 + getal2:
       punten += 10
       print("Goed zo! Je score is nu" + str(punten) +".")
-      print("Je krijgt nog een opgave.")  
+      print("Je krijgt nog een opgave.")
     else:
       punten -= 10
       print("Helaas! Fout! Je score is nu" + str(punten) +".")
@@ -368,7 +368,7 @@ while not spel_afgelopen:
     if antwoord == getal1 - getal2:
       punten += 10
       print("Goed zo! Je score is nu" + str(punten) + ".")
-      print("Je krijgt nog een opgave.")  
+      print("Je krijgt nog een opgave.")
     else:
       punten -= 10
       print("Helaas! Fout! Je score is nu" + str(punten) +".")
@@ -381,7 +381,7 @@ while not spel_afgelopen:
     if antwoord == getal1 * getal2:
       punten += 10
       print("Goed zo! Je score is nu" + str(punten) + ".")
-      print("Je krijgt nog een opgave.")  
+      print("Je krijgt nog een opgave.")
     else:
       punten -= 10
       print("Helaas! Fout! Je score is nu" + str(punten) +".")
