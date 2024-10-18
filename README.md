@@ -20,7 +20,7 @@ http://course.cs.ru.nl/pythonVO/Jupyter/img
 http://course.cs.ru.nl/pythonVO/img
 REPLACE with:
 
-https://raw.githubusercontent.com/rweeda/PythonIA/main/img/
+https://raw.githubusercontent.com/rweeda/PythonIA/main/img
 
 
 TRYING THESE:
