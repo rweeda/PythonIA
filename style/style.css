@@ -1,0 +1,78 @@
+body {
+  margin: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+
+#lesvrij{
+  background-color: #c2c2d6;
+  text-align: center;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+div.content h1, h2 {
+	color: green; /*was #2634 F5; RoyalBlue;*/
+}
+
+
+div.content h3{
+	color: green;
+}
+
+div.content p{
+	color: black;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: green; /*#2634F5; Darkblue #4CAF50; was green */
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+
+/* Menu shifts to top if not enough room on the left */
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+ 
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
