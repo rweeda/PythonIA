@@ -21,3 +21,10 @@ http://course.cs.ru.nl/pythonVO/img
 REPLACE with:
 
 https://raw.githubusercontent.com/rweeda/PythonIA/main/img/
+
+
+TRYING THESE:
+https://rweeda.github.io/PythonIA/main/docs/IA_H1_oplossingen.html
+https://raw.githubusercontent.com/rweeda/PythonIA/docs/IA_H1_oplossingen.html
+
+<a href="https://rweeda.github.io/PythonIA/docs/IA_H1_oplossingen.html">new</a>
