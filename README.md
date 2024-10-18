@@ -24,7 +24,9 @@ https://raw.githubusercontent.com/rweeda/PythonIA/main/img/
 
 
 TRYING THESE:
-https://rweeda.github.io/PythonIA/main/docs/IA_H1_oplossingen.html
-https://raw.githubusercontent.com/rweeda/PythonIA/docs/IA_H1_oplossingen.html
 
-<a href="https://rweeda.github.io/PythonIA/docs/IA_H1_oplossingen.html">new</a>
+WORKS!!
+//rweeda.github.io/PythonIA/docs/
+
+//course.cs.ru.nl/pythonVO/Teams/IA_uitwerkingen/
+
