@@ -1,0 +1,85 @@
+body {
+    padding-top: 0px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+    text-align: left;
+}
+.container {
+    width: 1400px;
+    padding: 19px 29px 29px;
+    margin: 30px auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    position:relative;
+}
+#languagelogo {
+    position:absolute;
+    right:10px;
+    top:10px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    filter: alpha(opacity=20);
+    -moz-opacity: 0.2;
+    -khtml-opacity: 0.2;
+    opacity: 0.2;
+    width:300px;
+    z-index:0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+/*
+#content {
+    z-index:1;
+    position:relative;
+}*/
+
+table, th, td {
+   border: 1px solid black;
+   text-align: left;
+}
+
+
+.python
+{
+background-color: #f5f5f5;
+text-align: left;
+font-family: courier;
+padding: 5px;
+margin-left:10px;
+text-indent:0;
+}
+
+/* dit werkt niet-->
+#tracingVariableTable{
+    text-align: center;
+}
+*/
+
+
+/* VOOR DE QUIZ */
+.question{
+	font-weight: 600;
+}
+.answers {
+    margin-bottom: 20px;
+}
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #297;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #3a8;
+}
