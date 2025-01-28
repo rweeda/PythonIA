@@ -2,7 +2,7 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8">
-    <title>Python VO cursus</title>
+    <title>Informatica: Kennismaken met programmeren</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
 
@@ -15,11 +15,11 @@
   <div id='content'>
 
 
-<H1>Informatica: Kennis maken met programmeren</h1>
+<H1>Informatica: Kennismaken met programmeren</h1>
 
 <hr>
 
-<p>In deze opdracht gaan we met code tekenen! We gaan een turtle (schildpad) besturen met Python code.<br>
+<p>In deze opdracht gaan we met code tekenen! We gaan een turtle (schildpad) besturen met Pythoncode.<br>
 In het volgende filmpje van 1,5 minuut geef ik een toelichting over de opdrachten die je gaat maken:
 
 <!--
@@ -31,10 +31,10 @@ In het volgende filmpje van 1,5 minuut geef ik een toelichting over de opdrachte
 
 </p>
 <h2 id="import-turtle">Tekenen</h2>
-Hieronder staan een aantal commando's die we aan een turtle geven. Druk op de groene Play-knop <img src="img/CreateCode_playknop.jpg" alt="Playknop" width="30"> rechtsonder de code om te zien wat de code doet: 
+Hieronder staat een aantal commando's die we aan een turtle geven. Druk op de groene Playknop <img src="img/CreateCode_playknop.jpg" alt="Playknop" width="30"> rechtsonder de code om te zien wat de code doet. 
 <br>
 Kun jij achterhalen wat elk commando doet?<br>
-<p style="color:brown;">De bruine tekst achter een # is alleen extra uitleg voor jou, daar doet de computer niets mee.</p>
+<p style="color:brown;">De bruine tekst achter een # is alleen extra uitleg voor jou; daar doet de computer niets mee.</p>
 
 <iframe frameborder="0" width="100%" height="400px" src="https://create.withcode.uk/embed/Cba"><a target="_blank" href="https://create.withcode.uk/python/Cba">create.withcode.uk</a></iframe>
 
@@ -83,7 +83,7 @@ turtle.forward(150)
 
 turtle.done()       # klaar
 -->
-<a href="INFvoorlichting_oplossingen.html#opgave-vierkantje-tekenen">Klik hier</a> voor een voorbeeld uitwerking.
+<a href="INFvoorlichting_oplossingen.html#opgave-vierkantje-tekenen">Klik hier</a> voor een voorbeelduitwerking.
 
 
 <h3 id="opgave-vierkantje-inkleuren"><span style="color:red">Opgave</span> Vierkantje inkleuren</h3>
@@ -94,12 +94,12 @@ Pas je eigen code van hierboven aan zodat de turtle je vierkant inkleurt:<br>
 Dat doe je zo:
 
 <ol>
-<li>Kies eerst en vulkleur. Op regel 4 zet je: <code>turtle.fillcolor("blue")</code>. In plaats van "blue" kun je ook kiezen voor red, orange, purple, brown, yellow, black, green ...
+<li>Kies eerst een vulkleur. Op regel 4 zet je: <code>turtle.fillcolor("blue")</code>. In plaats van "blue" kun je ook kiezen voor red, orange, purple, brown, yellow, black, green ...
 <li>Geef aan waar de code voor je figuur begint, met: <code>turtle.begin_fill()</code>. Zet de code VOOR de code <code>turtle.forward(100)</code>, want daarmee begint je figuur.
 <li>Geef aan waar de code voor je figuur eindigt, met: <code>turtle.end_fill()</code>. Dit zet je na de laatste <code>turtle.forward(100)</code>.
 </ol>
 
-<a href="INFvoorlichting_oplossingen.html#opgave-vierkantje-inkleuren">Klik hier</a> voor een voorbeeld uitwerking.
+<a href="INFvoorlichting_oplossingen.html#opgave-vierkantje-inkleuren">Klik hier</a> voor een voorbeelduitwerking.
 
 
 <h3 id="opgave-huisje-tekenen"><span style="color:red">Opgave</span> Huisje tekenen</h3>
@@ -117,7 +117,7 @@ Tips: Het kan lastig zijn om het dakje precies goed te krijgen. Teken eerst je h
 
 <iframe frameborder="0" width="100%" height="600px" src="https://create.withcode.uk/embed/Cbb"><a target="_blank" href="https://create.withcode.uk/python/Cbb">create.withcode.uk</a></iframe>
 
-<a href="INFvoorlichting_oplossingen.html#opgave-huisje-tekenen">Klik hier</a> voor een voorbeeld uitwerking.
+<a href="INFvoorlichting_oplossingen.html#opgave-huisje-tekenen">Klik hier</a> voor een voorbeelduitwerking.
 
 
 
@@ -125,8 +125,8 @@ Tips: Het kan lastig zijn om het dakje precies goed te krijgen. Teken eerst je h
 <h2 id="turtle-functies">Meer dingen met turtle</h2>
 <p>Hier zijn een paar andere dingen die turtle kan:</p>
 <pre class="python">
-turtle.pendown()               # Zet pen op papier, alle bewegingen hierna worden zichtbaar
-turtle.penup()                 # Haal pen van papier, bewegingen hierna worden niet zichtbaar
+turtle.pendown()               # Zet pen op papier. Alle bewegingen hierna worden zichtbaar
+turtle.penup()                 # Haal pen van papier. Bewegingen hierna worden niet zichtbaar
 turtle.pencolor("darkViolet")  # Kleur van de pen. Je kunt ook kiezen uit black, green, gold, blue, red, yellow...
 turtle.pensize(8)              # Dikte van de pen
 
@@ -138,8 +138,8 @@ turtle.forward(10)             # Loop 10 stappen vooruit
 turtle.goto(40, 40)            # Zet de schildpad op positie (x,y). (0,0) is het midden van het scherm
 turtle.setheading(90)          # Kijkrichting: 90 is naar boven, 0 is naar rechts
 
-turtle.circle(50)              # Teken een cirkel met straal van 50 pixels
-turtle.circle(60, 180)         # Teken een halve cirkel (180 graden) met staal 60
+turtle.circle(50)              # Teken een cirkel met een straal van 50 pixels
+turtle.circle(60, 180)         # Teken een halve cirkel (180 graden) met een straal van 60
 
 </pre>
 
@@ -156,7 +156,7 @@ Laat turtle jouw voorletter schrijven. Gebruik verschillende diktes en kleuren. 
 
 <iframe frameborder="0" width="100%" height="800px" src="https://create.withcode.uk/embed/CbT"><a target="_blank" href="https://create.withcode.uk/python/CbT">create.withcode.uk</a></iframe>
 
-<a href="INFvoorlichting_oplossingen.html#opgave-nederlandse-vlag">Klik hier</a> voor een voorbeeld uitwerking.
+<a href="INFvoorlichting_oplossingen.html#opgave-nederlandse-vlag">Klik hier</a> voor een voorbeelduitwerking.
 
 <h3 id="opgave-eigen-creatie"><span style="color:red">Opgave</span> Eigen creatie</h3>
 Maak nu zelf je eigen creatie!
