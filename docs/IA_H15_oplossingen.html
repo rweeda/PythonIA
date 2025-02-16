@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Python - Informatica Actief</title>
+    <!--css import-->
+    <link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div class="content">
+<h1 id="H15oplossingen">Onderwerp 15 - Python Dictionaries: Uitwerkingen</h1>
+
+<hr>
+<h3 id="opgave151">Opdracht 15.1 Dictionary met een trainingsschema maken en afdrukken</h3>
+<pre class="python">
+trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal"}
+print(trainingsschema)                                  # print de dictionary
+
+training_zat = trainingsschema["zaterdag"]              # haalt de waarde van de sleutel "zaterdag", namelijk voetbal
+print( training_zat )
+
+training_dinsdag = trainingsschema["dinsdag"]           # haalt de waarde van de sleutel "dinsdag", maar deze bestaat niet
+print( training_dinsdag )                               # 'dinsdag' is geen sleutel, dus geeft dit een foutmelding KeyError
+</pre>
+
+
+
+<h3 id="opgave152">Opdracht 15.2 Waarde met <code>get()</code> ophalen</h3>
+<pre class="python">
+trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal"}
+
+#opdracht a
+training_zat = trainingsschema["zaterdag"]        # haalt de waarde van de sleutel "zaterdag", namelijk voetbal
+print( training_zat )
+
+#opdracht b
+training_zondag = trainingsschema.get("dinsdag") # haalt de waarde van de sleutel 'zondag', maar deze bestaat niet
+print( training_zondag )                          # 'zondag' is geen sleutel, dus levert get() 'None' op
+
+#opdracht c
+if training_zondag == None:                        # er is geen training
+    print("Geen training!")                     # print dan "Geen training!"
+</pre>
+
+
+
+<h3 id="opgave153">Opdracht 15.3 Trainingsschema uitbreiden</h3>
+<pre class="python">
+trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal"}
+trainingsschema["zondag"] = "wielrennen"
+
+print(trainingsschema)
+</pre>
+
+
+<h3 id="opgave154">Opdracht 15.4 Trainingsschema aanpassen</h3>
+<pre class="python">
+trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal","zondag": "wielrennen"}
+trainingsschema["zondag"] = "hardloopwedstrijd"
+
+print(trainingsschema)
+</pre>
+
+
+<h3 id="opgave155">Opdracht 15.5 Verwijderen van een sleutel-waarde paar uit het trainingsschema</h3>
+<pre class="python">
+trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal","zondag": "wielrennen"}
+del trainingsschema["woensdag"]                          #verwijder "woensdag" en de bijbehorende activiteit uit de dictionary
+
+print(trainingsschema)
+</pre>
+
+
+<h3 id="opgave156">Opdracht 15.6 Hele trainingsschema afdrukken</h3>
+<pre class="python">
+trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal","zondag": "wielrennen"}
+
+for sleutel in trainingsschema:
+    print("Je training voor", sleutel, "is", trainingsschema.get(sleutel)+".")   #print de sleutels en waarden van de dictionary
+</pre>
+
+
+<h3 id="opgave157">Opdracht 15.7 Lijsten maken van delen van het trainingsschema</h3>
+<pre class="python">
+trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal","zondag": "wielrennen"}
+
+#opdracht a
+print( list(trainingsschema.keys()) )    # print een lijst van de trainingsdagen
+
+#opdracht b
+print( list(trainingsschema.values()) )  # print een lijst van de sporten
+
+#opdracht c
+print( list(trainingsschema.items()) )   # print een lijst van alle trainingsdagen met bijbehorende sporten.
+</pre>
+
+<h3 id="opgave158">Opdracht 15.8 Keuzes maken: lijst of dictionary</h3>
+<ol style="list-style-type: lower-alpha">
+<li>Lijst: Een lijst is geschikt omdat je alleen de namen van studenten opslaat en de volgorde belangrijk kan zijn. Je hebt geen sleutel-waarde paren nodig, dus een lijst is eenvoudiger en efficiënter.</li>
+<li>Dictionary: Een dictionary is beter omdat je sleutel-waarde paren nodig hebt (naam-telefoonnummer). Dit maakt het ophalen van gegevens op basis van een sleutel (naam) veel efficiënter.</li>
+<li>Lijst: Een lijst is geschikt omdat je alleen de cijfers opslaat en je de volgorde van invoer wilt behouden om bijvoorbeeld de cijfers in volgorde van binnenkomst te verwerken.
+<li>Lijst: Een lijst is geschikt als je alleen de items opslaat en de volgorde van toevoeging belangrijk is. Als je echter ook de prijzen en hoeveelheden van elk item wilt opslaan, kan een Dictionary beter zijn.</li>
+<li>Dictionary: Een dictionary is ideaal omdat je elk letter als sleutel kunt gebruiken en de frequentie als waarde. Dit maakt het gemakkelijk om de frequentie van elk letter bij te houden en op te halen.</li>
+</ol>
+
+<br>
+</div>
+<br>
+<br>
+</body>
+</html>
