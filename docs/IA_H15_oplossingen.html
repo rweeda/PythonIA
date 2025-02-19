@@ -35,16 +35,20 @@ print( training_dinsdag )                               # 'dinsdag' is geen sleu
 trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal"}
 
 #opdracht a
-training_zat = trainingsschema["zaterdag"]        # haalt de waarde van de sleutel "zaterdag", namelijk voetbal
-print( training_zat )
+training_wo = trainingsschema["woensdag"]  # haalt de waarde van de sleutel "woensdag", namelijk fitness
+if training_wo == None: # er is geen training
+    print("Geen training!") # print dan "Geen training!"
+else:
+    print( training_wo ) 
 
 #opdracht b
 training_zondag = trainingsschema.get("dinsdag") # haalt de waarde van de sleutel 'zondag', maar deze bestaat niet
-print( training_zondag )                          # 'zondag' is geen sleutel, dus levert get() 'None' op
 
-#opdracht c
-if training_zondag == None:                        # er is geen training
-    print("Geen training!")                     # print dan "Geen training!"
+#opdracht b
+if training_zondag == None: # er is geen training
+    print("Geen training!") # print dan "Geen training!"
+else: 
+    print( training_zondag )                # 'zondag' is geen sleutel, dus levert get() 'None' op 
 </pre>
 
 
