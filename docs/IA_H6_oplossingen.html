@@ -220,14 +220,14 @@ def BMI_berekenen (aantal_m, aantal_kg):
 
 #bepaal de gezondheidscategorie bij BMI
 def advies_bepalen(BMI):
-	if BMI <= 18.5: # te licht
-		advies = "Je mag best wel wat aankomen"
-		return "te licht"
-	elif BMI > 18.5 and BMI < 25: #gezond gewicht
-		advies = "Blijf op dit gewicht"
-	else: #BMI>= 25: te zwaar
-		advies = "Je kunt het beste wat afvallen"
-	return advies
+    if BMI <= 18.5: # te licht
+        advies = "Je mag best wel wat aankomen"
+    else:
+        if BMI < 25: #gezond gewicht
+            advies = "Blijf op dit gewicht"
+        else: #B in het geval BMI>= 25: te zwaaar
+            advies = "Je kunt het beste wat afvallen"
+    return advies
 
 ### HOOFDPROGRAMMA
 
