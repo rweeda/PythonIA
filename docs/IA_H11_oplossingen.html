@@ -12,10 +12,10 @@
 </head>
 <body>
 <div class="content">
-<h1 id="H11oplossingen">Hoofdstuk 14 Tekstbestanden: Uitwerkingen</h1>
+<h1 id="H11oplossingen">Hoofdstuk 15 Tekstbestanden: Uitwerkingen</h1>
 
 <hr>
-<h3 id="opgave1111">Opdracht 14.1 - Foutmelding herkennen</h3>
+<h3 id="opgave1111">Opdracht 15.1 - Foutmelding herkennen</h3>
 Geen uitwerking beschikbaar.
 <ol>
 <li>Door de code te runnen zie je dat er in "groet.txt" het volgende staat:<br>
@@ -43,7 +43,7 @@ c.	Klik op "groet.txt" om de inhoud van dat bestand zien.
 -->
 
 
-<h3 id="opgave1112">Opdracht 14.2 - Inhoud afdrukken</h3>
+<h3 id="opgave1112">Opdracht 15.2 - Inhoud afdrukken</h3>
 
 <pre class="python">
 bestand = open("dikkertjeDap.txt", "r")						#open bestand
@@ -57,7 +57,7 @@ bestand.close()															#sluit bestand
 </pre>
 
 
-<h3 id="opgave1113">Opdracht 14.3 - Letters tellen</h3>
+<h3 id="opgave1113">Opdracht 15.3 - Letters tellen</h3>
 
 <pre class="python">
 bestand = open("dikkertjeDap.txt", "r")  #open bestand om te lezen	
@@ -86,7 +86,7 @@ print(inhoud)
 </pre>
 
 
-<h3 id="opgave1121">Opdracht 14.4 - In bestand schrijven</h3>
+<h3 id="opgave1121">Opdracht 15.4 - In bestand schrijven</h3>
 <pre class="python">
 tekst = input("Geef een regel tekst om in het bestand te zetten: ")
 
@@ -100,7 +100,7 @@ print("Dit staat er nu in het bestand: ", tekst_in_bestand)
 bestand2.close()
 </pre>
 
-<h3 id="opgave1122">Opdracht 14.5 - Bestanden kopi&euml;ren</h3>
+<h3 id="opgave1122">Opdracht 15.5 - Bestanden kopi&euml;ren</h3>
 <pre class="python">
 leesbestand = open("kuikentjePiep.txt", "r")          #open bestand om te lezen	
 tekst = leesbestand.read()	            #sla inhoud van bestand op in een string variabele
@@ -111,7 +111,7 @@ schrijfbestand.write(tekst)                  #schrijf tekst in bestand
 schrijfbestand.close() 	                    #sluit bestand
 </pre>
 
-<h3 id="opgave1123">Opdracht 14.6 - Van lijst naar bestand</h3>
+<h3 id="opgave1123">Opdracht 15.6 - Van lijst naar bestand</h3>
 <pre class="python">
 lijst= ["rood\n","wit\n", "blauw"]
 
@@ -122,12 +122,12 @@ bestand.close()
 </pre>
 
 
-<h3 id="opgave1124">Opdracht 14.7 - Toevoegen aan een bestand</h3>
+<h3 id="opgave1124">Opdracht 15.7 - Toevoegen aan een bestand</h3>
 Met "a" plak je steeds tekst achteraan bestaande tekst in een bestand. Je overschrijft dus niets.<br>
 
 Met “w” wordt alle oude tekst overschreven.
 
-<h3 id="opgave1131">Opdracht 14.8 - Van bestand naar scherm</h3>
+<h3 id="opgave1131">Opdracht 15.8 - Van bestand naar scherm</h3>
 <pre class="python">
 bestand = open("emailadressen.csv", "r")
 
@@ -154,9 +154,9 @@ bestand.close()
 </pre>
 <hr>
 
-<h1 id="11AfOpgaven">H14: Afsluitende opdrachten: UITWERKINGEN</h1>
+<h1 id="11AfOpgaven">H15: Afsluitende opdrachten: UITWERKINGEN</h1>
 
-<h3 id="AfOpgave111">Afsluitende opdracht 14.1 Vat samen</h3>
+<h3 id="AfOpgave111">Afsluitende opdracht 15.1 Vat samen</h3>
 <b>Samenvatting:</b> Er wordt een lijst gemaakt van de inhoud van het bestand, waarbij elk woord een apart element in de lijst wordt.<br>
 
 
@@ -170,7 +170,7 @@ Ter informatie, in detail gebeurt het volgende:
 <li>De lijst wordt geprint naar het scherm.
 </ol>
 
-<h3 id="AfOpgave112">Afsluitende opdracht 14.2 Hoofdletters maken van tekst in een bestand</h3>
+<h3 id="AfOpgave112">Afsluitende opdracht 15.2 Hoofdletters maken van tekst in een bestand</h3>
 <pre class="python">
 leesbestand_handle = open("kuikentjePiep.txt", "r") #open bestand om te lezen	
 tekst = leesbestand_handle.read(#sla inhoud van bestand op in variabele
@@ -183,7 +183,7 @@ schrijfbestand_handle.write(tekst)                  #schrijf tekst in bestand
 schrijfbestand_handle.close() 	                    #sluit bestand
 </pre>
 
-<h3 id="AfOpgave113">Afsluitende opdracht 14.3: Gebruikersinvoer opslaan</h3>
+<h3 id="AfOpgave113">Afsluitende opdracht 15.3: Gebruikersinvoer opslaan</h3>
 <pre class="python">
 bestand = open("hobby.txt", "w")
 
@@ -196,7 +196,7 @@ bestand.close()
 </pre>
 
 
-<h3 id="AfOpgave114">Afsluitende opdracht 14.4: Het aantal drieletterwoorden</h3>
+<h3 id="AfOpgave115">Afsluitende opdracht 15.4: Het aantal drieletterwoorden</h3>
 <pre class=""python">
 bestand = open("kuikentjePiep.txt", "r")
 
@@ -219,7 +219,7 @@ print(woord_teller)
 bestand.close()
 </pre>
 
-<h3 id="AfOpgave115">Afsluitende opdracht 14.5: Persoonlijkebrievengenerator</h3>
+<h3 id="AfOpgave115">Afsluitende opdracht 15.5: Persoonlijkebrievengenerator</h3>
 <pre class="python">
 ### LEES GEGEVENS IN
 bestand = open("abo_gegevens.txt", "r")
