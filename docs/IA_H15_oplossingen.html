@@ -35,7 +35,7 @@ print( training_dinsdag )                               # 'dinsdag' is geen sleu
 trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal"}
 
 #opdracht a
-training_wo = trainingsschema["woensdag"]  # haalt de waarde van de sleutel "woensdag", namelijk fitness
+training_wo = trainingsschema.get("woensdag")  # haalt de waarde van de sleutel "woensdag", namelijk fitness
 if training_wo is None: # er is geen training
     print("Geen training!") # print dan "Geen training!"
 else:
