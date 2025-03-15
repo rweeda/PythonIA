@@ -154,6 +154,52 @@ for dier, eigenschappen in dieren.items():
 print("Het oudste dier is " + oudste_dier + " met " + str(max_leeftijd) + " jaar.")
 </pre>
 
+
+<h3 id="opgaveaf151">Afsluitende opdracht 11.1 Aantal voldoendes</h3>
+<pre class="python">
+cijfers = {
+    "Wiskunde": 7.5,
+    "Nederlands": 6.8,
+    "Engels": 7.2,
+    "Biologie": 5.4,
+    "Geschiedenis": 7.0,
+    "Scheikunde": 4.9,
+    "Informatica": 8.3
+}
+
+aantal_onvoldoendes = 0
+
+for cijfer in cijfers.values():
+    if cijfer < 5.5:
+        aantal_onvoldoendes += 1
+
+print("Aantal onvoldoendes:", aantal_onvoldoendes)
+
+</pre>
+
+<h3 id="opgaveaf152">Afsluitende opdracht 11.2 Bouwmaterialen</h3>
+<pre class="python">
+bouwmaterialen = {
+    "Speler1": {"hout": 150, "steen": 90, "metaal": 50},
+    "Speler2": {"hout": 200, "steen": 75, "metaal": 30},
+    "Speler3": {"hout": 50, "steen": 5, "metaal": 10}
+}
+
+#a totaal aan bouwmaterialen per speler
+for speler, materialen in bouwmaterialen.items():
+    speler_totaal = 0  # Start met 0
+    for hoeveelheid in materialen.values():  # Loop door de waarden (hoeveelheden)
+        speler_totaal += hoeveelheid  # Tel de waarde op bij totaal
+    print(speler, "heeft in totaal", speler_totaal, "aan bouwmaterialen.")
+
+#b totaal aan bouwmaterialen voor alle spelers bij elkaar
+totaal = 0
+for speler, materialen in bouwmaterialen.items():
+    for hoeveelheid in materialen.values():  # Loop door de waarden (hoeveelheden)
+        totaal += hoeveelheid  # Tel de waarde op bij totaal
+print("In totaal is er", totaal, "aan bouwmaterialen.")  
+</pre>
+
 <br>
 </div>
 <br>
