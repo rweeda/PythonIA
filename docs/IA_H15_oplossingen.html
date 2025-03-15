@@ -115,6 +115,45 @@ print( list(trainingsschema.items()) )   # print een lijst van alle trainingsdag
 <li>Dictionary: Een dictionary is meer geschikt dan een lijst voor deze taak, omdat een dictionary directe toegang geeft tot gegevens (het cijfer) op basis van een sleutel (de naam).</li>
 </ol>
 
+
+<h3 id="opgave159">Opdracht 11.9 Werken met een geneste dictionary</h3>
+<pre class="python">
+dieren = {
+    "Leeuw": {"soort": "Zoogdier", "leefgebied": "Afrika", "leeftijd": 14},
+    "Pinguïn": {"soort": "Vogel", "leefgebied": "Antarctica", "leeftijd": 20},
+    "Python": {"soort": "Reptiel", "leefgebied": "Jungle", "leeftijd": 25}
+}
+
+#a: Print alle informatie over de Pinguïn
+print("Alle informatie over de Pinguïn:", dieren["Pinguïn"])
+
+#b: Print het leefgebied van de Pinguïn 
+print("De leefgebied van de Pinguïn is:", dieren["Pinguïn"]["leefgebied"])
+
+#c: Voegt een Olifant toe
+dieren["Olifant"] = {"soort": "Zoogdier", "leefgebied": "Afrika", "leeftijd": 70}
+
+#d: Verandert de leeftijd van de Leeuw
+dieren["Leeuw"]["leeftijd"] = 16
+
+#e: Drukt de informatie van alle dieren (netjes) af
+print("Alle dieren:")
+for dier, eigenschappen in dieren.items():
+    print(dier, "is van het soort", eigenschappen['soort'], "leeft in", eigenschappen['leefgebied'], "en is", eigenschappen['leeftijd'], "jaar oud.")
+
+
+#f: Doorloopt de dictionary met een for-loop en vindt het oudste dier
+oudste_dier = ""
+max_leeftijd = 0
+for dier, eigenschappen in dieren.items():
+    if eigenschappen["leeftijd"] > max_leeftijd:
+        max_leeftijd = eigenschappen["leeftijd"]
+        oudste_dier = dier
+
+
+print("Het oudste dier is " + oudste_dier + " met " + str(max_leeftijd) + " jaar.")
+</pre>
+
 <br>
 </div>
 <br>
