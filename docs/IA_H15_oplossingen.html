@@ -35,8 +35,8 @@ print( training_dinsdag )                               # 'dinsdag' is geen sleu
 trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal"}
 
 #opdracht a
-training_wo = trainingsschema["woensdag"]  # haalt de waarde van de sleutel "woensdag", namelijk fitness
-if training_wo == None: # er is geen training
+training_wo = trainingsschema.get("woensdag")  # haalt de waarde van de sleutel "woensdag", namelijk fitness
+if training_wo is None: # er is geen training
     print("Geen training!") # print dan "Geen training!"
 else:
     print( training_wo )
@@ -45,7 +45,7 @@ else:
 training_zondag = trainingsschema.get("dinsdag") # haalt de waarde van de sleutel 'zondag', maar deze bestaat niet
 
 #opdracht b
-if training_zondag == None: # er is geen training
+if training_zondag is None: # er is geen training
     print("Geen training!") # print dan "Geen training!"
 else:
     print( training_zondag )                # 'zondag' is geen sleutel, dus levert get() 'None' op
@@ -110,7 +110,95 @@ print( list(trainingsschema.items()) )   # print een lijst van alle trainingsdag
 <li>Lijst: Een lijst is geschikt omdat je alleen de cijfers opslaat en je de volgorde van invoer wilt behouden om bijvoorbeeld de cijfers in volgorde van binnenkomst te verwerken.
 <li>Lijst: Een lijst is geschikt als je alleen de items opslaat en de volgorde van toevoeging belangrijk is. Als je echter ook de prijzen en hoeveelheden van elk item wilt opslaan, kan een Dictionary beter zijn.</li>
 <li>Dictionary: Een dictionary is ideaal omdat je elk letter als sleutel kunt gebruiken en de frequentie als waarde. Dit maakt het gemakkelijk om de frequentie van elk letter bij te houden en op te halen.</li>
+<li>Lijst: Je maakt een lijst van de namen. Met <code>len()</code> bepaal je makkelijk hoeveel er in zitten.</li>
+<li>Lijst: Je maakt een lijst met de namen in de wachtrij. Degene die vooraan staat, mag als eerste in de attractie en wordt vervolgens uit de lijst verwijderd. Een lijst is geschikter dan een dictionary voor deze taak, omdat een wachtrij een geordende structuur heeft waarin het principe "First In, First Out" (FIFO) geldt..</li>
+<li>Dictionary: Een dictionary is meer geschikt dan een lijst voor deze taak, omdat een dictionary directe toegang geeft tot gegevens (het cijfer) op basis van een sleutel (de naam).</li>
 </ol>
+
+
+<h3 id="opgave159">Opdracht 11.9 Werken met een geneste dictionary</h3>
+<pre class="python">
+dieren = {
+    "Leeuw": {"soort": "Zoogdier", "leefgebied": "Afrika", "leeftijd": 14},
+    "Pinguïn": {"soort": "Vogel", "leefgebied": "Antarctica", "leeftijd": 20},
+    "Python": {"soort": "Reptiel", "leefgebied": "Jungle", "leeftijd": 25}
+}
+
+#a: Print alle informatie over de Pinguïn
+print("Alle informatie over de Pinguïn:", dieren["Pinguïn"])
+
+#b: Print het leefgebied van de Pinguïn 
+print("De leefgebied van de Pinguïn is:", dieren["Pinguïn"]["leefgebied"])
+
+#c: Voegt een Olifant toe
+dieren["Olifant"] = {"soort": "Zoogdier", "leefgebied": "Afrika", "leeftijd": 70}
+
+#d: Verandert de leeftijd van de Leeuw
+dieren["Leeuw"]["leeftijd"] = 16
+
+#e: Drukt de informatie van alle dieren (netjes) af
+print("Alle dieren:")
+for dier, eigenschappen in dieren.items():
+    print(dier, "is van het soort", eigenschappen['soort'], "leeft in", eigenschappen['leefgebied'], "en is", eigenschappen['leeftijd'], "jaar oud.")
+
+
+#f: Doorloopt de dictionary met een for-loop en vindt het oudste dier
+oudste_dier = ""
+max_leeftijd = 0
+for dier, eigenschappen in dieren.items():
+    if eigenschappen["leeftijd"] > max_leeftijd:
+        max_leeftijd = eigenschappen["leeftijd"]
+        oudste_dier = dier
+
+
+print("Het oudste dier is " + oudste_dier + " met " + str(max_leeftijd) + " jaar.")
+</pre>
+
+
+<h3 id="opgaveaf151">Afsluitende opdracht 11.1 Aantal voldoendes</h3>
+<pre class="python">
+cijfers = {
+    "Wiskunde": 7.5,
+    "Nederlands": 6.8,
+    "Engels": 7.2,
+    "Biologie": 5.4,
+    "Geschiedenis": 7.0,
+    "Scheikunde": 4.9,
+    "Informatica": 8.3
+}
+
+aantal_onvoldoendes = 0
+
+for cijfer in cijfers.values():
+    if cijfer < 5.5:
+        aantal_onvoldoendes += 1
+
+print("Aantal onvoldoendes:", aantal_onvoldoendes)
+
+</pre>
+
+<h3 id="opgaveaf152">Afsluitende opdracht 11.2 Bouwmaterialen</h3>
+<pre class="python">
+bouwmaterialen = {
+    "Speler1": {"hout": 150, "steen": 90, "metaal": 50},
+    "Speler2": {"hout": 200, "steen": 75, "metaal": 30},
+    "Speler3": {"hout": 50, "steen": 5, "metaal": 10}
+}
+
+#a totaal aan bouwmaterialen per speler
+for speler, materialen in bouwmaterialen.items():
+    speler_totaal = 0  # Start met 0
+    for hoeveelheid in materialen.values():  # Loop door de waarden (hoeveelheden)
+        speler_totaal += hoeveelheid  # Tel de waarde op bij totaal
+    print(speler, "heeft in totaal", speler_totaal, "aan bouwmaterialen.")
+
+#b totaal aan bouwmaterialen voor alle spelers bij elkaar
+totaal = 0
+for speler, materialen in bouwmaterialen.items():
+    for hoeveelheid in materialen.values():  # Loop door de waarden (hoeveelheden)
+        totaal += hoeveelheid  # Tel de waarde op bij totaal
+print("In totaal is er", totaal, "aan bouwmaterialen.")  
+</pre>
 
 <br>
 </div>
