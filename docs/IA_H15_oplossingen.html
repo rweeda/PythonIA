@@ -65,13 +65,13 @@ print(trainingsschema)
 <h3 id="opgave154">Opdracht 11.4 Trainingsschema aanpassen</h3>
 <pre class="python">
 trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal","zondag": "wielrennen"}
-trainingsschema["zondag"] = "hardloopwedstrijd"
+trainingsschema["zondag"] = "hardlopen"
 
 print(trainingsschema)
 </pre>
 
 
-<h3 id="opgave155">Opdracht 11.5 Verwijderen van een sleutel-waarde paar uit het trainingsschema</h3>
+<h3 id="opgave155">Opdracht 11.5 Verwijderen van een sleutelwaarde-paar uit het trainingsschema</h3>
 <pre class="python">
 trainingsschema = {"maandag":"hardlopen", "woensdag":"fitness", "zaterdag":"voetbal","zondag": "wielrennen"}
 del trainingsschema["woensdag"]                          #verwijder "woensdag" en de bijbehorende activiteit uit de dictionary
@@ -105,13 +105,13 @@ print( list(trainingsschema.items()) )   # print een lijst van alle trainingsdag
 
 <h3 id="opgave158">Opdracht 11.8 Keuzes maken: lijst of dictionary</h3>
 <ol style="list-style-type: lower-alpha">
-<li>Lijst: Een lijst is geschikt omdat je alleen de namen van studenten opslaat en de volgorde belangrijk kan zijn. Je hebt geen sleutel-waarde paren nodig, dus een lijst is eenvoudiger en efficiënter.</li>
-<li>Dictionary: Een dictionary is beter omdat je sleutel-waarde paren nodig hebt (naam-telefoonnummer). Dit maakt het ophalen van gegevens op basis van een sleutel (naam) veel efficiënter.</li>
+<li>Lijst: Een lijst is geschikt omdat je alleen de namen van studenten opslaat en de volgorde belangrijk kan zijn. Je hebt geen sleutelwaarde-paren nodig, dus een lijst is eenvoudiger en efficiënter.</li>
+<li>Dictionary: Een dictionary is beter omdat je sleutelwaarde-paren nodig hebt (naam-telefoonnummer). Dit maakt het ophalen van gegevens op basis van een sleutel (naam) veel efficiënter.</li>
 <li>Lijst: Een lijst is geschikt omdat je alleen de cijfers opslaat en je de volgorde van invoer wilt behouden om bijvoorbeeld de cijfers in volgorde van binnenkomst te verwerken.
-<li>Lijst: Een lijst is geschikt als je alleen de items opslaat en de volgorde van toevoeging belangrijk is. Als je echter ook de prijzen en hoeveelheden van elk item wilt opslaan, kan een Dictionary beter zijn.</li>
-<li>Dictionary: Een dictionary is ideaal omdat je elk letter als sleutel kunt gebruiken en de frequentie als waarde. Dit maakt het gemakkelijk om de frequentie van elk letter bij te houden en op te halen.</li>
-<li>Lijst: Je maakt een lijst van de namen. Met <code>len()</code> bepaal je makkelijk hoeveel er in zitten.</li>
-<li>Lijst: Je maakt een lijst met de namen in de wachtrij. Degene die vooraan staat, mag als eerste in de attractie en wordt vervolgens uit de lijst verwijderd. Een lijst is geschikter dan een dictionary voor deze taak, omdat een wachtrij een geordende structuur heeft waarin het principe "First In, First Out" (FIFO) geldt..</li>
+<li>Lijst: Een lijst is geschikt als je alleen de items opslaat en de volgorde van toevoeging belangrijk is. Als je echter ook de prijzen en hoeveelheden van elk item wilt opslaan, kan een dictionary beter zijn.</li>
+<li>Dictionary: Een dictionary is ideaal omdat je elke letter als sleutel kunt gebruiken en de frequentie als waarde. Dit maakt het gemakkelijk om de frequentie van elke letter bij te houden en op te halen.</li>
+<li>Lijst: Je maakt een lijst van de namen. Met <code>len()</code> bepaal je makkelijk hoeveel erin zitten.</li>
+<li>Lijst: Je maakt een lijst met de namen in de wachtrij. De naam van degene die vooraan staat, mag als eerste in de attractie en wordt vervolgens uit de lijst verwijderd. Een lijst is geschikter dan een dictionary voor deze taak, omdat een wachtrij een geordende structuur heeft waarin het principe "First In, First Out" (FIFO) geldt.</li>
 <li>Dictionary: Een dictionary is meer geschikt dan een lijst voor deze taak, omdat een dictionary directe toegang geeft tot gegevens (het cijfer) op basis van een sleutel (de naam).</li>
 </ol>
 
@@ -128,7 +128,7 @@ dieren = {
 print("Alle informatie over de Pinguïn:", dieren["Pinguïn"])
 
 #b: Print het leefgebied van de Pinguïn 
-print("De leefgebied van de Pinguïn is:", dieren["Pinguïn"]["leefgebied"])
+print("Het leefgebied van de Pinguïn is:", dieren["Pinguïn"]["leefgebied"])
 
 #c: Voegt een Olifant toe
 dieren["Olifant"] = {"soort": "Zoogdier", "leefgebied": "Afrika", "leeftijd": 70}
@@ -197,8 +197,29 @@ totaal = 0
 for speler, materialen in bouwmaterialen.items():
     for hoeveelheid in materialen.values():  # Loop door de waarden (hoeveelheden)
         totaal += hoeveelheid  # Tel de waarde op bij totaal
-print("In totaal is er", totaal, "aan bouwmaterialen.")  
+print("In totaal zijn er", totaal, "bouwmaterialen.")  
 </pre>
+<br>
+Alternatief antwoord met onderdelen a) en b) samen:<br>
+<pre class="python">
+bouwmaterialen = {
+    "speler1": {"hout": 150, "steen": 90, "metaal": 50},
+    "speler2": {"hout": 200, "steen": 75, "metaal": 30},
+    "speler3": {"hout": 50, "steen": 5, "metaal": 10}
+}
+
+
+totale_som = 0
+for speler, materiaal in bouwmaterialen.items():
+    som_speler = 0
+    for aantal in materiaal.values():
+        som_speler += aantal
+    print(speler, "heeft", som_speler, "materialen.")
+    totale_som += som_speler
+print()
+print("Het toaal aan materialen bedragt", str(totale_som)+ ".")
+</pre>
+
 
 <br>
 </div>
