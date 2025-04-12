@@ -1,6 +1,24 @@
 Nieuwe Python cursus: 
 https://moodle.informatica-actief.nl/course/view.php?id=1107 
 
+Jupyter links naar github: https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/H2/H2_IA_1.ipynb
+
+
+SQL 
+https://github.com/rweeda/PythonIA/blob/main/sql/sql_test.ipynb
+dus vanuit Moodle: 
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/sql_test.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/danilo.sql
+
+
+https://basthon.informatica-actief.nl/?kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/danilo.sql&from=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/sql_test.ipynb
+
+
+
+IenI:
+https://jupyter.infvo.nl/books/notebook/?kernel=sql&from=share/SQL-progOmgeving.ipynb&module=share/data/example.sql
+
+
+
 TODO:
 -python installerne
 
