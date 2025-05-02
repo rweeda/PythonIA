@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Python - Informatica Actief</title>
+    <!--css import-->
+    <link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for rescaling menu -->
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div class="content">
+<h1 id="H16oplossingen">Onderwerp 16 - Python Geneste Dictionaries: Uitwerkingen</h1>
+
+<hr>
+
+
+<h3 id="opgave161">Opdracht 16.1 Gegevens over Rome toevoegen</h3>
+<ol type="a">
+<li>
+<pre class="python">
+steden = {
+    "Amsterdam":{"land": "Nederland", "inwoners": 921000},
+    "Parijs": {"land": "Frankrijk", "inwoners": 2148000},
+    "Berlijn": {"land": "Duitsland", "inwoners": 3769000},
+    "Rome": {"land": "Italië", "inwoners": 2873000}
+}
+</pre>
+
+<li><code>print(steden["Rome"])   # Geeft: {'land': 'Italië', 'inwoners': 2873000}</code>
+<li><code>print(steden["Rome"]["inwoners"])   # Geeft: 2873000</code>
+</ol>
+
+<h3 id="opgave162">Opdracht 16.2 Aantal inwoners van Berlijn aanpassen</h3>
+<pre class="python">
+steden = {
+    "Amsterdam":{"land": "Nederland", "inwoners": 921000},
+    "Parijs": {"land": "Frankrijk", "inwoners": 2148000},
+    "Berlijn": {"land": "Duitsland", "inwoners": 3769000},
+}
+
+steden["Berlijn"]["land"] = "DL"
+print(steden["Berlijn"]["land"])   # Geeft "DL"
+</pre>
+
+<h3 id="opgave163">Opdracht 16.3 Kennismaken met de geneste dictionary "De dierentuin"</h3>
+
+<ol type="a">
+<li>Davanne
+<li>15
+<li>3, namelijk: Zoogdier, Vogel, Reptiel
+<li>muizen en ratten</li>
+<li>een lijst</li>
+
+</ol>
+
+
+<h3 id="opgave164">Opdracht 16.4 Werken met de geneste dictionary "De dierentuin"</h3>
+
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3}
+}
+
+#a: Print de verblijf over de dierentuin
+print("Alle informatie over de dierentuin:", dierentuin)
+
+#b: Print alle informatie over de Pinguïn
+print("Alle informatie over de Pinguïn:", dierentuin["Pinguïn"])
+
+#c: Print de verblijf van de Pinguïn 
+print("De verblijf van de Pinguïn is:", dierentuin["Pinguïn"]["verblijf"])
+
+#d: Pas het aantal Pythons aan naar 4
+dierentuin["Python"]["aantal"] = 4
+print(dierentuin)
+
+#e: Voeg een Olifant toe
+dierentuin["Olifant"] = {"soort": "Zoogdier", "verblijf": "Savanne",  "dieet": ["planten", "fruit", "bladeren"],
+        "aantal": 6}
+print(dierentuin)
+
+
+#f: Druk de gegevens van alle dieren (netjes) af
+print("Alle dieren:")
+for dier, gegevens in dierentuin.items():
+    print(dier, "is van het soort", gegevens['soort'], "leeft in", gegevens['verblijf'], "en er zijn er", gegevens['aantal'], "van.")
+
+
+
+</pre>
+<!--
+#f: Doorloopt de dictionary met een for-loop en vindt het oudste dier
+oudste_dier = ""
+max_leeftijd = 0
+for dier, eigenschappen in dieren.items():
+    if eigenschappen["leeftijd"] > max_leeftijd:
+        max_leeftijd = eigenschappen["leeftijd"]
+        oudste_dier = dier
+
+
+print("Het oudste dier is " + oudste_dier + " met " + str(max_leeftijd) + " jaar.")
+-->
+
+
+<h3 id="opgave165">Opdracht 16.5 Miljoenensteden</h3>
+<pre class="python">
+steden = {
+    "Amsterdam": {"land": "Nederland", "inwoners": 921000, "werelddeel": "Europa"},
+    "Buenos Aires": {"land": "Argentinië", "inwoners": 2890000, "werelddeel": "Zuid-Amerika"},
+    "Rome": {"land": "Italië", "inwoners": 2873000, "werelddeel": "Europa"},
+    "São Paulo": {"land": "Brazilië", "inwoners": 12330000, "werelddeel": "Zuid-Amerika"},
+    "Tokyo": {"land": "Japan", "inwoners": 13960000, "werelddeel": "Azië"}
+}
+miljoenenstedenLijst =[]                            # maak een lege lijst
+for stad, gegevens in steden.items():               # loop door de dictionary en haal de gegevens voor elke stad op
+	if gegevens["inwoners"] > 1000000 :              # als er meer dan 1 miljoen inwoners zijn
+		miljoenenstedenLijst.append( stad )	        # voeg stad toe aan miljoenenstedenLijst
+
+print("Lijst met miljoenensteden:", miljoenenstedenLijst)
+</pre>
+
+<h3 id="opgave166">Opdracht 16.6 Lijst van alle dieren in de Savanne</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
+
+savanneLijst = []                                 # maak een lege lijst
+for dier, gegevens in dierentuin.items():        # loop door de dictionary en haal de gegevens voor elk dier op
+    if gegevens["verblijf"] == "Savanne":         # als het verblijf Savanne is
+        savanneLijst.append(dier)                  # voeg het dier toe aan savanneLijst
+
+print(savanneLijst)
+</pre>
+
+
+
+<h3 id="opgave167">Opdracht 16.7 Lijst van alle dieren die vlees eten</h3>
+<pre class="python">
+
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
+
+vleesDiet = []                                 # maak een lege lijst
+for dier, gegevens in dierentuin.items():        # loop door de dictionary en haal de gegevens voor elk dier op
+    if "vlees" in gegevens["dieet"]:            # als er vlees in het dieet van het dier zit
+        vleesDiet.append(dier)                  # voeg het dier toe aan vleesDiet
+
+print(vleesDiet)
+</pre>
+
+
+
+
+<h3 id="opgave168">Opdracht 16.8 Aantal Zuid-Amerikaanse steden</h3>
+<pre class="python">
+steden = {
+    "Amsterdam": {"land": "Nederland", "inwoners": 921000, "werelddeel": "Europa"},
+    "Buenos Aires": {"land": "Argentinië", "inwoners": 2890000, "werelddeel": "Zuid-Amerika"},
+    "Rome": {"land": "Italië", "inwoners": 2873000, "werelddeel": "Europa"},
+    "São Paulo": {"land": "Brazilië", "inwoners": 12330000, "werelddeel": "Zuid-Amerika"},
+    "Tokyo": {"land": "Japan", "inwoners": 13960000, "werelddeel": "Azië"}
+}
+
+aantal_ZuidAmerikaanse_steden = 0	#teller begint op 0
+for stad in steden:
+	if steden[stad]["werelddeel"] == "Zuid-Amerika":	#als de inwoners meer zijn dan 1 miljoen
+		aantal_ZuidAmerikaanse_steden += 1	#teller ophogen zodra element gevonden is
+
+print("Aantal Zuid-Amerikaanse steden is:", aantal_ZuidAmerikaanse_steden)
+</pre>
+
+
+<h3 id="opgave169">Opdracht 16.9 Aantal soorten in de poolgebied</h3>
+<pre class="python">
+
+    dierentuin = {
+        "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+        "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+        "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+        "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+        "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+    }
+    
+    
+    aantal_soorten_poolgebied = 0	                                        # teller begint op 0
+    for dier in dierentuin:
+        if dierentuin[dier]["verblijf"] == "Poolgebied":	                # als verblijf gelijk is aan Poolgebied
+            aantal_soorten_poolgebied += 1	                                # teller ophogen
+    
+    print("Aantal dieren in het Poolgebied:", aantal_soorten_poolgebied)	# teller printen
+</pre>
+
+
+
+<h3 id="opgaveaf161">Afsluitende opdracht 16.1</h3>
+
+
+
+<br>
+</div>
+<br>
+<br>
+</body>
+</html>
