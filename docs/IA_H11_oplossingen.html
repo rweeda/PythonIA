@@ -173,12 +173,12 @@ Ter informatie, in detail gebeurt het volgende:
 <h3 id="AfOpgave112">Afsluitende opdracht 15.2 Hoofdletters maken van tekst in een bestand</h3>
 <pre class="python">
 leesbestand_handle = open("kuikentjePiep.txt", "r") #open bestand om te lezen	
-tekst = leesbestand_handle.read(#sla inhoud van bestand op in variabele
+tekst = leesbestand_handle.read() #sla inhoud van bestand op in variabele
 tekst = tekst.upper()
 print(tekst)
 leesbestand_handle.close()	 #sluit bestand
 
-schrijfbestand_handle = open("KUIKENTJEPIEP.txt", "w") #open/maak bestand om in te schrijven
+schrijfbestand_handle = open("kuikentjePiepGroot.txt", "w") #open/maak bestand om in te schrijven
 schrijfbestand_handle.write(tekst)                  #schrijf tekst in bestand
 schrijfbestand_handle.close() 	                    #sluit bestand
 </pre>
