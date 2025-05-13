@@ -20,7 +20,7 @@ Table bestelling {
 Table bezorger {
   bezorgernummer INTEGER
   wachtwoord TEXT
-  berzorgernaam TEXT
+  naam TEXT
   gebdatum TEXT
   telefoon TEXT
 }
@@ -42,7 +42,7 @@ Table formaat {
 Table klant {
   klantnummer INTEGER [primary key]
   wachtwoord TEXT
-  klantnaam TEXT
+  naam TEXT
   adres TEXT
   postcode TEXT
   woonplaats TEXT
@@ -52,8 +52,8 @@ Table klant {
   
 Table pizza {
   pizzacode INTEGER [primary key]
-  pizzanaam TEXT
-  pizzaomschrijving TEXT
+  naam TEXT
+  omschrijving TEXT
   basisprijs REAL
 }
 

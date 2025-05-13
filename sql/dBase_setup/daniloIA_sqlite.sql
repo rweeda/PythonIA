@@ -30,7 +30,7 @@ DROP TABLE IF EXISTS `bezorger`;
 CREATE TABLE `bezorger` (
   `bezorgernummer` INTEGER PRIMARY KEY NOT NULL,
   `wachtwoord` TEXT NOT NULL,
-  `bezorgernaam` TEXT NOT NULL,
+  `naam` TEXT NOT NULL,
   `gebdatum` date NOT NULL,
   `telefoon` TEXT NOT NULL
 );
@@ -53,7 +53,7 @@ DROP TABLE IF EXISTS `klant`;
 CREATE TABLE `klant` (
   `klantnummer` INTEGER PRIMARY KEY NOT NULL,
   `wachtwoord` TEXT  NOT NULL,
-  `klantnaam` TEXT  NOT NULL,
+  `naam` TEXT  NOT NULL,
   `adres` TEXT  NOT NULL,
   `postcode` TEXT  NOT NULL,
   `woonplaats` TEXT NOT NULL,
@@ -63,13 +63,13 @@ CREATE TABLE `klant` (
 DROP TABLE IF EXISTS `pizza`;
 CREATE TABLE `pizza` (
   `pizzacode`  INTEGER PRIMARY KEY NOT NULL,
-  `pizzanaam` TEXT NOT NULL,
+  `naam` TEXT NOT NULL,
   `omschrijving` varchar(255) NOT NULL,
   `basisprijs` REAL NOT NULL
 );
 
 
-INSERT INTO `klant` (`klantnummer`, `wachtwoord`, `klantnaam`, `adres`, `postcode`, `woonplaats`, `telefoon`) VALUES
+INSERT INTO `klant` (`klantnummer`, `wachtwoord`, `naam`, `adres`, `postcode`, `woonplaats`, `telefoon`) VALUES
 (101, 'uqOpgECQ_', 'Hanneke Bolier', 'Gladioolstraat 11', '3742TC', 'Enschede', '06-16915427'),
 (103, 'id4m9g2_PHp10t', 'Erika de Vries', 'Banckertlaan 7', '3742MG', 'Enschede', '06-79118502'),
 (104, '84t9TPLOZKZ', 'Nelleke op den Brouw', 'Talmalaan 11', '3741T2', 'Enschede', '035-6014464'),
@@ -189,7 +189,7 @@ INSERT INTO `klant` (`klantnummer`, `wachtwoord`, `klantnaam`, `adres`, `postcod
 (472, 'ioRVCQ6uX4', 'Lotte Vermeer', 'St. Annastraat 189', '6525GW', 'Nijmegen', '024-2286731'),
 (474, 'OdlbHaDqKU', 'Timo Hendriks', 'Wolfskuilseweg 23', '6542JG', 'Nijmegen', '06-49902715');
 
-INSERT INTO `pizza` (`pizzacode`, `pizzanaam`, `omschrijving`, `basisprijs`) VALUES
+INSERT INTO `pizza` (`pizzacode`, `naam`, `omschrijving`, `basisprijs`) VALUES
 (1, 'Margherita', 'Tomaat,kaas en oregano ', '6.00'),
 (2, 'Napoletana', 'Tomaat, kaas, ansjovis, olijven, kappertjes en oregano', '7.50'),
 (3, 'Prosciutto', 'Tomaat, kaas, ham en oregano', '7.50'),
@@ -227,7 +227,7 @@ INSERT INTO `pizza` (`pizzacode`, `pizzanaam`, `omschrijving`, `basisprijs`) VAL
 (35, 'Specialità di Danilo', 'Tomaat, kaas, ham, salami, paprika, tonijn, gehakt, beplease kaas, taleggio kaas en oregano ', '9.50'),
 (36, 'Combinazione', 'Eigen keuze pizza', '10.50');
 
-INSERT INTO `bezorger` (`bezorgernummer`, `wachtwoord`, `bezorgernaam`, `gebdatum`, `telefoon`) VALUES
+INSERT INTO `bezorger` (`bezorgernummer`, `wachtwoord`, `naam`, `gebdatum`, `telefoon`) VALUES
 (0, 'Aardbei', 'Afhalen', '2021-12-01', '02X-2675125'),
 (1, '0nbekend', 'Ageeth Mooy', '1994-02-02', '06-73X37362'),
 (2, 'I234S67B9', 'Eric Henze', '1994-01-04', '06-X4226714'),
