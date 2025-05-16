@@ -238,8 +238,11 @@ kappertjes, salami, olijven en oregano  |
 href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave24"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
-<!-- ANTWOORD: <pre><code class="language-sql"> ANTWOORD: SELECT omschrijving
-FROM pizza WHERE naam='Inferno' </code></pre> -->
+<!-- ANTWOORD: 
+
+<pre><code class="language-sql">SELECT omschrijving
+FROM pizza WHERE naam='Inferno' </code></pre> 
+-->
 
 
 

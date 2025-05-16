@@ -52,7 +52,7 @@ In dit onderwerp:
 
 
 
-### Overzicht ONDERWERP 2: SQL SELECT - FROM - WHERE
+### Overzicht ONDERWERP 2: SQL SELECT - FROM - WHERE
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
     <br>XX uur
@@ -80,7 +80,7 @@ In dit onderwerp:
 </ul>
 
 
-###Overzicht Onderwerp 3: SQL - : Operatoren, sorteren en LIMIT
+###Overzicht Onderwerp 3: SQL - : Operatoren, ORDER BY en LIMIT
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
     <br>XX uur
@@ -106,8 +106,25 @@ In dit onderwerp:
 
 </ul>
 
+###Overzicht Onderwerp 4: JOIN
 
-# Overzicht Onderwerp 4: Create - Read - Update - Delete
+
+ <div class="activity-item time-block">
+    <div class="fa fa-clock-o fa-3x"><br></div>
+    <br>XX uur
+</div>
+
+<p>In dit onderwerp... </p>
+
+<p>Leerdoelen</p>
+
+In dit onderwerp:
+<ul> 
+<li>met `JOIN` gegevens uit meerdere tabellen combineren;
+</ul>
+
+
+# Overzicht Onderwerp 5: Create - Read - Update - Delete
 
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
@@ -131,11 +148,11 @@ In dit onderwerp:
 <li>leer je dat gebruikers verschillende CRUD rechten hebben op een database;
 <li>leer je hoe je met de SQL statement <code>CREATE TABLE</code> een tabel maakt;
 <li>leer je hoe je een kolom als primary key aanmaakt, en deze automatisch doornummert;
-<li>leer je hoe je met de SQL statement <code>INSERT INTO... VALUES</code> gegevens in een tabel invoert, waaronder ook een NULL voor een waarde dat automatisch genummerd wordt
+<li>leer je hoe je met de SQL statement <code>INSERT INTO... VALUES</code> gegevens in een tabel invoert, waaronder ook een NULL voor een waarde dat automatisch genummerd wordt.
 
 </ul>
 
-###Overzicht Onderwerp 5: JOIN, FUNCTIES en GROUP BY
+###Overzicht Onderwerp 6: Functies en GROUP BY
 
 
  <div class="activity-item time-block">
@@ -149,14 +166,10 @@ In dit onderwerp:
 
 In dit onderwerp:
 <ul> 
-<li>met `JOIN` gegevens uit meerdere tabellen combineren;
 <li>leer je met SQL groepsfuncties gebruiken op kolommen: `MIN()`, `MAX()`, `SUM()`, `AVG()`,  `COUNT(*)`, `DISTINCT`;
 
 <li>leer je met `GROUP BY` rijen met gegevens te groeperen zodat je daarna functies kan gebruiken
 <li>leer je met `HAVING` ...
 
 <li>OPTIONEEL??? leer je rekenen met: `+`, `-`, `*`, `/`
-<li>
-
-
 </ul>

@@ -1,7 +1,7 @@
 
-## 1.1. Introductie databases
+# 1.1: Inleiding databases
 
-## Introductie <p>Het is vrijdagavond. Je weet nog niet wat je wilt eten maar
+<p>Het is vrijdagavond. Je weet nog niet wat je wilt eten maar
 hebt gehoord dat een nieuwe pizzeria – Pizzeria Danilo, net geopend om de
 hoek – hele lekkere pizza’s maakt. Als je een pizza bestelt, moet je
 natuurlijk wel eerst weten welke je wilt hebben. Als je de website van je
@@ -26,7 +26,7 @@ georganiseerde manier is opgeslagen, zodat computers die makkelijk kunnen
 lezen, begrijpen en verwerken.</p>
 
 
-## Ontwerp van een tabel: kolommen kiezen
+### Verwerkingsopdracht 1.1.1 Kolommen kiezen bij het ontwerp van een tabel
 
 Stel dat jij bij Danilo's Pizzeria wilt bestellen. Om de contactgegevens op
 te slaan in een database moet je het webformulier hieronder invullen.
@@ -58,11 +58,20 @@ van klantgegevens.
 <li>Hieronder staat een tabel om de gegevens op te slaan. Geef de kolommen
 namen (bij 'A' t/m 'H'). Geef de tabel ook een naam.
 
-</ol> |   A   |   B   |   C   |   D   |   E   |   F   |   G   |   H   |
-|-------|-------|-------|-------|-------|-------|-------|-------| |       |
-|       |       |       |       |       |       |
+</ol>
 
 
+ |   A   |   B   |   C   |   D   |   E   |   F   |   G   |   H   |
+|-------|-------|-------|-------|-------|-------|-------|-------| 
+|       |        |       |       |       |       |       |       |
+
+
+<p>Bekijk <a
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave111"
+target="_blank">hier</a> de voorbeelduitwerking.</p>
+
+
+<!--
 ANTWOORDEN: <ol style="list-style-type: lower-alpha">
 
 <li>Deze gegevens worden verzameld: voornaam, tussenvoegsel, achternaam,
@@ -97,19 +106,44 @@ TABEL: klanten <table>
   </thead>
 </table>
 
+-->
+
+## 1.2: Verschillende soorten data
 
 
-## UITLEG Verschillende soorten data Met een database sla je gestructureerde
-data op. Daarvoor moet je voor iedere kolom aangeven wat voor soort gegevens
+In een database sla je data op een gestructureerde
+manier op. Daarvoor moet je voor iedere kolom aangeven wat voor soort gegevens
 je wilt opslaan, oftewel het <b>datatype</b>.
 
-In SQLite, de database waar wij mee werken, zijn er drie datatypen: <ul>
+In SQLite, de database waar wij mee werken, zijn er drie datatypen: 
+
+<ul>
 <li><b>TEXT</b>: een stuk tekst. Bijvoorbeeld: 'Jaap' <li><b>INTEGER</b>: een
 geheel getal. Bijvoorbeeld: 4 <li><b>REAL</b>: een kommagetal. Bijvoorbeeld:
 2.50 </ul>
 
-### Opdracht: ontwerp van een tabel: data types Ga verder met de tabel uit
-de vorige opdracht. <br>Geef bij elke kolom 'A' t/m 'H' aan welk van de
+### Opdracht 1.2.1 Datatypes kiezen bij het ontwerp van een tabel
+
+Ga verder met de tabel uit
+de vorige opdracht. 
+
+TABEL: klanten <table>
+  <thead>
+    <tr>
+      <th>klantnummer</th>
+      <th>voornaam</th>
+      <th>tussenvoegsel</th>
+      <th>achternaam</th>
+      <th>adres</th>
+      <th>postcode</th>
+      <th>plaats</th>
+      <th>telefoon/th>
+    </tr>
+  </thead>
+</table>
+
+
+<br>Geef bij elke kolom  aan welk van de
 volgende type gegevens het bevat: <ul> <li>TEXT: een tekst <li>INTEGER: een
 geheel getal <li>REAL: een kommagetal </ul>
 
@@ -122,10 +156,55 @@ telefoonnummer zul je ook als een tekst opslaan, omdat anders de voorloop nul
 wegvalt, bijvoorbeeld: "0688567389".
 
 
-## UITLEG PRIMARY KEY Elke tabel heeft een kolom hebben waarmee je records
+<p>Bekijk <a
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave121"
+target="_blank">hier</a> de voorbeelduitwerking.</p>
+
+
+<!-- ANTWOORD:
+
+TABEL: klanten <table>
+  <thead>
+    <tr>
+      <th>klantnummer</th>
+      <th>voornaam</th>
+      <th>tussenvoegsel</th>
+      <th>achternaam</th>
+      <th>adres</th>
+      <th>postcode</th>
+      <th>plaats</th>
+      <th>telefoon/th>
+    </tr>
+        <tr>
+      <td>INTEGER</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT/td>
+    </tr>
+  </thead>
+</table>
+
+
+
+
+
+-->
+
+
+
+## 1.3: Primary key 
+
+
+Elke tabel heeft een kolom hebben waarmee je gegevens
 kan aanwijzen: een <b>primary key</b>. Deze kolom moet <b>unieke</b> gegevens
-hebben, een kolom waar nooit twee keer hetzelfde waarde voor mag komen. Een
-voorbeeld is leerlingnummer. Er kunnen geen twee leerlingen dezelfde
+hebben, een kolom waar nooit twee keer hetzelfde waarde voor mag komen. 
+
+Een
+voorbeeld is <i>leerlingnummer</i>. Er kunnen geen twee leerlingen dezelfde
 leerlingnummer hebben. Terwijl er misschien wel twee leerlingen met dezelfde
 naam zijn, bijvoorbeeld Tom Janssen. Met een leerlingnummer weet je zeker
 over wie je het hebt. Een andervoorbeeld is een gebruikersnaam in een spel,
@@ -134,7 +213,7 @@ daar mag er maar één van zijn.
 (<i>Toelichting: een primary key kan uit meerdere kolommen samen bestaan,
 maar dat behandelen we in deze cursus niet.</i>)
 
-### OPDRACHT PRIMARY KEY
+### Verwerkingsopdracht 1.3.1 Wat is een primary key?
 
 Welke van de volgende uitspraken over primary keys is correct?
 
@@ -144,17 +223,88 @@ B. Een primary key mag dubbel voorkomen
 C. Een primary key identificeert elke rij op unieke wijze
 D. Een primary key is altijd tekst
 
+
+<p>Bekijk <a
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave131"
+target="_blank">hier</a> de voorbeelduitwerking.</p>
+
+<!--
 ANTWOORD: Antwoord C is juist
+-->
+
+### Verwerkingsopdracht 1.3.2 Welk kolom is een primary key?
+
+Bekijk weer het tabel `klanten`. Welk kolom is hier de primary key?
+
+TABEL: klanten <table>
+  <thead>
+    <tr>
+      <th>klantnummer</th>
+      <th>voornaam</th>
+      <th>tussenvoegsel</th>
+      <th>achternaam</th>
+      <th>adres</th>
+      <th>postcode</th>
+      <th>plaats</th>
+      <th>telefoon/th>
+    </tr>
+  </thead>
+</table>
 
 
-## UITLEG Eisen stellen aan data Naast dat data van een bepaald type is, kun
+<p>Bekijk <a
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave132"
+target="_blank">hier</a> de voorbeelduitwerking.</p>
+
+<!--
+ANTWOORD: Kolom <i>klantnummer</i> is de primary key. Elk klant heeft een eigen unieke klantnummer. 
+-->
+
+
+## 1.4: Eisen stellen aan data 
+
+Naast dat data van een bepaald type is, kun
 je nog anderen eisen stellen aan waarden in een bepaald kolom, bijvoorbeeld:
 <ul>
   <li>PRIMARY KEY: unieke waarde
   <li>NOT NULL: mag niet leeg zijn
 
-### Opdracht: ontwerp van een tabel: Eisen aan data Ga verder met de tabel
+
+
+### Verwerkingsopdracht 1.4 Eisen aan datat stellen bij het ontwerpen van een tabel 
+
+
+Ga verder met de tabel
 uit de vorige opdracht. <br>
+
+TABEL: klanten <table>
+  <thead>
+    <tr>
+      <th>klantnummer</th>
+      <th>voornaam</th>
+      <th>tussenvoegsel</th>
+      <th>achternaam</th>
+      <th>adres</th>
+      <th>postcode</th>
+      <th>plaats</th>
+      <th>telefoon/th>
+    </tr>
+        <tr>
+      <td>INTEGER</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT/td>
+    </tr>
+  </thead>
+</table>
+
+
+
+
 
 Geef bij elke kolom aan of er speciale eisen aan gesteld zijn:
   <ul>
@@ -163,6 +313,11 @@ Geef bij elke kolom aan of er speciale eisen aan gesteld zijn:
   </ul>
 
 
+<p>Bekijk <a
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave141"
+target="_blank">hier</a> de voorbeelduitwerking.</p>
+
+<!--
 ANTWOORD: TABEL: klanten <table>
   <thead>
     <tr>
@@ -179,11 +334,11 @@ ANTWOORD: TABEL: klanten <table>
 </table>
 
 
+-->
 
 
 
-
-## Databases: Waarom?
+# 1.5: Nut van databases
 
 
 [![Watch the
@@ -215,9 +370,36 @@ en invoeren, kan de schoolleiding zien hoe het met verschillende klassen gaat
 en kan jij zien hoe je er voor staat met al je vakken of opdrachten
 inleveren.</p>
 
+# 1.6: Databasemanagementsysteem (DBMS) 
 
 
-### Opdracht 1.1:  Wat zijn databases?
+<p>Een database kan al snel heel groot
+worden. Er wordt niet alleen data in opgeslagen, maar ook data gewijzigd of
+verwijderd. Een andere belangrijke functie is het opvragen en combineren van
+gegevens. Bovendien heeft niet iedereen dezelfde toegang: als leerling kun je
+alleen je eigen gegevens zien, terwijl een docent bijvoorbeeld de cijfers van
+alle leerlingen kan bekijken, aanpassen of toevoegen.</p> 
+
+
+<p>Al deze
+bedrijven, programma’s en apps maken gebruik van zogeheten databases. Een
+veelgebruikte soort is de relationele database: een database die bestaat uit
+meerdere tabellen die met elkaar in verband staan. Dat betekent dat gegevens
+uit de ene tabel gekoppeld zijn aan gegevens in een andere tabel. Deze
+databases worden beheerd door een databasebeheersysteem (*Database Management
+System*, of DBMS). </p>
+
+
+[TODO IMG]
+
+
+<p>Zo’n systeem zorgt ervoor dat de data betrouwbaar en correct blijft, en
+dat wij op een eenvoudige manier informatie kunnen opvragen wanneer we die
+nodig hebben.</p>
+
+
+
+### Verwerkignsopdracht 1.6.1  Waar vind je databases?
 
 <p>Waarschijnlijk heb je al eerder gebruik gemaakt van een database,
 misschien zonder dat je dat wist. Laten we eens op onderzoek uit gaan en
@@ -228,7 +410,7 @@ een website die, naar jouw verwachting, gebruik maakt van een database. </li>
 <li>Wat voor soort data zou opgeslagen worden in deze database?</li> </ol>
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave532"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave161"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
@@ -245,32 +427,12 @@ target="_blank">hier</a> de voorbeelduitwerking.</p>
 </li> </ul> -->
 
 
-###Databasemanagementsysteem (DBMS) <p>Een database kan al snel heel groot
-worden. Er wordt niet alleen data in opgeslagen, maar ook data gewijzigd of
-verwijderd. Een andere belangrijke functie is het opvragen en combineren van
-gegevens. Bovendien heeft niet iedereen dezelfde toegang: als leerling kun je
-alleen je eigen gegevens zien, terwijl een docent bijvoorbeeld de cijfers van
-alle leerlingen kan bekijken, aanpassen of toevoegen.</p> <p>Al deze
-bedrijven, programma’s en apps maken gebruik van zogeheten databases. Een
-veelgebruikte soort is de relationele database: een database die bestaat uit
-meerdere tabellen die met elkaar in verband staan. Dat betekent dat gegevens
-uit de ene tabel gekoppeld zijn aan gegevens in een andere tabel. Deze
-databases worden beheerd door een databasebeheersysteem (*Database Management
-System*, of DBMS). </p>
-
-
-[IMG]
-
-
-<p>Zo’n systeem zorgt ervoor dat de data betrouwbaar en correct blijft, en
-dat wij op een eenvoudige manier informatie kunnen opvragen wanneer we die
-nodig hebben.</p>
 
 
 
 
 
-### Opdracht 1.2: Gegevens, data en informatie
+### Verwerkingsopdracht 1.6.2 Gegevens, data en informatie
 
 
 <p>Woorden als <i>gegevens</i>, <i>data</i>, en <i>informatie</i> worden vaak
@@ -294,6 +456,11 @@ op internet naar de definitie van informatie. Wat is informatie?</li>
 
 
 </ol>
+
+
+<p>Bekijk <a
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave162"
+target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
 <!-- Mogelijke antwoorden: <ol style="list-style-type: lower-alpha">
@@ -336,7 +503,7 @@ In de praktijk worden de woorden data en gegevens veel door elkaar gebruikt.
 -->
 
 
-## Terugblik
+# 1.7: Samenvatting Databases
 
 Bij het maken van de vorige opdrachten heb je veel geleerd over
 gestructureerde data. We vatten dat nu samen.
