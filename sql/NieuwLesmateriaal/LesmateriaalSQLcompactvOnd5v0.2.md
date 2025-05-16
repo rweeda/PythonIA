@@ -1,5 +1,5 @@
 
-# ONDERWERP 4
+# ONDERWERP 5
 
 
 ## Gegevens beheren
@@ -30,7 +30,14 @@ De app van Danilo's Pizzeria heeft verschillende gebruikers:
 <li>Beheerders – beheren de hele database
 </ul>
 
-TODO ERD
+Ter herinnering, hieronder zie je alle tabellen die in Danilo's database staan.
+<p> <a
+href="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/DaniloIA_ERD.png"
+target="_blank">
+  <img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/DaniloIA_ERD.png" alt="Klik om in een nieuw venster te openen" width="1000"/>
+</a></p>
+
+
 ### Opdracht CRUD rechten van klanten bepalen
 
 Een klant plaatst een bestelling via de app van Danilo's Pizzeria. 
