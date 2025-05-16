@@ -9,10 +9,6 @@
 tegen, hoe zijn ze opgebouwd en hoe kun je er nuttige informatie uit halen? 
 In deze onderwerp werk je met een database van Pizzeria Danilo.</p>
 
-<p>Elke keer als je Informatica-Actief opnieuw opstart, wordt de 
-oorspronkelijke database hersteld. Je hoeft dus niet bang te zijn om iets 
-fout te doen — experimenteren mag!
-
 <img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H1_overzicht.png" width="100">
 </p>
 
@@ -24,32 +20,35 @@ In dit onderwerp:
 
 
 ###Overzicht ONDERWERP 1: DATABASES
+
+<h5><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H1_overzicht.png" alt="logo onderwerp 1" style="float: right; margin: 4px;" width="150" height="151">
+1: Kennismaking met databases<br></h5>
+
+
+<p>Data is overal. In dit onderwerp leer je hoe gegevens op een gestructureerde manier in tabellen van een database worden opgeslagen. Zo kun je snel en eenvoudig informatie opvragen wanneer je die nodig hebt. Zo’n verzoek noem je een <strong>query</strong>, en daarvoor gebruik je een speciale vraagtaal: <strong>SQL</strong>, wat staat voor <em>Structured Query Language</em>. Dit is de standaardtaal om met databases te werken.</p>
+
+<p>In dit onderwerp gebruik je <strong>SQLite</strong> — een eenvoudige, lichtgewicht database — om SQL te leren.</p>
+
+<p>We beginnen met het verkennen van databases. Wat zijn het? Waar kom je ze tegen? Hoe zijn ze opgebouwd? En hoe kun je er nuttige informatie uit halen? In deze cursus werk je met de database van Pizzeria Danilo als voorbeeld.</p>
+
+<p>In dit onderwerp:</p>
+<ul>
+  <li>leer je de begrippen <em>database</em>, <em>SQL</em> en <em>SQLite</em> kennen;</li>
+  <li>ontdek je dat een <strong>database</strong> een georganiseerde verzameling gegevens is, opgeslagen in tabellen met rijen en kolommen;</li>
+  <li>leer je hoe data gestructureerd wordt opgeslagen in tabellen;</li>
+  <li>maak je kennis met de drie datatypen in SQLite: <strong>TEXT</strong> (tekst), <strong>INTEGER</strong> (geheel getal) en <strong>REAL</strong> (kommagetal);</li>
+  <li>leer je dat elke tabel een <em>primary key</em> heeft: een kolom waarvan elk rij een unieke waarde bevat;</li>
+  <li>ontwerp je zelf een eenvoudige tabel;</li>
+  <li>leer je wat een <em>databasemanagementsysteem</em> (DBMS) is;</li>
+  <li>leer je het verschil tussen gegevens, data en informatie.
+</ul>
+</p>
+<p>
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
-    <br>XX uur
+    <br>1 uur
 </div>
-
-
-<p>Data is overal. In dit onderwerp leer je hoe data op een gestructureerde manier in tabellen van een database wordt opgeslagen. Je kunt eenvoudig en snel informatie opvragen wanneer dat nodig is. Zo’n verzoek noem je een <b>query</b> en daarvoor heb je een speciale vraagtaal
-nodig: <b>SQL</b>. Dat staat voor <i>Structured Query Language</i>. Dat is de standaardtaal om met databases te werken.
-In deze onderwerp gebruik je <b>SQLite</b> — een eenvoudige, lichtgewicht database — om SQL te leren.
-
-Met een SQL query (oftewel, zoekvraag), kun je gegevens uit een database tonen. In deze cursus gebruiken we <i>SQLite</i>, dat is een eenvoudige, lichtgewicht database.</p>
-
-
-In dit onderwerp:
-
-<ul>
-<li>leer je de begrippen database, SQL en SQLite;
-<li>leer je dat een <i>database</i> een georganiseerde verzameling gegevens is, opgeslagen in tabellen met rijen en kolommen;
-<li>leer je hoe data gestructureerd opgeslagen wordt in een tabel</li>
-<li>leer je de drie datatypen van SQLite: TEXT (tekst), INTEGER (geheel getal) en REAL (kommagetal)</li>
-<li>leer je dat elk tabel een <i>primary key</i> heeft, dat is een kolom waarbij elk rij een uniek gegeven heeft;
-<li>leer je zelf een tabel ontwerpen;
-<li>leer je wat een databasemanagementsysteem (DBMS) is;
-<li>leer je het verschil tussen gegevens, data en informatie.
-</ul>
-
+</p>
 
 
 ### Overzicht ONDERWERP 2: SQL SELECT - FROM - WHERE

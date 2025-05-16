@@ -6,7 +6,7 @@ hebt gehoord dat een nieuwe pizzeria – Pizzeria Danilo, net geopend om de
 hoek – hele lekkere pizza’s maakt. Als je een pizza bestelt, moet je
 natuurlijk wel eerst weten welke je wilt hebben. Als je de website van je
 plaatselijke pizzeria erbij hebt gepakt word je overweldigd door de
-hoeveelheid opties. Al deze opties staan in een <b>database</b>.</p>
+hoeveelheid opties. Al deze opties staan in een <strong>database</strong>.</p>
 
 <img
 src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H1_1_pizzabezorger.png"
@@ -14,14 +14,14 @@ alt="afbeelding van een bezorger" width="300">
 
 
 <p>Maar wat is een database? En hoe ziet zoiets eruit? Danilo moet veel
-<b>gegevens</b> bijhouden. Zoals bijvoorbeeld, de naam van de pizza's, de
+<strong>gegevens</strong> bijhouden. Zoals bijvoorbeeld, de naam van de pizza's, de
 prijs en de ingrediënten. Maar ook de namen en adressen van klanten en
 gegevens over bestellingen en bezorgers. </p>
 
 
 <p>Die gegevens worden bewaard in tabellen. En tabellen bestaan weer uit
 rijen en kolommen met gegevens die opgeslagen worden. Die gegevens noemen we
-<b>data</b>. Gestructureerde data is informatie die op een vaste,
+<strong>data</strong>. Gestructureerde data is informatie die op een vaste,
 georganiseerde manier is opgeslagen, zodat computers die makkelijk kunnen
 lezen, begrijpen en verwerken.</p>
 
@@ -44,19 +44,19 @@ We maken een tabel waarin we de contactgegevens opslaan. Zo kunnen we
 makkelijk de gegevens van klanten terugvinden als ze een bestelling plaatsen.
 <ol style="list-style-type: lower-alpha">
 
-<li>Welke gegevens worden verzameld? Noem alle velden.
+<li>Welke gegevens worden verzameld? Noem alle velden.</li>
 
-<li>Wat betekent het sterretje, bijvoorbeeld achter 'Voornaam'?
+<li>Wat betekent het sterretje, bijvoorbeeld achter 'Voornaam'?</li>
 
 <li>Wat gebeurt er als er twee verschillende mensen zijn met dezelfde
 voornaam en achternaam waarvan je het adres wilt opzoeken? Wat voor oplossing
-hebben we op school hiervoor?
+hebben we op school hiervoor?</li>
 
 <li>Bedenk een oplossing voor Danilo's pizzeria voor het eenduidig opslaan
-van klantgegevens.
+van klantgegevens.</li>
 
 <li>Hieronder staat een tabel om de gegevens op te slaan. Geef de kolommen
-namen (bij 'A' t/m 'H'). Geef de tabel ook een naam.
+namen (bij 'A' t/m 'H'). Geef de tabel ook een naam.</li>
 
 </ol>
 
@@ -75,18 +75,18 @@ target="_blank">hier</a> de voorbeelduitwerking.</p>
 ANTWOORDEN: <ol style="list-style-type: lower-alpha">
 
 <li>Deze gegevens worden verzameld: voornaam, tussenvoegsel, achternaam,
-adres, postcode, plaats en telefoon.
+adres, postcode, plaats en telefoon.</li>
 
 <li>Dat is een veld dat verplicht ingevuld moet worden.</li>
 
 <li>Als twee klanten dezelfde naam hebben kun je ze niet uit elkaar halen, je
 kunt dan niet hun juiste adres opzoeken. Als oplossing gebruiken we een
 unieke waarde waarvan er maar één is, zoals een leerlingnummer op school, of
-een BSN.
+een BSN.</li>
 
-<li>Voor Danilo's pizzeria zou een uniek nummer een klantnummer kunnen zijn.
+<li>Voor Danilo's pizzeria zou een uniek nummer een klantnummer kunnen zijn.</li>
 
-<li>Zie hieronder <li>tabelnaam: klanten
+<li>Zie tabel hieronder./li>
 
 </ol>
 
@@ -101,7 +101,7 @@ TABEL: klanten <table>
       <th>adres</th>
       <th>postcode</th>
       <th>plaats</th>
-      <th>telefoon/th>
+      <th>telefoon</th>
     </tr>
   </thead>
 </table>
@@ -113,14 +113,19 @@ TABEL: klanten <table>
 
 In een database sla je data op een gestructureerde
 manier op. Daarvoor moet je voor iedere kolom aangeven wat voor soort gegevens
-je wilt opslaan, oftewel het <b>datatype</b>.
+je wilt opslaan, oftewel het <strong>datatype</strong>.
 
-In SQLite, de database waar wij mee werken, zijn er drie datatypen: 
+In SQLite, de database waar wij mee werken, zijn er drie datatypes: 
 
 <ul>
-<li><b>TEXT</b>: een stuk tekst. Bijvoorbeeld: 'Jaap' <li><b>INTEGER</b>: een
-geheel getal. Bijvoorbeeld: 4 <li><b>REAL</b>: een kommagetal. Bijvoorbeeld:
-2.50 </ul>
+<li><strong>TEXT</strong>: een stuk tekst. Bijvoorbeeld: 'Jaap'</li>
+
+<li><strong>INTEGER</strong>: een
+geheel getal. Bijvoorbeeld: 4 </li>
+
+<li><strong>REAL</strong>: een kommagetal. Bijvoorbeeld:
+2.50</li>
+ </ul>
 
 ### Opdracht 1.2.1 Datatypes kiezen bij het ontwerp van een tabel
 
@@ -137,19 +142,19 @@ TABEL: klanten <table>
       <th>adres</th>
       <th>postcode</th>
       <th>plaats</th>
-      <th>telefoon/th>
+      <th>telefoon</th>
     </tr>
   </thead>
 </table>
 
 
 <br>Geef bij elke kolom  aan welk van de
-volgende type gegevens het bevat: <ul> <li>TEXT: een tekst <li>INTEGER: een
-geheel getal <li>REAL: een kommagetal </ul>
+volgende type gegevens het bevat: <ul> <li>TEXT: een tekst </li><li>INTEGER: een
+geheel getal</li> <li>REAL: een kommagetal</li> </ul>
 
 
 
-Omdat er maar drie datatypen zijn zul je sommige gegevens als een TEXT
+Omdat er maar drie datatypes zijn zul je sommige gegevens als een TEXT
 opslaan. Bijvoorbeeld, een datum sla je in de vorm jjjj-mm-dd (j: jaar, m:
 maand, d:dag) op als een tekst, bijvoorbeeld: "2025-04-20". Een
 telefoonnummer zul je ook als een tekst opslaan, omdat anders de voorloop nul
@@ -173,7 +178,7 @@ TABEL: klanten <table>
       <th>adres</th>
       <th>postcode</th>
       <th>plaats</th>
-      <th>telefoon/th>
+      <th>telefoon</th>
     </tr>
         <tr>
       <td>INTEGER</td>
@@ -183,7 +188,7 @@ TABEL: klanten <table>
       <td>TEXT</td>
       <td>TEXT</td>
       <td>TEXT</td>
-      <td>TEXT/td>
+      <td>TEXT</td>
     </tr>
   </thead>
 </table>
@@ -200,14 +205,14 @@ TABEL: klanten <table>
 
 
 Elke tabel heeft een kolom hebben waarmee je gegevens
-kan aanwijzen: een <b>primary key</b>. Deze kolom moet <b>unieke</b> gegevens
+kan aanwijzen: een <strong>primary key</strong>. Deze kolom moet <strong>unieke</strong> gegevens
 hebben, een kolom waar nooit twee keer hetzelfde waarde voor mag komen. 
 
 Een
 voorbeeld is <i>leerlingnummer</i>. Er kunnen geen twee leerlingen dezelfde
 leerlingnummer hebben. Terwijl er misschien wel twee leerlingen met dezelfde
 naam zijn, bijvoorbeeld Tom Janssen. Met een leerlingnummer weet je zeker
-over wie je het hebt. Een andervoorbeeld is een gebruikersnaam in een spel,
+over wie je het hebt. Een ander voorbeeld is een gebruikersnaam in een spel,
 daar mag er maar één van zijn.
 
 (<i>Toelichting: een primary key kan uit meerdere kolommen samen bestaan,
@@ -232,9 +237,9 @@ target="_blank">hier</a> de voorbeelduitwerking.</p>
 ANTWOORD: Antwoord C is juist
 -->
 
-### Verwerkingsopdracht 1.3.2 Welk kolom is een primary key?
+### Verwerkingsopdracht 1.3.2 Welke kolom is een primary key?
 
-Bekijk weer het tabel `klanten`. Welk kolom is hier de primary key?
+Bekijk weer de tabel <code>klanten</code>. Welke kolom is hier de primary key?
 
 TABEL: klanten <table>
   <thead>
@@ -246,7 +251,7 @@ TABEL: klanten <table>
       <th>adres</th>
       <th>postcode</th>
       <th>plaats</th>
-      <th>telefoon/th>
+      <th>telefoon</th>
     </tr>
   </thead>
 </table>
@@ -257,7 +262,7 @@ href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave132"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 <!--
-ANTWOORD: Kolom <i>klantnummer</i> is de primary key. Elk klant heeft een eigen unieke klantnummer. 
+ANTWOORD: Kolom <em>klantnummer</em> is de primary key. Elk klant heeft een eigen unieke klantnummer. 
 -->
 
 
@@ -266,10 +271,10 @@ ANTWOORD: Kolom <i>klantnummer</i> is de primary key. Elk klant heeft een eigen 
 Naast dat data van een bepaald type is, kun
 je nog anderen eisen stellen aan waarden in een bepaald kolom, bijvoorbeeld:
 <ul>
-  <li>PRIMARY KEY: unieke waarde
-  <li>NOT NULL: mag niet leeg zijn
+  <li>PRIMARY KEY: een unieke waarde;</li>
+  <li>NOT NULL: mag niet leeg zijn.</li>
 
-
+</ul>
 
 ### Verwerkingsopdracht 1.4 Eisen aan datat stellen bij het ontwerpen van een tabel 
 
@@ -287,7 +292,7 @@ TABEL: klanten <table>
       <th>adres</th>
       <th>postcode</th>
       <th>plaats</th>
-      <th>telefoon/th>
+      <th>telefoon</th>
     </tr>
         <tr>
       <td>INTEGER</td>
@@ -297,7 +302,7 @@ TABEL: klanten <table>
       <td>TEXT</td>
       <td>TEXT</td>
       <td>TEXT</td>
-      <td>TEXT/td>
+      <td>TEXT</td>
     </tr>
   </thead>
 </table>
@@ -308,8 +313,8 @@ TABEL: klanten <table>
 
 Geef bij elke kolom aan of er speciale eisen aan gesteld zijn:
   <ul>
-  <li>PRIMARY KEY: een unieke waarde (in het Nederlands <i>primaire sleutel</i>)
-  <li>NOT NULL: mag niet leeg zijn
+  <li>PRIMARY KEY: een unieke waarde (in het Nederlands <em>primaire sleutel</em>)</li>
+  <li>NOT NULL: mag niet leeg zijn</li>
   </ul>
 
 
@@ -346,7 +351,7 @@ video](https://www.youtube.com/watch?v=t8jgX1f8kc4/hqdefault.jpg)](https://www.y
 
 
 <p>Je kunt je voorstellen dat Danilo graag een goed overzicht wil houden van
-alle verzamelde gegevens. Daarom gebruikt hij een <b>database</b>. Een
+alle verzamelde gegevens. Daarom gebruikt hij een <strong>database</strong>. Een
 database is een gestructureerde manier om gegevens op te slaan. Met een
 database is het mogelijk om door middel van een speciale vraagtaal gegevens
 op te vragen en te combineren tot nuttige informatie.</p>
@@ -399,7 +404,7 @@ nodig hebben.</p>
 
 
 
-### Verwerkignsopdracht 1.6.1  Waar vind je databases?
+### Verwerkingsopdracht 1.6.1  Waar vind je databases?
 
 <p>Waarschijnlijk heb je al eerder gebruik gemaakt van een database,
 misschien zonder dat je dat wist. Laten we eens op onderzoek uit gaan en
@@ -510,12 +515,12 @@ gestructureerde data. We vatten dat nu samen.
 
 <ul> 
 
-<li><b>Database</b>: Een georganiseerde verzameling gegevens, opgeslagen
+<li><strong>Database</strong>: Een georganiseerde verzameling gegevens, opgeslagen
 in tabellen met rijen en kolommen. In een pizzeria zoals Danilo’s worden gegevens opgeslagen over o.a. pizza’s, klanten, bestellingen en bezorgers.
 <li>Een tabel heeft kolommen. Ieder kolom heeft een naam zoals <i>voornaam</i>, <i>adres</i>, <i>telefoonnummer</i>, enz. en een datatype (bijv. tekst of getal).
- <li><b>Datatypes</b> in SQLite:  INTEGER -
+ <li><strong>Datatypes</strong> in SQLite:  INTEGER -
 Gehele getallen (bijv. een klantnummer: 4054), TEXT - Tekstuele gegevens (bijv. een naam :'Jaap') en REAL -
-Kommagetallen (bijv. een prijs: 2.50) <li><b>Primary Key</b>: Elk tabel heeft een kolom waarbij elke rij uniek is. Voorbeelden: klantnummer, leerlingnummer.
-<li>Gegevens</b> zijn feiten die je kunt verzamelen, zoals een naam of temperatuur.
-<li>Data</b> zijn opgeslagen gegevens (in tabellen of bestanden).
-<li>Informatie</b> is eïnterpreteerde data die betekenis heeft, bijvoorbeeld een weerbericht.</ul>
+Kommagetallen (bijv. een prijs: 2.50) <li><strong>Primary Key</strong>: Elk tabel heeft een kolom waarbij elke rij uniek is. Voorbeelden: klantnummer, leerlingnummer.
+<li><strong>Gegevens</strong> zijn feiten die je kunt verzamelen, zoals een naam of temperatuur.
+<li><strong>Data</strong> zijn opgeslagen gegevens (in tabellen of bestanden).
+<li><strong>Informatie</strong> is eïnterpreteerde data die betekenis heeft, bijvoorbeeld een weerbericht.</ul>
