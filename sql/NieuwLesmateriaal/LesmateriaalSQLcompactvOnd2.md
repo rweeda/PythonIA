@@ -7,7 +7,7 @@
 om data in een database op te slaan, te bewerken en op te halen. Zo’n verzoek
 aan de database noem je een <b>query</b>, wat letterlijk ‘vraag’ betekent in
 het Engels. Als je een query schrijft, stel je dus eigenlijk een vraag aan de
-database. Bijvoorbeeld: “Welke klanten wonen in Amsterdam?”</p>
+database. Bijvoorbeeld: “Welke klanten wonen in Amsterdam?”. Met SQL haal je uit bestaande tabellen gegevens en maak je een overzicht hiervan.</p>
 
 <p>In deze cursus leer je hoe je SQL gebruikt binnen <b>SQLite</b> — een
 eenvoudige, lichtgewicht databasesysteem. We beginnen met leren hoe je
@@ -58,14 +58,18 @@ data selecteren van een database en in een overzicht tonen. Met FROM geef je
 aan uit welke tabel de informatie gehaald moet worden. Hoe dat werkt leer je
 nu.</p>
 
+TODO: FOCUS OP DAT JE EEN OVERZICHT AAN HET MAKEN BENT - [IMG TOEVOEGEN]
+
 
 ---------------------------------------
 
 
 ## 2.1: Je eerste query
 
-Om één kolom op te halen geef je na de SELECT de kolomnaam op, en na de FROM
+Om één kolom op te halen en deze te tonen, geef je na de SELECT de kolomnaam op, en na de FROM
 de tabelnaam:
+
+
 
 
 ```sql

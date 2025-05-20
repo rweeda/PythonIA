@@ -31,6 +31,23 @@ In dit onderwerp:
 
 <p>We beginnen met het verkennen van databases. Wat zijn het? Waar kom je ze tegen? Hoe zijn ze opgebouwd? En hoe kun je er nuttige informatie uit halen? In deze cursus werk je met de database van Pizzeria Danilo als voorbeeld.</p>
 
+
+
+<p>Naast het opzoeken van informatie, kun je met SQL ook tabellen maken, 
+vullen, aanpassen en verwijderen. Deze acties heten CRUD (Create, Read, 
+Update, Delete). Om te zorgen dat informatie veilig blijft, hebben gebruikers 
+vaak verschillende rechten. Niet iedereen mag zomaar tabellen verwijderen, en 
+ook niet iedereen mag alle gegevens inzien. In deze onderwerp leer je 
+nadenken over wie welk acties mag uitvoeren op een database, bijvoorbeeld het 
+aanpassen en toevoegen van gegevens en verwijderen van gegevens.</p> 
+
+<p>Leerdoelen</p>
+
+In dit onderwerp: <ul> 
+
+
+</ul>
+
 <p>In dit onderwerp:</p>
 <ul>
   <li>leer je de begrippen <em>database</em>, <em>SQL</em> en <em>SQLite</em> kennen;</li>
@@ -40,7 +57,19 @@ In dit onderwerp:
   <li>leer je dat elke tabel een <em>primary key</em> heeft: een kolom waarvan elk rij een unieke waarde bevat;</li>
   <li>ontwerp je zelf een eenvoudige tabel;</li>
   <li>leer je wat een <em>databasemanagementsysteem</em> (DBMS) is;</li>
-  <li>leer je het verschil tussen gegevens, data en informatie.
+  <li>leer je het verschil tussen gegevens, data en informatie;
+  
+  
+<li>TODO leer je dat je gegevens uit een database kan ophalen (Read), kan 
+maken (Create), aanpassen (Update), en verwijderen (Delete); 
+
+
+<li>TODO OND1 leer je dat de vier acties samen een acronym 'CRUD' 
+(Create-Read-Update-Delete) hebben;
+
+</li> <li>TODO OND1 leer je dat gebruikers verschillende CRUD rechten hebben 
+op een database; <li> TODO UITLEGGEN DAT HET UITVOEREN IN DE VERDIEPING STAAT 
+
 </ul>
 </p>
 <p>
@@ -51,7 +80,7 @@ In dit onderwerp:
 </p>
 
 
-### Overzicht ONDERWERP 2: SQL SELECT - FROM - WHERE
+### Overzicht ONDERWERP 2: SQL SELECT - FROM - WHERE
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
     <br>XX uur
@@ -100,9 +129,9 @@ In dit onderwerp:
 <li>leer je gegevens in een kolom sorteren met `ORDER BY`;
 <li>leer je wiskundige operatoren gebruiken: '<', '<=', '>', '>=' en '<>';</li>
 <li>leer je zoeken met <code>LIKE</code> en joker '%';
-<li>leer je logische operatoren AND, OR, NOT te gebruiken, en combinaties daarvan.
-
-
+<li>leer je logische operatoren AND, OR, NOT te gebruiken, en combinaties daarvan;
+<li>leer je met SQL groepsfuncties gebruiken op kolommen: `MIN()`, `MAX()`, `SUM()`, `AVG()`,  `COUNT(*)`;
+<li>TODO `DISTINCT`;
 </ul>
 
 ###Overzicht Onderwerp 4: JOIN
@@ -120,38 +149,11 @@ In dit onderwerp:
 In dit onderwerp:
 <ul> 
 <li>met `JOIN` gegevens uit meerdere tabellen combineren;
+<li>TODO koppelen (Foreign key)
 </ul>
 
 
-# Overzicht Onderwerp 5: Create - Read - Update - Delete
-
- <div class="activity-item time-block">
-    <div class="fa fa-clock-o fa-3x"><br></div>
-    <br>XX uur
-</div>
-
-
-<p>Naast het opzoeken van informatie, kun je met SQL ook tabellen maken, vullen, aanpassen en verwijderen. Deze acties heten CRUD (Create, Read, Update, Delete). Om te zorgen dat informatie veilig blijft, hebben gebruikers vaak verschillende rechten. Niet iedereen mag zomaar tabellen verwijderen, en ook niet iedereen mag alle gegevens inzien. In deze onderwerp leer je alle acties uitvoeren: het van maken van tabellen, het aanpassen en toevoegen van gegevens en verwijderen van gegevens en tabellen.
-
-<p>Elke keer als je webpagina ververst, wordt de 
-oorspronkelijke database hersteld. Je hoeft dus niet bang te zijn om iets 
-fout te doen — experimenteren mag!
-</p>
-
-<p>Leerdoelen</p>
-
-In dit onderwerp:
-<ul> 
-<li>leer je dat er naast het ophalen (Read) van tabellen en gegevens ook andere acties mogelijk zijn, namelijk aanmaken (Create) aanpassen (Update), en verwijderen (Delete) van gegevens en van tabellen;
-<li>leer je dat de vier acties samen een acronym 'CRUD' (Create-Read-Update-Delete) hebben;</li>
-<li>leer je dat gebruikers verschillende CRUD rechten hebben op een database;
-<li>leer je hoe je met de SQL statement <code>CREATE TABLE</code> een tabel maakt;
-<li>leer je hoe je een kolom als primary key aanmaakt, en deze automatisch doornummert;
-<li>leer je hoe je met de SQL statement <code>INSERT INTO... VALUES</code> gegevens in een tabel invoert, waaronder ook een NULL voor een waarde dat automatisch genummerd wordt.
-
-</ul>
-
-###Overzicht Onderwerp 6: Functies en GROUP BY
+###Overzicht Onderwerp VERDIEPING: GROUP BY, HAVING
 
 
  <div class="activity-item time-block">
@@ -165,10 +167,56 @@ In dit onderwerp:
 
 In dit onderwerp:
 <ul> 
-<li>leer je met SQL groepsfuncties gebruiken op kolommen: `MIN()`, `MAX()`, `SUM()`, `AVG()`,  `COUNT(*)`, `DISTINCT`;
+
 
 <li>leer je met `GROUP BY` rijen met gegevens te groeperen zodat je daarna functies kan gebruiken
 <li>leer je met `HAVING` ...
 
 <li>OPTIONEEL??? leer je rekenen met: `+`, `-`, `*`, `/`
 </ul>
+
+
+# Overzicht Onderwerp VERDIEPING: Create - Read - Update - Delete uitvoeren
+
+ <div class="activity-item time-block">
+    <div class="fa fa-clock-o fa-3x"><br></div>
+    <br>XX uur
+</div>
+
+
+<p>Naast het opzoeken van informatie, kun je met SQL ook tabellen maken, 
+vullen, aanpassen en verwijderen. Deze acties heten CRUD (Create, Read, 
+Update, Delete). In deze onderwerp leer je alle acties uitvoeren: het van 
+maken van tabellen, het aanpassen en toevoegen van gegevens en verwijderen 
+van gegevens en tabellen. 
+
+<p>Elke keer als je webpagina ververst, wordt de 
+oorspronkelijke database hersteld. Je hoeft dus niet bang te zijn om iets 
+fout te doen — experimenteren mag!
+</p>
+
+
+<p>Leerdoelen</p>
+
+In dit onderwerp: <ul> VERDEIPING OBJECT: insert into update delete 
+
+
+Op record niveau vs op tabelniveau
+
+
+TABEL: 
+
+<li>TODO OND1 leer je dat er naast het ophalen (Read) van tabellen en 
+gegevens ook andere acties mogelijk zijn, namelijk aanmaken (Create) 
+aanpassen (Update), en verwijderen (Delete) van gegevens en van tabellen; 
+
+<li>VERDIPEING leer je hoe je met de SQL statement <code>CREATE TABLE</code> 
+een tabel maakt; <li>VERDIEPING leer je hoe je een kolom als primary key 
+aanmaakt, en deze automatisch doornummert; <li>VERDIEPING leer je hoe je met 
+de SQL statement <code>INSERT INTO... VALUES</code> gegevens in een tabel 
+invoert, waaronder ook een NULL voor een waarde dat automatisch genummerd 
+wordt. <li>VERDIEPING TODO UPDATE <li>VERDIEPING TODO DELETE <li>ALTER 
+
+
+</ul>
+
