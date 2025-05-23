@@ -10,20 +10,17 @@ hoeveelheid opties. Al deze opties staan in een <strong>database</strong>.</p>
 
 <img
 src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H1_1_pizzabezorger.png"
-alt="afbeelding van een bezorger" width="300">
+alt="afbeelding van een bezorger" width="200" align="right">
 
 
-<p>Maar wat is een database? En hoe ziet zoiets eruit? Danilo moet veel
+<p>Maar wat is een database? En hoe ziet zoiets eruit? 
+
+Danilo moet veel
 <strong>gegevens</strong> bijhouden. Zoals bijvoorbeeld, de naam van de pizza's, de
 prijs en de ingrediënten. Maar ook de namen en adressen van klanten en
-gegevens over bestellingen en bezorgers. </p>
-
-
-<p>Die gegevens worden bewaard in tabellen. En tabellen bestaan weer uit
-rijen en kolommen met gegevens die opgeslagen worden. Die gegevens noemen we
-<strong>data</strong>. Gestructureerde data is informatie die op een vaste,
-georganiseerde manier is opgeslagen, zodat computers die makkelijk kunnen
-lezen, begrijpen en verwerken.</p>
+gegevens over bestellingen en bezorgers. Die gegevens worden bewaard in tabellen. En tabellen bestaan weer uit kolommen met rijen van gegevens die opgeslagen worden. Die gegevens noemen we
+<strong>data</strong>. Door informatie op een vaste,
+georganiseerde manier is op te slaan kunnen computers die makkelijk lezen, begrijpen en verwerken. Dat noemen we <strong>gestructureerde data</strong>. Een <strong>database</strong> is een verzameling van tabellen waaruit je eenvoudig (overzichten met) gegevens kunt opvragen.</p>
 
 
 ### Verwerkingsopdracht 1.1.1 Kolommen kiezen bij het ontwerp van een tabel
@@ -31,7 +28,7 @@ lezen, begrijpen en verwerken.</p>
 Stel dat jij bij Danilo's Pizzeria wilt bestellen. Om de contactgegevens op
 te slaan in een database moet je het webformulier hieronder invullen.
 
-Bekijk het webformulier goed.
+
 
 
 
@@ -43,27 +40,49 @@ alt="webformulier" width="600"></p>
 We maken een tabel waarin we de contactgegevens opslaan. Zo kunnen we
 makkelijk de gegevens van klanten terugvinden als ze een bestelling plaatsen.
 <ol style="list-style-type: lower-alpha">
-
-<li>Welke gegevens worden verzameld? Noem alle velden.</li>
+<li>Bekijk het webformulier hiernaast goed. Welke gegevens worden verzameld? Noem alle velden.</li>
 
 <li>Wat betekent het sterretje, bijvoorbeeld achter 'Voornaam'?</li>
 
 <li>Wat gebeurt er als er twee verschillende mensen zijn met dezelfde
 voornaam en achternaam waarvan je het adres wilt opzoeken? Wat voor oplossing
-hebben we op school hiervoor?</li>
+hebben we op school hiervoor? Tip: wat voor uniek getal heeft elk leerling op school?</li>
 
 <li>Bedenk een oplossing voor Danilo's pizzeria voor het eenduidig opslaan
-van klantgegevens.</li>
+van klantgegevens. Dus, bedenk iets unieks voor elke klant.</li>
 
-<li>Hieronder staat een tabel om de gegevens op te slaan. Geef de kolommen
-namen (bij 'A' t/m 'H'). Geef de tabel ook een naam.</li>
-
+<li>We maken een tabel om de gegevens in op te slaan. Kolom 'B' hebben we voor je alvast ingevuld met <i>voornaam</i>.
+<ul>
+<li>De eerste kolom, 'A' gebruik je voor je unieke waarde. Geef die een naam. 
+<li>Geef ook de andere kolommen
+namen (bij 'C' t/m 'H'). 
+<li>Geef de tabel ook een naam.</li>
+</ul>
 </ol>
 
+TABEL:
+ <table border=1>
+    <tr>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th> voornaam </th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; G &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    </tr>
+    <tr><td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+</table>
 
- |   A   |   B   |   C   |   D   |   E   |   F   |   G   |   H   |
-|-------|-------|-------|-------|-------|-------|-------|-------| 
-|       |        |       |       |       |       |       |       |
 
 
 <p>Bekijk <a
@@ -127,13 +146,28 @@ geheel getal. Bijvoorbeeld: 4 </li>
 2.50</li>
  </ul>
 
+
+Omdat er in SQLite maar drie datatypes zijn, worden sommige gegevens als TEXT
+opgeslagen. Bijvoorbeeld, een datum sla je in de vorm jjjj-mm-dd (j: jaar, m:
+maand, d:dag) op als een tekst, bijvoorbeeld: "2025-04-20". Een
+telefoonnummer zul je ook als een tekst opslaan, omdat anders de voorloop nul
+wegvalt, bijvoorbeeld: "0688567389".
+
+
 ### Opdracht 1.2.1 Datatypes kiezen bij het ontwerp van een tabel
 
 Ga verder met de tabel uit
 de vorige opdracht. 
+<br>Geef bij elke kolom  aan welk van de
+volgende type gegevens het bevat: 
+<ul> 
+  <li>TEXT: een tekst </li>
+  <li>INTEGER: een geheel getal</li> 
+  <li>REAL: een kommagetal</li> 
+</ul>
 
-TABEL: klanten <table>
-  <thead>
+TABEL: klanten 
+<table border=1>
     <tr>
       <th>klantnummer</th>
       <th>voornaam</th>
@@ -144,21 +178,23 @@ TABEL: klanten <table>
       <th>plaats</th>
       <th>telefoon</th>
     </tr>
-  </thead>
+    <tr><td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
 </table>
 
 
-<br>Geef bij elke kolom  aan welk van de
-volgende type gegevens het bevat: <ul> <li>TEXT: een tekst </li><li>INTEGER: een
-geheel getal</li> <li>REAL: een kommagetal</li> </ul>
 
 
 
-Omdat er maar drie datatypes zijn zul je sommige gegevens als een TEXT
-opslaan. Bijvoorbeeld, een datum sla je in de vorm jjjj-mm-dd (j: jaar, m:
-maand, d:dag) op als een tekst, bijvoorbeeld: "2025-04-20". Een
-telefoonnummer zul je ook als een tekst opslaan, omdat anders de voorloop nul
-wegvalt, bijvoorbeeld: "0688567389".
+
+
 
 
 <p>Bekijk <a
@@ -212,7 +248,7 @@ Een
 voorbeeld is <i>leerlingnummer</i>. Er kunnen geen twee leerlingen dezelfde
 leerlingnummer hebben. Terwijl er misschien wel twee leerlingen met dezelfde
 naam zijn, bijvoorbeeld Tom Janssen. Met een leerlingnummer weet je zeker
-over wie je het hebt. Een ander voorbeeld is een gebruikersnaam in een spel,
+over wie je het hebt. Een ander voorbeeld is een klantnaam bij Pizzeria Danilo of gebruikersnaam in een spel,
 daar mag er maar één van zijn.
 
 (<i>Toelichting: een primary key kan uit meerdere kolommen samen bestaan,
@@ -222,27 +258,27 @@ maar dat behandelen we in deze cursus niet.</i>)
 
 Welke van de volgende uitspraken over primary keys is correct?
 
-
-A. Een primary key mag leeg zijn
-B. Een primary key mag dubbel voorkomen
-C. Een primary key identificeert elke rij op unieke wijze
-D. Een primary key is altijd tekst
-
+<ol style="list-style-type: lower-alpha">
+<li>Een primary key mag leeg zijn
+<li>Een primary key mag dubbel voorkomen
+<li>Een primary key identificeert elke rij op unieke wijze
+<li>Een primary key is altijd tekst
+</ol>
 
 <p>Bekijk <a
 href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave131"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 <!--
-ANTWOORD: Antwoord C is juist
+ANTWOORD: Antwoord c is juist. Een primary key identificeert elke rij op unieke wijze
 -->
 
 ### Verwerkingsopdracht 1.3.2 Welke kolom is een primary key?
 
 Bekijk weer de tabel <code>klanten</code>. Welke kolom is hier de primary key?
 
-TABEL: klanten <table>
-  <thead>
+TABEL: klanten 
+<table border=1>
     <tr>
       <th>klantnummer</th>
       <th>voornaam</th>
@@ -253,7 +289,15 @@ TABEL: klanten <table>
       <th>plaats</th>
       <th>telefoon</th>
     </tr>
-  </thead>
+    <tr><td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
 </table>
 
 
@@ -276,13 +320,13 @@ je nog anderen eisen stellen aan waarden in een bepaald kolom, bijvoorbeeld:
 
 </ul>
 
-### Verwerkingsopdracht 1.4 Eisen aan datat stellen bij het ontwerpen van een tabel 
+### Verwerkingsopdracht 1.4 Eisen aan data stellen bij het ontwerpen van een tabel 
 
 
 Ga verder met de tabel
 uit de vorige opdracht. <br>
 
-TABEL: klanten <table>
+TABEL: klanten <table border=1>
   <thead>
     <tr>
       <th>klantnummer</th>
@@ -346,26 +390,45 @@ ANTWOORD: TABEL: klanten <table>
 # 1.5: Nut van databases
 
 
-[![Watch the
-video](https://www.youtube.com/watch?v=t8jgX1f8kc4/hqdefault.jpg)](https://www.youtube.com/watch?v=t8jgX1f8kc4)
+[![Bekijk op Youtube](https://www.youtube.com/watch?v=t8jgX1f8kc4/hqdefault.jpg)](https://www.youtube.com/watch?v=t8jgX1f8kc4)
 
+
+<iframe width="560" height="315"
+  src="https://www.youtube.com/embed/v=t8jgX1f8kc4"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
 
 <p>Je kunt je voorstellen dat Danilo graag een goed overzicht wil houden van
 alle verzamelde gegevens. Daarom gebruikt hij een <strong>database</strong>. Een
-database is een gestructureerde manier om gegevens op te slaan. Met een
-database is het mogelijk om door middel van een speciale vraagtaal gegevens
-op te vragen en te combineren tot nuttige informatie.</p>
+database is een gestructureerde manier om gegevens op te slaan.</p>
+
+<p>Danilo's database bestaat uit meerdere tabellen. Er is bijvoorbeeld een <em>tabel</em> klant met klantgegevens, een tabel <em>pizza</em> met alle pizza's die besteld kunnen worden, en een tabel <em>bestelling</em> waarin bijgehouden wordt welke pizza's er besteld zijn.
+Hieronder zie je alle tabellen die in Danilo's database staan.
+<p> <a
+href="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/DaniloIA_ERD.png"
+target="_blank">
+  <img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/DaniloIA_ERD.png" alt="Klik om in een nieuw venster te openen" width="1000"/>
+</a></p>
+
+
+<p>Met een zoekvraag, of <strong>query</strong> vraag je een deel van de gegevens uit een database op. Je kunt gegevens ook combineren tot nuttige informatie, bijvoorbeeld op welke dagen de meeste pizza's besteld worden.
+</p>
+
+
+
+
 
 <p>Data is overal, niet alleen in de pizzeria van Danilo. Zodra jij je op het
-internet begeeft laat je een spoor van gegevens achter en die data moet
-ergens heen. Terwijl jij, bijvoorbeeld, gebruik maakt van YouTube worden
+internet begeeft laat je een spoor van gegevens achter. Terwijl jij, bijvoorbeeld, gebruik maakt van YouTube worden
 verschillende gegevens verzameld die hergebruikt kunnen worden om een
 gepersonaliseerde ervaring aan te kunnen bieden. Denk hierbij aan hoe lang je
 naar een video kijkt, naar welke video’s je zoekt of op welke video’s die
 aangeraden worden jij ook echt doorklikt. Ook moet er veel informatie over de
-video’s zelf opgeslagen worden zoals de titel, de thema’s, de lengte, etc. Je
+video’s zelf opgeslagen worden zoals de titel, de thema’s, de lengte, enz. Je
 kunt je voorstellen dat via het internet zo een enorme hoeveelheid data
-verzameld wordt.</p>
+verzameld worden.</p>
 
 
 <p>Jouw school maakt ook gebruik van databases. Gebruikt je school Magister
@@ -375,32 +438,6 @@ en invoeren, kan de schoolleiding zien hoe het met verschillende klassen gaat
 en kan jij zien hoe je er voor staat met al je vakken of opdrachten
 inleveren.</p>
 
-# 1.6: Databasemanagementsysteem (DBMS) 
-
-
-<p>Een database kan al snel heel groot
-worden. Er wordt niet alleen data in opgeslagen, maar ook data gewijzigd of
-verwijderd. Een andere belangrijke functie is het opvragen en combineren van
-gegevens. Bovendien heeft niet iedereen dezelfde toegang: als leerling kun je
-alleen je eigen gegevens zien, terwijl een docent bijvoorbeeld de cijfers van
-alle leerlingen kan bekijken, aanpassen of toevoegen.</p> 
-
-
-<p>Al deze
-bedrijven, programma’s en apps maken gebruik van zogeheten databases. Een
-veelgebruikte soort is de relationele database: een database die bestaat uit
-meerdere tabellen die met elkaar in verband staan. Dat betekent dat gegevens
-uit de ene tabel gekoppeld zijn aan gegevens in een andere tabel. Deze
-databases worden beheerd door een databasebeheersysteem (*Database Management
-System*, of DBMS). </p>
-
-
-[TODO IMG]
-
-
-<p>Zo’n systeem zorgt ervoor dat de data betrouwbaar en correct blijft, en
-dat wij op een eenvoudige manier informatie kunnen opvragen wanneer we die
-nodig hebben.</p>
 
 
 
@@ -412,7 +449,7 @@ kijken of we nog meer databases kunnen vinden.</p>
 
 <ol style="list-style-type: lower-alpha"> <li>Bedenk nog een voorbeeld van
 een website die, naar jouw verwachting, gebruik maakt van een database. </li>
-<li>Wat voor soort data zou opgeslagen worden in deze database?</li> </ol>
+<li>Wat voor data worden opgeslagen in deze database?</li> </ol>
 
 <p>Bekijk <a
 href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave161"
@@ -433,7 +470,170 @@ target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
 
+# 1.6: Database management system (DBMS) 
 
+
+<p>Een database kan al snel heel groot
+worden. Er wordt niet alleen data in opgeslagen, maar ook data gewijzigd of
+verwijderd. Een andere belangrijke functie is het opvragen en combineren van
+gegevens. Bovendien heeft niet iedereen dezelfde toegang: als leerling kun je
+alleen je eigen gegevens zien, terwijl een docent bijvoorbeeld de cijfers van
+alle leerlingen kan bekijken, aanpassen of toevoegen.</p> 
+
+
+<p>Al deze
+bedrijven, programma’s en apps maken gebruik van zogeheten databases. Een
+veelgebruikte soort is de relationele database: een database die bestaat uit
+meerdere tabellen die met elkaar in verband staan. Dat betekent dat gegevens
+uit de ene tabel gekoppeld zijn aan gegevens in een andere tabel. Deze
+databases worden beheerd door een <strong>database management system (DBMS)</strong>. </p>
+
+  <img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H1_1dbase.png" alt="DBMS" width="1000"/>
+
+
+<p>Zo’n systeem zorgt ervoor dat de data betrouwbaar en correct blijft, en
+dat wij op een eenvoudige en veilige manier informatie kunnen opvragen wanneer we die
+nodig hebben.</p>
+
+
+
+
+## Gegevens beheren
+
+Het beheren van gegevens kan je opdelen in vier categorieen: Create, Read, Update, Delete, afgekort tot <strong>CRUD</strong>:
+
+<ul> 
+<li><b>Create</b>: Nieuwe tabellen aanmaken (met CREATE TABLE), of gegevens toevoegen (met INSERT INTO);
+<li><b>Read</b>: Opgeslagen gegevens bekijken (met SELECT);
+<li><b>Update</b>: Opgeslagen gegevens bewerken (met UPDATE);
+<li><b>Delete</b>: Opgeslagen gegevens verwijderen (met DELETE). 
+</ul> 
+
+
+<p>Een DBMS zorgt ervoor dat een beheerder al deze acties kan doen. Als er meerdere gebruikers zijn, bepaal je per gebruiker wat die mag. Een klant mag bijvoorbeeld alleen zijn eigen 
+wachtwoord bewerken (Update) en niet dat van andere klanten.</p> 
+
+De app van Danilo's Pizzeria heeft verschillende gebruikers, bijvoorbeeld klanten (die pizza's bestellen), bezorgers (brengen pizza's rond), en beheerders (die de hele database beheren).
+
+Voorbeelden van CRUD acties op Danilo's Pizzeria zijn:
+<ul>
+<li>Create: Als een nieuwe bezorger in dienst komt, dan worden zijn gegevens door een beheerder toegevoegd. 
+<li>Read: Om te zien op welk adres een pizza bezorgd moet worden, kan de bezorger deze opvragen.
+<li>Update: De bezorger mag zijn eigen <i>telefoon</i>nummer aanpassen. 
+<li>Delete: Als een bezorger ontslag neemt, worden zijn gegevens door een beheerder verwijderd.
+</ul>
+<!--
+<ul>
+<li>Create: Als een nieuwe bezorger in dienst komt, dan worden zijn gegevens toegevoegd aan tabel <code>bezorger</code>. 
+<li>Read: Om te zien op welk adres een pizza bezorgd moet worden, kan de bezorger deze uit tabel <code>klant</code> opvragen.
+<li>Update: De bezorger mag zijn eigen <i>telefoon</i>nummer aanpassen. 
+<li>Delete: Als een bezorger ontslag neemt, worden zijn gegevens uit tabel <code>bezorger</code> verwijderd.
+</ul>
+-->
+
+<!--
+Ter herinnering, hieronder zie je alle tabellen die in Danilo's database staan.
+<p> <a
+href="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/DaniloIA_ERD.png"
+target="_blank">
+  <img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/DaniloIA_ERD.png" alt="Klik om in een nieuw venster te openen" width="1000"/>
+</a></p>
+-->
+
+### Opdracht CRUD rechten van klanten bepalen
+
+We bekijken de CRUD-rechten die een klant heeft op tabel <code>klant</code>.
+
+[TODO IMG TABEL KLANT *]
+<ol style="list-style-type: lower-alpha">
+<li>Bepaal welke van de volgende rechten de klant heeft op de eigen gegevens in de tabel <code>klant</code>?
+<li>Waarom is het logisch dat een klant sommige dingen wel en andere dingen niet mag? 
+</ol>
+
+
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<!--
+ANTWOORDEN:
+<ol style="list-style-type: lower-alpha">
+<li>Acties:
+	<ul>
+<li>Create: Ja, bij het aanmaken van een nieuw account.
+<li>Read: Ja, mag eigen gegevens bekijken.
+<li>Update: Ja, mag eigen gegevens wijzigen (zoals wachtwoord of adres).
+<li>Delete: Meestal niet zelf; alleen door een beheerder.
+</ul>
+<li>Klanten mogen alleen hun eigen gegevens zien en invoeren, maar niet wijzigen of verwijderen. Dit voorkomt fouten en misbruik, en beschermt de privacy van andere klanten.
+</ol>
+-->
+
+### Verwerkingsopdracht CRUD Rechten van de bezorger bepalen
+Een bezorger krijgt een overzicht van de pizza’s die hij moet afleveren. Na bezorging vinkt hij in het systeem aan dat de bestelling is bezorgd, daarmee wordt de bezorgtijd vastgelegd.
+<ol style="list-style-type: lower-alpha">
+<li>Welke CRUD-rechten heeft een bezorger nodig als hij een bestelling gaat bezorgen?
+<li>Waarom is het belangrijk dat een bezorger geen toegang heeft tot bepaalde gegevens?
+</ol>
+
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<!--
+ANTWOORDEN:
+<ol style="list-style-type: lower-alpha">
+<li>Acties:
+<ul>
+<li>Read: Ja, om te kunnen zien welke bestellingen hij moet bezorge naar welk adres.
+<li>Update: Ja, om de bezorgtijd vast te leggen.
+<li>Create/Delete: Nee, een bezorger mag geen bestellingen invoeren of verwijderen.
+</ul>
+<li>Toelichting: De bezorger heeft beperkte toegang. Hij mag alleen de bezorg_tijd aangeven, en dus aanpassen. Andere gegevens zijn niet zijn verantwoordelijkheid en moeten dus beschermd blijven. Hij mag bijvoorbeeld wel het adres van de klant inzien, maar niet de wachtwoord van de klant.
+</ol>
+-->
+
+
+### Verwerkingsopdracht Fouten voorkomen
+Stel dat je per ongeluk een Delete-recht geeft aan een klant op de tabel waarin alle geplaatste bestellingen staan.
+
+<ol style="list-style-type: lower-alpha">
+<li>Wat zou er kunnen gebeuren als een klant zijn eigen of andermans bestellingen kon verwijderen?
+<li>Hoe kun je dit voorkomen?
+</ol>
+
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<!-- ANTWOORDEN
+<ol style="list-style-type: lower-alpha">
+<li>Gevolgen van verkeerde Delete-rechten bij klanten:
+<ul>
+<li>Klanten kunnen elkaars of hun eigen bestellingen verwijderen.
+<li>Hierdoor kunnen bezorgers en keukenpersoneel hun werk niet goed doen.
+<li>Er ontstaat chaos in de bestelgeschiedenis, en klantenservice moet fouten oplossen.
+</ul>
+<li>Oplossing:
+<ul>
+<li>Gebruik toegang op basis van rollen (bijv. alleen de beheerder mag DELETE uitvoeren).
+<li>Voeg controlemechanismen toe in de applicatie: de knop ‘verwijderen’ is niet zichtbaar voor klanten.
+<li>Extra: in een geavanceerde DBMS kun je databasepermissies aanpassen, bijvoorbeeld met GRANT/REVOKE.
+</ul>
+</ol>
+-->
+
+
+### Verwerkingsopdracht CRUD Rechten van de databasebeheerder bepalen
+De beheerder moet het hele systeem kunnen beheren, ook als er iets fout is gegaan.
+<ol style="list-style-type: lower-alpha">
+<li>Welke CRUD-rechten heeft een beheerder?
+<li>Wat zijn de voor- en nadelen van het geven van volledige CRUD-rechten aan een beheerder?
+</ol>
+
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<!--
+ANTWOORDEN
+<ol style="list-style-type: lower-alpha">
+<li>Acties: Create, Read, Update, Delete: een beheerder heeft alle rechten.
+<li>Voor- en nadelen:
+<ul>
+<li>Voordelen: De beheerder kan fouten corrigeren, testgegevens verwijderen, of het systeem onderhouden.
+<li>Nadelen: Volledige rechten zijn gevoelig voor fouten of misbruik. Eén verkeerde DELETE-query kan veel gegevens verwijderen.
+</ul>
+</ol>
+-->
 
 
 
@@ -509,18 +709,18 @@ In de praktijk worden de woorden data en gegevens veel door elkaar gebruikt.
 
 
 # 1.7: Samenvatting Databases
+In deze opdracht heb je veel geleerd over gestructureerde data. We vatten dat nu samen.
 
-Bij het maken van de vorige opdrachten heb je veel geleerd over
-gestructureerde data. We vatten dat nu samen.
-
-<ul> 
-
-<li><strong>Database</strong>: Een georganiseerde verzameling gegevens, opgeslagen
-in tabellen met rijen en kolommen. In een pizzeria zoals Danilo’s worden gegevens opgeslagen over o.a. pizza’s, klanten, bestellingen en bezorgers.
-<li>Een tabel heeft kolommen. Ieder kolom heeft een naam zoals <i>voornaam</i>, <i>adres</i>, <i>telefoonnummer</i>, enz. en een datatype (bijv. tekst of getal).
- <li><strong>Datatypes</strong> in SQLite:  INTEGER -
-Gehele getallen (bijv. een klantnummer: 4054), TEXT - Tekstuele gegevens (bijv. een naam :'Jaap') en REAL -
-Kommagetallen (bijv. een prijs: 2.50) <li><strong>Primary Key</strong>: Elk tabel heeft een kolom waarbij elke rij uniek is. Voorbeelden: klantnummer, leerlingnummer.
-<li><strong>Gegevens</strong> zijn feiten die je kunt verzamelen, zoals een naam of temperatuur.
-<li><strong>Data</strong> zijn opgeslagen gegevens (in tabellen of bestanden).
-<li><strong>Informatie</strong> is eïnterpreteerde data die betekenis heeft, bijvoorbeeld een weerbericht.</ul>
+<ul>
+ <li><strong>Database</strong>: een georganiseerde verzameling gegevens, opgeslagen in tabellen met rijen en kolommen. In een pizzeria zoals Danilo’s worden gegevens opgeslagen over o.a. pizza’s, klanten, bestellingen en bezorgers.</li> 
+ <li>Een tabel bestaat uit kolommen, elk met een naam zoals <i>voornaam</i>, <i>adres</i>, <i>telefoonnummer</i>, enz., en een datatype (bijv. tekst of getal).</li> <li><strong>Datatypes</strong> in SQLite: 
+ <ul> 
+ <li><strong>INTEGER</strong>: gehele getallen (bijv. een klantnummer: 4054)</li> <li><strong>TEXT</strong>: tekstuele gegevens (bijv. een naam: 'Jaap')</li> <li><strong>REAL</strong>: kommagetallen (bijv. een prijs: 2,50)</li> 
+ </ul> 
+ </li> 
+ <li><strong>Primary key</strong>: elke tabel heeft een kolom waarin elke waarde uniek is. Voorbeelden: klantnummer, leerlingnummer.</li> 
+ <li>Een database wordt beheerd door een <strong>Database Management System (DBMS)</strong>.</li> 
+ <li>Om de gegevens in je database te beschermen, wordt er per gebruiker bepaald welke <strong>CRUD</strong>-rechten (Create, Read, Update, Delete) diegene op welke data heeft.</li> 
+ <li><strong>Gegevens</strong> zijn feiten die je kunt verzamelen, zoals een naam of temperatuur.</li> 
+ <li><strong>Data</strong> zijn opgeslagen gegevens (in tabellen of bestanden).</li> <li><strong>Informatie</strong> is geïnterpreteerde data die betekenis heeft, bijvoorbeeld een weerbericht.</li>
+  </ul>

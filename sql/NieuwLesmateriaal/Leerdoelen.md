@@ -19,7 +19,7 @@ In dit onderwerp:
 
 
 
-###Overzicht ONDERWERP 1: DATABASES
+### Overzicht ONDERWERP 1: DATABASES
 
 <h5><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H1_overzicht.png" alt="logo onderwerp 1" style="float: right; margin: 4px;" width="150" height="151">
 1: Kennismaking met databases<br></h5>
@@ -43,10 +43,6 @@ aanpassen en toevoegen van gegevens en verwijderen van gegevens.</p>
 
 <p>Leerdoelen</p>
 
-In dit onderwerp: <ul> 
-
-
-</ul>
 
 <p>In dit onderwerp:</p>
 <ul>
@@ -209,13 +205,17 @@ TABEL:
 <li>TODO OND1 leer je dat er naast het ophalen (Read) van tabellen en 
 gegevens ook andere acties mogelijk zijn, namelijk aanmaken (Create) 
 aanpassen (Update), en verwijderen (Delete) van gegevens en van tabellen; 
-
 <li>VERDIPEING leer je hoe je met de SQL statement <code>CREATE TABLE</code> 
-een tabel maakt; <li>VERDIEPING leer je hoe je een kolom als primary key 
-aanmaakt, en deze automatisch doornummert; <li>VERDIEPING leer je hoe je met 
+een tabel maakt; 
+<li>VERDIEPING leer je hoe je een kolom als primary key 
+aanmaakt, en deze automatisch doornummert; 
+<li>VERDIEPING leer je hoe je met 
 de SQL statement <code>INSERT INTO... VALUES</code> gegevens in een tabel 
 invoert, waaronder ook een NULL voor een waarde dat automatisch genummerd 
-wordt. <li>VERDIEPING TODO UPDATE <li>VERDIEPING TODO DELETE <li>ALTER 
+wordt. 
+<li>VERDIEPING TODO UPDATE 
+<li>VERDIEPING TODO DELETE 
+<li>ALTER 
 
 
 </ul>
