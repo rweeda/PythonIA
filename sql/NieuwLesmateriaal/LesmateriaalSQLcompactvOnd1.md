@@ -326,7 +326,8 @@ je nog anderen eisen stellen aan waarden in een bepaald kolom, bijvoorbeeld:
 Ga verder met de tabel
 uit de vorige opdracht. <br>
 
-TABEL: klanten <table border=1>
+TABEL: klanten 
+<table border=1>
   <thead>
     <tr>
       <th>klantnummer</th>
@@ -338,7 +339,7 @@ TABEL: klanten <table border=1>
       <th>plaats</th>
       <th>telefoon</th>
     </tr>
-        <tr>
+    <tr>
       <td>INTEGER</td>
       <td>TEXT</td>
       <td>TEXT</td>
