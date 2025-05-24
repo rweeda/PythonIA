@@ -11,7 +11,7 @@
 
 Met `AS` kan je een kolomnaam hernoemen. Dit doe je na de `SELECT`.
 
-Bijvoorbeeld, hieronder wordt de kolom `naam` getoond als `pizzanaam`
+Bijvoorbeeld, hieronder wordt de kolom <i>naam</i> getoond als <i>pizzanaam</i>.
 
 
 ``` SQL
@@ -31,7 +31,24 @@ FROM pizza;
 
 
 ### Verwerkingsopdracht 3.1.1 Kolom 'naam' hernoemen in 'bezorgernaam'
-Toon een overzicht van alle namen van de bezorgers. Noem het kolom `bezorgernaam`.
+<table>
+<tr><td width=35% valign="top">
+Toon een overzicht van alle namen van de bezorgers zoals het overzicht hiernaast. Noem het kolom <i>bezorgernaam</i>.
+</td><td width=65%>
+  <table border="1">
+    <tr>
+      <th>bezorgernaam</th>
+    </tr>
+    <tr><td>Afhalen</td></tr>
+    <tr><td>Ageeth Mooy</td></tr>
+    <tr><td>Eric Henze</td></tr>
+    <tr><td>...</td></tr>
+    <tr><td>Herman Prent</td></tr>
+  </table>
+</td>
+</tr>
+</table>
+
 
 <p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave311" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!-- ANTWOORD:
