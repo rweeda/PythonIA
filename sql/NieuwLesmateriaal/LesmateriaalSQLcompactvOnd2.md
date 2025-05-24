@@ -554,8 +554,8 @@ nette en leesbare queries te schrijven.</p>
 <li>Schrijf elke opdracht op een nieuwe regel;
 <li>Als je meerdere items achter een SELECT of FROM opdracht hebt staan dan moet je deze scheiden met een komma;
 <li>Gebruik spaties om de leesbaarheid tussen items te vergroten;
-<li>Schrijf commentaar in je query om uit te leggen wat je doet (vooral bij WHERE en GROUP BY);
-<li>Sluit een query af met een puntkomma (;).
+<li>Schrijf met <code>--</code> commentaar in je query om uit te leggen wat je doet (vooral bij WHERE en GROUP BY);
+<li>Sluit een query af met een puntkomma <code>;</code>.
 </ol>
 
 Hieronder een voorbeeld van nette code: 
@@ -594,7 +594,7 @@ leesbaar is -- (6) en afsluiten met een ; (maar dat hoeft niet) WHERE
 basisprijs < 8; -->
 
 
-## 2.9: Fouten opsporen
+## 2.10: Fouten opsporen
 
 Het kan voorkomen dat er een fout in je code zit. Hier zijn wat tips om die
 op te sporen: 
@@ -618,7 +618,7 @@ bijvoorbeeld 'enschede' in plaats van 'Enschede'.
 </ul>
 
 
-### Opdracht 2.9.1 Fout in query (1) 
+### Opdracht 2.10.1 Fout in query (1) 
 
 Piet wil met de query hieronder een
 overzicht van alle pizza's die minder dan 7 euro kosten. Wat is de fout in
@@ -628,7 +628,7 @@ SELECT naam basisprijs < 7.0 FROM WHERE
 pizza;
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave291"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2101"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
@@ -636,7 +636,7 @@ target="_blank">hier</a> de voorbeelduitwerking.</p>
 class="language-sql"> SELECT naam FROM pizza WHERE basispijs < 7.0;
 </code></pre> -->
 
-### Opdracht 2.9.2 Fout in query (2) 
+### Opdracht 2.10.2 Fout in query (2) 
 
 <table width="100%">
   <tr>
@@ -723,7 +723,7 @@ WHERE woonplaats = 'nijmegen';
 
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave292"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2102"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 <!-- ANTWOORD: b De woonplaatsen zijn met een hoofdletter geschreven (bv.
@@ -736,7 +736,7 @@ De juiste query is:
 'Nijmegen'; -->
 
 
-### Opdracht 2.9.3: Fout in query (3) 
+### Opdracht 2.10.3: Fout in query (3) 
 
 De code hieronder bevat een fout. Run de
 code, lees de foutmelding en herstel de fout.
@@ -746,7 +746,7 @@ SELECT naam FROM pizzas WHERE basispijs < 7.0;
 
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave293"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2103"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
@@ -756,7 +756,7 @@ class="language-sql"> SELECT naam FROM pizza WHERE basispijs < 7.0;
 
 
 
-### Opdracht 2.9.4: Fout in query (4) 
+### Opdracht 2.10.4: Fout in query (4) 
 
 De code hieronder bevat een fout. Run de
 code, lees de foutmelding en herstel de fout.
@@ -764,7 +764,7 @@ code, lees de foutmelding en herstel de fout.
 ``` sql SELECT pizzanaam FROM pizza WHERE basispijs < 7.0;```
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave294"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2104"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
@@ -774,7 +774,7 @@ SELECT naam FROM pizza WHERE basispijs < 7.0; </code></pre> -->
 
 
 
-# SAMENVATTING Onderwerp 2
+# Samenvatting Onderwerp 2
 
 <ul>
 <li><b>SQL</b> staat voor Structured Query Language. Het is de standaardtaal om gegevens in een database op te slaan, te bewerken en op te vragen;
@@ -796,16 +796,16 @@ SELECT naam FROM pizza WHERE basispijs < 7.0; </code></pre> -->
 | HAVING | (Optioneel)Voorwaarde op groep |
 | ORDER BY | (Optioneel) Sorteren |
 
-# AFSLUITENDE OPDRACHTEN 2.10
+# Afsluitende Opdrachten 2: SQL SELECT FROM
 
-### Afsluitende Opdracht 2.10.1 Kolomnamen opzoeken 
+### Afsluitende Opdracht 2.11.1 Kolomnamen opzoeken 
 
 Je wil weten welke kolomnamen er in de
 tabel <i>bestelling</i> zitten. Welke query helpt je hierbij?
 
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2101"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2111"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
@@ -814,12 +814,12 @@ tabel, inclusief de kolomnamen: <pre><code class="language-sql"> SELECT *
 FROM bestelling; </code></pre> -->
 
 
-### Afsluitende Opdracht 2.10.2: Toon gegevens van een specifieke pizza
+### Afsluitende Opdracht 2.11.2: Toon gegevens van een specifieke pizza
 
 Toon de omschrijving en de basisprijs van de pizza met de naam **"Quattro Formaggi"**.
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2102"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2112"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
@@ -833,7 +833,7 @@ WHERE naam = 'Quattro Formaggi';
 
 
 
-### Afsluitende Opdracht 2.10.3: Klanten in een specifieke plaats
+### Afsluitende Opdracht 2.11.3: Klanten in een specifieke plaats
 Toon het **klantnummer**, **naam** en **plaats** van alle klanten die wonen in **"Utrecht"**. 
 
 <!--
@@ -845,10 +845,10 @@ WHERE plaats = 'Utrecht';
 -->
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2103"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2113"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
-### Afsluitende Opdracht 2.10.4: Netjes schrijven  
+### Afsluitende Opdracht 2.11.4: Netjes schrijven  
 Onderstaande query werkt wel, maar is rommelig:
 
 
@@ -864,7 +864,7 @@ select naam,basisprijs from pizza where basisprijs>9
 </ol>
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2104"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2114"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
@@ -877,7 +877,7 @@ WHERE basisprijs > 9; -- pizza's duurder dan 9 euro
 -->
 
 
-### Afsluitende Opdracht 2.10.5 Debuggen van een fout  
+### Afsluitende Opdracht 2.11.5 Debuggen van een fout  
 Onderstaande query geeft een foutmelding. Zoek de fout en verbeter de query.
 
 <!--
@@ -886,7 +886,7 @@ SELECT wachtwoord FROM bezorger WHERE naam = Ronald Marbus;
 </code></pre>
 -->
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2105"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2115"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 <!--
@@ -898,7 +898,7 @@ WHERE naam = 'Ronald Marbus';
 -->
 
 
-### Afsluitende Opdracht 2.10.6 Debuggen en herschrijven van slordige query
+### Afsluitende Opdracht 2.11.6 Debuggen en herschrijven van slordige query
 De volgende query werkt niet goed. Voer hem eerst uit en analyseer de foutmelding. Herschrijf daarna de query netjes én correct:
 
 <!--
@@ -913,7 +913,7 @@ SELECT naam basisprijs FROM pizza WHERE basisprijs<7
 </ol>
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2106"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2116"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 <!--
@@ -927,13 +927,13 @@ WHERE basisprijs < 7;
 -->
 
 
-### Afsluitende Opdracht 2.10.7 Alle bezorgers bekijken  
+### Afsluitende Opdracht 2.11.7 Alle bezorgers bekijken  
 <ol type="alpha">
 <li>Toon alle kolommen en gegevens uit de tabel `bezorger`.  
 <li>Welke kolomnamen zie je terug? Geef er drie en leg kort uit wat ze betekenen.
 </ol>
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2107"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2117"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 <!--
