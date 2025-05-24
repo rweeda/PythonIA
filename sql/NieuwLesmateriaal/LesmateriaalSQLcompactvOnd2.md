@@ -222,8 +222,7 @@ FROM tabelnaam;
 
 ### Opdracht 2.4.1 Alle gegevens van tabel pizza ophalen
 <table width="100%">
-  <tr>
-    <td valign="top" width="35%">
+  <tr><td style="text-align:left; vertical-align:top; font-size:1rem;" width="35%">
 Toon alle kolommen met gegevens van tabel <code>pizza</code>, zoals in het
 voorbeeld hiernaast.
     </td>
@@ -297,7 +296,7 @@ deze volgorde</b>.
 
 
 
-## 2.6 Voorwaarden met de WHERE
+## 2.6: Voorwaarden met de WHERE
 
 <p>Met WHERE kun je beperken welke rijen getoond moet worden. Met WHERE kun
 je een voorwaarde aangeven, bijvoorbeeld: 'waarbij de informatie voldoet aan
@@ -307,7 +306,8 @@ je een voorwaarde aangeven, bijvoorbeeld: 'waarbij de informatie voldoet aan
 worden, dan met FROM de tabel waaruit de gegevens moeten komen, en met WHERE
 welke beperking geldt.</p>
 
-
+<table width="100%">
+  <tr><td style="text-align:left; vertical-align:top; font-size:1rem;" width="35%">
 <p>Bijvoorbeeld, met de volgende query tonen we alle pizza's die precies 8
 euro kosten:</p>
 
@@ -316,8 +316,8 @@ euro kosten:</p>
  FROM pizza
  WHERE basisprijs=8;
  ```
-
-
+  </td>
+  <td width="65%">
 <table border="1">
   <thead>
     <tr>
@@ -360,7 +360,7 @@ euro kosten:</p>
     </tr>
   </tbody>
 </table>
-
+</td></tr></table>
 
 
 ### Opdracht 2.6.1 Omschrijving van een Inferno pizza tonen 
@@ -398,7 +398,7 @@ FROM pizza WHERE naam='Inferno' </code></pre>
 
 
 
-## 2.7 Kennis maken met de andere tabellen
+## 2.7: Kennis maken met de andere tabellen
 
 
 <p>Danilo's pizzeria database bestaat uit meer tabellen dan alleen
