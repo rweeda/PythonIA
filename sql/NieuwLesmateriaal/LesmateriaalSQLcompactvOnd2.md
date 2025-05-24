@@ -113,7 +113,7 @@ Daarmee krijg je zo'n volgende overzicht:
 ### Opdracht 2.2.1: Alle pizzacodes tonen 
 
 <table>
-    <td valign="top" width="35%">
+  <tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 <ol style="list-style-type:lower-alpha"> 
 <li>Geef een overzicht van alle pizzacodes (kolom <i>pizzacode</i>) in tabel
 <code>pizza</code>, zoals in het voorbeeld hiernaast.
@@ -156,14 +156,14 @@ elke pizza aan zijn pizzacode. </ol> -->
 Je kunt ook een meerdere kolommen ophalen. Dat doe je als volgt:
 
 ```sql
-SELECT kolom1, kolom2, ... FROM tabelnaam;
+SELECT kolom1, kolom2, ... 
+FROM tabelnaam;
 ```
 
 ### Opdracht 2.3.1 Menu printen
 <table width="100%">
-  <tr>
-    <td valign="top" width="35%">
-Maak een menu door de <i>naam</i> en <i>basisprijs</i> van elk pizza uit het tabel `pizza` te halen, zoals hiernaast.
+  <tr><td style="text-align:left; vertical-align:top; font-size:1rem;" width="35%">
+Maak een menu door de <i>naam</i> en <i>basisprijs</i> van elk pizza uit het tabel <code>pizza</code> te halen, zoals hiernaast.
     </td>
     <td width="65%">
       <table border="1">
@@ -211,7 +211,7 @@ target="_blank">hier</a> de voorbeelduitwerking.</p> <!-- ANTWOORD:
 <pre><code class="language-sql"> SELECT pizzanaam, omschrijving, basisprijs
 FROM pizza; </code></pre> -->
 
-### 2.4 Alle gegevens van een tabel ophalen
+### 2.4: Alle gegevens van een tabel ophalen
 
 <p>Om alle kolommen op te halen gebruik je na de SELECT een '*'</p>
 
@@ -220,7 +220,7 @@ SELECT *
 FROM tabelnaam;
 ```
 
-### Opdracht 2.4.1 Alle gegevens van tabel pizza ophalen
+### Opdracht 2.4.1 Alle gegevens van tabel <code>pizza</code> ophalen
 <table width="100%">
   <tr><td style="text-align:left; vertical-align:top; font-size:1rem;" width="35%">
 Toon alle kolommen met gegevens van tabel <code>pizza</code>, zoals in het
@@ -307,7 +307,7 @@ worden, dan met FROM de tabel waaruit de gegevens moeten komen, en met WHERE
 welke beperking geldt.</p>
 
 <table width="100%">
-  <tr><td style="text-align:left; vertical-align:top; font-size:1rem;" width="35%">
+  <tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 <p>Bijvoorbeeld, met de volgende query tonen we alle pizza's die precies 8
 euro kosten:</p>
 
@@ -365,7 +365,7 @@ euro kosten:</p>
 
 ### Opdracht 2.6.1 Omschrijving van een Inferno pizza tonen 
 <table>
-<tr><td valign="top" width=35%>
+  <tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 Schrijf een query om de
 omschrijving van de pizza 'Inferno' te tonen, zoals in het voorbeeld
 hiernaast.
@@ -417,7 +417,7 @@ target="_blank">
 
 ### Opdracht 2.7.1 Alle gegevens uit tabel <code>klant</code> tonen
 <table>
-<tr><td valign="top" width=35%>
+  <tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 <p>Toon alle gegevens
 uit tabel <code>klant</code>, zoals in het voorbeeld hiernaast.
 </td><td width="65%">
@@ -436,7 +436,8 @@ target="_blank">hier</a> de voorbeelduitwerking.</p>
 ### Opdracht 2.7.2: Alle klanten uit Enschede tonen
 
 <table>
-<tr><td valign="top" width=35%>Toon het adres, de postcode en de plaats van alle klanten die in Enschede
+  <tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
+  Toon het adres, de postcode en de plaats van alle klanten die in Enschede
 wonen, zoals hiernaast. Tip: De gegevens komen uit tabel <code>klant</code>.</p> 
 </td><td width="65%">
 <table border="1">
@@ -488,10 +489,9 @@ target="_blank">hier</a> de voorbeelduitwerking.</p>
 woonplaats FROM klant WHERE plaats='Enschede'; </code></pre> -->
 
 
-### Opdracht 2.7.3 Wachtwoord van een bezorger
+### Opdracht 2.7.3 Wachtwoord van een bezorger tonen
 <table width="100%">
-        <tr>
-          <td valign="top" width="35%">
+  <tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
       Toon het wachtwoord van de
       bezorger met de naam Ronald Marbus, zoals hiernaast.
       Tips: <ul> <li>De gegevens komen uit tabel <code>bezorger</code>,</li> <li>toon
@@ -639,8 +639,7 @@ class="language-sql"> SELECT naam FROM pizza WHERE basispijs < 7.0;
 ### Opdracht 2.10.2 Fout in query (2) 
 
 <table width="100%">
-  <tr>
-    <td valign="top" width="35%">
+  <tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 Lukas wil alle klantgegevens van klanten
 in Nijmegen zien, zoals het overzicht. Hij gebruikt daarvoor het onderstaande code, maar dat
 levert niets op!
@@ -774,7 +773,7 @@ SELECT naam FROM pizza WHERE basispijs < 7.0; </code></pre> -->
 
 
 
-# Samenvatting Onderwerp 2
+## 2.11: Samenvatting SQL SELECT-FROM
 
 <ul>
 <li><b>SQL</b> staat voor Structured Query Language. Het is de standaardtaal om gegevens in een database op te slaan, te bewerken en op te vragen;
@@ -796,16 +795,16 @@ SELECT naam FROM pizza WHERE basispijs < 7.0; </code></pre> -->
 | HAVING | (Optioneel)Voorwaarde op groep |
 | ORDER BY | (Optioneel) Sorteren |
 
-# Afsluitende Opdrachten 2: SQL SELECT FROM
+## Afsluitende Opdrachten 2: SQL SELECT-FROM
 
-### Afsluitende Opdracht 2.11.1 Kolomnamen opzoeken 
+### Afsluitende Opdracht 2.12.1 Kolomnamen opzoeken 
 
 Je wil weten welke kolomnamen er in de
 tabel <i>bestelling</i> zitten. Welke query helpt je hierbij?
 
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2111"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2121"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
@@ -814,12 +813,12 @@ tabel, inclusief de kolomnamen: <pre><code class="language-sql"> SELECT *
 FROM bestelling; </code></pre> -->
 
 
-### Afsluitende Opdracht 2.11.2: Toon gegevens van een specifieke pizza
+### Afsluitende Opdracht 2.12.2: Toon gegevens van een specifieke pizza
 
 Toon de omschrijving en de basisprijs van de pizza met de naam **"Quattro Formaggi"**.
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2112"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2122"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
@@ -833,7 +832,7 @@ WHERE naam = 'Quattro Formaggi';
 
 
 
-### Afsluitende Opdracht 2.11.3: Klanten in een specifieke plaats
+### Afsluitende Opdracht 2.12.3: Klanten in een specifieke plaats
 Toon het **klantnummer**, **naam** en **plaats** van alle klanten die wonen in **"Utrecht"**. 
 
 <!--
@@ -845,10 +844,10 @@ WHERE plaats = 'Utrecht';
 -->
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2113"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2123"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
-### Afsluitende Opdracht 2.11.4: Netjes schrijven  
+### Afsluitende Opdracht 2.12.4: Netjes schrijven  
 Onderstaande query werkt wel, maar is rommelig:
 
 
@@ -864,7 +863,7 @@ select naam,basisprijs from pizza where basisprijs>9
 </ol>
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2114"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2124"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
@@ -877,7 +876,7 @@ WHERE basisprijs > 9; -- pizza's duurder dan 9 euro
 -->
 
 
-### Afsluitende Opdracht 2.11.5 Debuggen van een fout  
+### Afsluitende Opdracht 2.12.5 Debuggen van een fout  
 Onderstaande query geeft een foutmelding. Zoek de fout en verbeter de query.
 
 <!--
@@ -886,7 +885,7 @@ SELECT wachtwoord FROM bezorger WHERE naam = Ronald Marbus;
 </code></pre>
 -->
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2115"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2125"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 <!--
@@ -898,7 +897,7 @@ WHERE naam = 'Ronald Marbus';
 -->
 
 
-### Afsluitende Opdracht 2.11.6 Debuggen en herschrijven van slordige query
+### Afsluitende Opdracht 2.12.6 Debuggen en herschrijven van slordige query
 De volgende query werkt niet goed. Voer hem eerst uit en analyseer de foutmelding. Herschrijf daarna de query netjes én correct:
 
 <!--
@@ -913,7 +912,7 @@ SELECT naam basisprijs FROM pizza WHERE basisprijs<7
 </ol>
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2116"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2126"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 <!--
@@ -927,13 +926,13 @@ WHERE basisprijs < 7;
 -->
 
 
-### Afsluitende Opdracht 2.11.7 Alle bezorgers bekijken  
+### Afsluitende Opdracht 2.12.7 Alle bezorgers bekijken  
 <ol type="alpha">
 <li>Toon alle kolommen en gegevens uit de tabel `bezorger`.  
 <li>Welke kolomnamen zie je terug? Geef er drie en leg kort uit wat ze betekenen.
 </ol>
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2117"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave2127"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 <!--
