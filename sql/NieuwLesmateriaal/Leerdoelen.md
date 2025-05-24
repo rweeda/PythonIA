@@ -56,7 +56,7 @@ aanpassen en toevoegen van gegevens en verwijderen van gegevens.</p>
   <li>leer je het verschil tussen gegevens, data en informatie;
   
   
-<li>TODO leer je dat je gegevens uit een database kan ophalen (Read), kan 
+<li>TODO leer je dat je gegevens uit een database kan ophalen (Read), 
 maken (Create), aanpassen (Update), en verwijderen (Delete); 
 
 
@@ -104,14 +104,14 @@ In dit onderwerp:
 </ul>
 
 
-###Overzicht Onderwerp 3: SQL - : Operatoren, ORDER BY en LIMIT
+###Overzicht Onderwerp 3: SQL Operatoren, ORDER BY, LIMIT en groepsfuncties
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
-    <br>XX uur
+    <br>3 uur
 </div>
 
 
-<p>In dit onderwerp leer je hoe je informatie kan opvragen dat aan specifieke voorwaarden moet voldoen. We breiden de WHERE uit met wiskundige operatoren, logische operatoren en leren met de LIKE te zoeken naar delen van teksten. </p>
+<p>In dit onderwerp leer je hoe je informatie kan opvragen dat aan specifieke voorwaarden moet voldoen. We breiden de WHERE uit met wiskundige operatoren, logische operatoren en leren met de LIKE te zoeken naar delen van teksten. Daarnaast leren we groepsfuncties gebruiken om rekensommen te maken op kolommen, en om alleen unieke waarden te tonen met DISTINCT.</p>
 
 
 <p>Leerdoelen</p>
@@ -126,11 +126,11 @@ In dit onderwerp:
 <li>leer je wiskundige operatoren gebruiken: '<', '<=', '>', '>=' en '<>';</li>
 <li>leer je zoeken met <code>LIKE</code> en joker '%';
 <li>leer je logische operatoren AND, OR, NOT te gebruiken, en combinaties daarvan;
-<li>leer je met SQL groepsfuncties gebruiken op kolommen: `MIN()`, `MAX()`, `SUM()`, `AVG()`,  `COUNT(*)`;
-<li>TODO `DISTINCT`;
+<li>leer je met `DISTINCT` alleen unieke waarden terug te krijgen door dubbele rijen uit het resultaat te verwijderen;
+<li>leer je SQL functies gebruiken op kolommen: <code>COUNT(*)</code>, <code>MIN()</code>, <code>MAX()</code>, <code>SUM()</code>, <code>AVG()</code>.
 </ul>
 
-###Overzicht Onderwerp 4: JOIN
+### Overzicht Onderwerp 4: JOIN
 
 
  <div class="activity-item time-block">
@@ -149,7 +149,7 @@ In dit onderwerp:
 </ul>
 
 
-###Overzicht Onderwerp VERDIEPING: GROUP BY, HAVING
+# Overzicht Onderwerp VERDIEPING: GROUP BY, HAVING
 
 
  <div class="activity-item time-block">

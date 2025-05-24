@@ -15,51 +15,51 @@
 <h1>UITWERKINGEN</h1>
 <hr>
 
-<h3 id="opgave221">Opdracht 2.2.1 Alle pizzacodes tonen </h3>
+<h3 id="opgave221">Verwerkingsopdracht 2.2.1 Alle pizzacodes tonen </h3>
 <ol style="list-style-type: lower-alpha">
 <li><pre><code class="language-sql">SELECT pizzacode 
 FROM pizza;</code></pre>
 <li>Elke pizzacode komt maar één keer voor. Dat betekent dat elke pizza een unieke code heeft. Zo’n unieke code noemen we een primary key. Een primary key zorgt ervoor dat je elk record in een tabel kunt herkennen. In dit geval herken je elke pizza aan zijn pizzacode.
 </ol>
 
-<h3 id="opgave231">Opdracht 2.3.1 Menu printen</h3>
+<h3 id="opgave231">Verwerkingsopdracht 2.3.1 Menu printen</h3>
 <pre><code class="language-sql">SELECT pizzanaam, omschrijving, basisprijs
 FROM pizza;
 </code></pre>
 
-<h3 id="opgave241">Opdracht 2.4.1 Alle gegevens van tabel <code>pizza</code> ophalen</h3>
+<h3 id="opgave241">Verwerkingsopdracht 2.4.1 Alle gegevens van tabel <code>pizza</code> ophalen</h3>
 <pre><code class="language-sql">SELECT * 
 FROM pizza;
 </code></pre>
 
 
 
-<h3 id="opgave261">Opdracht 2.6.1 Omschrijving van een Inferno pizza tonen </h3>
+<h3 id="opgave261">Verwerkingsopdracht 2.6.1 Omschrijving van een Inferno pizza tonen </h3>
 <pre><code class="language-sql">SELECT omschrijving
 FROM pizza 
 WHERE naam='Inferno'
 </code></pre>
 
 
-<h3 id="opgave271">Opdracht 2.7.1 Alle gegevens uit tabel <code>klant</code> tonen</h3>
+<h3 id="opgave271">Verwerkingsopdracht 2.7.1 Alle gegevens uit tabel <code>klant</code> tonen</h3>
 <pre><code class="language-sql">SELECT * 
 FROM klant;
 </code></pre>
 
 
-<h3 id="opgave272">Opdracht 2.7.2 Alle klanten uit Enschede tonen</h3>
+<h3 id="opgave272">Verwerkingsopdracht 2.7.2 Alle klanten uit Enschede tonen</h3>
 <pre><code class="language-sql">SELECT adres, postcode, woonplaats 
 FROM klant 
 WHERE plaats='Enschede'; </code></pre>
 
-<h3 id="opgave273">Opdracht 2.7.3 Wachtwoord van een bezorger tonen</h3>
+<h3 id="opgave273">Verwerkingsopdracht 2.7.3 Wachtwoord van een bezorger tonen</h3>
 <pre><code class="language-sql">SELECT wachtwoord 
 FROM bezorger 
 WHERE naam = 'Ronald Marbus'; 
 </code></pre>
 
 
-<h3 id="opgave291">Opdracht 2.9.1 Query netjes opschrijven</h3>
+<h3 id="opgave291">Verwerkingsopdracht 2.9.1 Query netjes opschrijven</h3>
 <ol>
 <li>SQL commando in hoofdletters;
 <li>Elke SQL commando op een nieuwe regel;
@@ -68,21 +68,21 @@ WHERE naam = 'Ronald Marbus';
 <li>Commentaar toevoegen met '--'.
 </ol>
 
- <pre><code class="language-sql"> 
-	SELECT naam, basisprijs  -- spatie na de komma
-	FROM pizza               -- Elke SQL commando op een nieuwe regel en in hoofdletters
-	WHERE basisprijs < 8;    -- afsluiten met een ';'
+<pre><code class="language-sql"> 
+SELECT naam, basisprijs  -- spatie na de komma
+FROM pizza               -- Elke SQL commando op een nieuwe regel en in hoofdletters
+WHERE basisprijs < 8;    -- afsluiten met een ';'
 </code></pre>
 
-<h3 id="opgave2101">Opdracht 2.10.1 Fout in query (1) </h3>
+<h3 id="opgave2101">Verwerkingsopdracht 2.10.1 Fout in query (1) </h3>
 De fout zat in de volgorde van de regels code. 
 <pre><code class="language-sql">SELECT naam 
 FROM pizza 
-WHERE basispijs < 7.0;
+WHERE basisprijs < 7.0;
 </code></pre>
 
 
-<h3 id="opgave2102">Opdracht 2.10.2 Fout in query (2)  </h3>
+<h3 id="opgave2102">Verwerkingsopdracht 2.10.2 Fout in query (2)  </h3>
 <ol style="list-style-type: lower-alpha"> 
 <li>B. De woonplaatsen zijn met een hoofdletter geschreven (bv.
 'Nijmegen'). SQL vergelijkt tekst hoofdlettergevoelig. In dit geval zijn er
@@ -93,14 +93,14 @@ De juiste query is:<pre><code class="language-sql">
 	FROM klant 
 	WHERE woonplaats = 'Nijmegen'; </code></pre>
 
-<h3 id="opgave2103">Opdracht 2.10.3 Fout in query (3)  </h3>
+<h3 id="opgave2103">Verwerkingsopdracht 2.10.3 Fout in query (3)  </h3>
 De fout zat in de naam van de tabel. 
 <pre><code class="language-sql">SELECT naam 
 FROM pizza 
 WHERE basispijs < 7.0;
 </code></pre>
 
-<h3 id="opgave2104">Opdracht 2.10.4 Fout in query (4))  </h3>
+<h3 id="opgave2104">Verwerkingsopdracht 2.10.4 Fout in query (4))  </h3>
 De fout zat in de kolomnaam. 
 <pre><code class="language-sql">SELECT naam 
 FROM pizza 
@@ -119,16 +119,16 @@ FROM bestelling; </code></pre>
 <pre><code class="language-sql">
 SELECT omschrijving, basisprijs
 FROM pizza
-WHERE naam = 'Quattro Formaggi';
+WHERE naam = 'Quattro formaggi';
 </code></pre>
 
 <h3 id="opgave2123"> Afsluitende Opdracht 2.12.3: Klanten in een specifieke plaats</h3>
 <pre><code class="language-sql">
-SELECT klantnummer, naam, plaats
+SELECT klantnummer, naam, woonplaats
 FROM klant
-WHERE plaats = 'Utrecht';
+WHERE woonplaats = 'Hengelo';
 </code></pre>
--->
+
 
 <h3 id="opgave2124"> Afsluitende Opdracht 2.12.4: Netjes schrijven  </h3>
 <pre><code class="language-sql">
@@ -157,9 +157,9 @@ WHERE basisprijs < 7;
 
 
 <h3 id="opgave2127">Afsluitende Opdracht 2.12.7 Alle bezorgers bekijken</h3> 
-	<ol type="alpha">
-<li><pre><code class="language-sql">
-SELECT * FROM bezorger;
+<ol style="list-style-type: lower-alpha;">
+<li><pre><code class="language-sql">SELECT * 
+FROM bezorger;
 </code></pre>
 <li>Mogelijke kolommen:
 <ul>
@@ -168,6 +168,14 @@ SELECT * FROM bezorger;
 <li>`wachtwoord`: gebruikt voor inloggen in het systeem
 </ul>
 </ol>
--
+
+
+<h1>Onderwerp 3</h1>
+<h3 id="opgave311">Verwerkingsopdracht 3.1.1 Kolom hernoemen</h3> 
+<pre><code class="language-sql">
+SELECT naam AS bezorgernaam
+FROM bezorger;
+</code></pre>
+
 </body>
 </html>
