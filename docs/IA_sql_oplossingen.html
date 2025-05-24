@@ -11,63 +11,51 @@
 </head>
 <body>
 <div class="content">
-<h1 id="SQL2">Onderwerp 2: SQL SELECT - FROM </h1>
+<h1 id="SQL2">Onderwerp 2: SQL SELECT - FROM - WHERE</h1>
 <h1>UITWERKINGEN</h1>
 <hr>
 
 <h3 id="opgave221">Opdracht 2.2.1 Alle pizzacodes tonen </h3>
-
 <ol style="list-style-type: lower-alpha">
-<li><pre><code class="language-sql">
-SELECT pizzacode 
+<li><pre><code class="language-sql">SELECT pizzacode 
 FROM pizza;</code></pre>
 <li>Elke pizzacode komt maar één keer voor. Dat betekent dat elke pizza een unieke code heeft. Zo’n unieke code noemen we een primary key. Een primary key zorgt ervoor dat je elk record in een tabel kunt herkennen. In dit geval herken je elke pizza aan zijn pizzacode.
 </ol>
 
 <h3 id="opgave231">Opdracht 2.3.1 Menu printen</h3>
-
-<pre><code class="language-sql"> 
-SELECT pizzanaam, omschrijving, basisprijs
+<pre><code class="language-sql">SELECT pizzanaam, omschrijving, basisprijs
 FROM pizza;
 </code></pre>
 
 <h3 id="opgave241">Opdracht 2.4.1 Alle gegevens van tabel <code>pizza</code> ophalen</h3>
-<pre><code class="language-sql"> 
-SELECT * 
+<pre><code class="language-sql">SELECT * 
 FROM pizza;
 </code></pre>
 
 
 
 <h3 id="opgave261">Opdracht 2.6.1 Omschrijving van een Inferno pizza tonen </h3>
-<pre><code class="language-sql"> 
-SELECT omschrijving
+<pre><code class="language-sql">SELECT omschrijving
 FROM pizza 
 WHERE naam='Inferno'
 </code></pre>
 
 
 <h3 id="opgave271">Opdracht 2.7.1 Alle gegevens uit tabel <code>klant</code> tonen</h3>
-
-<pre><code class="language-sql"> 
-SELECT * 
+<pre><code class="language-sql">SELECT * 
 FROM klant;
 </code></pre>
 
 
 <h3 id="opgave272">Opdracht 2.7.2 Alle klanten uit Enschede tonen</h3>
-
- <pre><code class="language-sql"> 
-	SELECT adres, postcode, woonplaats 
+<pre><code class="language-sql">SELECT adres, postcode, woonplaats 
 FROM klant 
 WHERE plaats='Enschede'; </code></pre>
 
 <h3 id="opgave273">Opdracht 2.7.3 Wachtwoord van een bezorger tonen</h3>
-
- <pre><code class="language-sql"> 
-	SELECT wachtwoord 
-	FROM bezorger 
-	WHERE naam = 'Ronald Marbus'; 
+<pre><code class="language-sql">SELECT wachtwoord 
+FROM bezorger 
+WHERE naam = 'Ronald Marbus'; 
 </code></pre>
 
 
@@ -87,9 +75,8 @@ WHERE plaats='Enschede'; </code></pre>
 </code></pre>
 
 <h3 id="opgave2101">Opdracht 2.10.1 Fout in query (1) </h3>
-De fout zat in de volgorde van de regels code. <pre><code
-class="language-sql"> 
-SELECT naam 
+De fout zat in de volgorde van de regels code. 
+<pre><code class="language-sql">SELECT naam 
 FROM pizza 
 WHERE basispijs < 7.0;
 </code></pre>
@@ -101,24 +88,21 @@ WHERE basispijs < 7.0;
 'Nijmegen'). SQL vergelijkt tekst hoofdlettergevoelig. In dit geval zijn er
 klanten die in 'nijmegen' wonen, maar wel in 'Nijmegen'.
 <li>
-De juiste query is:
-
-<pre><code class="language-sql"> 
+De juiste query is:<pre><code class="language-sql"> 
 	SELECT * 
 	FROM klant 
 	WHERE woonplaats = 'Nijmegen'; </code></pre>
 
 <h3 id="opgave2103">Opdracht 2.10.3 Fout in query (3)  </h3>
-De fout zat in de naam van de tabel. <pre><code
-class="language-sql"> 
-SELECT naam 
+De fout zat in de naam van de tabel. 
+<pre><code class="language-sql">SELECT naam 
 FROM pizza 
 WHERE basispijs < 7.0;
 </code></pre>
 
 <h3 id="opgave2104">Opdracht 2.10.4 Fout in query (4))  </h3>
-De fout zat in de kolomnaam. <pre><code class="language-sql">
-SELECT naam 
+De fout zat in de kolomnaam. 
+<pre><code class="language-sql">SELECT naam 
 FROM pizza 
 WHERE basispijs < 7.0; </code></pre>
 <hr>
@@ -127,8 +111,63 @@ WHERE basispijs < 7.0; </code></pre>
 <hr>
 <h3 id="opgave2121">Afsluitende Opdracht 2.12.1 Kolomnamen opzoeken</h3>
 Met de volgende query krijg je een overzicht van de hele
-tabel, inclusief de kolomnamen: <pre><code class="language-sql"> 
-	SELECT *
+tabel, inclusief de kolomnamen: 
+<pre><code class="language-sql">SELECT *
 FROM bestelling; </code></pre>
+
+<h3 id="opgave2122"> Afsluitende Opdracht 2.12.2: Toon gegevens van een specifieke pizza</h3>
+<pre><code class="language-sql">
+SELECT omschrijving, basisprijs
+FROM pizza
+WHERE naam = 'Quattro Formaggi';
+</code></pre>
+
+<h3 id="opgave2123"> Afsluitende Opdracht 2.12.3: Klanten in een specifieke plaats</h3>
+<pre><code class="language-sql">
+SELECT klantnummer, naam, plaats
+FROM klant
+WHERE plaats = 'Utrecht';
+</code></pre>
+-->
+
+<h3 id="opgave2124"> Afsluitende Opdracht 2.12.4: Netjes schrijven  </h3>
+<pre><code class="language-sql">
+SELECT naam, basisprijs
+FROM pizza
+WHERE basisprijs > 9; -- pizza's duurder dan 9 euro
+</code></pre>
+
+
+<h3 id="opgave2125"> Afsluitende Opdracht 2.12.5 Debuggen van een fout </h3> 
+<pre><code class="language-sql">
+SELECT wachtwoord
+FROM bezorger
+WHERE naam = 'Ronald Marbus';
+</code></pre>
+
+
+<h3 id="opgave2126"> Afsluitende Opdracht 2.12.6 Debuggen en herschrijven van slordige query</h3>
+<pre><code class="language-sql">
+-- Er ontbreekt een komma tussen de kolommen.
+-- Er ontbreekt een puntkomma aan het eind.
+SELECT naam, basisprijs
+FROM pizza
+WHERE basisprijs < 7;
+</code></pre>
+
+
+<h3 id="opgave2127">Afsluitende Opdracht 2.12.7 Alle bezorgers bekijken</h3> 
+	<ol type="alpha">
+<li><pre><code class="language-sql">
+SELECT * FROM bezorger;
+</code></pre>
+<li>Mogelijke kolommen:
+<ul>
+<li>`bezorgernummer`: uniek nummer van elke bezorger  
+<li>`naam`: de naam van de bezorger  
+<li>`wachtwoord`: gebruikt voor inloggen in het systeem
+</ul>
+</ol>
+-
 </body>
 </html>

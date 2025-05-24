@@ -79,7 +79,7 @@ op een database; <li> TODO UITLEGGEN DAT HET UITVOEREN IN DE VERDIEPING STAAT
 ### Overzicht ONDERWERP 2: SQL SELECT - FROM - WHERE
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
-    <br>XX uur
+    <br>2 uur
 </div>
 
 
