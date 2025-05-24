@@ -10,7 +10,202 @@
 
 </head>
 <body>
+<h1 id="SQL1">Onderwerp 1: Databases</h1>
+<h1>UITWERKINGEN</h1>
+<hr>
 <div class="content">
+<h3 id="opgave111">Verwerkingsopdracht 1.1.1 Kolommen kiezen bij het ontwerp van een tabel</h3>
+<ol style="list-style-type: lower-alpha">
+
+<li>Deze gegevens worden verzameld: voornaam, tussenvoegsel, achternaam,
+adres, postcode, plaats en telefoon.</li>
+
+<li>Dat is een veld dat verplicht ingevuld moet worden.</li>
+
+<li>Als twee klanten dezelfde naam hebben kun je ze niet uit elkaar halen, je
+kunt dan niet hun juiste adres opzoeken. Als oplossing gebruiken we een
+unieke waarde waarvan er maar één is, zoals een leerlingnummer op school, of
+een BSN.</li>
+
+<li>Voor Danilo's pizzeria zou een uniek nummer een klantnummer kunnen zijn.</li>
+
+<li>Zie tabel hieronder./li>
+
+</ol>
+
+
+TABEL: klanten <table>
+  <thead>
+    <tr>
+      <th>klantnummer</th>
+      <th>voornaam</th>
+      <th>tussenvoegsel</th>
+      <th>achternaam</th>
+      <th>adres</th>
+      <th>postcode</th>
+      <th>plaats</th>
+      <th>telefoon</th>
+    </tr>
+  </thead>
+</table>
+
+
+<h3 id="opgave121">Verwerkingsopdracht 1.2.1 Verschillende soorten data</h3>
+TABEL: klanten <table>
+  <thead>
+    <tr>
+      <th>klantnummer</th>
+      <th>voornaam</th>
+      <th>tussenvoegsel</th>
+      <th>achternaam</th>
+      <th>adres</th>
+      <th>postcode</th>
+      <th>plaats</th>
+      <th>telefoon</th>
+    </tr>
+        <tr>
+      <td>INTEGER</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+      <td>TEXT</td>
+    </tr>
+  </thead>
+</table>
+
+<h3 id="opgave131">Verwerkingsopdracht 1.3.1 Wat is een primary key?</h3>
+Antwoord C is juist. Een primary key identificeert elke rij op unieke wijze
+
+
+<h3 id="opgave132">Verwerkingsopdracht 1.3.2 Welke kolom is een primary key?</h3>
+Kolom <em>klantnummer</em> is de primary key. Elk klant heeft een eigen unieke klantnummer. 
+
+<h3 id="opgave141">Verwerkingsopdracht 1.4.1 Eisen aan data stellen bij het ontwerpen van een tabel</h3>
+
+
+TABEL: klanten <table>
+  <thead>
+    <tr>
+      <th>klantnummer<br>INTEGER PRIMARY KEY NOT NULL</th>
+      <th>voornaam<br>TEXT NOT NULL</th>
+      <th>tussenvoegsel<br>TEXT</th>
+      <th>achternaam<br>TEXT NOT NULL</th>
+      <th>adres<br>TEXT NOT NULL</th>
+      <th>postcode<br>TEXT NOT NULL</th>
+      <th>plaats<br>TEXT NOT NULL</th>
+      <th>telefoon<br>TEXT NOT NULL</th>
+    </tr>
+  </thead>
+</table>
+
+
+<h3 id="opgave151">Waar vind je databases?</h3>
+Voorbeelden van databases zijn
+<ol style="list-style-type: lower-alpha">
+<li>
+  <li>Webwinkel</li>
+  <li>Social media platform</li>
+  <li>Magister of SOMtoday</li>
+</li> <li>
+  <li>Bij webwinkel: productenlijst</li>
+  <li>Bij social media platform: posts</li>
+  <li>Bij school database: gegevens over leerlingen zoals adres, cijfers en rooster</li>
+</li> </ul> 
+
+<h3 id="opgave171">Verwerkingsopdracht 1.7.1 CRUD rechten van klanten bepalen</h3>
+<ol style="list-style-type: lower-alpha">
+<li>Acties:
+	<ul>
+<li>Create: Ja, bij het aanmaken van een nieuw account.
+<li>Read: Ja, mag eigen gegevens bekijken.
+<li>Update: Ja, mag eigen gegevens wijzigen (zoals wachtwoord of adres).
+<li>Delete: Meestal niet zelf; alleen door een beheerder.
+</ul>
+<li>Klanten mogen alleen hun eigen gegevens zien en invoeren, maar niet wijzigen of verwijderen. Dit voorkomt fouten en misbruik, en beschermt de privacy van andere klanten.
+</ol>
+
+<h3 id="opgave172">Verwerkingsopdracht 1.7.2 CRUD Rechten van de bezorger bepalen</h3>
+<ol style="list-style-type: lower-alpha">
+<li>Acties:
+<ul>
+<li>Read: Ja, om te kunnen zien welke bestellingen hij moet bezorge naar welk adres.
+<li>Update: Ja, om de bezorgtijd vast te leggen.
+<li>Create/Delete: Nee, een bezorger mag geen bestellingen invoeren of verwijderen.
+</ul>
+<li>Toelichting: De bezorger heeft beperkte toegang. Hij mag alleen de bezorg_tijd aangeven, en dus aanpassen. Andere gegevens zijn niet zijn verantwoordelijkheid en moeten dus beschermd blijven. Hij mag bijvoorbeeld wel het adres van de klant inzien, maar niet de wachtwoord van de klant.
+</ol>
+-->
+
+
+<h3 id="opgave173">Verwerkingsopdracht 1.7.3 Fouten voorkomen</h3>
+
+<ol style="list-style-type: lower-alpha">
+<li>Gevolgen van verkeerde Delete-rechten bij klanten:
+<ul>
+<li>Klanten kunnen elkaars of hun eigen bestellingen verwijderen.
+<li>Hierdoor kunnen bezorgers en keukenpersoneel hun werk niet goed doen.
+<li>Er ontstaat chaos in de bestelgeschiedenis, en klantenservice moet fouten oplossen.
+</ul>
+<li>Oplossing:
+<ul>
+<li>Gebruik toegang op basis van rollen (bijv. alleen de beheerder mag DELETE uitvoeren).
+<li>Voeg controlemechanismen toe in de applicatie: de knop ‘verwijderen’ is niet zichtbaar voor klanten.
+<li>Extra: in een geavanceerde DBMS kun je databasepermissies aanpassen, bijvoorbeeld met GRANT/REVOKE.
+</ul>
+</ol>
+
+
+<h3 id="opgave174">Verwerkingsopdracht 1.7.4 CRUD Rechten van de databasebeheerder bepalen</h3>
+<ol style="list-style-type: lower-alpha">
+<li>Acties: Create, Read, Update, Delete: een beheerder heeft alle rechten.
+<li>Voor- en nadelen:
+<ul>
+<li>Voordelen: De beheerder kan fouten corrigeren, testgegevens verwijderen, of het systeem onderhouden.
+<li>Nadelen: Volledige rechten zijn gevoelig voor fouten of misbruik. Eén verkeerde DELETE-query kan veel gegevens verwijderen.
+</ul>
+</ol>
+
+<h3 id="opgave181">Verwerkingsopdracht 1.8.1 Gegevens, data en informatie</h3>
+Mogelijke antwoorden: <ol style="list-style-type: lower-alpha">
+<li>chatGPT: "Gegevens zijn feiten, cijfers en andere waarnemingen die
+verzameld en opgeslagen kunnen worden om te worden geanalyseerd,
+geïnterpreteerd of gebruikt voor besluitvorming." Met andere woorden,
+allerlei eigenschappen van mensen en objecten die je kunt verzamelen en
+opslaan om later te gebruiken en/of te combineren tot nuttige
+informatie.</li>
+
+<li>chatGPT: "Data bestaat uit feiten, cijfers en waarnemingen die worden
+verzameld uit verschillende bronnen en die nog moeten worden geanalyseerd of
+geïnterpreteerd om betekenis of waarde te krijgen." Met andere woorden,
+opgeslagen eigenschappen van mensen en objecten die je kunt verzamelen en
+opslaan om later te gebruiken en/of te combineren tot nuttige
+informatie.</li>
+
+<li>chatGPT: "Informatie is de kennis, inzichten, of betekenis die wordt
+verkregen door het verzamelen, verwerken, analyseren en interpreteren van
+ruwe feiten en cijfers. Het is georganiseerd en gestructureerd zodanig dat
+het begrijpelijk en nuttig is voor de ontvanger, en het wordt gebruikt om
+beslissingen te nemen, problemen op te lossen of communicatie te verbeteren"
+Met andere woorden, informatie bestaat uit het (slim) combineren van data
+(gegevens) om zo tot nuttige kennis te komen. Bijvoorbeeld het opstellen van
+een profiel van iemand om een persoonlijke advertentie, advies of muziekkeuze
+te kunnen geven.</li>
+
+<li>
+
+  <ul>
+    <li>Het weerbericht bestaat uit een combinatie van gegevens en data  en dus is het informatie.
+    <li>Windsnelheid die wordt gemeten en afgelezen is een gegeven is dat nog niet is opgeslagen. Dus zijn
+    het gegevens.
+    <li>"Temperatuur gedurende de dag" zijn metingen die elk uur zijn gedaan en zijn opgeslagen. Dus is
+    het data.
+  </ul>
+In de praktijk worden de woorden data en gegevens veel door elkaar gebruikt.
+</ol>
+
 <h1 id="SQL2">Onderwerp 2: SQL SELECT - FROM - WHERE</h1>
 <h1>UITWERKINGEN</h1>
 <hr>
@@ -50,7 +245,7 @@ FROM klant;
 <h3 id="opgave272">Verwerkingsopdracht 2.7.2 Alle klanten uit Enschede tonen</h3>
 <pre><code class="language-sql">SELECT adres, postcode, woonplaats 
 FROM klant 
-WHERE plaats='Enschede'; </code></pre>
+WHERE woonplaats='Enschede'; </code></pre>
 
 <h3 id="opgave273">Verwerkingsopdracht 2.7.3 Wachtwoord van een bezorger tonen</h3>
 <pre><code class="language-sql">SELECT wachtwoord 
@@ -92,6 +287,7 @@ De juiste query is:<pre><code class="language-sql">
 	SELECT * 
 	FROM klant 
 	WHERE woonplaats = 'Nijmegen'; </code></pre>
+</ol>
 
 <h3 id="opgave2103">Verwerkingsopdracht 2.10.3 Fout in query (3)  </h3>
 De fout zat in de naam van de tabel. 
@@ -115,14 +311,14 @@ tabel, inclusief de kolomnamen:
 <pre><code class="language-sql">SELECT *
 FROM bestelling; </code></pre>
 
-<h3 id="opgave2122"> Afsluitende Opdracht 2.12.2: Toon gegevens van een specifieke pizza</h3>
+<h3 id="opgave2122">Afsluitende Opdracht 2.12.2: Toon gegevens van een specifieke pizza</h3>
 <pre><code class="language-sql">
 SELECT omschrijving, basisprijs
 FROM pizza
 WHERE naam = 'Quattro formaggi';
 </code></pre>
 
-<h3 id="opgave2123"> Afsluitende Opdracht 2.12.3: Klanten in een specifieke plaats</h3>
+<h3 id="opgave2123">Afsluitende Opdracht 2.12.3: Klanten in een specifieke plaats</h3>
 <pre><code class="language-sql">
 SELECT klantnummer, naam, woonplaats
 FROM klant
@@ -130,7 +326,7 @@ WHERE woonplaats = 'Hengelo';
 </code></pre>
 
 
-<h3 id="opgave2124"> Afsluitende Opdracht 2.12.4: Netjes schrijven  </h3>
+<h3 id="opgave2124">Afsluitende Opdracht 2.12.4: Netjes schrijven  </h3>
 <pre><code class="language-sql">
 SELECT naam, basisprijs
 FROM pizza
@@ -138,7 +334,7 @@ WHERE basisprijs > 9; -- pizza's duurder dan 9 euro
 </code></pre>
 
 
-<h3 id="opgave2125"> Afsluitende Opdracht 2.12.5 Debuggen van een fout </h3> 
+<h3 id="opgave2125">Afsluitende Opdracht 2.12.5 Debuggen van een fout </h3> 
 <pre><code class="language-sql">
 SELECT wachtwoord
 FROM bezorger
@@ -146,7 +342,7 @@ WHERE naam = 'Ronald Marbus';
 </code></pre>
 
 
-<h3 id="opgave2126"> Afsluitende Opdracht 2.12.6 Debuggen en herschrijven van slordige query</h3>
+<h3 id="opgave2126">Afsluitende Opdracht 2.12.6 Debuggen en herschrijven van slordige query</h3>
 <pre><code class="language-sql">
 -- Er ontbreekt een komma tussen de kolommen.
 -- Er ontbreekt een puntkomma aan het eind.
@@ -208,11 +404,14 @@ LIMIT 8;
 </code></pre>
 
 <h3 id="opgave332">Verwerkingsopdracht 3.3.3 Volgorde van onderdelen</h3>
-SELECT
-FROM
-WHERE
-ORDER BY
-LIMIT
+<ol>
+	<li>SELECT
+<li>FROM
+<li>WHERE
+<li>ORDER BY
+<li>LIMIT
+</ol>
+
 
 <h3 id="opgave341">Verwerkingsopdracht 3.4.1 Dure pizza's</h3>
 <pre><code class="language-sql">

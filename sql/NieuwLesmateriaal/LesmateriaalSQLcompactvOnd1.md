@@ -154,7 +154,7 @@ telefoonnummer zul je ook als een tekst opslaan, omdat anders de voorloop nul
 wegvalt, bijvoorbeeld: "0688567389".
 
 
-### Opdracht 1.2.1 Datatypes kiezen bij het ontwerp van een tabel
+### Verwerkingsopdracht 1.2.1 Datatypes kiezen bij het ontwerp van een tabel
 
 Ga verder met de tabel uit
 de vorige opdracht. 
@@ -387,7 +387,7 @@ ANTWOORD: TABEL: klanten <table>
 
 
 
-# 1.5: Nut van databases
+## 1.5: Nut van databases
 
 
 [![Bekijk op Youtube](https://www.youtube.com/watch?v=t8jgX1f8kc4/hqdefault.jpg)](https://www.youtube.com/watch?v=t8jgX1f8kc4)
@@ -441,7 +441,7 @@ inleveren.</p>
 
 
 
-### Verwerkingsopdracht 1.6.1  Waar vind je databases?
+### Verwerkingsopdracht 1.5.1  Waar vind je databases?
 
 <p>Waarschijnlijk heb je al eerder gebruik gemaakt van een database,
 misschien zonder dat je dat wist. Laten we eens op onderzoek uit gaan en
@@ -452,7 +452,7 @@ een website die, naar jouw verwachting, gebruik maakt van een database. </li>
 <li>Wat voor data worden opgeslagen in deze database?</li> </ol>
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave161"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave151"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
@@ -470,7 +470,7 @@ target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 
 
-# 1.6: Database management system (DBMS) 
+## 1.6: Database management system (DBMS) 
 
 
 <p>Een database kan al snel heel groot
@@ -498,7 +498,7 @@ nodig hebben.</p>
 
 
 
-## Gegevens beheren
+## 1.7: Gegevens beheren: CRUD
 
 Het beheren van gegevens kan je opdelen in vier categorieen: Create, Read, Update, Delete, afgekort tot <strong>CRUD</strong>:
 
@@ -540,7 +540,7 @@ target="_blank">
 </a></p>
 -->
 
-### Opdracht CRUD rechten van klanten bepalen
+### Verwerkingsopdracht 1.7.1 CRUD rechten van klanten bepalen
 
 We bekijken de CRUD-rechten die een klant heeft op tabel <code>klant</code>.
 
@@ -551,7 +551,7 @@ We bekijken de CRUD-rechten die een klant heeft op tabel <code>klant</code>.
 </ol>
 
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave171" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!--
 ANTWOORDEN:
 <ol style="list-style-type: lower-alpha">
@@ -566,14 +566,14 @@ ANTWOORDEN:
 </ol>
 -->
 
-### Verwerkingsopdracht CRUD Rechten van de bezorger bepalen
+### Verwerkingsopdracht 1.7.2 CRUD Rechten van de bezorger bepalen
 Een bezorger krijgt een overzicht van de pizza’s die hij moet afleveren. Na bezorging vinkt hij in het systeem aan dat de bestelling is bezorgd, daarmee wordt de bezorgtijd vastgelegd.
 <ol style="list-style-type: lower-alpha">
 <li>Welke CRUD-rechten heeft een bezorger nodig als hij een bestelling gaat bezorgen?
 <li>Waarom is het belangrijk dat een bezorger geen toegang heeft tot bepaalde gegevens?
 </ol>
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave172" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!--
 ANTWOORDEN:
 <ol style="list-style-type: lower-alpha">
@@ -588,7 +588,7 @@ ANTWOORDEN:
 -->
 
 
-### Verwerkingsopdracht Fouten voorkomen
+### Verwerkingsopdracht 1.7.3 Fouten voorkomen
 Stel dat je per ongeluk een Delete-recht geeft aan een klant op de tabel waarin alle geplaatste bestellingen staan.
 
 <ol style="list-style-type: lower-alpha">
@@ -596,7 +596,7 @@ Stel dat je per ongeluk een Delete-recht geeft aan een klant op de tabel waarin 
 <li>Hoe kun je dit voorkomen?
 </ol>
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave173" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!-- ANTWOORDEN
 <ol style="list-style-type: lower-alpha">
 <li>Gevolgen van verkeerde Delete-rechten bij klanten:
@@ -615,14 +615,14 @@ Stel dat je per ongeluk een Delete-recht geeft aan een klant op de tabel waarin 
 -->
 
 
-### Verwerkingsopdracht CRUD Rechten van de databasebeheerder bepalen
+### Verwerkingsopdracht 1.7.4 CRUD Rechten van de databasebeheerder bepalen
 De beheerder moet het hele systeem kunnen beheren, ook als er iets fout is gegaan.
 <ol style="list-style-type: lower-alpha">
 <li>Welke CRUD-rechten heeft een beheerder?
 <li>Wat zijn de voor- en nadelen van het geven van volledige CRUD-rechten aan een beheerder?
 </ol>
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave174" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!--
 ANTWOORDEN
 <ol style="list-style-type: lower-alpha">
@@ -635,9 +635,17 @@ ANTWOORDEN
 </ol>
 -->
 
+## 1.8: Gegevens, data en informatie
 
+In de praktijk worden de woorden data en gegevens veel door elkaar gebruikt.
 
-### Verwerkingsopdracht 1.6.2 Gegevens, data en informatie
+<ul>
+ <li><strong>Gegevens</strong> zijn feiten die je kunt verzamelen, zoals een naam of temperatuur.</li> 
+ <li><strong>Data</strong> zijn opgeslagen gegevens (in tabellen of bestanden).</li> 
+ <li><strong>Informatie</strong> is geïnterpreteerde data die betekenis heeft, bijvoorbeeld een weerbericht.</li>
+</ul>
+
+### Verwerkingsopdracht 1.8.1 Gegevens, data en informatie
 
 
 <p>Woorden als <i>gegevens</i>, <i>data</i>, en <i>informatie</i> worden vaak
@@ -708,7 +716,7 @@ In de praktijk worden de woorden data en gegevens veel door elkaar gebruikt.
 -->
 
 
-# 1.7: Samenvatting Databases
+# 1.9: Samenvatting 1. Databases
 In deze opdracht heb je veel geleerd over gestructureerde data. We vatten dat nu samen.
 
 <ul>
