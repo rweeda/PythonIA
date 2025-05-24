@@ -441,7 +441,7 @@ Let op:
 </ul>
 
 <p>Bijvoorbeeld, om alle namen te die beginnen met ‘Jo’ (zoals Josette, Johan) gebruik je:</p>
-<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%"
+<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 ```SQL
 SELECT naam
 FROM klant
@@ -689,23 +689,24 @@ WHERE plaats = 'Enschede' AND naam LIKE 'H%';
 Toon alle pizza's die tussen de €8,50 en €10,- kosten, zoals in het overzicht hiernaast.<br>
 Tip: de basisprijs is meer dan 8,50 en minder dan 10 euro.
 </td><td width="65%">
-    | naam                   | basisprijs |
-|------------------------|-------------|
-| Calzone (dichte pizza) | 9.0         |
-| Marinara               | 8.5         |
-| Mozzarella             | 8.5         |
-| Quattro stragioni      | 8.5         |
-| Americana              | 8.5         |
-| Shoarma                | 9.0         |
-| Pollo                  | 9.0         |
-| Salmone                | 8.5         |
-| Fantasia               | 9.0         |
-| Parma                  | 8.5         |
-| Pazza                  | 8.5         |
-| Inferno                | 8.5         |
-| Tropicana              | 8.5         |
-| Della Casa             | 8.5         |
-| Specialità di Danilo   | 9.5         |
+<table border="1">
+  <thead>
+    <tr>
+      <th>naam</th>
+      <th>basisprijs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Calzone (dichte pizza)</td><td>9.0</td></tr>
+    <tr><td>Marinara</td><td>8.5</td></tr>
+    <tr><td>Mozzarella</td><td>8.5</td></tr>
+    <tr><td>Quattro stragioni</td><td>8.5</td></tr>
+    <tr><td>Americana</td><td>8.5</td></tr>
+    <tr><td>...</td><td>...</td></tr>
+    <tr><td>Specialità di Danilo</td><td>9.5</td></tr>
+  </tbody>
+</table>
+
 
 </td></tr></table>
 
@@ -737,13 +738,21 @@ WHERE naam LIKE 'M%' OR basisprijs < 7;
 ```
    </td>
     <td width="65%">
+<table border="1">
+  <thead>
+    <tr>
+      <th>naam</th>
+      <th>basisprijs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Margherita</td><td>6.0</td></tr>
+    <tr><td>Cippola</td><td>6.5</td></tr>
+    <tr><td>Marinara</td><td>8.5</td></tr>
+    <tr><td>Mozzarella</td><td>8.5</td></tr>
+  </tbody>
+</table>
 
-| naam       | basisprijs |
-| ---------- | ---------- |
-| Margherita | 6.0        |
-| Cippola    | 6.5        |
-| Marinara   | 8.5        |
-| Mozzarella | 8.5        |
 
  </td>
   </tr>
@@ -758,10 +767,40 @@ WHERE naam LIKE 'M%' OR basisprijs < 7;
 
 <p>Toon alle informatie over zowel bestellingen bestelcode 13 <b>en</b> die met bestelcode 30, zoals hiernaast.</p>
 </td><td width="65%">
-    | bestelcode | datum       | bestel_tijd | bezorg_tijd | bezorgernummer | klantnummer | korting |
-| ---------- | ----------- | ----------- | ----------- | -------------- | ----------- | ------- |
-| 13         | 2021-12-03  | 17:33:00    | 17:48:00    | 5              | 279         | 0.0     |
-| 30         | 2021-12-05  | 17:55:00    | 18:11:00    | 8              | 376         | 0.0     |
+<table border="1">
+  <thead>
+    <tr>
+      <th>bestelcode</th>
+      <th>datum</th>
+      <th>bestel_tijd</th>
+      <th>bezorg_tijd</th>
+      <th>bezorgernummer</th>
+      <th>klantnummer</th>
+      <th>korting</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>13</td>
+      <td>2021-12-03</td>
+      <td>17:33:00</td>
+      <td>17:48:00</td>
+      <td>5</td>
+      <td>279</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>2021-12-05</td>
+      <td>17:55:00</td>
+      <td>18:11:00</td>
+      <td>8</td>
+      <td>376</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 </td></tr></table>
@@ -1105,10 +1144,18 @@ FROM klant;
 ```
 </td><td width="65%">
 
-| plaats     |
-|------------|
-| Enschede   |
-| Hengelo    |
+<table border="1">
+  <thead>
+    <tr>
+      <th>plaats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Enschede</td></tr>
+    <tr><td>Hengelo</td></tr>
+  </tbody>
+</table>
+
 </td></tr></table>
 
 
@@ -1337,9 +1384,19 @@ FROM pizza;
 
 </td><td width="65%">
   
-| duurste_pizza |
-|----------------|
-| 10.5          |
+<table border="1">
+  <thead>
+    <tr>
+      <th>duurste_pizza</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10.5</td>
+    </tr>
+  </tbody>
+</table>
+
 </td></tr></table>
 
 ### Verwerkingsopdracht 3.14.1 Duurste bodem
@@ -1448,9 +1505,19 @@ FROM pizza;
 ```
 </td><td width="65%">
 
-| gemiddelde_pizza_prijs |
-|-------------------------|
-| 8.15277777779      |
+<table border="1">
+  <thead>
+    <tr>
+      <th>gemiddelde_pizza_prijs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>8.15277777779</td>
+    </tr>
+  </tbody>
+</table>
+
 </td></tr></table>
 
 ### Verwerkingsopdracht 3.16.1 Gemiddelde toeslag
@@ -1536,11 +1603,19 @@ Toon een overzicht van alle pizza's waarvan de naam met 'C' begint maar niet mee
 
 </td><td width="65%">
     
-| naam         |
-|--------------|
-| Cippola      |
-| Calimero     |
-| Capricciosa  |
+<table border="1">
+  <thead>
+    <tr>
+      <th>naam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Cippola</td></tr>
+    <tr><td>Calimero</td></tr>
+    <tr><td>Capricciosa</td></tr>
+  </tbody>
+</table>
+
 
 </td></tr></table>
 
@@ -1556,7 +1631,7 @@ WHERE naam LIKE 'C%' AND basisprijs <= 8.0;
 -->
 
 
-### Afsluitende Opdracht 3.14.3
+### Afsluitende Opdracht 3.17.3
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 
@@ -1574,7 +1649,7 @@ Toon een overzicht zoals hiernaast van alle pizza's met een basisprijs van minim
 
 
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave3173" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!-- ANTWOORD:
 <pre><code class="language-sql">
 SELECT naam, basisprijs
@@ -1584,7 +1659,7 @@ WHERE basisprijs >= 9
 </code></pre>
 -->
 
-### Afsluitende Opdracht 3.14.4 Toon 3 pizza’s zonder vlees, met een ‘a’ in de naam
+### Afsluitende Opdracht 3.17.4 Toon 3 pizza’s zonder vlees, met een ‘a’ in de naam
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 Toon de eerste drie pizza’s (alfabetisch op naam) die <b>geen</b> vlees (ham, salami, kip) bevatten <b>en</b> een ‘a’ in de naam hebben. Toon de kolommen <b>naam</b> en <b>omschrijving</b>.
@@ -1617,7 +1692,7 @@ Toon de eerste drie pizza’s (alfabetisch op naam) die <b>geen</b> vlees (ham, 
 
 
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave3174" target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 <!-- ANTWOORD:
 <pre><code class="language-sql">
@@ -1633,7 +1708,7 @@ LIMIT 3;
 -->
 
 
-### Afsluitende Opdracht 3.14.5 Klanten buiten Enschede met 06-nummer
+### Afsluitende Opdracht 3.17.5 Klanten buiten Enschede met 06-nummer
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 
 Tel het aantal klanten die een mobiel nummer (06) hebben maar <b>niet</b> in Enschede wonen. Noem de kolom zoals in het voorbeeld hiernaast.
@@ -1654,7 +1729,7 @@ Tel het aantal klanten die een mobiel nummer (06) hebben maar <b>niet</b> in Ens
 
 
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave3175" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!-- ANTWOORD:
 <pre><code class="language-sql">
 SELECT COUNT(*) AS aantal_klanten
@@ -1672,7 +1747,7 @@ WHERE telefoon LIKE '06%'
 -->
 
 
-### Afsluitende Opdracht 3.14.6 Pizza’s met ‘special’ of duurder dan €10
+### Afsluitende Opdracht 3.17.6 Pizza’s met ‘special’ of duurder dan €10
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 Toon de namen van alle pizza’s waarvan de omschrijving het woord 'special' bevat, <b>óf</b> die duurder zijn dan €9,00.
 
@@ -1696,7 +1771,7 @@ Toon de namen van alle pizza’s waarvan de omschrijving het woord 'special' bev
 </td></tr></table>
 
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave3176" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!-- ANTWOORD:
 <pre><code class="language-sql">
 SELECT naam
@@ -1706,7 +1781,7 @@ WHERE omschrijving LIKE '%special%'
 </code></pre>
 -->
 
-### Afsluitende Opdracht 3.14.7 Bezorgers met naam H maar die NIET met J begint
+### Afsluitende Opdracht 3.17.7 Bezorgers met naam H maar die NIET met J begint
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 Toon de namen van de bezorgers met de letter 'H' in hun naam naar <b>niet</b> met de letter 'J' beginnen. Noem de kolom <i>bezorgernaam</i>. Sorteer de namen van hoog naar laag.
 
@@ -1729,6 +1804,8 @@ Toon de namen van de bezorgers met de letter 'H' in hun naam naar <b>niet</b> me
 </table>
 </td></tr></table>
 
+
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave3177" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!-- ANTWOORD:
 <pre><code class="language-sql">
 SELECT naam AS bezorgernaam
@@ -1738,7 +1815,7 @@ ORDER BY naam DESC;
 </code></pre>
 -->
 
-### Afsluitende Opdracht 3.14.8 Totaal aantal bestelde pizza's
+### Afsluitende Opdracht 3.17.8 Totaal aantal bestelde pizza's
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 Toon het totaal aantal bestelde pizza's, zoals hiernaast. De gegevens komen uit tabel <i>besteldePizza</i>.
 
@@ -1758,6 +1835,7 @@ Toon het totaal aantal bestelde pizza's, zoals hiernaast. De gegevens komen uit 
 
 </td></tr></table>
 
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave3178" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!-- ANTWOORD:
 <pre><code class="language-sql">
 SELECT SUM(aantal) AS aantal_bestelde_pizzas
