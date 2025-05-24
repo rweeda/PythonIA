@@ -26,13 +26,21 @@ FROM pizza;
 ```
     </td>
     <td width="65%">
-| pizzanaam   |
-|-------------|
-| Margherita  |
-| Napoletana  |
-| Prosciutto  |
-| Funghi      |
-| Salame      |
+<table border="1">
+  <thead>
+    <tr>
+      <th>pizzanaam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Margherita</td></tr>
+    <tr><td>Napoletana</td></tr>
+    <tr><td>Prosciutto</td></tr>
+    <tr><td>Funghi</td></tr>
+    <tr><td>Salame</td></tr>
+  </tbody>
+</table>
+
     </td>
   </tr>
 </table>
@@ -256,17 +264,25 @@ Geef een overzicht van de pizza's gesorteerd op <b>bestel_datum</b>, zoals in he
 Tip: eerst aflopend sorteren, dan met LIMIT de bovenste acht bestellingen tonen.
 
 </td><td width="65%">
+<table border="1">
+  <thead>
+    <tr>
+      <th>bestelcode</th>
+      <th>bestel_datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1469</td><td>2022-03-03</td></tr>
+    <tr><td>1470</td><td>2022-03-03</td></tr>
+    <tr><td>1471</td><td>2022-03-03</td></tr>
+    <tr><td>1473</td><td>2022-03-03</td></tr>
+    <tr><td>1464</td><td>2022-03-02</td></tr>
+    <tr><td>1465</td><td>2022-03-02</td></tr>
+    <tr><td>1466</td><td>2022-03-02</td></tr>
+    <tr><td>1467</td><td>2022-03-02</td></tr>
+  </tbody>
+</table>
 
-| bestelcode | bestel_datum |
-|------------|--------------|
-| 1469       | 2022-03-03   |
-| 1470       | 2022-03-03   |
-| 1471       | 2022-03-03   |
-| 1473       | 2022-03-03   |
-| 1464       | 2022-03-02   |
-| 1465       | 2022-03-02   |
-| 1466       | 2022-03-02   |
-| 1467       | 2022-03-02   |
 
     
 </td></tr></table>
@@ -340,17 +356,26 @@ WHERE basisprijs <= 8;
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 Toon de <b>naam</b> en <b>basisprijs</b> van de pizza's die 9,50 euro kosten of meer, zoals in het overzicht hiernaast.
 </td><td width="65%">
-| naam                  | basisprijs |
-|-----------------------|-------------|
-| Specialità di Danilo | 9.5         |
-| Combinazione          | 10.5        |
+<table border="1">
+  <thead>
+    <tr>
+      <th>naam</th>
+      <th>basisprijs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Specialità di Danilo</td><td>9.5</td></tr>
+    <tr><td>Combinazione</td><td>10.5</td></tr>
+  </tbody>
+</table>
+
 
 </td></tr></table>
 
 
 
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave34" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave341" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!-- ANTWOORD:
 <pre><code class="language-sql">
 SELECT naam, basisprijs
@@ -388,7 +413,7 @@ Toon de <b>naam</b> en <b>basisprijs</b> van de pizza's die <b>niet</b> 8 euro k
 
 
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave35" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave342" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!-- ANTWOORD:
 <pre><code class="language-sql">
 SELECT naam, basisprijs
@@ -416,19 +441,30 @@ Let op:
 </ul>
 
 <p>Bijvoorbeeld, om alle namen te die beginnen met ‘Jo’ (zoals Josette, Johan) gebruik je:</p>
-
+<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%"
+```SQL
 SELECT naam
 FROM klant
 WHERE naam LIKE 'J%';
+```
+</td><td width="65%">
+<table border="1">
+  <thead>
+    <tr>
+      <th>naam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Josette Soede</td></tr>
+    <tr><td>Jolanda Budding-Doornbos</td></tr>
+    <tr><td>Joanne Vlastuin</td></tr>
+    <tr><td>Jolanda Knoop - Hoek</td></tr>
+    <tr><td>Joost Nieuwboer</td></tr>
+    <tr><td>Johan van Nierop</td></tr>
+  </tbody>
+</table>
+</td></tr></table>
 
-| naam                      |
-|---------------------------|
-| Josette Soede             |
-| Jolanda Budding-Doornbos  |
-| Joanne Vlastuin           |
-| Jolanda Knoop - Hoek      |
-| Joost Nieuwboer           |
-| Johan van Nierop          |
 
 
 
@@ -591,13 +627,58 @@ FROM klant
 WHERE plaats = 'Enschede' AND naam LIKE 'H%';
 ```
 </td><td width="65%">
+<table border="1">
+  <thead>
+    <tr>
+      <th>klantnummer</th>
+      <th>wachtwoord</th>
+      <th>naam</th>
+      <th>adres</th>
+      <th>postcode</th>
+      <th>plaats</th>
+      <th>telefoon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>101</td>
+      <td>uqOpgECQ_</td>
+      <td>Hanneke Bolier</td>
+      <td>Gladioolstraat 11</td>
+      <td>3742TC</td>
+      <td>Enschede</td>
+      <td>06-169X5427</td>
+    </tr>
+    <tr>
+      <td>209</td>
+      <td>m1nbsrweOFJxu5</td>
+      <td>Hermina de Pater</td>
+      <td>Koekoeksbloemlaan 40</td>
+      <td>3742EK</td>
+      <td>Enschede</td>
+      <td>06-6255X908</td>
+    </tr>
+    <tr>
+      <td>221</td>
+      <td>Qe4W6Xf70D_YlHR</td>
+      <td>Heleen  van Harberden</td>
+      <td>Acacialaan 27</td>
+      <td>3741WB</td>
+      <td>Enschede</td>
+      <td>035-85X3955</td>
+    </tr>
+    <tr>
+      <td>401</td>
+      <td>dJiorsEkNLE</td>
+      <td>Henrike Teeuw</td>
+      <td>Dahliastraat 17</td>
+      <td>3742RK</td>
+      <td>Enschede</td>
+      <td>035-8X94605</td>
+    </tr>
+  </tbody>
+</table>
 
-| klantnummer | wachtwoord     | naam                  | adres                | postcode | plaats    | telefoon     |
-|-------------|----------------|------------------------|----------------------|----------|-----------|--------------|
-| 101         | uqOpgECQ_      | Hanneke Bolier         | Gladioolstraat 11    | 3742TC   | Enschede  | 06-169X5427  |
-| 209         | m1nbsrweOFJxu5 | Hermina de Pater       | Koekoeksbloemlaan 40 | 3742EK   | Enschede  | 06-6255X908  |
-| 221         | Qe4W6Xf70D_YlHR| Heleen  van Harberden  | Acacialaan 27        | 3741WB   | Enschede  | 035-85X3955  |
-| 401         | dJiorsEkNLE    | Henrike Teeuw          | Dahliastraat 17      | 3742RK   | Enschede  | 035-8X94605  |
 </td></tr></table>
 
 
