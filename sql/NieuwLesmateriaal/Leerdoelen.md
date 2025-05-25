@@ -76,10 +76,10 @@ op een database; <li> TODO UITLEGGEN DAT HET UITVOEREN IN DE VERDIEPING STAAT
 </p>
 
 
-### Overzicht ONDERWERP 2: SQL SELECT - FROM - WHERE
+### Overzicht ONDERWERP 2: SELECT - FROM
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
-    <br>2 uur
+    <br>1 uur
 </div>
 
 
@@ -94,24 +94,44 @@ In dit onderwerp:
 <li>leer je dat SQL (Structured Query Language) de standaardtaal om gegevens in een database op te slaan, te bewerken en op te halen;
 <li>leer je het begip query voor een zoekvraag;</li>
 <li>leer je een <code>SELECT - FROM</code> query te gebruiken om informatie uit een tabel te halen;</li>
-<li>leer je welke SQL commando's er zijn en in welk volgorde ze staan;</li>
-<li>leer je een <code>WHERE</code> te gebruiken om voorwaarden aan de opgehaalde informatie te stellen;</li>
+<li>leer je een kolom te hernoemen met <code>AS</code>;</li>
+
 <li>maak je kennis met meerdere tabellen uit de database van Danilo's pizzeria;</li>
+
+</ul>
+
+### Overzicht 3: WHERE
+<h4>3: WHERE</h4>
+ <div class="activity-item time-block">
+    <div class="fa fa-clock-o fa-3x"><br></div>
+    <br>2 uur
+</div>
+<p>In dit onderwerp leer je hoe je met WHERE informatie kunt opvragen die aan specifieke voorwaarden moet voldoen. We breiden WHERE uit met wiskundige operatoren, logische operatoren en leren met de LIKE te zoeken naar delen van teksten. Daarnaast leer je hoe je omgaat met fouten door foutmeldingen lezen en fouten op te sporen. Ook leer je commentaar te gebruiken, en het schrijven van nette queries om fouten te voorkomen.</p>
+
+<p>Leerdoelen</p>
+
+In dit onderwerp:
+<ul> 
+
+<li>leer je <code>WHERE</code> te gebruiken om voorwaarden aan de opgehaalde informatie te stellen;</li>
+<li>leer je wiskundige operatoren gebruiken: '<', '<=', '>', '>=' en '<>';</li>
+<li>leer je zoeken met <code>LIKE</code> en joker '%';
+<li>leer je logische operatoren <code>AND</code>, <code>OR</code>, <code>NOT</code> te gebruiken, en combinaties daarvan;
 
 <li>leer je gebruik te maken van commentaar;</li>
 <li>leer je nette queries te schrijven;</li>
 <li>leer je fouten op te sporen en op te lossen.</li>
 </ul>
 
-
-###Overzicht Onderwerp 3: SQL Operatoren, ORDER BY, LIMIT en groepsfuncties
+### Overzicht Onderwerp 5: 
+<h4>5: ORDER BY, LIMIT en groepsfuncties</h4>
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
-    <br>3 uur
+    <br>1 uur
 </div>
 
 
-<p>In dit onderwerp leer je hoe je informatie kan opvragen dat aan specifieke voorwaarden moet voldoen. We breiden de WHERE uit met wiskundige operatoren, logische operatoren en leren met de LIKE te zoeken naar delen van teksten. Daarnaast leren we groepsfuncties gebruiken om rekensommen te maken op kolommen, en om alleen unieke waarden te tonen met DISTINCT.</p>
+<p>In dit onderwerp leer je welke andere SQL commando's er zijn. Bijvoorbeeld om het aantal rijen in een overzicht te beperken, of om een kolom te sorteren. Daarnaast leren we groepsfuncties gebruiken om rekensommen te maken op kolommen, en met DISTINCT alleen unieke waarden op te halen.</p>
 
 
 <p>Leerdoelen</p>
@@ -119,23 +139,23 @@ In dit onderwerp:
 In dit onderwerp:
 <ul> 
 
+<li>leer je welke SQL commando's er zijn en in welk volgorde ze staan;</li>
+<li>leer je het aantal rijen te beperken met <code>LIMIT</code>;</li>
+<li>leer je gegevens in een kolom sorteren met <code>ORDER BY</code>;
 
-<li>leer je een kolom te hernoemen met `AS`;</li>
-<li>leer je het aantal rijen te beperken met `LIMIT`;</li>
-<li>leer je gegevens in een kolom sorteren met `ORDER BY`;
-<li>leer je wiskundige operatoren gebruiken: '<', '<=', '>', '>=' en '<>';</li>
-<li>leer je zoeken met <code>LIKE</code> en joker '%';
-<li>leer je logische operatoren AND, OR, NOT te gebruiken, en combinaties daarvan;
-<li>leer je met `DISTINCT` alleen unieke waarden terug te krijgen door dubbele rijen uit het resultaat te verwijderen;
-<li>leer je SQL functies gebruiken op kolommen: <code>COUNT(*)</code>, <code>MIN()</code>, <code>MAX()</code>, <code>SUM()</code>, <code>AVG()</code>.
+<li>leer je SQL functies gebruiken op kolommen: <code>COUNT(*)</code>, <code>MIN()</code>, <code>MAX()</code>, <code>SUM()</code>, <code>AVG()</code>;
+<li>leer je met <code>DISTINCT</code> alleen unieke waarden terug te krijgen door dubbele rijen uit het resultaat te verwijderen;
+<li>leer je met <code>COUNT(DISTINCT ..)</code> het aantal unieke waarden in een kolom te tellen.
+
 </ul>
 
-### Overzicht Onderwerp 4: JOIN
 
+### Overzicht Onderwerp 6: JOIN
+<h4>6: JOIN</h4>
 
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
-    <br>XX uur
+    <br>1 uur
 </div>
 
 <p>In dit onderwerp... </p>

@@ -79,6 +79,7 @@ FROM bezorger;
 
 ## 3.2: Aantal rijen beperken met <code>LIMIT</code>
 <p>Met LIMIT kun je bepalen hoeveel rijen er getoond moeten worden.</p>
+
 ``` SQL
 SELECT kolomnaam
 FROM tabel

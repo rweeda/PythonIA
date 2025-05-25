@@ -206,7 +206,7 @@ te kunnen geven.</li>
 In de praktijk worden de woorden data en gegevens veel door elkaar gebruikt.
 </ol>
 
-<h1 id="SQL2">Onderwerp 2: SQL SELECT - FROM - WHERE</h1>
+<h1 id="SQL2">Onderwerp 2: SQL SELECT - FROM </h1>
 <h1>UITWERKINGEN</h1>
 <hr>
 
@@ -227,34 +227,178 @@ FROM pizza;
 FROM pizza;
 </code></pre>
 
+<h3 id="opgave251">Verwerkingsopdracht 2.5.1 Kolom hernoemen</h3> 
+<pre><code class="language-sql">
+SELECT naam AS bezorgernaam
+FROM bezorger;
+</code></pre>
 
 
-<h3 id="opgave261">Verwerkingsopdracht 2.6.1 Omschrijving van een Inferno pizza tonen </h3>
+<h3 id="opgave261">Verwerkingsopdracht 2.6.1 Alle gegevens uit tabel <code>klant</code> tonen</h3>
+<pre><code class="language-sql">SELECT * 
+FROM klant;
+</code></pre>
+
+
+
+<hr>
+<h1 id="SQL2AfOpgaven">Afsluitende Opdrachten 2</h1>
+
+<hr>
+<h3 id="opgave281">Afsluitende Opdracht 2.8.1 Kolomnamen opzoeken</h3>
+Met de volgende query krijg je een overzicht van de hele
+tabel, inclusief de kolomnamen: 
+<pre><code class="language-sql">SELECT *
+FROM bestelling; </code></pre>
+
+
+<h3 id="opgave282">Afsluitende Opdracht 2.8.2 Menu</h3>
+<pre><code class="language-sql">
+SELECT omschrijving, naam
+FROM pizza;
+</code></pre>
+
+<h3 id="opgave2127">Afsluitende Opdracht 2.8.3 Alle bezorgers bekijken</h3> 
+<ol style="list-style-type: lower-alpha;">
+<li><pre><code class="language-sql">SELECT * 
+FROM bezorger;
+</code></pre>
+<li>Mogelijke kolommen:
+<ul>
+<li>`bezorgernummer`: uniek nummer van elke bezorger  
+<li>`naam`: de naam van de bezorger  
+<li>`wachtwoord`: gebruikt voor inloggen in het systeem
+</ul>
+<li><pre><code class="language-sql">SELECT naam AS bezorgernaam 
+FROM bezorger;
+</code></pre>
+</ol>
+
+
+<h1>Onderwerp 3</h1>
+
+
+<h3 id="opgave311">Verwerkingsopdracht 3.1.1 Omschrijving van een Inferno pizza tonen </h3>
 <pre><code class="language-sql">SELECT omschrijving
 FROM pizza 
 WHERE naam='Inferno'
 </code></pre>
 
 
-<h3 id="opgave271">Verwerkingsopdracht 2.7.1 Alle gegevens uit tabel <code>klant</code> tonen</h3>
-<pre><code class="language-sql">SELECT * 
-FROM klant;
-</code></pre>
 
+<!--
 
-<h3 id="opgave272">Verwerkingsopdracht 2.7.2 Alle klanten uit Enschede tonen</h3>
+<h3 id="opgave262">Verwerkingsopdracht 2.6.2 Alle klanten uit Enschede tonen</h3>
 <pre><code class="language-sql">SELECT adres, postcode, woonplaats 
 FROM klant 
 WHERE woonplaats='Enschede'; </code></pre>
 
-<h3 id="opgave273">Verwerkingsopdracht 2.7.3 Wachtwoord van een bezorger tonen</h3>
+<h3 id="opgave263">Verwerkingsopdracht 2.6.3 Wachtwoord van een bezorger tonen</h3>
 <pre><code class="language-sql">SELECT wachtwoord 
 FROM bezorger 
 WHERE naam = 'Ronald Marbus'; 
 </code></pre>
+-->
 
 
-<h3 id="opgave291">Verwerkingsopdracht 2.9.1 Query netjes opschrijven</h3>
+
+
+
+<h3 id="opgave321">Verwerkingsopdracht 3.2.1 Dure pizza's</h3>
+<pre><code class="language-sql">
+SELECT naam, basisprijs
+FROM pizza
+WHERE basisprijs >= 9.50;
+</code></pre>
+
+
+<h3 id="opgave322">Verwerkingsopdracht 3.2.2: Geen 8 euro pizza's</h3>
+<pre><code class="language-sql">
+SELECT naam, basisprijs
+FROM pizza
+WHERE basisprijs <> 8;
+</code></pre>
+
+
+<h3 id="opgave331">Verwerkingsopdracht 3.3.1 Alle pizza's waar de letter 'a' in voorkomt</h3>
+<pre><code class="language-sql">
+SELECT naam
+FROM pizza
+WHERE naam LIKE '%a%';
+</code></pre>
+
+
+<h3 id="opgave332">Verwerkingsopdracht 3.3.2 Alle klanten met een mobiele telefoonnummer</h3>
+<pre><code class="language-sql">
+SELECT naam, telefoon
+FROM klant
+WHERE telefoon LIKE '06%';
+</code></pre>
+
+
+
+<h3 id="opgave361">Verwerkingsopdracht 3.4.1 Pizza's tussen de 8,50 en 10 euro</h3>
+<pre><code class="language-sql">
+SELECT naam, basisprijs
+FROM pizza
+WHERE basisprijs >= 8.50 AND basisprijs <= 10;
+</code></pre>
+
+<h3 id="opgave371">Verwerkingsopdracht 3.5.1 Bestellingen met bestelcode</h3>
+<pre><code class="language-sql">
+SELECT *
+FROM bestelling
+WHERE bestelcode = 13 OR bestelcode = 30;
+</code></pre>
+
+
+<h3 id="opgave352">Verwerkingsopdracht 3.5.2 Alle goedkope of gezonde pizza's</h3>
+<pre><code class="language-sql">
+SELECT *
+FROM pizza
+WHERE basisprijs < 7.50 OR omschrijving LIKE '%fruit%';
+</code></pre>
+
+
+
+<h3 id="opgave361">Verwerkingsopdracht 3.6.1 Alle pizza's zonder kip</h3>
+<pre><code class="language-sql"> 
+SELECT naam AS pizzanaam, omschrijving
+FROM pizza
+WHERE omschrijving NOT LIKE '%kip%';
+</code></pre>
+ook goed:
+<pre><code class="language-sql"> 
+ANTWOORD: 
+SELECT naam, omschrijving
+FROM pizza
+WHERE NOT omschrijving LIKE '%kip%';
+</code></pre>
+
+
+<h3 id="opgave371">Verwerkingsopdracht 3.7.1 Alle pizza's zonder paprika of ui</h3>
+<pre><code class="language-sql">
+SELECT naam, omschrijving
+FROM pizza
+WHERE NOT (omschrijving LIKE '%paprika%' OR omschrijving LIKE '%ui%');
+</code></pre>																								
+Ook goed:							   
+<pre><code class="language-sql">
+SELECT naam, omschrijving
+FROM pizza
+WHERE (omschrijving NOT LIKE '%paprika%') AND (omschrijving NOT LIKE '%ui%');
+</code></pre>
+
+<h3 id="opgave372">Verwerkingsopdracht 3.7.2 Toon pizza's die voldoen aan meerdere voorwaarden</h3>
+<pre><code class="language-sql">
+SELECT *
+FROM pizza
+WHERE basisprijs < 7.5 AND (naam LIKE 'M%' OR naam LIKE '%A');
+</code></pre>
+
+
+
+<h3 id="opgave391">Verwerkingsopdracht 3.9.1 Query netjes opschrijven</h3>
 <ol>
 <li>SQL commando in hoofdletters;
 <li>Elke SQL commando op een nieuwe regel;
@@ -269,7 +413,7 @@ FROM pizza               -- Elke SQL commando op een nieuwe regel en in hoofdlet
 WHERE basisprijs < 8;    -- afsluiten met een ';'
 </code></pre>
 
-<h3 id="opgave2101">Verwerkingsopdracht 2.10.1 Fout in query (1) </h3>
+<h3 id="opgave3101">Verwerkingsopdracht 3.10.1 Fout in query (1) </h3>
 De fout zat in de volgorde van de regels code. 
 <pre><code class="language-sql">SELECT naam 
 FROM pizza 
@@ -277,7 +421,7 @@ WHERE basisprijs < 7.0;
 </code></pre>
 
 
-<h3 id="opgave2102">Verwerkingsopdracht 2.10.2 Fout in query (2)  </h3>
+<h3 id="opgave3102">Verwerkingsopdracht 3.10.2 Fout in query (2)  </h3>
 <ol style="list-style-type: lower-alpha"> 
 <li>B. De woonplaatsen zijn met een hoofdletter geschreven (bv.
 'Nijmegen'). SQL vergelijkt tekst hoofdlettergevoelig. In dit geval zijn er
@@ -289,49 +433,38 @@ De juiste query is:<pre><code class="language-sql">
 	WHERE woonplaats = 'Nijmegen'; </code></pre>
 </ol>
 
-<h3 id="opgave2103">Verwerkingsopdracht 2.10.3 Fout in query (3)  </h3>
+<h3 id="opgave3103">Verwerkingsopdracht 3.10.3 Fout in query (3)  </h3>
 De fout zat in de naam van de tabel. 
 <pre><code class="language-sql">SELECT naam 
 FROM pizza 
 WHERE basispijs < 7.0;
 </code></pre>
 
-<h3 id="opgave2104">Verwerkingsopdracht 2.10.4 Fout in query (4))  </h3>
+<h3 id="opgave3104">Verwerkingsopdracht 3.10.4 Fout in query (4))  </h3>
 De fout zat in de kolomnaam. 
 <pre><code class="language-sql">SELECT naam 
 FROM pizza 
 WHERE basispijs < 7.0; </code></pre>
-<hr>
-<h1 id="SQL2AfOpgaven">Afsluitende Opdrachten 2: SQL SELECT-FROM</h1>
 
-<hr>
-<h3 id="opgave2121">Afsluitende Opdracht 2.12.1 Kolomnamen opzoeken</h3>
-Met de volgende query krijg je een overzicht van de hele
-tabel, inclusief de kolomnamen: 
-<pre><code class="language-sql">SELECT *
-FROM bestelling; </code></pre>
 
-<h3 id="opgave2122">Afsluitende Opdracht 2.12.2: Toon gegevens van een specifieke pizza</h3>
+<h1>3 Afsluitende Opdrachten</h1>
+
+
+
+ <h3 id="opgave2122">Afsluitende Opdracht 2.12.2 Toon gegevens van een specifieke pizza</h3>
 <pre><code class="language-sql">
 SELECT omschrijving, basisprijs
 FROM pizza
 WHERE naam = 'Quattro formaggi';
 </code></pre>
 
-<h3 id="opgave2123">Afsluitende Opdracht 2.12.3: Klanten in een specifieke plaats</h3>
+<h3 id="opgave2123">Afsluitende Opdracht 2.12.3 Klanten in een specifieke plaats</h3>
 <pre><code class="language-sql">
 SELECT klantnummer, naam, woonplaats
 FROM klant
 WHERE woonplaats = 'Hengelo';
 </code></pre>
 
-
-<h3 id="opgave2124">Afsluitende Opdracht 2.12.4: Netjes schrijven  </h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
-FROM pizza
-WHERE basisprijs > 9; -- pizza's duurder dan 9 euro
-</code></pre>
 
 
 <h3 id="opgave2125">Afsluitende Opdracht 2.12.5 Debuggen van een fout </h3> 
@@ -352,212 +485,6 @@ WHERE basisprijs < 7;
 </code></pre>
 
 
-<h3 id="opgave2127">Afsluitende Opdracht 2.12.7 Alle bezorgers bekijken</h3> 
-<ol style="list-style-type: lower-alpha;">
-<li><pre><code class="language-sql">SELECT * 
-FROM bezorger;
-</code></pre>
-<li>Mogelijke kolommen:
-<ul>
-<li>`bezorgernummer`: uniek nummer van elke bezorger  
-<li>`naam`: de naam van de bezorger  
-<li>`wachtwoord`: gebruikt voor inloggen in het systeem
-</ul>
-</ol>
-
-
-<h1>Onderwerp 3</h1>
-<h3 id="opgave311">Verwerkingsopdracht 3.1.1 Kolom hernoemen</h3> 
-<pre><code class="language-sql">
-SELECT naam AS bezorgernaam
-FROM bezorger;
-</code></pre>
-
-<h3 id="opgave321">Verwerkingsopdracht 3.2.1 Alleen de eerste drie pizza's</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
-FROM pizza
-LIMIT 3;
-</code></pre>
-
-<h3 id="opgave331">Verwerkingsopdracht 3.3.1 de drie duurste pizza's</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
-FROM pizza
-ORDER BY basisprijs;
-</code></pre>
-Ook goed:
-<pre><code class="language-sql">
-SELECT naam, basisprijs
-FROM pizza
-ORDER BY basisprijs ASC;
-</code></pre>
-
-
-
-<h3 id="opgave332">Verwerkingsopdracht 3.3.2 De vijf laatste bezorgingen</h3>
-<pre><code class="language-sql">
-SELECT bestelcode, bestel_datum
-FROM bestelling
-ORDER BY bestel_datum DESC
-LIMIT 8;
-</code></pre>
-
-<h3 id="opgave332">Verwerkingsopdracht 3.3.3 Volgorde van onderdelen</h3>
-<ol>
-	<li>SELECT
-<li>FROM
-<li>WHERE
-<li>ORDER BY
-<li>LIMIT
-</ol>
-
-
-<h3 id="opgave341">Verwerkingsopdracht 3.4.1 Dure pizza's</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
-FROM pizza
-WHERE basisprijs >=9.50;
-</code></pre>
-
-
-<h3 id="opgave342">Verwerkingsopdracht 3.4.2: Geen 8 euro pizza's</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
-FROM pizza
-WHERE basisprijs<>8;
-</code></pre>
-
-
-<h3 id="opgave351">Verwerkingsopdracht 3.5.1 Alle pizza's waar de letter 'a' in voorkomt</h3>
-<pre><code class="language-sql">
-SELECT naam
-FROM pizza
-WHERE naam LIKE '%a%';
-</code></pre>
-
-
-<h3 id="opgave352">Verwerkingsopdracht 3.5.2 Alle klanten met een mobiele telefoonnummer</h3>
-<pre><code class="language-sql">
-SELECT naam, telefoon
-FROM klant
-WHERE telefoon LIKE '06%';
-</code></pre>
-
-
-<h3 id="opgave361">Verwerkingsopdracht 3.6.1 Pizza's tussen de 8,50 en 10 euro</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
-FROM pizza
-WHERE basisprijs>=8.50 AND basisprijs<=10;
-</code></pre>
-
-<h3 id="opgave371">Verwerkingsopdracht 3.7.1 Bestellingen met bestelcode</h3>
-<pre><code class="language-sql">
-SELECT *
-FROM bestelling
-WHERE bestelcode = 13 OR bestelcode = 30;
-</code></pre>
-
-
-<h3 id="opgave372">Verwerkingsopdracht 3.7.2 Alle goedkope of gezonde pizza's</h3>
-<pre><code class="language-sql">
-SELECT *
-FROM pizza
-WHERE basisprijs < 7.50 OR omschrijving LIKE '%fruit%';
-</code></pre>
-
-
-
-<h3 id="opgave381">Verwerkingsopdracht 3.8.1 Alle pizza's zonder kip</h3>
-<pre><code class="language-sql"> 
-SELECT naam AS pizzanaam, omschrijving
-FROM pizza
-WHERE omschrijving NOT LIKE '%kip%';
-</code></pre>
-ook goed:
-<pre><code class="language-sql"> 
-ANTWOORD: 
-SELECT naam, omschrijving
-FROM pizza
-WHERE NOT omschrijving LIKE '%kip%';
-</code></pre>
-
-
-<h3 id="opgave391">Verwerkingsopdracht 3.9.1 Alle pizza's zonder paprika of ui</h3>
-<pre><code class="language-sql">
-SELECT naam, omschrijving
-FROM pizza
-WHERE NOT (omschrijving LIKE '%paprika%' OR omschrijving LIKE '%ui%');
-</code></pre>																								
-Ook goed:							   
-<pre><code class="language-sql">
-SELECT naam, omschrijving
-FROM pizza
-WHERE omschrijving NOT LIKE '%paprika%' AND omschrijving NOT LIKE '%ui%';
-</code></pre>
-
-<h3 id="opgave392">Verwerkingsopdracht 3.9.2 Toon pizza's die voldoen aan meerdere voorwaarden</h3>
-<pre><code class="language-sql">
-SELECT *
-FROM pizza
-WHERE basisprijs < 7.5 AND (naam LIKE 'M%' OR naam LIKE '%A');
-</code></pre>
-
-
-<h3 id="opgave3101">Verwerkingsopdracht 3.10.1 Unieke bezorgdata</h3>
-<pre><code class="language-sql">
-SELECT DISTINCT bestel_datum
-FROM bestelling;
-</code></pre>
-
-
-<h3 id="opgave3111">Verwerkingsopdracht 3.11.1 Pizza's tellen</h3>
-<pre><code class="language-sql">
-SELECT COUNT(*) AS aantal_pizzas
-FROM besteldePizza;
-</code></pre>
-
-<h3 id="opgave3121">Verwerkingsopdracht 3.12.1 Unieke pizzacode's tellen</h3>
-<pre><code class="language-sql">
-SELECT COUNT(DISTINCT pizzacode) AS aantal_pizzas
-FROM besteldePizza;
-</code></pre>
-
-
-
-<h3 id="opgave3131">Verwerkingsopdracht 3.13.1 Vroegste bezorging</h3>
-<pre><code class="language-sql">
-SELECT MIN(bezorg_tijd) AS vroegste_bezorging
-FROM bestelling;
-</code></pre>
-
-<h3 id="opgave3141">Verwerkingsopdracht 3.14.1 Duurste bodem</h3>
-<pre><code class="language-sql"> 
-SELECT MAX(plusprijs) AS hoogste_toeslag
-FROM bodem;
-</code></pre>
-
-<h3 id="opgave3151">Verwerkingsopdracht 3.15.1 Totaal van alle kortingen</h3>
-<pre><code class="language-sql"> 
-SELECT SUM(korting) AS totaal_korting
-FROM bestelling;
-</code></pre>
-
-
-<h3 id="opgave3161">Verwerkingsopdracht 3.16.1 Gemiddelde toeslag</h3>
-<pre><code class="language-sql"> 
-SELECT AVG(plusprijs) AS gemiddelde_bodem_toeslag
-FROM bodem;
- </code></pre>
-
-
-<h3 id="opgave3171">Afsluitende Opdracht 3.17.1 Menu</h3>
-<pre><code class="language-sql">
-SELECT omschrijving, naam
-FROM pizza;
-</code></pre>
-
 <h3 id="opgave3172">Afsluitende Opdracht 3.17.2 Alle goedkope pizza's met een 'C'</h3>
 <pre><code class="language-sql">
 SELECT naam
@@ -575,7 +502,7 @@ WHERE basisprijs >= 9
   AND omschrijving LIKE '%salami%';
 </code></pre>
 
-<h3 id="opgave3174">Afsluitende Opdracht 3.17.4 Toon 3 pizza’s zonder vlees, met een ‘a’ in de naam</h3>
+<h3 id="opgave3174">Afsluitende Opdracht 3.17.4 Toon 3 pizza's zonder vlees, met een 'a' in de naam</h3>
 <pre><code class="language-sql">
 SELECT naam, omschrijving
 FROM pizza
@@ -583,10 +510,122 @@ WHERE omschrijving NOT LIKE '%ham%'
   AND omschrijving NOT LIKE '%salami%'
   AND omschrijving NOT LIKE '%kip%'
   AND naam LIKE '%a%'
-ORDER BY naam
+</code></pre>
+
+
+
+
+
+
+
+<h3 id="opgave3176">Afsluitende Opdracht 3.17.6 Pizza's met 'special' of duurder dan €10</h3>
+<pre><code class="language-sql">
+SELECT naam
+FROM pizza
+WHERE omschrijving LIKE '%special%'
+   OR basisprijs > 9;
+</code></pre>
+
+
+<h3 id="opgave3177">Afsluitende Opdracht 3.17.7 Bezorgers met naam H maar die NIET met J begint</h3>
+<pre><code class="language-sql">
+SELECT naam AS bezorgernaam
+FROM bezorger
+WHERE naam LIKE '%H%' AND naam NOT LIKE 'J%'
+</code></pre>
+
+
+<h1>Onderwerp 4</h1>
+
+<h3 id="opgave411">Verwerkingsopdracht 4.1.1 Volgorde van onderdelen</h3>
+<ol>
+<li>SELECT
+<li>FROM
+<li>WHERE
+<li>ORDER BY
+<li>LIMIT
+</ol>
+
+
+<h3 id="opgave421">Verwerkingsopdracht 4.2.1 Alleen de eerste drie pizza's</h3>
+<pre><code class="language-sql">
+SELECT naam, basisprijs
+FROM pizza
 LIMIT 3;
 </code></pre>
 
+
+
+<h3 id="opgave431">Verwerkingsopdracht 4.3.1 de drie duurste pizza's</h3>
+<pre><code class="language-sql">
+SELECT naam, basisprijs
+FROM pizza
+ORDER BY basisprijs;
+</code></pre>
+Ook goed:
+<pre><code class="language-sql">
+SELECT naam, basisprijs
+FROM pizza
+ORDER BY basisprijs ASC;
+</code></pre>
+
+
+<h3 id="opgave432">Verwerkingsopdracht 4.3.2 De vijf laatste bezorgingen</h3>
+<pre><code class="language-sql">
+SELECT bestelcode, bestel_datum
+FROM bestelling
+ORDER BY bestel_datum DESC
+LIMIT 8;
+</code></pre>
+
+
+<h3 id="opgave441">Verwerkingsopdracht 4.4.1 Unieke bezorgdata</h3>
+<pre><code class="language-sql">
+SELECT DISTINCT bestel_datum
+FROM bestelling;
+</code></pre>
+
+
+<h3 id="opgave451">Verwerkingsopdracht 4.5.1 Pizza's tellen</h3>
+<pre><code class="language-sql">
+SELECT COUNT(*) AS aantal_pizzas
+FROM besteldePizza;
+</code></pre>
+
+<h3 id="opgave461">Verwerkingsopdracht 4.6.1 Unieke pizzacode's tellen</h3>
+<pre><code class="language-sql">
+SELECT COUNT(DISTINCT pizzacode) AS aantal_pizzas
+FROM besteldePizza;
+</code></pre>
+
+
+<h3 id="opgave471">Verwerkingsopdracht 4.7.1 Vroegste bezorging</h3>
+<pre><code class="language-sql">
+SELECT MIN(bezorg_tijd) AS vroegste_bezorging
+FROM bestelling;
+</code></pre>
+
+<h3 id="opgave481">Verwerkingsopdracht 4.8.1 Duurste bodem</h3>
+<pre><code class="language-sql"> 
+SELECT MAX(plusprijs) AS hoogste_toeslag
+FROM bodem;
+</code></pre>
+
+<h3 id="opgave491">Verwerkingsopdracht 4.9.1 Totaal van alle kortingen</h3>
+<pre><code class="language-sql"> 
+SELECT SUM(korting) AS totaal_korting
+FROM bestelling;
+</code></pre>
+
+
+<h3 id="opgave4101">Verwerkingsopdracht 4.10.1 Gemiddelde toeslag</h3>
+<pre><code class="language-sql"> 
+SELECT AVG(plusprijs) AS gemiddelde_bodem_toeslag
+FROM bodem;
+ </code></pre>
+
+
+<h1>4: Aflsuitende Opdrachten</h1>
 
 
 
@@ -606,28 +645,13 @@ WHERE telefoon LIKE '06%'
 </code></pre>
 
 
-
-<h3 id="opgave3176">Afsluitende Opdracht 3.17.6 Pizza’s met ‘special’ of duurder dan €10</h3>
-<pre><code class="language-sql">
-SELECT naam
-FROM pizza
-WHERE omschrijving LIKE '%special%'
-   OR basisprijs > 9;
-</code></pre>
-
-
-<h3 id="opgave3177">Afsluitende Opdracht 3.17.7 Bezorgers met naam H maar die NIET met J begint</h3>
-<pre><code class="language-sql">
-SELECT naam AS bezorgernaam
-FROM bezorger
-WHERE naam LIKE '%H%' AND naam NOT LIKE 'J%'
-ORDER BY naam DESC;
-</code></pre>
-
 <h3 id="opgave3178">Afsluitende Opdracht 3.17.8 Totaal aantal bestelde pizza's</h3>
 <pre><code class="language-sql">
 SELECT SUM(aantal) AS aantal_bestelde_pizzas
 FROM besteldePizza
 </code></pre>
+
+
+
 </body>
 </html>
