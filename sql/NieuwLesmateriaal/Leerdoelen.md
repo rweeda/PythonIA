@@ -1,4 +1,17 @@
-###Overzicht Onderwerp 1: Inleiding databases
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.1.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.2.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.3.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.4.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.5.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.6.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.7.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.8.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.9.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.10.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.11.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_4.12.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+
+### Overzicht Onderwerp 1: Inleiding databases
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
     <br>XX uur
@@ -16,6 +29,16 @@ In deze onderwerp werk je met een database van Pizzeria Danilo.</p>
 <p>Leerdoelen</p>
 
 In dit onderwerp:
+<ul>
+<li>leer je dat een database gebruikt wordt om data op een gestructureerde manier (in tabellen) op te slaan;
+<li>leer je dat gebruikers van een database verschillende rechten hebben, bijvoorbeeld om data in te voeren (CREATE), lezen (READ), aan te passen (UPDATE), of te verwijderen (DELETE) - de zogeheten CRUD rechten;
+<li>leer je dat gegevens in een tabel uniek aanwijsbaar moeten zijn, met een primary key;
+<li>leer je met SQL een query te maken om gegevens uit de database te halen en te tonen;
+<li>leer je met voorwaarden aan de gegevens te stellen die getoond moeten worden;
+<li>leer je hoe tabellen aan elkaar gekoppeld zijn en hoe je gegevens uit verschillende tabellen kunt combineren.
+</ul>
+
+
 
 
 
@@ -32,10 +55,7 @@ In dit onderwerp:
 <p>We beginnen met het verkennen van databases. Wat zijn het? Waar kom je ze tegen? Hoe zijn ze opgebouwd? En hoe kun je er nuttige informatie uit halen? In deze cursus werk je met de database van Pizzeria Danilo als voorbeeld.</p>
 
 
-
-<p>Naast het opzoeken van informatie, kun je met SQL ook tabellen maken, 
-vullen, aanpassen en verwijderen. Deze acties heten CRUD (Create, Read, 
-Update, Delete). Om te zorgen dat informatie veilig blijft, hebben gebruikers 
+<p>Met SQL kun je gegevens in een database invoeren (Create), opzoeken (Read), aanpassen (Update) en verwijderen (Delete). Afgekort heten deze acties CRUD. Om te zorgen dat informatie veilig blijft, hebben gebruikers 
 vaak verschillende rechten. Niet iedereen mag zomaar tabellen verwijderen, en 
 ook niet iedereen mag alle gegevens inzien. In deze onderwerp leer je 
 nadenken over wie welk acties mag uitvoeren op een database, bijvoorbeeld het 
@@ -53,15 +73,14 @@ aanpassen en toevoegen van gegevens en verwijderen van gegevens.</p>
   <li>leer je dat elke tabel een <em>primary key</em> heeft: een kolom waarvan elk rij een unieke waarde bevat;</li>
   <li>ontwerp je zelf een eenvoudige tabel;</li>
   <li>leer je wat een <em>databasemanagementsysteem</em> (DBMS) is;</li>
+  <li>TODO leer je dat je gegevens uit een database kan ophalen (Read), 
+maken (Create), aanpassen (Update), en verwijderen (Delete) - afgekort tot <b>CRUD</b>; 
   <li>leer je het verschil tussen gegevens, data en informatie;
   
   
-<li>TODO leer je dat je gegevens uit een database kan ophalen (Read), 
-maken (Create), aanpassen (Update), en verwijderen (Delete); 
 
 
-<li>TODO OND1 leer je dat de vier acties samen een acronym 'CRUD' 
-(Create-Read-Update-Delete) hebben;
+
 
 </li> <li>TODO OND1 leer je dat gebruikers verschillende CRUD rechten hebben 
 op een database; <li> TODO UITLEGGEN DAT HET UITVOEREN IN DE VERDIEPING STAAT 
@@ -123,8 +142,8 @@ In dit onderwerp:
 <li>leer je fouten op te sporen en op te lossen.</li>
 </ul>
 
-### Overzicht Onderwerp 5: 
-<h4>5: ORDER BY, LIMIT en groepsfuncties</h4>
+### Overzicht Onderwerp 4: 
+<h4>5: LIMIT, ORDER BY en groepsfuncties</h4>
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
     <br>1 uur
@@ -143,14 +162,14 @@ In dit onderwerp:
 <li>leer je het aantal rijen te beperken met <code>LIMIT</code>;</li>
 <li>leer je gegevens in een kolom sorteren met <code>ORDER BY</code>;
 
-<li>leer je SQL functies gebruiken op kolommen: <code>COUNT(*)</code>, <code>MIN()</code>, <code>MAX()</code>, <code>SUM()</code>, <code>AVG()</code>;
+<li>leer je SQL functies gebruiken op kolommen: <code>COUNT()</code>, <code>MIN()</code>, <code>MAX()</code>, <code>SUM()</code>, <code>AVG()</code>;
 <li>leer je met <code>DISTINCT</code> alleen unieke waarden terug te krijgen door dubbele rijen uit het resultaat te verwijderen;
 <li>leer je met <code>COUNT(DISTINCT ..)</code> het aantal unieke waarden in een kolom te tellen.
 
 </ul>
 
 
-### Overzicht Onderwerp 6: JOIN
+### Overzicht Onderwerp 5: JOIN
 <h4>6: JOIN</h4>
 
  <div class="activity-item time-block">
@@ -158,14 +177,15 @@ In dit onderwerp:
     <br>1 uur
 </div>
 
-<p>In dit onderwerp... </p>
+<p>De kracht van een database is dat het in staat stelt om gegevens uit verschillende tabellen te combineren. In dit onderwerp leer je hoe tabellen aan elkaar gekoppeld zijn, en hoe je met JOIN gegevens uit verschillende tabellen samenvoegen in een overzicht.</p>
 
 <p>Leerdoelen</p>
 
 In dit onderwerp:
 <ul> 
-<li>met `JOIN` gegevens uit meerdere tabellen combineren;
-<li>TODO koppelen (Foreign key)
+<li>leer je hoe je een strokendiagram kunt gebruiken om te zien hoe tabellen aan elkaar gekoppeld zijn;
+<li>leer je dat gegevens in een tabel aan een ander gekoppeld kunnen worden met een <b>foreign key</b>;
+<li>leer je met <code>JOIN</code> gegevens uit meerdere tabellen combineren;
 </ul>
 
 
@@ -202,10 +222,8 @@ In dit onderwerp:
 
 <p>Naast het opzoeken van informatie, kun je met SQL ook tabellen maken, 
 vullen, aanpassen en verwijderen. Deze acties heten CRUD (Create, Read, 
-Update, Delete). In deze onderwerp leer je alle acties uitvoeren: het van 
-maken van tabellen, het aanpassen en toevoegen van gegevens en verwijderen 
-van gegevens en tabellen. 
-
+Update, Delete). In deze onderwerp leer je alle acties uitvoeren: eerste het invoeren, aanpassen en verwijderen van gegevens uit tabellen. Daarna leer je ook hoe je tabellen kunt aanmaken, aanpassen en verwijderen.
+</p>
 <p>Elke keer als je webpagina ververst, wordt de 
 oorspronkelijke database hersteld. Je hoeft dus niet bang te zijn om iets 
 fout te doen — experimenteren mag!
@@ -214,7 +232,14 @@ fout te doen — experimenteren mag!
 
 <p>Leerdoelen</p>
 
-In dit onderwerp: <ul> VERDEIPING OBJECT: insert into update delete 
+In dit onderwerp:
+
+<ul>
+<li>leer je gegevens invoeren in een tabel met <code>INSERT INTO</code>;
+<li>leer je gegevens aanpassen in een tabel met <code>INSERT INTO</code>;
+
+
+ VERDEIPING OBJECT: insert into update delete 
 
 
 Op record niveau vs op tabelniveau

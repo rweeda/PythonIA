@@ -1843,3 +1843,5 @@ SELECT SUM(aantal) AS aantal_bestelde_pizzas
 FROM besteldePizza
 </code></pre>
 -->
+
+

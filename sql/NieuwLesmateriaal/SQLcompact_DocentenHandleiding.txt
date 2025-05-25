@@ -1,0 +1,46 @@
+ACHETERLIGGENDE IDEE
+Het achterliggende idee van deze compact SQL cursus is om leerlingen op een snelle manier kennis te laten maken met databases en SQL. Er is 1 context, dat van een Pizzeria. 
+
+
+
+
+HOE HET LESMATERIAAL IS OPGEBOUWD
+
+Het lesmateriaal is zo ontwikkeld dat leerlingen er in principe zelfstandig doorheen kunnen.
+Per paragraaf wordt een niueuw stuk theorie behandeld, met uitleg inclusief een voorbeeld. Dat wordt opgevolgd door een verwerkingsopdracht om te toetsen of de thoerie goed is begrepen.
+Elk onderwerp wordt afgesloten met een samenvatting en Aflsuitende Opdrachten. De Afsluitenden Opdrachten zijn hogere orde vragen die meer denkwerk vragen dan de verwerkingsopdrachten. Vaak combineren ze theorie uit verschillende paragrafen.
+Een leerling die de Afsluitende Opdrachten zonder problemen kan maken heeft aangetoond de lesstof te beheersen.
+
+Bij alle opdrachten wordt de verwachte uitvoertabel gegeven. Ook zijn van alle opdrachten zijn antwoorden beschikbaar.
+
+
+INHOUD VAN HET LESMATERIAAL
+
+BASIS
+
+In onderwerp 1 focussen we op hoe gegevens in tabellen in een database worden opgeslagen. We beginnen met een praktische opdracht waarbij leerlingen onderzoeken welke gegevens, en bijbehorende datatypen worden opgeslagen bij een webformulier voor het opslaan van contactgegevens.
+Daarbij wordt de belang van een primary key onderstreept om gegevens op een unieke wijze te kunnen aanwijzen. Er wordt ingegaan op de nut van databases, waar ze te vinden zijn. Ook wordt er aandacht besteed aan database management system (DBMS). Daarbij wordt ook aandacht besteed aan welke gebruikers welke Create-Read-Update-Delete (CRUD) rechten op data hebben, om de veiligheid en integriteit van gegevens te waarborgen.
+
+
+
+Onderwerpen 2 t/m 5 (en optioneel 6) richten zich op het ophalen en tonen van gegevens uit een database, waarbij de gegevens aan bepaalde voorwaarden moeten voldoen. Code schrijven om data in tabellen in te voeren, aan te passen of verwijderen komen aan bod in de verdieping. Dat geldt ook voor het maken, aanpassen of verwijderen van tabellen uit een database.
+In onderwerp 2 komt het schrijven van een simpele SQL query met SELECT-FROM aan bod. Daarbij wordt ook aandacht besteed zowel aan het debuggen, als het schrijven van nette code om fouten te voorkomen.
+In onderwerp 3 komt WHILE aan bod, met voorwaarden waarin wiskundige en logische operatoren aan bod komen.
+In onderwerp 4 bekijken we verschillende manieren om gegevens in een overzicht te presenteren, door het aantal te beperken, te sorteren, of groepsfuncties te gebruiken (zoals het tellen of rekenen met gegevens).
+In onderwerp 5 besteden we aandacht aan het combineren van gegevens uit verschillende tabellen met de JOIN. Essentieel hierbij is dat leerlingen aan de hand van een stroomdiagram kunnen zien hoe tabellen aan elkaar gekoppeld zijn.
+
+
+
+VERVOLG
+In onderwerp 6 komen de overige SQL commando's GROUP BY en HAVING aan bod.
+In onderwerp 7 besteden we aandacht aan het invoeren, aanpassen en verwijderen van data uit tabellen. Ook wordt uitgelegd hoe je tabellen kunt maken, aanpassen en verwijderen.
+
+
+AFSLUITING EN AANSLUITING MET ANDERE cursussen
+
+
+AFLSUITING
+Ter afsluiting kan een toets worden gemaakt. Ook kunnen leerlingen gevraagd worden hun kennis toe te passen in andere cursussen. 
+Te denken valt aan het maken van een website in PHP met achterliggende SQL server, waardoor de leerlingen hun kennis kunnen toepassen in combinatie met andere domeinen zoals programmeren (domein D) en interactie (domein F), of usability (domein O).
+Ook kunnen ze hun kennis toepassen bij het maken van een game (Cursus 'UX,gaming' https://moodle.informatica-actief.nl/course/view.php?id=1001 of Javascript:<a href="https://moodle.informatica-actief.nl/course/view.php?name=GamesJS">, of Pygame met Python) met een database om de stand van een spel of spelerinformatie in op te slaan, waarbij er een koppeling komt met programmeren (domein D) en user experience (domein P).
+
