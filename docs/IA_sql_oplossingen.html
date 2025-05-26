@@ -790,8 +790,8 @@ LIMIT 10;
 
 <h3 id="opgave711">Verwerkingsopdracht 7.1.1 Pizza toevoegen en controleren</h3>
 <ol type="a">
-  <li><pre><code class="language-sql">SELECT *
-FROM bodem
+  <li><pre><code class="language-sql">INSERT INTO pizza 
+VALUES (NULL, 'Pizza Hawaii', 'Ham en ananas', 8.50);
 </code></pre>
 <li><pre><code class="language-sql">-- check:
 SELECT *
@@ -807,18 +807,137 @@ Bij antwoord D ontbreken aanhalingstekens en het euroteken is fout in SQL.
 
 
 <h3 id="opgave713">Verwerkingsopdracht 7.1.3 Pan-bodem toevoegen</h3>
-
-
 <pre><code class="language-sql"> 
-INSERT INTO bodem (bodemcode, omschrijving, plusprijs)
-VALUES (NULL, "Pan", 2.00);
-
-
+INSERT INTO formaat 
+VALUES (NULL, 'XXL', 2.00);
 -- check:
 SELECT *
-FROM bodem;
+FROM formaat;
 </code></pre>
 
 
+### Verwerkingsopdracht 7.2.2 Verwijder de Pazza pizza
+<pre><code class="language-sql">
+-- verwijderen:
+DELETE FROM pizza
+WHERE naam = "Pazza";
+-- check:
+SELECT *
+FROM pizza;
+</code></pre>
+
+
+### Verwerkingsopdracht 7.2.2 Verwijder de Pazza pizza
+<pre><code class="language-sql"> 
+UPDATE pizza
+SET basisprijs = 8.00
+WHERE naam = "Margherita";
+-- check:
+SELECT *
+FROM pizza;
+</code></pre>
+
+### Verwerkingsopdracht 7.3.1 Pas de prijs van een pizza aan
+<pre><code class="language-sql"> 
+UPDATE pizza
+SET basisprijs = 8.00
+WHERE naam = "Margherita";
+</code></pre>
+
+
+### Verwerkingsopdracht 7.4.1 Nieuwe tabel kortingsbonnen aanmaken
+<ol type="a">
+<li>
+<pre><code class="language-sql">
+CREATE TABLE kortingsbon (
+    boncode INTEGER PRIMARY KEY AUTOINCREMENT,
+    korting REAL,
+    datum TEXT
+);
+</code></pre>
+</li>
+<li>
+Als de code geen foutmelding geeft, maar wel een lege tabel oplevert, dan is het aanmaken gelukt. Met <code>CREATE TABLE</code> heb je alleen de tabel aangemaakt. Met <code>INSERT INTO</code> kun je daarna gegevens invoeren.
+</li>
+</ol> 
+
+
+
+### Verwerkingsopdracht 7.5.1 Verwijder tabel bodem
+<ol type="a">
+<li>
+<pre><code class="language-sql">
+-- verwijderen:
+DROP TABLE bodem;
+</code></pre>
+<li>
+-- check:
+<pre><code class="language-sql">
+SELECT *
+FROM bodem;-- ophalen lukt niet omdat de tabel in de vorige stap verwijderd is.
+</code></pre>
+</ol>
+
+
+
+### Verwerkingsopdracht 7.6.1 Kolom geboortedatum toevoegen
+<pre><code class="language-sql">
+ALTER TABLE klant
+ADD geboortedatum TEXT;
+</code></pre>
+
+### Verwerkingsopdracht 7.7.1 Kolom hernoemen naar klantnaam
+<pre><code class="language-sql">
+ALTER TABLE klant
+RENAME COLUMN naam TO klantnaam;
+</code></pre>
+
+### Verwerkingsopdracht 7.8.1 Tabel hernoemen naar grootte
+<pre><code class="language-sql">
+ALTER TABLE formaat
+RENAME TO grootte;
+</code></pre>
+
+
+
+
+### Verwerkingsopdracht 7.10.1 Foreign keys bij Danilo's Pizzeria
+<ol type="a">
+<li>Tabel <i>besteldepizza</i> heeft vier foreign keys, namelijk:
+	<ol><li><b>bestelcode</b> uit tabel <i>bestelling</i> 
+	<ol><li><b>pizzacode</b> uit tabel <i>pizza</i> 
+	<ol><li><b>bodemcode</b> uit tabel <i>bodem</i> 
+	<ol><li><b>formaatcode</b> uit tabel <i>formaat</i> 
+	</ol>
+<li>Tabel <i>formaat</i> heeft <b>geen</b> foreign key. Die heeft een primary key <b>formaatcode</b> die vanuit tabel <i>besteldePizza</i> als foreign key gebruikt wordt, maar die verwijst zelf niet naar een ander tabel en heeft dus geen foreign key.
+</ol>
+
+### Verwerkingsopdracht 7.11.1 Foreign keys bij Danilo's Pizzeria
+<ol type="a">
+<li>Tabel <i>besteldePizza</i> heeft een kolom formaatcode. Daarvoor komen de gegevens uit tabel <i>formaat</i> en kolom <b>formaatcode</b>.
+<li>De foreign key verwijst naar kolom <b>omschrijving</b> uit tabel <i>formaat</i>. Dit is niet goed, want het moet verwijzen naar de primary key van tabel <i>formaat</i>, en dus <b>formaatcode</b>.
+</ol>
+
+### Verwerkingsopdracht 7.11.2 Foreign key
+
+De code voor de ontbrekende foreign key is:
+<code>FOREIGN KEY(klantnummer) REFERENCES klant(klantnummer)</code>
+
+
+De complete SQL code voor het maken van de tabel <i>bestelling</i> is dan:
+<pre><code class="language-sql">
+CREATE TABLE  `bestelling` (
+  `bestelcode` INTEGER PRIMARY KEY NOT NULL,
+  `bestel_datum` date NOT NULL,
+  `bestel_tijd` time NOT NULL,
+  `bezorg_tijd` time DEFAULT NULL,
+  `bezorgernummer` INTEGER NOT NULL,
+  `klantnummer` INTEGER NOT NULL,
+  `korting` REAL NOT NULL,
+  FOREIGN KEY(bezorgernummer) REFERENCES bezorger(bezorgernummer)
+  FOREIGN KEY(klantnummer) REFERENCES klant(klantnummer)
+) ;
+</code></pre>
+-->
 </body>
 </html>

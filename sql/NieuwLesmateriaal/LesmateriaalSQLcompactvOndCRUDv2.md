@@ -1,5 +1,5 @@
 
-# ONDERWERP 5: Gegevens invoeren, aanpassen en verwijderen
+# ONDERWERP 7: Gegevens invoeren, aanpassen en verwijderen
 
 <p>Elke keer dat je de webpagina ververst, wordt de oorspronkelijke database hersteld. Je hoeft dus niet bang te zijn om iets fout te doen — experimenteren mag!</p>
 
@@ -7,7 +7,7 @@
 
 ## 7.1: Gegevens in een tabel invoeren
 
-<p>Met een <code>INSERT INTO... VALUES (...)</code>-query voeg je nieuwe gegevens toe aan een tabel.</p>
+<p>Met INSERT INTO ... VALUES (...) voeg je nieuwe gegevens toe aan een tabel.</p>
 
 <pre><code class="language-sql">
 INSERT INTO tabelnaam 
@@ -159,7 +159,7 @@ FROM bodem;
 
 ## 7.2: Gegevens uit een tabel verwijderen
 
-<p>Met <code>DELETE FROM</code> kun je een of meerdere rijen verwijderen uit een tabel:</p>
+<p>Met DELETE FROM kun je een of meerdere rijen verwijderen uit een tabel:</p>
 
 <pre><code class="language-sql">
 DELETE FROM tabelnaam
@@ -167,9 +167,9 @@ WHERE voorwaarde;
 </code></pre>
 
 <ul>
-  <li>Achter <code>DELETE FROM</code> geef je de naam van de tabel aan.</li>
-  <li>Met <code>WHERE</code> geef je aan welke rij(en) je wilt verwijderen. Gebruik hier bij voorkeur de <i>primary key</i>.</li>
-  <li><strong>Let op:</strong> Als je geen <code>WHERE</code> gebruikt, worden <i>alle</i> rijen uit de tabel verwijderd!</li>
+  <li>Achter DELETE FROM geef je de naam van de tabel aan.</li>
+  <li>Met WHERE geef je aan welke rij(en) je wilt verwijderen. Gebruik hier bij voorkeur de <i>primary key</i>.</li>
+  <li>Let op: Als je geen WHERE gebruikt, worden <i>alle</i> rijen uit de tabel verwijderd!</li>
 </ul>
 
 <p>Voorbeeld: Deze query verwijdert de rij uit de tabel <i>pizza</i> waarbij de <b>pizzacode</b> gelijk is aan 1:</p>
@@ -218,9 +218,9 @@ FROM pizza;
 
 
 
-## Gegevens in een tabel aanpassen
+## 7.3: Gegevens in een tabel aanpassen
 
-<p>Met <code>UPDATE</code> kun je gegevens in een tabel aanpassen:</p>
+<p>Met UPDATE kun je gegevens in een tabel aanpassen:</p>
 
 <pre><code class="language-sql">
 UPDATE tabelnaam
@@ -243,7 +243,7 @@ SET pizzanaam = "Hawaii"
 WHERE pizzacode = 1;
 </code></pre>
 
-### Verwerkingsopdracht: Pas de prijs van een pizza aan
+### Verwerkingsopdracht 7.3.1 Pas de prijs van een pizza aan
 
 <ol type="a">
   <li>Schrijf een query die voor de pizza met <b>naam</b> gelijk aan <i>"Margherita"</i> de <b>basisprijs</b> verhoogt naar €8,00.</li>
@@ -260,7 +260,7 @@ WHERE naam = "Margherita";
 -->
 
 
-## Nieuwe tabel aanmaken
+## 7.4: Nieuwe tabel aanmaken
 
 <p>Met een <code>CREATE TABLE</code>-query maak je een nieuwe tabel aan in de database.</p>
 
@@ -291,7 +291,7 @@ CREATE TABLE pizza (
 );
 </code></pre>
 
-### Verwerkingsopdracht: Nieuwe tabel kortingsbonnen aanmaken
+### Verwerkingsopdracht 7.4.1 Nieuwe tabel kortingsbonnen aanmaken
 
 <p>Maak een nieuwe tabel <i>kortingsbon</i> aan waarin je informatie opslaat over kortingsbonnen die in omloop zijn: <b>boncode</b>, hoeveel <b>korting</b> ze geven en tot welke <b>datum</b> ze geldig zijn.</p>
 
@@ -326,7 +326,7 @@ Als de code geen foutmelding geeft, maar wel een lege tabel oplevert, dan is het
 
 
 
-## Een tabel verwijderen
+## 7.5: Een tabel verwijderen
 
 <p>Met een <code>DROP TABLE</code>-query verwijder je een hele tabel uit de database. Alle gegevens in de tabel gaan dan verloren.</p>
 
@@ -372,7 +372,7 @@ FROM bodem;-- ophalen lukt niet omdat de tabel in de vorige stap verwijderd is.
 -->
 
 
-## Tabel aanpassen – Kolom toevoegen
+## 7.6: Tabel aanpassen – Kolom toevoegen
 
 <p>Met een <code>ALTER TABLE</code>-query kun je de structuur van een bestaande tabel aanpassen, bijvoorbeeld door een kolom toe te voegen.</p>
 
@@ -408,7 +408,7 @@ ADD geboortedatum TEXT;
 
 
 
-## Tabel aanpassen – Kolom hernoemen
+## 7.7: Tabel aanpassen – Kolom hernoemen
 
 <p>Met <code>ALTER TABLE ... RENAME COLUMN</code> kun je een bestaande kolom een nieuwe naam geven.</p>
 
@@ -429,11 +429,11 @@ ALTER TABLE bodem
 RENAME COLUMN plusprijs TO toeslag;
 </code></pre>
 
-### Verwerkingsopdracht: Kolom hernoemen
+### Verwerkingsopdracht 7.7.1 Kolom hernoemen
 
 <p>Hernoem de kolom <b>naam</b> naar <b>klantnaam</b> in de tabel <i>klant</i>.</p>
 
-<p>Bekijk de <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave471" target="_blank">voorbeelduitwerking</a>.</p>
+<p>Bekijk de <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave771" target="_blank">voorbeelduitwerking</a>.</p>
 
 <!--
 <pre><code class="language-sql">
@@ -443,7 +443,7 @@ RENAME COLUMN naam TO klantnaam;
 -->
 
 
-## Tabel aanpassen – Tabel hernoemen
+## 7.8: Tabel aanpassen – Tabel hernoemen
 
 <p>Met <code>ALTER TABLE ... RENAME TO</code> geef je een bestaande tabel een nieuwe naam.</p>
 
@@ -464,10 +464,10 @@ ALTER TABLE bezorger
 RENAME TO medewerker;
 </code></pre>
 
-### Verwerkingsopdracht: Tabel hernoemen
+### Verwerkingsopdracht 7.8.1 Tabel hernoemen
 
 <p>Hernoem de tabel <i>formaat</i> naar <i>grootte</i>.</p>
-<p>Bekijk de <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave471" target="_blank">voorbeelduitwerking</a>.</p>
+<p>Bekijk de <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave481" target="_blank">voorbeelduitwerking</a>.</p>
 <!--
 <pre><code class="language-sql">
 ALTER TABLE formaat
@@ -475,7 +475,7 @@ RENAME TO grootte;
 </code></pre>
 -->
 
-## Overzicht van alle tabellen
+## 7.9: Overzicht van alle tabellen
 
 <p>In het <b>ERD-schema</b> (Entity-Relationship Diagram) hieronder zie je een overzicht van de tabellen en hoe ze met elkaar verbonden zijn.</p>
 
@@ -486,7 +486,7 @@ RENAME TO grootte;
 <p><strong>Extra:</strong> De tekens bij de pijlen geven het type relatie aan. De relatie tussen <i>klant</i> en <i>bestelling</i> is een één-op-veel-relatie: één klant kan meerdere bestellingen hebben, maar een bestelling hoort bij één klant.</p>
 
 
-## Tabellen koppelen met een foreign key
+## 7.10: Tabellen koppelen met een foreign key
 
 In een eerdere opdracht heb je een nieuwe tabel gemaakt om informatie over kortingsbonnen bij te houden: de waarde van de korting en de geldigheidsdatum. Hieronder zie je de bijborende query en tabel die daarbij gemaakt is.
 
@@ -523,7 +523,38 @@ alt="Tabel kortingsbonnen" width="200"></p>
   <li>Je kunt makkelijker gegevens opvragen, zoals welke bestellingen met welke bon zijn gedaan.</li>
 </ul>
 -->
-## Foreign key maken in SQL
+
+
+### Verwerkingsopdracht 7.10.1 Foreign keys bij Danilo's Pizzeria
+
+Bekijk het overzicht van de tabellen en beantwoord de volgende vragen:
+<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/DaniloIA_ERD.png" alt="overzicht tabellen" width="500"></p>
+
+
+<ol type="a">
+  <li>Hoeveel foreign keys heeft de tabel <i>besteldePizza</i>? Noem per key de bijbehorende tabel en kolomnaam.</li>
+  <li>Hoeveel foreign keys heeft de tabel <i>formaat</i>?</li></ol>
+
+<p>Bekijk de <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave471" target="_blank">voorbeelduitwerking</a>.</p>
+
+
+
+<!--
+
+ANTWOORDEN:
+<ol type="a">
+<li>Tabel <i>besteldepizza</i> heeft vier foreign keys, namelijk:
+	<ol><li><b>bestelcode</b> uit tabel <i>bestelling</i> 
+	<ol><li><b>pizzacode</b> uit tabel <i>pizza</i> 
+	<ol><li><b>bodemcode</b> uit tabel <i>bodem</i> 
+	<ol><li><b>formaatcode</b> uit tabel <i>formaat</i> 
+	</ol>
+</ol>
+
+-->
+
+
+## 7.11: Een foreign key maken in SQL
 
 Voor het maken van een foreign key voeg je een regel toe in je CREATE TABLE-query:
 
@@ -565,16 +596,13 @@ Je kunt hier een filmpje bekijken waarin wordt uitgelegd wat primary en foreign 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/obeOGxESGLI?start=0&amp;end=150" frameborder="0" allowfullscreen></iframe>
 -->
 
-
-### Verwerkingsopdracht: Foreign keys bij Danilo's Pizzeria
+### Verwerkingsopdracht 7.10.1 Foreign keys bij Danilo's Pizzeria
 
 Bekijk het overzicht van de tabellen en beantwoord de volgende vragen:
 <img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/DaniloIA_ERD.png" alt="overzicht tabellen" width="500"></p>
 
 
 <ol type="a">
-  <li>Hoeveel foreign keys heeft de tabel <i>besteldePizza</i>? Noem per key de bijbehorende tabel en kolomnaam.</li>
-  <li>Hoeveel foreign keys heeft de tabel <i>formaat</i>?</li>
   <li>Leg uit wat deze regel betekent: <code>FOREIGN KEY (formaatcode) REFERENCES formaat(formaatcode)</code>.</li>
   <li>Wat gaat er mis bij deze regel: <code>FOREIGN KEY (formaatcode) REFERENCES formaat(omschrijving)</code>?</li>
 </ol>
@@ -587,13 +615,7 @@ Bekijk het overzicht van de tabellen en beantwoord de volgende vragen:
 
 ANTWOORDEN:
 <ol type="a">
-<li>Tabel <i>besteldepizza</i> heeft vier foreign keys, namelijk:
-	<ol><li><b>bestelcode</b> uit tabel <i>bestelling</i> 
-	<ol><li><b>pizzacode</b> uit tabel <i>pizza</i> 
-	<ol><li><b>bodemcode</b> uit tabel <i>bodem</i> 
-	<ol><li><b>formaatcode</b> uit tabel <i>formaat</i> 
-	</ol>
-<li>Tabel <i>formaat</i> heeft <b>geen</b> foreign key. Die heeft een primary key <b>formaatcode</b> die vanuit tabel <i>besteldePizza</i> als foreign key gebruikt wordt, maar die verwijst zelf niet naar een ander tabel en heeft dus geen foreign key.
+
 <li>Tabel <i>besteldePizza</i> heeft een kolom formaatcode. Daarvoor komen de gegevens uit tabel <i>formaat</i> en kolom <b>formaatcode</b>.
 <li>De foreign key verwijst naar kolom <b>omschrijving</b> uit tabel <i>formaat</i>. Dit is niet goed, want het moet verwijzen naar de primary key van tabel <i>formaat</i>, en dus <b>formaatcode</b>.
 </ol>
