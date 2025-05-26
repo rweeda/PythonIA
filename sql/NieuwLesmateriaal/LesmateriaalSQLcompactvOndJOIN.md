@@ -95,7 +95,8 @@ FROM besteldepizza
 JOIN pizza ON besteldepizza.pizzacode = pizza.pizzacode;
 </code></pre>
 </td><td width="65%">
-<p>De uitvoer van deze query is:</p>
+
+De uitvoer van deze query is:
 
 <table border="1" cellpadding="4" cellspacing="0">
   <thead>

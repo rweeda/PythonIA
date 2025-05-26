@@ -12,6 +12,8 @@ https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/r
 https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_7.12.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
 
 
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_5.2.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+
 ### ALGEMEEN INLEIDING
 <h4>Gestructureerd data</h4>
 
