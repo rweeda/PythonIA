@@ -12,7 +12,7 @@ https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/r
 https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_7.12.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
 
 
-https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_5.2.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_5.5.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
 
 ### ALGEMEEN INLEIDING
 <h4>Gestructureerd data</h4>
@@ -231,10 +231,10 @@ In dit onderwerp:
 
 <li>leer je de koppelingen tussen tabellen af te lezen uit een ERD-schema;
   <li>leer je hoe je een ERD-schema kunt gebruiken om te zien hoe tabellen aan elkaar gekoppeld zijn;</li>
-  <li>leer je hoe je met <code>tabel.kolom</code> aangeeft uit welke tabel een kolom komt — handig als kolomnamen gelijk zijn;</li>
+  <li>leer je hoe je met <code>tabel.kolom</code> aangeeft uit welke tabel een kolom komt;</li>
   <li>leer je hoe je met <code>JOIN ... ON ...</code> gegevens uit meerdere tabellen kunt combineren;</li>
   <li>leer je dat de kolommen waarop je koppelt, in beide tabellen moeten voorkomen en dezelfde soort waarden moeten bevatten;</li>
-  <li>leer je dat je meerdere <strong>JOINs</strong> kunt gebruiken om drie of meer tabellen aan elkaar te koppelen.</li>
+  <li>leer je dat je meerdere JOINs kunt gebruiken om drie of meer tabellen aan elkaar te koppelen.</li>
 </ul>
 
 

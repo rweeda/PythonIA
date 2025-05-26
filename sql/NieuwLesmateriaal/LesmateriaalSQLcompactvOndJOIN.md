@@ -181,7 +181,7 @@ JOIN bestelling ON besteldePizza.bestelcode = bestelling.bestelcode;
 -->
 
 
-### Verwerkingsopdracht 7.1.3 JOIN uitleggen
+### Verwerkingsopdracht 5.2.3 JOIN uitleggen
 Schrijf in je eigen woorden wat er gebeurt bij een JOIN. Wat moet er kloppen tussen twee tabellen om een JOIN te kunnen maken?
 
 
@@ -193,67 +193,94 @@ Een JOIN koppelt rijen van twee tabellen aan elkaar via een gemeenschappelijke k
 
 
 
-### Verwerkingsopdracht 7.1.4 Omschrijving van de bodem bij een bestelling
+
+
+
+
+
+
+
+
+# 5.3: Meer dan 2 tabellen koppelen
+
+Je kunt ook meer dan 3 tabellen koppelen met een JOIN. Je koppelt eerst twee tabellen via de kolom met gelijke waarden.
+Daarna voeg je een derde tabel toe met een extra JOIN.
+
+```SQL
+SELECT ...
+FROM tabel1
+JOIN tabel2 ON tabel1.kolom = tabel2.kolom
+JOIN tabel3 ON tabel2.kolom = tabel3.kolom;
+```
+
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
-Laat zien welke bodembeschrijving hoort bij elke bestelde pizza. De inforamtie staat in tabellen <i>besteldepizza</i> en <i>bodem</i>.
+<b>Voorbeeld. Deze query geeft een overzicht met <b>besteldepizzacode</b> (uit tabel <i>besteldePizza</i>), <b>naam</b> (uit tabel <i>pizza</i>) en <b>omschrijving</b> (uit tabel <i>formaat</i>) door de drie tabellen te koppelen via kolommen met gelijke waarden.</p>
 
-
-</td><td width="65%">
-
-
-
-</td></tr></table>
-
-
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave714" target="_blank">hier</a> de voorbeelduitwerking.</p>
-
-<!-- ANTWOORD:
 <pre><code class="language-sql">
-SELECT besteldepizza.besteldepizzacode, bodem.omschrijving
-FROM besteldepizza
-JOIN bodem ON besteldepizza.bodemcode = bodem.bodemcode;
+SELECT besteldePizza.besteldepizzacode, pizza.naam, formaat.omschrijving
+FROM besteldePizza
+JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode 
+JOIN formaat ON besteldePizza.formaatcode = formaat.formaatcode; 
 </code></pre>
--->
 
+</td><td width="65%">
 
+<table border="1" cellpadding="4" cellspacing="0">
 
+  <thead>
+    <tr>
+      <th>besteldepizzacode</th>
+      <th>naam</th>
+      <th>omschrijving</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>Marinara</td><td>extra groot (40 cm)</td></tr>
+    <tr><td>2</td><td>Hawai</td><td>groot (35 cm)</td></tr>
+    <tr><td>3</td><td>Fantasia</td><td>klein (25 cm)</td></tr>
+    <tr><td>4</td><td>Salmone</td><td>klein (25 cm)</td></tr>
+    <tr><td>…</td><td>…</td><td>…</td></tr>
+    <tr><td>5833</td><td>Prosciutto</td><td>medium (30 cm)</td></tr>
+  </tbody>
+</table>
+</td></tr></table>
 
-
-
-
-
-# JOIN MET MEER DAN 2 TABELLEN
-
-Je kunt ook meer dan 3 tabellen koppelen met een `JOIN`. Je koppelt steeds twee tabellen tegelijk, en gebruikt een tweede `JOIN` om dat te koppelen aan een derde tabel.
-
-
-### Opdracht: JOIN met drie tabellen toepassen toepassen
+### Opdracht 5.3.1: Overzicht van naam en bodem van alle bestelde pizza's
 
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 
-Toon een overzicht zoals hiernaast, van alle bestelde pizza’s, met daarbij:
-<ul>
-<li>de bestelcode (uit tabel `besteldepizza')
-<li>de pizzanaam (uit tabel `pizza')
-<li>en de bodembeschrijving (uit tabel `bodem`)
-</ul>
-
-Gebruik een`JOIN` om de tabellen aan elkaar te koppelen. Gebruik de de tabellen `besteldepizza`, `pizza` en `bodem`. Koppel er steeds twee tegelijk.
-
-Tip: je moet twee JOINs gebruiken.
+Maak een overzicht van alle bestelde pizza’s met daarbij de <b>naam</b> (uit tabel <i>pizza</i> van de pizza en de soort <b>omschrijving</b> van de bodem (uit tabel <i>bodem</i>).
+Tip: Je hebt een derde tabel nodig, namelijk <i>besteldepizza</i> om de gegevens aan elkaar te koppelen.
 
 
 </td><td width="65%">
 
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr>
+      <th>besteldepizzacode</th>
+      <th>pizzanaam</th>
+      <th>bodem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>Marinara</td><td>krokante dunne bodem</td></tr>
+    <tr><td>2</td><td>Hawai</td><td>glutenvrije bodem</td></tr>
+    <tr><td>3</td><td>Fantasia</td><td>panbodem</td></tr>
+    <tr><td>4</td><td>Salmone</td><td>krokante dunne bodem</td></tr>
+    <tr><td>…</td><td>…</td><td>…</td></tr>
+    <tr><td>5833</td><td>Prosciutto</td><td>krokante dunne bodem</td></tr>
+  </tbody>
+</table>
 
 
 </td></tr></table>
 
 
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave531" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!-- ANTWOORD:
 <ol type="alpha">
 <li>
@@ -273,27 +300,237 @@ en de omschrijving van de bodem staat in de tabel <code>bodem</code>.
 </ol>
 -->
 
+### 5.4: Samenvatting
+<ul>
+  <li>Relaties tussen tabellen zijn zichtbaar in een ERD-schema (Entity-Relationship Diagram).</li>
+  <li>Met een <code>JOIN</code> is het mogelijk om betekenisvolle combinaties van data uit verschillende tabellen te maken, zoals klantgegevens met bezorger, of pizza met formaat en bodem.</li>
+  <li>De kolommen waarop je koppelt, moeten in beide tabellen voorkomen en dezelfde soort waarden bevatten.</li>
+  <li>Met <code>tabel.kolom</code> geef je aan uit welke tabel een kolom komt.</li>
+  <li>Je kunt meerdere <strong>JOINs</strong> gebruiken om drie of meer tabellen aan elkaar te koppelen.</li>
+</ul>
 
 
-### Opdracht: Bezorgerinformatie
+
+
+
+
+### 5.5: Afsluitende Opdrachten
+
+
+
+### Afsluitende Opdracht 5.5.1 Omschrijving van de bodem bij een bestelling
+
+<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
+Laat zien welke bodembeschrijving hoort bij elke bestelde pizza, zoals in het ovezicht hiernaast. De informatie komt uit tabellen <i>besteldepizza</i> en <i>bodem</i>.
+
+
+</td><td width="65%">
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr>
+      <th>besteldepizzacode</th>
+      <th>omschrijving</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>American style</td></tr>
+    <tr><td>2</td><td>American style</td></tr>
+    <tr><td>3</td><td>American style</td></tr>
+    <tr><td>4</td><td>American style</td></tr>
+    <tr><td>…</td><td>…</td></tr>
+    <tr><td>5832</td><td>Italian style</td></tr>
+    <tr><td>5833</td><td>American style</td></tr>
+  </tbody>
+</table>
+
+
+
+</td></tr></table>
+
+
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave551" target="_blank">hier</a> de voorbeelduitwerking.</p>
+
+<!-- ANTWOORD:
+<pre><code class="language-sql">
+SELECT besteldepizza.besteldepizzacode, bodem.omschrijving
+FROM besteldepizza
+JOIN bodem ON besteldepizza.bodemcode = bodem.bodemcode;
+</code></pre>
+-->
+
+### Afsluitende Opdracht 5.5.2 Een overzicht van de bestelde pizza en het formaat
+
+<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
+
+Toon een overzicht van de bestelde pizza en het formaat zoals hiernaast.
+
+</td><td width="65%">
+
+
+
+</td></tr></table>
+
+
+
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave552" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<!-- ANTWOORD:
+<pre><code class="language-sql">
+SELECT 
+  besteldePizza.besteldepizzacode,
+  pizza.naam AS pizzanaam,
+  formaat.omschrijving AS formaat
+FROM besteldePizza
+JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode
+JOIN formaat ON besteldePizza.formaatcode = formaat.formaatcode;
+</code></pre>
+-->
+
+
+
+
+### Afsluitende Opdracht 5.5.3 Klanten en hun bezorgers
+
+<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
+
+<p>Maak een overzicht van bestellingen met de <b>naam van de klant</b>, het <b>adres</b> van de klant, en de <b>naam van de bezorger</b>. Toon het overzicht zoals hiernaast, let daarbij op de kolomnamen.</p>
+
+<p>Tip: Hiervoor moet je de tabellen <i>bestelling</i>, <i>klant</i> en <i>bezorger</i>koppelen.
+
+</td><td width="65%">
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr>
+      <th>klantnaam</th>
+      <th>klantadres</th>
+      <th>bezorgernaam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Sanne Jansen</td><td>Lindenstraat 12</td><td>Mohammed</td></tr>
+    <tr><td>Lars Willems</td><td>Beukenlaan 34</td><td>Julia</td></tr>
+    <tr><td>Fatima El Amrani</td><td>Schoolstraat 5</td><td>Mohammed</td></tr>
+    <tr><td>…</td><td>…</td><td>…</td></tr>
+  </tbody>
+</table>
+
+
+
+</td></tr></table>
+
+
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave553" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<!-- ANTWOORD:
+SELECT 
+  klant.naam AS klantnaam,
+  klant.adres AS klantadres,
+  bezorger.naam AS bezorgernaam
+FROM bestelling
+JOIN klant ON bestelling.klantnummer = klant.klantnummer
+JOIN bezorger ON bestelling.bezorgercode = bezorger.bezorgercode;
+</code></pre>
+-->
+
+
+
+
+
+### Afsluitende Opdracht 5.5.4 Bestellingen van klanten uit Enschede of Hengelo
+<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
+
+Toon de <b>bestelcode</b> en <b>klantnummer</b> van de eerste 3 bestellingen waarvan de klant uit <b>Enschede of Hengelo</b> komt, zoals in het overzicht hiernaast. De gegevens komen uit tabellen <i>klant</i> en <i>bestelling</i>.
+
+</td><td width="65%">
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr>
+      <th>bestelcode</th>
+      <th>klantnummer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>224</td></tr>
+    <tr><td>4</td><td>323</td></tr>
+    <tr><td>5</td><td>279</td></tr>
+  </tbody>
+</table>
+
+
+</td></tr></table>
+
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave554" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<!-- ANTWOORD:
+<pre><code class="language-sql">
+SELECT bestelcode, bestelling.klantnummer
+FROM bestelling
+JOIN klant  ON bestelling.klantnummer = klant.klantnummer
+WHERE woonplaats = 'Enschede' OR woonplaats = 'Hengelo'
+LIMIT 3;
+</code></pre>
+-->
+
+
+
+
+### Afsluitende Opdracht 5.5.5 Bezorgerinformatie
 
 
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 Toon uit tabel `bestelling` voor de eerste vijf gegevens, de naam van de bezorger en bijbehorende de klantgegevens (klantnaam, adres, postcode, en woonplaats). Toon het overzicht zoals hiernaast.
 </td><td width="65%">
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr>
+      <th>bezorgernaam</th>
+      <th>klantnaam</th>
+      <th>adres</th>
+      <th>postcode</th>
+      <th>woonplaats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Han Fröling</td>
+      <td>Katja Pas</td>
+      <td>Koperwiek 73</td>
+      <td>3766AM</td>
+      <td>Hengelo</td>
+    </tr>
+    <tr>
+      <td>Afhalen</td>
+      <td>Bram Kuipers</td>
+      <td>Heyendaalseweg 300</td>
+      <td>6525EC</td>
+      <td>Nijmegen</td>
+    </tr>
+    <tr>
+      <td>Ageeth Mooy</td>
+      <td>Frank Goudsmit</td>
+      <td>Pelikaanweg 17</td>
+      <td>3762VA</td>
+      <td>Hengelo</td>
+    </tr>
+    <tr>
+      <td>Hans Boonstra</td>
+      <td>Maarten Doornbos</td>
+      <td>Mozartlaan 35</td>
+      <td>3741HT</td>
+      <td>Enschede</td>
+    </tr>
+    <tr>
+      <td>Marleen Hoekstra</td>
+      <td>Margaretha Verwoert - Gro</td>
+      <td>Goudenregenlaan 30</td>
+      <td>3741CB</td>
+      <td>Enschede</td>
+    </tr>
+  </tbody>
+</table>
 
-| bezorgernaam     | klantnaam                   | adres                | postcode | woonplaats |
-|------------------|-----------------------------|----------------------|----------|------------|
-| Han Fröling      | Katja Pas                   | Koperwiek 73         | 3766AM   | Hengelo    |
-| Afhalen          | Bram Kuipers                | Heyendaalseweg 300   | 6525EC   | Nijmegen   |
-| Ageeth Mooy      | Frank Goudsmit              | Pelikaanweg 17       | 3762VA   | Hengelo    |
-| Hans Boonstra    | Maarten Doornbos            | Mozartlaan 35        | 3741HT   | Enschede   |
-| Marleen Hoekstra | Margaretha Verwoert - Gro   | Goudenregenlaan 30   | 3741CB   | Enschede   |
 
 </td></tr></table>
 
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave555" target="_blank">hier</a> de voorbeelduitwerking.</p>
 
 <!-- ANTWOORD
 <pre><code class="language-sql">
@@ -310,92 +547,42 @@ LIMIT 5;
 </code></pre>
 -->
 
-### SAMENVATTING JOIN
-
-<ul>
-<li>Met een JOIN is het mogelijk om betekenisvolle combinaties van data uit verschillende tabellen te maken, zoals klantgegevens met bezorger, of pizza met formaat en bodem;</li>
-  <li>Een <strong>JOIN</strong> gebruik je om gegevens uit meerdere tabellen te combineren via een gemeenschappelijke kolom;</li>
-  <li>De kolommen waarop je koppelt moeten in beide tabellen voorkomen en dezelfde soort waarden bevatten;</li>
-  <li>Met <code>tabel.kolom</code> geef je aan uit welke tabel een kolom komt — handig als kolomnamen gelijk zijn;</li>
-  <li>Je kunt meerdere <strong>JOINs</strong> gebruiken om drie of meer tabellen aan elkaar te koppelen;</li>
-</ul>
 
 
 
 
-## AFSLUITENDE OPDRACHTEN 
-
-### Afsluitende Opdracht 7.1.5 Een overzicht van de bestelde pizza en het formaat
+### Afsluitende Opdracht 5.5.6 Voor de kok
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
-
-Toon een overzicht van de bestelde pizza en het formaat zoals hiernaast.
-
-</td><td width="65%">
-
-
-
-</td></tr></table>
-
-
-
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
-<!-- ANTWOORD:
-<pre><code class="language-sql">
-SELECT 
-  besteldePizza.besteldepizzacode,
-  pizza.naam AS pizzanaam,
-  formaat.omschrijving AS formaat
-FROM besteldePizza
-JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode
-JOIN formaat ON besteldePizza.formaatcode = formaat.formaatcode;
-</code></pre>
--->
-
-
-
-
-
-
-
-### Opdracht: Toon alle kortingen die bij een bestelling horen
-
-<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
-
-Toon alle kortingen die bij een bestelling horen. Hiervoor heb je de tabellen `besteldepizza` en `kortingsbonnen` nodig.
-Toon het overzicht zoals hiernaast.
-
-</td><td width="65%">
-
-
-
-</td></tr></table>
-
-
-<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave313" target="_blank">hier</a> de voorbeelduitwerking.</p>
-<!-- ANTWOORD:
-<pre><code class="language-sql">
-SELECT 
-  besteldepizza.bestelcode,
-  kortingsbonnen.korting,
-  kortingsbonnen.datum
-FROM besteldepizza
-JOIN kortingsbonnen ON besteldepizza.boncode = kortingsbonnen.boncode;
-</code></pre>
--->
-### Opdracht Voor de kok
-
 Maak voor de kok een overzicht van welke pizza's besteld zijn zoals hieronder, met daarin pizzanaam, formaat, bodem. Laat alleen de eerste 10 zien.
 
-| pizzanaam | formaat            | bodem           |
-|-----------|--------------------|------------------|
-| Marinara  | extra groot (40 cm)| American style   |
-| Hawai     | groot (35 cm)      | American style   |
-| Fantasia  | klein (25 cm)      | American style   |
-| Salmone   | klein (25 cm)      | American style   |
-| Fantasia  | medium (30 cm)     | American style   |
+</td><td width="65%">
 
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr>
+      <th>pizzanaam</th>
+      <th>formaat</th>
+      <th>bodem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Marinara</td><td>extra groot (40 cm)</td><td>American style</td></tr>
+    <tr><td>Hawai</td><td>groot (35 cm)</td><td>American style</td></tr>
+    <tr><td>Fantasia</td><td>klein (25 cm)</td><td>American style</td></tr>
+    <tr><td>Salmone</td><td>klein (25 cm)</td><td>American style</td></tr>
+    <tr><td>Fantasia</td><td>medium (30 cm)</td><td>American style</td></tr>
+    <tr><td>Inferno</td><td>groot (35 cm)</td><td>American style</td></tr>
+    <tr><td>Vegetariana</td><td>extra groot (40 cm)</td><td>Italian style</td></tr>
+    <tr><td>Salame</td><td>klein (25 cm)</td><td>American style</td></tr>
+    <tr><td>Borromea</td><td>klein (25 cm)</td><td>American style</td></tr>
+    <tr><td>Calimero</td><td>groot (35 cm)</td><td>American style</td></tr>
+  </tbody>
+</table>
 
+</td></tr></table>
+
+<p>Bekijk <a href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave556" target="_blank">hier</a> de voorbeelduitwerking.</p>
 <!-- ANTWOORD:
 <pre><code class="language-sql">
 SELECT 
@@ -407,30 +594,6 @@ JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode
 JOIN formaat ON besteldePizza.formaatcode = formaat.formaatcode
 JOIN bodem ON besteldePizza.bodemcode = bodem.bodemcode
 LIMIT 10;
-</code></pre>
--->
-
-
-### Afsluitende Opdracht Bestellingen van klanten uit Enschede of Hengelo
-
-Toon de `bestelcode` en `klantnummer` van alle bestellingen waarvan de klant uit **Enschede of Hengelo** komt, zoals in het overzicht hieronder. De gegevens komen uit tabellen `klant` en `bestelling`.
-
-| bestelcode | klantnummer |
-|------------|-------------|
-| 1          | 224         |
-| 4          | 323         |
-| 5          | 279         |
-| 6          | 199         |
-| 7          | 323         |
-| ...      | ... |
-
-
-<!-- ANTWOORD:
-<pre><code class="language-sql">
-SELECT bestelcode, bestelling.klantnummer
-FROM bestelling
-JOIN klant  ON bestelling.klantnummer = klant.klantnummer
-WHERE woonplaats = 'Enschede' OR woonplaats = 'Hengelo';
 </code></pre>
 -->
 

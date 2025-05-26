@@ -670,23 +670,101 @@ JOIN bestelling ON besteldePizza.bestelcode = bestelling.bestelcode;
 </code></pre>
 
 
+<h3 id="opgave523">Verwerkingsopdracht 5.2.3 JOIN uitleggen</h3>
+Een JOIN koppelt rijen van twee tabellen aan elkaar via een gemeenschappelijke kolom met gelijke waarden. Die kolommen moeten logisch bij elkaar horen en dezelfde soort informatie bevatten.
+
+
+<h3 id="opgave531">Opdracht 5.3.1: Overzicht van naam en bodem van alle bestelde pizza's</h3>
+<pre><code class="language-sql">
+SELECT besteldepizza.bestelcode, pizza.naam AS pizzanaam, bodem.omschrijving AS bodembeschrijving
+FROM besteldepizza
+JOIN pizza ON besteldepizza.pizzacode = pizza.pizzacode
+JOIN bodem ON besteldepizza.bodemcode = bodem.bodemcode;
+</code></pre>
+
+
+
+<h3 id="opgave551">Afsluitende Opdracht 5.5.1 Omschrijving van de bodem bij een bestelling</h3>
+
+<pre><code class="language-sql">
+SELECT besteldepizza.besteldepizzacode, bodem.omschrijving
+FROM besteldepizza
+JOIN bodem ON besteldepizza.bodemcode = bodem.bodemcode;
+</code></pre>
 
 
 
 
+<h3 id="opgave552">Afsluitende Opdracht 5.5.2 Een overzicht van de bestelde pizza en het formaat</h3>
+<pre><code class="language-sql">
+SELECT 
+  besteldePizza.besteldepizzacode,
+  pizza.naam AS pizzanaam,
+  formaat.omschrijving AS formaat
+FROM besteldePizza
+JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode
+JOIN formaat ON besteldePizza.formaatcode = formaat.formaatcode;
+</code></pre>
+
+<h3 id="opgave553">Afsluitende Opdracht 5.5.3 Klanten en hun bezorgers</h3>
+<pre><code class="language-sql">SELECT 
+  klant.naam AS klantnaam,
+  klant.adres AS klantadres,
+  bezorger.naam AS bezorgernaam
+FROM bestelling
+JOIN klant ON bestelling.klantnummer = klant.klantnummer
+JOIN bezorger ON bestelling.bezorgercode = bezorger.bezorgercode;
+</code></pre>
+
+<h3 id="opgave554">Afsluitende Opdracht 5.5.4 Bestellingen van klanten uit Enschede of Hengelo</h3>
+<pre><code class="language-sql">
+SELECT bestelcode, bestelling.klantnummer
+FROM bestelling
+JOIN klant  ON bestelling.klantnummer = klant.klantnummer
+WHERE woonplaats = 'Enschede' OR woonplaats = 'Hengelo'
+LIMIT 3;
+</code></pre>
+
+<h3 id="opgave535">Afsluitende Opdracht 5.5.5 Bezorgerinformatie</h3>
+<pre><code class="language-sql">
+SELECT 
+    bezorger.naam AS bezorgernaam,
+    klant.naam AS klantnaam,
+    klant.adres,
+    klant.postcode,
+    klant.woonplaats
+FROM bestelling
+JOIN bezorger ON bestelling.bezorgernummer = bezorger.bezorgernummer
+JOIN klant ON bestelling.klantnummer = klant.klantnummer
+LIMIT 5;
+</code></pre>
+
+<h3 id="opgave556">Afsluitende Opdracht 5.5.6 Voor de kok</h3>
+<pre><code class="language-sql">
+SELECT 
+    pizza.naam AS pizzanaam,
+    formaat.omschrijving AS formaat,
+    bodem.omschrijving AS bodem
+FROM besteldePizza
+JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode
+JOIN formaat ON besteldePizza.formaatcode = formaat.formaatcode
+JOIN bodem ON besteldePizza.bodemcode = bodem.bodemcode
+LIMIT 10;
+</code></pre>
+
+<h1>Onderwerp 6</h1>
 
 
 <h1>Onderwerp 7</h1>
 
 
 <h3 id="opgave711">Verwerkingsopdracht 7.1.1 Pizza toevoegen en controleren</h3>
-<ol type="a">
-<pre><code class="language-sql"> 
+<ol type="alpha">
+  <li><pre><code class="language-sql"> 
 SELECT *
 FROM bodem
 </code></pre>
-<li>
-<pre><code class="language-sql"> 
+<li><pre><code class="language-sql"> 
 -- check:
 SELECT *
 FROM pizza;
