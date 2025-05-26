@@ -651,6 +651,67 @@ SELECT SUM(aantal) AS aantal_bestelde_pizzas
 FROM besteldePizza
 </code></pre>
 
+<h1>Onderwerp 5</h1>
+<h3 id="opgave511">Verwerkingsopdracht 5.1.1 Koppelingen tussen tabellen </h3>  
+A (<em>klant</em> en <em>bestelling</em>).<p> Toelichting: De tabel <em>bestelling</em> bevat de kolom <b>klantnummer</b> die verwijst naar een rij in de tabel <em>klant</em>.</p>
+
+
+
+<h3 id="opgave521">Verwerkingsopdracht 5.2.1 Nut van een JOIN</h3>
+
+C. Omdat de naam van de pizza niet in tabel <i>besteldepizza</i> staat
+
+
+<h3 id="opgave522">Verwerkingsopdracht 5.2.2 BesteldePizza, besteldatum en bezorgtijd</h3>
+<pre><code class="language-sql">
+SELECT besteldePizza.besteldepizzacode, bestelling.bestel_datum, bestelling.bezorg_tijd
+FROM besteldePizza
+JOIN bestelling ON besteldePizza.bestelcode = bestelling.bestelcode;
+</code></pre>
+
+
+
+
+
+
+
+
+<h1>Onderwerp 7</h1>
+
+
+<h3 id="opgave711">Verwerkingsopdracht 7.1.1 Pizza toevoegen en controleren</h3>
+<ol type="a">
+<pre><code class="language-sql"> 
+SELECT *
+FROM bodem
+</code></pre>
+<li>
+<pre><code class="language-sql"> 
+-- check:
+SELECT *
+FROM pizza;
+</code></pre>
+</ol>
+
+<h3 id="opgave712">Verwerkingsopdracht 7.1.2 Een nieuwe glutenvrije bodem</h3>
+Antwoord: B<br>
+Toelichting: bodemcode is een AUTOINCREMENT-veld en moet je dus NULL invullen.
+Bij antwoord D ontbreken aanhalingstekens en het euroteken is fout in SQL.
+
+
+
+<h3 id="opgave713">Verwerkingsopdracht 7.1.3 Pan-bodem toevoegen</h3>
+
+
+<pre><code class="language-sql"> 
+INSERT INTO bodem (bodemcode, omschrijving, plusprijs)
+VALUES (NULL, "Pan", 2.00);
+
+
+-- check:
+SELECT *
+FROM bodem;
+</code></pre>
 
 
 </body>

@@ -14,6 +14,12 @@ Een leerling die de Afsluitende Opdrachten zonder problemen kan maken heeft aang
 Bij alle opdrachten wordt de verwachte uitvoertabel gegeven. Ook zijn van alle opdrachten zijn antwoorden beschikbaar.
 
 
+Leerlingen kunnen hun werk op hun computer opslaan via 'Bestand' en dan 'Bewaar notebook als..'. Op deze manier downloaden zij een Juypter notebook. Die kan ook in Moodle tussentijds opgeslagen of ingeleverd worden. Na elke onderwerp is er een 'databank' voor het bewaren van bestanden. Via 'Bestand' kan de Jupyter notebook weer ingeladen worden zodat een leerling verder kan waar die gebleven is.
+
+
+Wil je de oorsprinkelijk database hetstellen? In de leeromgeving kan je de oorspronkelijke database terugkrijgen door de webpagina te verversen. Hierdoor gaat ook de werk van de leerling verloren. Die kan behouden blijven door het bestand op te slaan. Bij het opslaan wordt alleen het Jupyter notebook met de ingevulde queries behouden, niet de database.
+
+
 INHOUD VAN HET LESMATERIAAL
 
 BASIS
