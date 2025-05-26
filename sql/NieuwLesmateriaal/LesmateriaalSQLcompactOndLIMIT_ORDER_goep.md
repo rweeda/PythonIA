@@ -4,8 +4,21 @@
 ### Afsluitende Opdracht 4.12.1
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
-Geef per formaat de drie duurste pizza’s op basis van de basisprijs. Toon per pizza de naam, formaatcode en prijs zoals in het overzicht hiernaast.
+Toon van de drie duuste pizza's de <b>naam</b> en <b>basisprijs</b> zoals in het overzicht hiernaast.
 </td><td width="65%">
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr>
+      <th>naam</th>
+      <th>basisprijs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Combinazione</td><td>10.5</td></tr>
+    <tr><td>Specialità di Danilo</td><td>9.5</td></tr>
+    <tr><td>Calzone (dichte pizza)</td><td>9</td></tr>
+  </tbody>
+</table>
 
 
 </td></tr></table>
@@ -23,10 +36,25 @@ LIMIT 3;
 </code></pre>
 -->
 
-### Afsluitende Opdracht 4.12.2
+### Afsluitende Opdracht 4.12.2 Vijf goedkoopste pizza's
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 Geef de namen en prijzen van de vijf goedkoopste pizza’s die minder dan €8 kosten. Sorteer ze oplopend op prijs, zoals in het overzicht hiernaast.
 </td><td width="65%">
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr>
+      <th>naam</th>
+      <th>basisprijs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Napoletana</td><td>7.5</td></tr>
+    <tr><td>Prosciutto</td><td>7.5</td></tr>
+    <tr><td>Funghi</td><td>7.5</td></tr>
+    <tr><td>Salame</td><td>7.5</td></tr>
+    <tr><td>Borromea</td><td>7.5</td></tr>
+  </tbody>
+</table>
 
 
 </td></tr></table>
@@ -45,7 +73,7 @@ LIMIT 5;
 -->
 
 
-### Afsluitende Opdracht 4.12.3
+### Afsluitende Opdracht 4.12.3 Gemiddelde prijs
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 <p>Toon de gemiddelde prijs van alle pizza’s zonder ham. Hernoem de kolom zoals in het overzicht hiernaast.</p>
 <p>Tip: begin met een overzicht van alle pizza’s zonder ham.</p>
@@ -77,6 +105,16 @@ WHERE omschrijving NOT LIKE '%ham%';
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 Hoeveel unieke woonplaatsen zijn er onder klanten die geen 06-nummer hebben opgegeven?
 </td><td width="65%">
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr>
+      <th>woonplaatsen_zonder_06</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>3</td></tr>
+  </tbody>
+</table>
 
 
 </td></tr></table>
@@ -88,10 +126,10 @@ Hoeveel unieke woonplaatsen zijn er onder klanten die geen 06-nummer hebben opge
 
 <!--
 
-
-SELECT COUNT(DISTINCT woonplaats)
+SELECT COUNT(DISTINCT woonplaats) AS woonplaatsen_zonder_06
 FROM klant
 WHERE telefoon NOT LIKE '06%';
+
 -->
 
 
@@ -126,10 +164,20 @@ WHERE basisprijs >= 7 AND basisprijs <= 10;
 -->
 
 
-### Afsluitende Opdracht 4.12.6
+### Afsluitende Opdracht 4.12.6 Totale toeslagen
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
-<p>Wat is het totaal van alle toeslagen (<b>plusprijs</b>) voor pizzabodems met een prijs hoger dan €1? De gegevens komen uit tabel <i>bodem</i>.</p>
+<p>Wat is het totaal van alle toeslagen (<b>plusprijs</b>) voor formaat met een prijs hoger dan €1? De gegevens komen uit tabel <i>formaat</i>. Toon het overzicht zoals hiernaast.</p>
 </td><td width="65%">
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr>
+      <th>totaal_toeslagen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1.5</td></tr>
+  </tbody>
+</table>
 
 
 </td></tr></table>
@@ -141,10 +189,9 @@ WHERE basisprijs >= 7 AND basisprijs <= 10;
 
 <!--
 
-SELECT SUM(plusprijs)
-FROM bodem
+SELECT SUM(plusprijs) AS totaal_toeslagen
+FROM formaat
 WHERE plusprijs > 1;
-
 
 -->
 

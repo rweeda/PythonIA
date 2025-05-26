@@ -625,10 +625,7 @@ FROM bodem;
  </code></pre>
 
 
-<h1>4: Aflsuitende Opdrachten</h1>
-
-
-
+<!--
 <h3 id="opgave3175">Afsluitende Opdracht 3.17.5 Klanten buiten Enschede met 06-nummer</h3>
 <pre><code class="language-sql">
 SELECT COUNT(*) AS aantal_klanten
@@ -650,6 +647,63 @@ WHERE telefoon LIKE '06%'
 SELECT SUM(aantal) AS aantal_bestelde_pizzas
 FROM besteldePizza
 </code></pre>
+-->
+
+
+<h3 id="opgave4121">Afsluitende Opdracht 4.12.1 De drie duurste pizza's
+<pre><code class="language-sql">
+SELECT naam, formaatcode, basisprijs
+FROM pizza
+ORDER BY basisprijs DESC
+LIMIT 3;
+</code></pre>
+
+<h3 id="opgave4122">Afsluitende Opdracht 4.12.2 Vijf goedkoopste pizza's
+<pre><code class="language-sql">
+SELECT naam, basisprijs
+FROM pizza
+WHERE basisprijs < 8
+ORDER BY basisprijs DESC
+LIMIT 5;
+</code></pre>
+
+
+
+<h3 id="opgave4123">Afsluitende Opdracht 4.12.3 Gemiddelde prijs
+<pre><code class="language-sql">
+SELECT avg(basisprijs) AS gemiddelde_prijs_zonder_ham
+From pizza
+WHERE omschrijving NOT LIKE '%ham%';
+</code></pre>
+
+<h3 id="opgave4124">Afsluitende Opdracht 4.12.4
+<pre><code class="language-sql">
+SELECT COUNT(DISTINCT woonplaats) AS woonplaatsen_zonder_06
+FROM klant
+WHERE telefoon NOT LIKE '06%';
+</code></pre>
+
+<h3 id="opgave4125">Afsluitende Opdracht 4.12.5 Aantal normale pizza's
+<pre><code class="language-sql">
+SELECT COUNT(pizzacode) AS aantal
+FROM pizza
+WHERE basisprijs >= 7 AND basisprijs <= 10;
+</code></pre>
+
+<h3 id="opgave4126">Afsluitende Opdracht 4.12.6 Totale toeslagen
+<pre><code class="language-sql">
+SELECT SUM(plusprijs) AS totaal_toeslagen
+FROM formaat
+WHERE plusprijs > 1;
+</code></pre>
+
+<h3 id="opgave4127">Afsluitende Opdracht 4.12.7
+<pre><code class="language-sql">
+SELECT max(basisprijs) AS duurste
+FROM pizza
+WHERE omschrijving LIKE "%vis%" OR naam LIKE "%a";
+</code></pre>
+
 
 <h1>Onderwerp 5</h1>
 <h3 id="opgave511">Verwerkingsopdracht 5.1.1 Koppelingen tussen tabellen </h3>  
@@ -674,7 +728,7 @@ JOIN bestelling ON besteldePizza.bestelcode = bestelling.bestelcode;
 Een JOIN koppelt rijen van twee tabellen aan elkaar via een gemeenschappelijke kolom met gelijke waarden. Die kolommen moeten logisch bij elkaar horen en dezelfde soort informatie bevatten.
 
 
-<h3 id="opgave531">Opdracht 5.3.1: Overzicht van naam en bodem van alle bestelde pizza's</h3>
+<h3 id="opgave531">Verwerkingsopdracht 5.3.1: Overzicht van naam en bodem van alle bestelde pizza's</h3>
 <pre><code class="language-sql">
 SELECT besteldepizza.bestelcode, pizza.naam AS pizzanaam, bodem.omschrijving AS bodembeschrijving
 FROM besteldepizza
@@ -759,13 +813,11 @@ LIMIT 10;
 
 
 <h3 id="opgave711">Verwerkingsopdracht 7.1.1 Pizza toevoegen en controleren</h3>
-<ol type="alpha">
-  <li><pre><code class="language-sql"> 
-SELECT *
+<ol type="a">
+  <li><pre><code class="language-sql">SELECT *
 FROM bodem
 </code></pre>
-<li><pre><code class="language-sql"> 
--- check:
+<li><pre><code class="language-sql">-- check:
 SELECT *
 FROM pizza;
 </code></pre>
