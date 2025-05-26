@@ -127,7 +127,7 @@ Je kunt je werk op je computer opslaan via 'Bestand' en vervolgens 'Bewaar noteb
 ### Overzicht ONDERWERP 2: SELECT - FROM
 
 
-<h4><!--<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/Dbase_CRUD.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right">-->Onderwerp 3: SELECT FROM</h4>
+<h4><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H2_dbase_tabel_icon.png" alt="Database en tabel"   role="presentation" class="img-responsive atto_image_button_right">Onderwerp 2: SELECT FROM</h4>
 
 
 
@@ -158,7 +158,7 @@ In dit onderwerp:
 
 ### Overzicht 3: WHERE
 
-<h4><!--<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/Dbase_CRUD.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right">-->Onderwerp 3: WHERE</h4>
+<h4><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H3_dbase_where_icon.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right">Onderwerp 3: WHERE</h4>
 
 
 
@@ -278,7 +278,7 @@ In dit onderwerp:
 -->
 
 
-<h4><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/Dbase_CRUD.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right">Onderwerp 7: Create - Read - Update - Delete uitvoeren</h4>
+<h4><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/Dbase_CRUD.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right" width="150">Onderwerp 7: Create - Read - Update - Delete uitvoeren</h4>
 
 
 <p>Naast het opzoeken van informatie, kun je met SQL ook tabellen maken, 

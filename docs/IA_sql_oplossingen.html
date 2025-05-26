@@ -625,30 +625,6 @@ FROM bodem;
  </code></pre>
 
 
-<!--
-<h3 id="opgave3175">Afsluitende Opdracht 3.17.5 Klanten buiten Enschede met 06-nummer</h3>
-<pre><code class="language-sql">
-SELECT COUNT(*) AS aantal_klanten
-FROM klant
-WHERE telefoon LIKE '06%' 
-  AND woonplaats <> 'Enschede';
-</code></pre>
-Ook goed:
-<pre><code class="language-sql">
-SELECT COUNT(*) AS aantal_klanten
-FROM klant
-WHERE telefoon LIKE '06%' 
-  AND NOT woonplaats = 'Enschede';
-</code></pre>
-
-
-<h3 id="opgave3178">Afsluitende Opdracht 3.17.8 Totaal aantal bestelde pizza's</h3>
-<pre><code class="language-sql">
-SELECT SUM(aantal) AS aantal_bestelde_pizzas
-FROM besteldePizza
-</code></pre>
--->
-
 
 <h3 id="opgave4121">Afsluitende Opdracht 4.12.1 De drie duurste pizza's
 <pre><code class="language-sql">
