@@ -424,7 +424,32 @@ print("Het totaal aantal dieren is:", totaal)
 </pre>
 
 
-<h3 id="opgave16141">16.14.1 Kleinst aantal exemplaren</h3>
+<h3 id="opgave16141">Opdracht 16.14.1 Gemiddeld aantal diersoort van elk soort
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
+
+
+
+som = 0
+for dier in dierentuin:
+    som += dierentuin[dier]["aantal"]
+print("Het totaal aantal dieren is:", som)
+
+print("Het totaal aantal diersoorten is:", len(dierentuin) )
+
+gemiddeld = som / len(dierentuin)
+print("Het gemiddelde aantal dieren per diersoort is:", gemiddeld)
+
+
+
+
+<h3 id="opgave16141">16.15.1 Kleinst aantal exemplaren</h3>
 <pre class="python">
 dierentuin = {
     "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
@@ -454,7 +479,7 @@ print("Het dier met het minste aantal is de", dier_met_minste, "met", min_aantal
 
 
 
-<h3 id="opgave16142">16.14.2 Meeste exemplaren</h3>
+<h3 id="opgave16142">16.15.2 Meeste exemplaren</h3>
 <pre class="python">
 # Startwaarden instellen:
 # - max_aantal wordt op 0 gezet, omdat elk dier minstens 1 exemplaar heeft
@@ -474,8 +499,39 @@ for dier, info in dierentuin.items():
 print("Het dier met het meeste aantal is de", dier_met_meeste, "met", max_aantal, "exemplaren.")
 </pre>
 
-<h3 id="opgaveaf161">Afsluitende opdracht 16.1</h3>
+<h3 id="opgave16161">Afsluitende opdracht 16.16.1</h3>
+profielen = {
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
 
+for profiel, gegevens in profielen.items():
+    if gegevens["volgers"] > 100:
+        print("Profiel", profiel, "heeft meer dan 100 volgers")
+
+</pre>
 
 
 <br>
