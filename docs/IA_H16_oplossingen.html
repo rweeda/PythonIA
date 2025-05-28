@@ -18,48 +18,19 @@
 <hr>
 
 
-<h3 id="opgave161">Opdracht 16.1 Gegevens over Rome toevoegen</h3>
-<ol type="a">
-<li>
-<pre class="python">
-steden = {
-    "Amsterdam":{"land": "Nederland", "inwoners": 921000},
-    "Parijs": {"land": "Frankrijk", "inwoners": 2148000},
-    "Berlijn": {"land": "Duitsland", "inwoners": 3769000},
-    "Rome": {"land": "Italië", "inwoners": 2873000}
-}
-</pre>
-
-<li><code>print(steden["Rome"])   # Geeft: {'land': 'Italië', 'inwoners': 2873000}</code>
-<li><code>print(steden["Rome"]["inwoners"])   # Geeft: 2873000</code>
-</ol>
-
-<h3 id="opgave162">Opdracht 16.2 Aantal inwoners van Berlijn aanpassen</h3>
-<pre class="python">
-steden = {
-    "Amsterdam":{"land": "Nederland", "inwoners": 921000},
-    "Parijs": {"land": "Frankrijk", "inwoners": 2148000},
-    "Berlijn": {"land": "Duitsland", "inwoners": 3769000},
-}
-
-steden["Berlijn"]["land"] = "DL"
-print(steden["Berlijn"]["land"])   # Geeft "DL"
-</pre>
-
-<h3 id="opgave163">Opdracht 16.3 Kennismaken met de geneste dictionary "De dierentuin"</h3>
+<h3 id="opgave1611">Opdracht 16.1.1 Kennismaken met de geneste dictionary `dierentuin`</h3>
 
 <ol type="a">
-<li>Davanne
+<li>Savanne
 <li>15
 <li>3, namelijk: Zoogdier, Vogel, Reptiel
 <li>muizen en ratten</li>
 <li>een lijst</li>
-
 </ol>
 
 
-<h3 id="opgave164">Opdracht 16.4 Werken met de geneste dictionary "De dierentuin"</h3>
 
+<h3 id="opgave1612">Opdracht 16.1.2 Gegevens in `dierentuin` printen</h3>
 <pre class="python">
 dierentuin = {
     "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
@@ -69,46 +40,167 @@ dierentuin = {
 
 #a: Print de verblijf over de dierentuin
 print("Alle informatie over de dierentuin:", dierentuin)
+</pre>
+
+
+<h3 id="opgave1621">Opdracht 16.2.1: Gegevens uit `dierentuin` printen</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3}
+}
 
 #b: Print alle informatie over de Pinguïn
 print("Alle informatie over de Pinguïn:", dierentuin["Pinguïn"])
-
 #c: Print de verblijf van de Pinguïn 
-print("De verblijf van de Pinguïn is:", dierentuin["Pinguïn"]["verblijf"])
+print("Het verblijf van de Pinguïn is:", dierentuin["Pinguïn"]["verblijf"])
+</pre>
 
-#d: Pas het aantal Pythons aan naar 4
+
+<h3 id="opgave1631">Opdracht 16.3.1 Aantal inwoners van Berlijn aanpassen</h3>
+<pre class="python">
+steden = {
+    "Amsterdam":{"land": "Nederland", "inwoners": 921000},
+    "Parijs": {"land": "Frankrijk", "inwoners": 2148000},
+    "Berlijn": {"land": "Duitsland", "inwoners": 3769000},
+}
+
+steden["Berlijn"]["land"] = "DL"
+print(steden["Berlijn"]["land"])   # Geeft "DL"
+
+</pre>
+
+
+<h3 id="opgave1632">Opdracht 16.3.2: Er is een Python geboren</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3}
+}
+# Pas het aantal Pythons aan naar 4
 dierentuin["Python"]["aantal"] = 4
 print(dierentuin)
 
-#e: Voeg een Olifant toe
+</pre>
+
+
+
+<h3 id="opgave1641">Opdracht 16.4.1 Olifant toevoegen</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3}
+}
+
+
+#a: Voeg olifant toe
 dierentuin["Olifant"] = {"soort": "Zoogdier", "verblijf": "Savanne",  "dieet": ["planten", "fruit", "bladeren"],
         "aantal": 6}
+
+#b: Print de geneste dictionary met informatie over de Olifant;
+print(dierentuin["Olifant"])
+
+#c: Print het aantal Olifanten dat er zijn;
+print(dierentuin["Olifant"]["aantal"])
+
+#d: Print alle informatie over het dierentuin.
 print(dierentuin)
+</pre>
 
 
-#f: Druk de gegevens van alle dieren (netjes) af
+<h3 id="opgave1651">Opdracht 16.5.1 Olifant verwijderen</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne",  "dieet": ["planten", "fruit", "bladeren"],
+        "aantal": 6}
+}
+
+del dierentuin["Olifant"]
+print(dierentuin)   
+</pre>
+
+
+
+<h3 id="opgave1661">Opdracht 16.6.1 Aantal diersoorten tellen</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
+
+print("Er zijn", len(dierentuin), "verschillende diersoorten in de dierentuin.")
+</pre>
+
+<h3 id="opgave1671">16.7.1 Opdracht geneste dictionary doorlopen met een for-loop</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3}
+}
+
+
+# Druk de informatie van alle dieren (netjes) af
 print("Alle dieren:")
 for dier, gegevens in dierentuin.items():
     print(dier, "is van het soort", gegevens['soort'], "leeft in", gegevens['verblijf'], "en er zijn er", gegevens['aantal'], "van.")
-
-
-
 </pre>
-<!--
-#f: Doorloopt de dictionary met een for-loop en vindt het oudste dier
-oudste_dier = ""
-max_leeftijd = 0
-for dier, eigenschappen in dieren.items():
-    if eigenschappen["leeftijd"] > max_leeftijd:
-        max_leeftijd = eigenschappen["leeftijd"]
-        oudste_dier = dier
+
+<h3 id="opgave1681">Opdracht 16.8.1 Zoeken of er een waarde is die aan een voorwaarde voldoet</h3>
+<pre class="python">
+steden = {
+    "Amsterdam": {"land": "Nederland", "inwoners": 921000, "werelddeel": "Europa"},
+    "Buenos Aires": {"land": "Argentinië", "inwoners": 2890000, "werelddeel": "Zuid-Amerika"},
+    "Rome": {"land": "Italië", "inwoners": 2873000, "werelddeel": "Europa"},
+    "São Paulo": {"land": "Brazilië", "inwoners": 12330000, "werelddeel": "Zuid-Amerika"},
+    "Tokyo": {"land": "Japan", "inwoners": 13960000, "werelddeel": "Azië"}
+}
+
+gevonden = False	#logische vlag: waarde nu nog niet gevonden
+
+for stad_info in steden.values():
+    if stad_info["inwoners"] > 2000000:  #als de waarde aan de voorwaarde voldoet
+        gevonden = True # zet de vlag op True
+
+if gevonden == True: # als de vlag op True staat
+	print("Stad met meerr dan 2 miljoen inwoners gevonden!") # print bevestiging dat waarde is gevonden
+else:
+	print("Geen stad met meer dan 2 miljoen inwoners gevonden.") # of print dat de waarde niet is gevonden
+</pre>
 
 
-print("Het oudste dier is " + oudste_dier + " met " + str(max_leeftijd) + " jaar.")
--->
+<h3 id="opgave1682">Opdracht 16.8.2 Check op kleine groepen</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3}
+}
+
+gevonden = False	#logische vlag: waarde nu nog niet gevonden
+
+for dier_info in dierentuin.values():
+    if dier_info["aantal"] <= 3:  #als de waarde aan de voorwaarde voldoet
+		gevonden = True # zet de vlag op True
+if gevonden == True: # als de vlag op True staat
+	print("Diersoort met 3 of minder gevonden!") # print bevestiging dat waarde is gevonden
+else:
+	print("Geen diersoort met 3 of minder gevonden.") # of print dat de waarde niet is gevonden
+</pre>
 
 
-<h3 id="opgave165">Opdracht 16.5 Miljoenensteden</h3>
+
+
+<h3 id="opgave1691">Opdracht 16.9.1 Miljoenensteden</h3>
 <pre class="python">
 steden = {
     "Amsterdam": {"land": "Nederland", "inwoners": 921000, "werelddeel": "Europa"},
@@ -125,7 +217,7 @@ for stad, gegevens in steden.items():               # loop door de dictionary en
 print("Lijst met miljoenensteden:", miljoenenstedenLijst)
 </pre>
 
-<h3 id="opgave166">Opdracht 16.6 Lijst van alle dieren in de Savanne</h3>
+<h3 id="opgave1692">Opdracht 16.9.2 Lijst van alle dieren in de Savanne</h3>
 <pre class="python">
 dierentuin = {
     "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
@@ -145,7 +237,7 @@ print(savanneLijst)
 
 
 
-<h3 id="opgave167">Opdracht 16.7 Lijst van alle dieren die vlees eten</h3>
+<h3 id="opgave1693">Opdracht 16.9.3 Lijst van alle dieren die vlees eten</h3>
 <pre class="python">
 
 dierentuin = {
@@ -165,9 +257,35 @@ print(vleesDiet)
 </pre>
 
 
+<h3 id="opgave1694">Opdracht 16.9.4 Lijst van alle benodigde eten</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
 
 
-<h3 id="opgave168">Opdracht 16.8 Aantal Zuid-Amerikaanse steden</h3>
+voedingLijst = []                                 # maak een lege lijst
+for dier, gegevens in dierentuin.items():        # loop door de dictionary en haal de gegevens voor elk dier op
+    voedingLijst.append(gegevens["dieet"])                   
+print(voedingLijst)
+
+OF
+
+
+voedingLijst = []                                 # maak een lege lijst
+for dier, gegevens in dierentuin.items():        # loop door de dictionary en haal de gegevens voor elk dier op             
+    voedingLijst += gegevens["dieet"]     
+print(voedingLijst)
+</pre>
+
+
+
+
+<h3 id="opgave16101">Opdracht 16.10.1 Aantal Zuid-Amerikaanse landen tellen</h3>
 <pre class="python">
 steden = {
     "Amsterdam": {"land": "Nederland", "inwoners": 921000, "werelddeel": "Europa"},
@@ -186,9 +304,8 @@ print("Aantal Zuid-Amerikaanse steden is:", aantal_ZuidAmerikaanse_steden)
 </pre>
 
 
-<h3 id="opgave169">Opdracht 16.9 Aantal soorten in de poolgebied</h3>
+<h3 id="opgave16102">Opdracht 16.10.2 Aantal soorten in het Poolgebied</h3>
 <pre class="python">
-
     dierentuin = {
         "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
         "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
@@ -207,6 +324,155 @@ print("Aantal Zuid-Amerikaanse steden is:", aantal_ZuidAmerikaanse_steden)
 </pre>
 
 
+<h3 id="opgave16111">16.11.1 Opdracht logische operatoren <code>and</code> en <code>or</code></h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
+for diersoort, gegevens in dierentuin.items():	#voor elk dier in de dictionary dierentuin
+    if gegevens["soort"] == "Zoogdier" and gegevens["verblijf"] == "Savanne":	#dieren die zoogdieren zijn EN in de savanne verblijven
+        print(diersoort, "is een zoogdier EN verblijft in de savanne.")
+
+for diersoort, gegevens in dierentuin.items():	#voor elk dier in de dictionary dierentuin
+    if gegevens["soort"] == "Zoogdier" or gegevens["verblijf"] == "Savanne":	#dieren die zoogdieren zijn OF in de savanne verblijven
+        print(diersoort, "is een zoogdier OF verblijft in de savanne.")
+</pre>
+
+
+<h3 id="opgave16121">Opdracht 16.12.1 Zoogdieren zoeken met combinaties van AND en OR</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
+
+#a
+for diersoort, gegevens in dierentuin.items():	#voor elk dier in de dictionary dierentuin
+    if gegevens["soort"] == "Zoogdier" or (gegevens["verblijf"] == "Savanne" and gegevens["aantal"] > 3 ):	#dieren die zoogdieren zijn OF (in de savanne verblijven EN meer dan 3 exemplaren)
+        print(diersoort, "is een zoogdier OF ( verblijft in de savanne EN er zijn meer dan 3 exemplaren ).")
+
+#b
+for diersoort, gegevens in dierentuin.items():	#voor elk dier in de dictionary dierentuin
+    if (gegevens["soort"] == "Zoogdier" or gegevens["verblijf"] == "Savanne") and gegevens["aantal"] > 3:    #dieren die (zoogdieren zijn OF in de savanne verblijven) EN meer dan 3 exemplaren
+        print(diersoort, "is een ( zoogdier OF verblijft in de savanne ) EN er zijn meer dan 3 exemplaren.")
+</pre>       
+c.    
+Bij de tweede wordt niets afgedrukt omdat aan de eerste eis alleen Leeuw, Olifant en IJsbeer voldaan, maar van geen van die zijn er meer dan 3 exemplaren      
+       
+
+<h3 id="opgave16122">Opdracht 16.12.2 Zoogdieren zoeken met combinaties van AND, OR en NOT</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
+
+
+#A and not (B or C)
+for dier, gegevens in dierentuin.items():	#voor elk dier in de dictionary dierentuin
+    if gegevens["soort"] == "Zoogdier" and not (gegevens["verblijf"] == "Savanne" or gegevens["verblijf"] == "Terrarium"):    #dieren die zoogdieren zijn en niet in de savanne of terrarium verblijven
+        print(dier, "is een zoogdier en verblijft niet in de savanne of terrarium.")
+# Verklaring: Er zijn drie zoogdieren (Leeuw, Olifant, IJsbeer), daarvan verblijft alleen de IJsbeer niet in de savanne of terrarium
+
+#not A or (b and not C)
+for dier, gegevens in dierentuin.items():	#voor elk dier in de dictionary dierentuin
+    if not gegevens["soort"] == "Zoogdier" or (gegevens["verblijf"] == "Savanne" and not gegevens["aantal"] < 3):       #dieren die niet zoogdieren zijn of in de savanne verblijven en niet minder dan 3 zijn
+        print(dier, "is geen zoogdier of verblijft in de savanne en er zijn niet minder dan 3.")
+# Verklaring: Er zijn 2 dieren die geen zoogdieren zijn (Pinguïn, Python), dus die voldoen. Daarnaast zijn er twee die in de savanne verblijven (Leeuw en Olifant) maar daarvan zijn er niet genoeg exemplaren.
+</pre>
+
+<h3 id="opgave16123">Opdracht 16.12.3: Zoek zoogdieren en vogels die geen vis eten</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
+
+
+for dier, gegevens in dierentuin.items():	#voor elk dier in de dictionary dierentuin
+    if (gegevens["soort"] == "Zoogdier" or gegevens["soort"] == "Vogel") and not "vis" in gegevens["dieet"] :
+        print(dier, "is een Zoogdier of een Vogel die geen vis eet")
+</pre>
+
+
+<h3 id="opgave16131">Opdracht 16.13.1 Totaal aantal dieren
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+totaal = 0
+for dier in dierentuin:
+    totaal += dierentuin[dier]["aantal"]
+
+print("Het totaal aantal dieren is:", totaal)
+</pre>
+
+
+<h3 id="opgave16141">16.14.1 Kleinst aantal exemplaren</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
+
+# Startwaarden instellen:
+# - min_aantal wordt op een heel hoog getal gezet, zodat elke echte waarde kleiner zal zijn
+# - dier_met_minste houdt bij van welk dier dit is
+min_aantal = float("inf")
+dier_met_minste = ""
+
+# Loop door elk dier en bijbehorende informatie in de dictionary
+for dier, info in dierentuin.items():
+    # Vergelijk het aantal met het huidige minimum
+    if info["aantal"] < min_aantal:
+        # Als dit dier minder exemplaren heeft, sla dat dan op
+        min_aantal = info["aantal"]
+        dier_met_minste = dier
+
+# Toon het resultaat netjes in een zin
+print("Het dier met het minste aantal is de", dier_met_minste, "met", min_aantal, "exemplaren.")
+</pre>
+
+
+
+<h3 id="opgave16142">16.14.2 Meeste exemplaren</h3>
+<pre class="python">
+# Startwaarden instellen:
+# - max_aantal wordt op 0 gezet, omdat elk dier minstens 1 exemplaar heeft
+# - dier_met_meeste houdt bij van welk dier dit is
+max_aantal = 0
+dier_met_meeste = ""
+
+# Loop door elk dier en bijbehorende informatie in de dictionary
+for dier, info in dierentuin.items():
+    # Vergelijk het aantal met het huidige maximum
+    if info["aantal"] > max_aantal:
+        # Als dit dier meer exemplaren heeft, sla dat dan op
+        max_aantal = info["aantal"]
+        dier_met_meeste = dier
+
+# Toon het resultaat netjes in een zin
+print("Het dier met het meeste aantal is de", dier_met_meeste, "met", max_aantal, "exemplaren.")
+</pre>
 
 <h3 id="opgaveaf161">Afsluitende opdracht 16.1</h3>
 
