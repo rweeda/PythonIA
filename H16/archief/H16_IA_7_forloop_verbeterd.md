@@ -35,10 +35,11 @@ dierentuin = {
 ```
 
 <p>Klik <a href="https://rweeda.github.io/PythonIA/docs/IA_H15_oplossingen.html#opgave1671">hier</a> voor een voorbeelduitwerking.</p>
+
+
 <!-- ANTWOORD
 # Druk de informatie van alle dieren (netjes) af
 print("Alle dieren:")
 for dier, gegevens in dierentuin.items():
     print(dier, "is van het soort", gegevens['soort'], "leeft in", gegevens['verblijf'], "en er zijn er", gegevens['aantal'], "van.")
-
 -->
