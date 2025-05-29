@@ -25,7 +25,10 @@ https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/r
 
 <p>Al deze bedrijven, programma’s en apps maken gebruik van zogeheten databases — en daar ga jij in deze cursus meer over leren. Een veelgebruikte vorm is de <strong>relationele database</strong>: een database die bestaat uit meerdere tabellen die met elkaar in verband staan. Dat betekent dat gegevens uit de ene tabel gekoppeld zijn aan gegevens in een andere tabel. Zo’n database wordt beheerd door een <em>Database Management System</em> (DBMS), een systeem dat zorgt dat de gegevens betrouwbaar en correct blijven en dat je ze makkelijk kunt opvragen wanneer je ze nodig hebt.</p>
 
-<p>Zo’n verzoek noem je een <strong>query</strong>, en daarvoor gebruik je een speciale vraagtaal: <strong>SQL</strong>, wat staat voor <em>Structured Query Language</em>. Dit is de standaardtaal om met relationele databases te werken. In deze module leer je werken met <strong>SQLite</strong> — een eenvoudige, lichtgewicht database — om SQL in de praktijk te gebruiken. Je leert hoe je gegevens kunt opvragen, invoeren en zelfs hoe je zelf tabellen aanmaakt.</p>
+<p>Zo’n verzoek noem je een <strong>query</strong>, en daarvoor gebruik je een speciale vraagtaal: <strong>SQL</strong>, wat staat voor <em>Structured Query Language</em>. Dit is de standaardtaal om met relationele databases te werken. In deze module leer je werken met <strong>SQLite</strong> — een eenvoudige, lichtgewicht database — om SQL in de praktijk te gebruiken. Je leert hoe je gegevens kunt opvragen, invoeren en zelfs hoe je zelf tabellen aanmaakt. De context is Danilo's Pizzzeria (<a
+href="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/DaniloIA_ERD.png"
+target="_blank">database structuur</a>).
+</p>
 
 <p>De inhoud van dit lesmateriaal is, met toestemming, deels overgenomen uit het lesmateriaal van <a href="https://co-teach.nl/">Co-Teach</a>.</p>
 
@@ -58,6 +61,7 @@ https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/r
 Je kunt je werk op je computer opslaan via 'Bestand' en vervolgens 'Bewaar notebook als...'. Je kunt je werk in de leeromgeving ook tussentijds opslaan of inleveren. Zie hiervoor 'Opslaan of inleveren' aan het einde van elk onderwerp.
 </p>
 
+<p>Er is een <a href="https://moodle.informatica-actief.nl/mod/url/view.php?id=84161">werkruimte</a> ingericht om query's uit te voeren op de database van Danilo's Pizzeria.</p>
 <!--
 
 ### Overzicht Onderwerp 1: Inleiding databases
@@ -168,17 +172,7 @@ In dit onderwerp:
 <p>Leerdoelen</p>
 
 In dit onderwerp:
-<ul> 
 
-<li>leer je <code>WHERE</code> te gebruiken om voorwaarden aan de opgehaalde informatie te stellen;</li>
-<li>leer je wiskundige operatoren gebruiken: '<', '<=', '>', '>=' en '<>';</li>
-<li>leer je zoeken met <code>LIKE</code> en joker '%';
-<li>leer je logische operatoren <code>AND</code>, <code>OR</code>, <code>NOT</code> te gebruiken, en combinaties daarvan;
-
-<li>leer je gebruik te maken van commentaar;</li>
-<li>leer je nette queries te schrijven;</li>
-<li>leer je fouten op te sporen en op te lossen.</li>
-</ul>
 
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>

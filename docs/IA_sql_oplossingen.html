@@ -451,14 +451,7 @@ WHERE basispijs < 7.0; </code></pre>
 
 
 
- <h3 id="opgave2122">Afsluitende Opdracht 2.12.2 Toon gegevens van een specifieke pizza</h3>
-<pre><code class="language-sql">
-SELECT omschrijving, basisprijs
-FROM pizza
-WHERE naam = 'Quattro formaggi';
-</code></pre>
-
-<h3 id="opgave2123">Afsluitende Opdracht 2.12.3 Klanten in een specifieke plaats</h3>
+<h3 id="opgave3121">Afsluitende Opdracht 3.12.1 Klanten in een specifieke plaats</h3>
 <pre><code class="language-sql">
 SELECT klantnummer, naam, woonplaats
 FROM klant
@@ -467,15 +460,7 @@ WHERE woonplaats = 'Hengelo';
 
 
 
-<h3 id="opgave2125">Afsluitende Opdracht 2.12.5 Debuggen van een fout </h3> 
-<pre><code class="language-sql">
-SELECT wachtwoord
-FROM bezorger
-WHERE naam = 'Ronald Marbus';
-</code></pre>
-
-
-<h3 id="opgave2126">Afsluitende Opdracht 2.12.6 Debuggen en herschrijven van slordige query</h3>
+<h3 id="opgave3122">Afsluitende Opdracht 3.12.2 Debuggen en herschrijven van slordige query</h3>
 <pre><code class="language-sql">
 -- Er ontbreekt een komma tussen de kolommen.
 -- Er ontbreekt een puntkomma aan het eind.
@@ -485,7 +470,7 @@ WHERE basisprijs < 7;
 </code></pre>
 
 
-<h3 id="opgave3172">Afsluitende Opdracht 3.17.2 Alle goedkope pizza's met een 'C'</h3>
+<h3 id="opgave3123">Afsluitende Opdracht 3.12.3 Alle goedkope pizza's met een 'C'</h3>
 <pre><code class="language-sql">
 SELECT naam
 FROM pizza
@@ -493,8 +478,7 @@ WHERE naam LIKE 'C%' AND basisprijs <= 8.0;
 </code></pre>
 
 
-<h3 id="opgave3173">Afsluitende Opdracht 3.17.3 Dure salami</h3>
-
+<h3 id="opgave3124">Afsluitende Opdracht 3.12.4 Dure salami</h3>
 <pre><code class="language-sql">
 SELECT naam, basisprijs
 FROM pizza
@@ -502,7 +486,7 @@ WHERE basisprijs >= 9
   AND omschrijving LIKE '%salami%';
 </code></pre>
 
-<h3 id="opgave3174">Afsluitende Opdracht 3.17.4 Toon 3 pizza's zonder vlees, met een 'a' in de naam</h3>
+<h3 id="opgave3125">Afsluitende Opdracht 3.12.5 Toon 3 pizza's zonder vlees, met een 'a' in de naam</h3>
 <pre><code class="language-sql">
 SELECT naam, omschrijving
 FROM pizza
@@ -513,12 +497,7 @@ WHERE omschrijving NOT LIKE '%ham%'
 </code></pre>
 
 
-
-
-
-
-
-<h3 id="opgave3176">Afsluitende Opdracht 3.17.6 Pizza's met 'special' of duurder dan €10</h3>
+<h3 id="opgave3126">Afsluitende Opdracht 3.12.6 Pizza's met 'special' of duurder dan €10</h3>
 <pre><code class="language-sql">
 SELECT naam
 FROM pizza
@@ -527,11 +506,11 @@ WHERE omschrijving LIKE '%special%'
 </code></pre>
 
 
-<h3 id="opgave3177">Afsluitende Opdracht 3.17.7 Bezorgers met naam H maar die NIET met J begint</h3>
+<h3 id="opgave3127">Afsluitende Opdracht 3.12.7 Bezorgers met naam H maar die NIET met J begint</h3>
 <pre><code class="language-sql">
 SELECT naam AS bezorgernaam
 FROM bezorger
-WHERE naam LIKE '%H%' AND naam NOT LIKE 'J%'
+WHERE (naam LIKE 'H%' OR naam LIKE 'J%') AND naam NOT LIKE '%A%';
 </code></pre>
 
 
