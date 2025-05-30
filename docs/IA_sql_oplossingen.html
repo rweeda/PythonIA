@@ -882,8 +882,41 @@ GROUP BY bodemcode
 HAVING SUM(aantal) > 2000;    -- filter ná de GROUP BY
 </code></pre>
 
+<h3 id="opgave661">  Afsluitende Opdracht 6.6.1 Aantal bestellingen per bodem</h3>
+<pre><code class="language-sql">
+SELECT bodemcode, COUNT(*) AS aantal_besteld_per_bodem
+FROM besteldePizza
+GROUP BY bodemcode 
+ORDER BY aantal_besteld_per_bodem DESC;
+</code></pre>
 
+<h3 id="opgave662">  Afsluitende Opdracht 6.6.2 Bekijk hoe vaak een specifieke bodem is gebruikt</h3>
+<pre><code>
+SELECT bodemcode, COUNT(*) AS aantal_besteld
+FROM besteldepizza
+WHERE bodemcode = 2
+GROUP BY bodemcode
+HAVING COUNT(*) > 1
+ORDER BY aantal_besteld DESC
+LIMIT 1;
+</code></pre>
 
+<h3 id="opgave663">Afsluitende Opdracht 6.6.3 Totale aantal pizza’s per klant</h3>
+
+<pre><code class="language-sql">
+SELECT bestelling.klantnummer, SUM(besteldePizza.aantal)
+FROM bestelling
+JOIN besteldePizza ON bestelling.bestelcode = besteldePizza.bestelcode
+GROUP BY bestelling.klantnummer;
+</code></pre>
+
+<h3 id="opgave664">Afsluitende Opdracht 6.6.4 Meest bestelde pizzabodem</h3>
+SELECT bodemcode, COUNT(*) as aantal_besteld
+FROM besteldepizza
+GROUP BY bodemcode
+ORDER BY aantal_besteld DESC
+LIMIT 1;
+</code></pre>
 
 <h1>Onderwerp 7</h1>
 
