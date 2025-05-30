@@ -282,10 +282,11 @@ GROUP BY bestelcode;
 
 
 
-## GROUP BY HAVING
+## 3: GROUP BY HAVING
 
+<p>
 Met HAVING kun je de resultaten *na* het groeperen filteren.  Hiermee kun je voorwaarden stellen aan groepen, iets wat niet met WHERE kan (want WHERE werkt vóór het groeperen). In HAVING kan je groepsfuncties gebruiken, zoals COUNT(), AVG(), SUM(), MAX() en MIN().
-
+</p>
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 Voorbeeld. De volgende query toont alleen bodems die meer dan één keer zijn besteld. HAVING filtert op het aantal per groep.
@@ -323,16 +324,11 @@ HAVING COUNT(*) > 1;
 
 
 
-### Verwerkingsopdracht
+### Verwerkingsopdracht 6.3.1 Bestelde bodems
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
-Voorbeeld. De volgende query toont alleen bodems die meer dan één keer zijn besteld. HAVING filtert op het aantal per groep.
+Toon alleen bodems die meer dan één keer zijn besteld. Tip: Gebruik HAVING om te filteren op het aantal per groep.
 
-```sql
-SELECT bodemcode, COUNT(*) as aantal_besteld_per_bodem
-FROM besteldepizza
-GROUP BY bodemcode
-HAVING COUNT(*) > 1;
-```
+
 </td><td width="65%">
 <table border="1">
   <thead>
@@ -363,7 +359,20 @@ bezorgernummer
 </td></tr></table>
 
 
-### Verwerkingsopdracht Ervaren bezorgers
+<p>Bekijk <a
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave631"
+target="_blank">hier</a> de voorbeelduitwerking.</p>
+ <!--
+<pre><code class="language-sql">
+SELECT bodemcode, COUNT(*) as aantal_besteld_per_bodem
+FROM besteldepizza
+GROUP BY bodemcode
+HAVING COUNT(*) > 1;
+</code></pre>
+-->
+
+
+### Verwerkingsopdracht 6.3.2 Ervaren bezorgers
 
 
 
@@ -389,7 +398,7 @@ De manager wil weten welke bezorgers veel ervaring hebben. Een bezorger geldt al
     </table>
 </td></tr></table>
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave491"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave632"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
  <!--
 <pre><code class="language-sql">
@@ -401,7 +410,7 @@ HAVING COUNT(*) > 150;
 -->
 
 
-### Verwerkingsopdracht Bodems met meer dan 2000 bestellingen
+### Verwerkingsopdracht 6.3.3 Bodems met meer dan 2000 bestellingen
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 
 <p>Geef een overzicht van de bodems met meer dan 2000 bestellingen, zoals in het overzicht hiernaast.
@@ -430,7 +439,7 @@ Tip: tel het aantal bestellingen bodem en toon alleen de bodems die meer dan 200
 
 </td></tr></table>
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave491"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave633"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
  <!--
 <pre><code class="language-sql">
@@ -443,7 +452,7 @@ HAVING COUNT(*) > 2000;
 
 
 
-# Verschil tussen WHERE en HAVING
+## 4: Verschil tussen WHERE en HAVING
 Met zowel de WHERE als HAVING kun je een voorwaarde geven om gegevens te filteren. Er is een belangrijke verschil tussen WHERE en HAVING:
 <ul>
 <li>WHERE werkt op individuele rijen, en werkt dus *vóór* het groeperen met GROUP BY.
@@ -453,7 +462,7 @@ Met zowel de WHERE als HAVING kun je een voorwaarde geven om gegevens te filtere
 
 
 
-### Verwerkingsopdracht Verschil tussen WHERE en HAVING
+### Verwerkingsopdracht 6.4.1 Verschil tussen WHERE en HAVING
 
 <ol type="a">
 <li>Schrijf een query met WHERE die alleen bestellingen met bodemcode 1 is, zoals hieronder links te zien is;
@@ -524,7 +533,7 @@ Met zowel de WHERE als HAVING kun je een voorwaarde geven om gegevens te filtere
 
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave491"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave641"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
  <!--
 <ol type="a">
@@ -547,7 +556,7 @@ HAVING COUNT(*) > 1;</pre>
 </ol>
 -->
 
-### Verwerkingsopdracht Bodems die vaak zijn besteld (maar zonder kleine bestellingen)
+### Verwerkingsopdracht 6.4.2 Bodems die vaak zijn besteld (maar zonder kleine bestellingen)
 
 <p>Bij deze opdracht moet je bedenken welke voorwaarde je in de WHERE en welke in de HAVING moet gebruiken.</p>
 
@@ -582,7 +591,7 @@ De informatie komt uit tabel <i>besteldePizza</i>.
 
 </td></tr></table>
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave491"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave642"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
  <!--
 <pre><code class="language-sql">

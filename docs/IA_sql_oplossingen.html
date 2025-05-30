@@ -619,7 +619,7 @@ FROM bodem;
 
 
 
-<h3 id="opgave4121">Afsluitende Opdracht 4.12.1 De drie duurste pizza's
+<h3 id="opgave4121">Afsluitende Opdracht 4.12.1 De drie duurste pizza's</h3>
 <pre><code class="language-sql">
 SELECT naam, formaatcode, basisprijs
 FROM pizza
@@ -627,7 +627,7 @@ ORDER BY basisprijs DESC
 LIMIT 3;
 </code></pre>
 
-<h3 id="opgave4122">Afsluitende Opdracht 4.12.2 Vijf goedkoopste pizza's
+<h3 id="opgave4122">Afsluitende Opdracht 4.12.2 Vijf goedkoopste pizza's</h3>
 <pre><code class="language-sql">
 SELECT naam, basisprijs
 FROM pizza
@@ -638,7 +638,7 @@ LIMIT 5;
 
 
 
-<h3 id="opgave4123">Afsluitende Opdracht 4.12.3 Gemiddelde prijs
+<h3 id="opgave4123">Afsluitende Opdracht 4.12.3 Gemiddelde prijs</h3>
 <pre><code class="language-sql">
 SELECT avg(basisprijs) AS gemiddelde_prijs_zonder_ham
 From pizza
@@ -652,21 +652,21 @@ FROM klant
 WHERE telefoon NOT LIKE '06%';
 </code></pre>
 
-<h3 id="opgave4125">Afsluitende Opdracht 4.12.5 Aantal normale pizza's
+<h3 id="opgave4125">Afsluitende Opdracht 4.12.5 Aantal normale pizza's</h3>
 <pre><code class="language-sql">
 SELECT COUNT(pizzacode) AS aantal
 FROM pizza
 WHERE basisprijs >= 7 AND basisprijs <= 10;
 </code></pre>
 
-<h3 id="opgave4126">Afsluitende Opdracht 4.12.6 Totale toeslagen
+<h3 id="opgave4126">Afsluitende Opdracht 4.12.6 Totale toeslagen</h3>
 <pre><code class="language-sql">
 SELECT SUM(plusprijs) AS totaal_toeslagen
 FROM formaat
 WHERE plusprijs > 1;
 </code></pre>
 
-<h3 id="opgave4127">Afsluitende Opdracht 4.12.7
+<h3 id="opgave4127">Afsluitende Opdracht 4.12.7</h3>
 <pre><code class="language-sql">
 SELECT max(basisprijs) AS duurste
 FROM pizza
@@ -682,7 +682,7 @@ A (<em>klant</em> en <em>bestelling</em>).<p> Toelichting: De tabel <em>bestelli
 
 <h3 id="opgave521">Verwerkingsopdracht 5.2.1 Nut van een JOIN</h3>
 
-C. Omdat de naam van de pizza niet in tabel <i>besteldepizza</i> staat
+C. Omdat de naam van de pizza niet in tabel <i>besteldepizza</i> staat.
 
 
 <h3 id="opgave522">Verwerkingsopdracht 5.2.2 BesteldePizza, besteldatum en bezorgtijd</h3>
@@ -789,7 +789,7 @@ LIMIT 10;
 
 
 
-### Verwerkingsopdracht 6.2.1 Bestelde pizzasoorten
+<h3 id="opgave621"> Verwerkingsopdracht 6.2.1 Bestelde pizzasoorten</h3>
 
 <pre><code class="language-sql"> 
 SELECT pizzacode, AVG(aantal) AS gemiddeld_aantal
@@ -799,7 +799,7 @@ GROUP BY pizzacode;
 
 
 
-### Verwerkingsopdracht 6.2.2 Aantal bestellingen per bodemcode
+<h3 id="opgave622"> Verwerkingsopdracht 6.2.2 Aantal bestellingen per bodemcode</h3>
 
 <pre><code class="language-sql"> 
 SELECT bodemcode, COUNT(*) 
@@ -808,13 +808,78 @@ GROUP BY bodemcode;
 </code></pre>
 
 
-### Verwerkingsopdracht 6.2.3 Meest pizza's van één soort
+<h3 id="opgave623">Verwerkingsopdracht 6.2.3 Meest pizza's van één soort</h3>
 
 
 <pre><code class="language-sql">
 SELECT bestelcode, MAX(aantal) AS max_aantal
 FROM besteldePizza
 GROUP BY bestelcode;
+</code></pre>
+
+
+
+<h3 id="opgave631"> Verwerkingsopdracht 6.3.1 Bestelde bodems</h3>
+
+<pre><code class="language-sql">
+SELECT bodemcode, COUNT(*) as aantal_besteld_per_bodem
+FROM besteldepizza
+GROUP BY bodemcode
+HAVING COUNT(*) > 1;
+</code></pre>
+
+
+
+<h3 id="opgave632"> Verwerkingsopdracht 6.3.2 Ervaren bezorgers</h3>
+<pre><code class="language-sql">
+SELECT bezorgernummer
+FROM bestelling
+GROUP BY bezorgernummer
+HAVING COUNT(*) > 150;
+</code></pre>
+
+
+
+<h3 id="opgave633"> Verwerkingsopdracht 6.3.3 Bodems met meer dan 2000 bestellingen</h3>
+
+<pre><code class="language-sql">
+SELECT bodemcode, COUNT(*) AS aantal_bestellingen
+FROM besteldePizza
+GROUP BY bodemcode
+HAVING COUNT(*) > 2000;
+</code></pre>
+
+
+
+
+<h3 id="opgave641"> Verwerkingsopdracht 6.4.1 Verschil tussen WHERE en HAVING</h3>
+<ol type="a">
+<li>WHERE-filter op rij-niveau:<br><pre><code class="language-sql">
+SELECT * 
+FROM besteldepizza
+WHERE bodemcode = 1;
+</pre>
+<li>HAVING-filter op groep-niveau<br>
+<pre><code class="language-sql">
+SELECT bodemcode, COUNT(*) AS aantal
+FROM besteldepizza
+GROUP BY bodemcode
+HAVING COUNT(*) > 1;</pre>
+<li>Her verschil tussen WHERE en HAVING:
+<ul>
+<li>WHERE gebruik je als je rijen wilt uitsluiten voordat je gaat tellen of groeperen.
+<li>HAVING gebruik je als je groepen wilt filteren nadat je hebt geteld of iets hebt samengevat.
+</ul>
+</ol>
+
+<h3 id="opgave642"> Verwerkingsopdracht 6.4.2 Bodems die vaak zijn besteld (maar zonder kleine bestellingen)</h3>
+
+<pre><code class="language-sql">
+SELECT bodemcode, SUM(aantal) AS totaal_besteld
+FROM besteldePizza
+WHERE aantal > 1             -- filter op rij-niveau vóór de GROUP BY
+GROUP BY bodemcode
+HAVING SUM(aantal) > 2000;    -- filter ná de GROUP BY
 </code></pre>
 
 
@@ -851,28 +916,17 @@ FROM formaat;
 </code></pre>
 
 
-### Verwerkingsopdracht 7.2.2 Verwijder de Pazza pizza
-<pre><code class="language-sql">
--- verwijderen:
-DELETE FROM pizza
+<h3 id="opgave722"> Verwerkingsopdracht 7.2.2 Verwijder de Pazza pizza</h3>
+<pre><code class="language-sql"> 
+UPDATE pizza
+SET basisprijs = 8.00
 WHERE naam = "Pazza";
 -- check:
 SELECT *
 FROM pizza;
 </code></pre>
 
-
-### Verwerkingsopdracht 7.2.2 Verwijder de Pazza pizza
-<pre><code class="language-sql"> 
-UPDATE pizza
-SET basisprijs = 8.00
-WHERE naam = "Margherita";
--- check:
-SELECT *
-FROM pizza;
-</code></pre>
-
-### Verwerkingsopdracht 7.3.1 Pas de prijs van een pizza aan
+<h3 id="opgave731"> Verwerkingsopdracht 7.3.1 Pas de prijs van een pizza aan</h3>
 <pre><code class="language-sql"> 
 UPDATE pizza
 SET basisprijs = 8.00
@@ -880,7 +934,7 @@ WHERE naam = "Margherita";
 </code></pre>
 
 
-### Verwerkingsopdracht 7.4.1 Nieuwe tabel kortingsbonnen aanmaken
+<h3 id="opgave741"> Verwerkingsopdracht 7.4.1 Nieuwe tabel kortingsbonnen aanmaken</h3>
 <ol type="a">
 <li>
 <pre><code class="language-sql">
@@ -898,7 +952,7 @@ Als de code geen foutmelding geeft, maar wel een lege tabel oplevert, dan is het
 
 
 
-### Verwerkingsopdracht 7.5.1 Verwijder tabel bodem
+<h3 id="opgave751"> Verwerkingsopdracht 7.5.1 Verwijder tabel bodem</h3>
 <ol type="a">
 <li>
 <pre><code class="language-sql">
@@ -915,19 +969,19 @@ FROM bodem;-- ophalen lukt niet omdat de tabel in de vorige stap verwijderd is.
 
 
 
-### Verwerkingsopdracht 7.6.1 Kolom geboortedatum toevoegen
+<h3 id="opgave761"> Verwerkingsopdracht 7.6.1 Kolom geboortedatum toevoegen</h3>
 <pre><code class="language-sql">
 ALTER TABLE klant
 ADD geboortedatum TEXT;
 </code></pre>
 
-### Verwerkingsopdracht 7.7.1 Kolom hernoemen naar klantnaam
+<h3 id="opgave771"> Verwerkingsopdracht 7.7.1 Kolom hernoemen naar klantnaam</h3>
 <pre><code class="language-sql">
 ALTER TABLE klant
 RENAME COLUMN naam TO klantnaam;
 </code></pre>
 
-### Verwerkingsopdracht 7.8.1 Tabel hernoemen naar grootte
+<h3 id="opgave781"> Verwerkingsopdracht 7.8.1 Tabel hernoemen naar grootte</h3>
 <pre><code class="language-sql">
 ALTER TABLE formaat
 RENAME TO grootte;
@@ -936,7 +990,7 @@ RENAME TO grootte;
 
 
 
-### Verwerkingsopdracht 7.10.1 Foreign keys bij Danilo's Pizzeria
+<h3 id="opgave7101"> Verwerkingsopdracht 7.10.1 Foreign keys bij Danilo's Pizzeria</h3>
 <ol type="a">
 <li>Tabel <i>besteldepizza</i> heeft vier foreign keys, namelijk:
 	<ol><li><b>bestelcode</b> uit tabel <i>bestelling</i> 
@@ -947,13 +1001,13 @@ RENAME TO grootte;
 <li>Tabel <i>formaat</i> heeft <b>geen</b> foreign key. Die heeft een primary key <b>formaatcode</b> die vanuit tabel <i>besteldePizza</i> als foreign key gebruikt wordt, maar die verwijst zelf niet naar een ander tabel en heeft dus geen foreign key.
 </ol>
 
-### Verwerkingsopdracht 7.11.1 Foreign keys bij Danilo's Pizzeria
+<h3 id="opgave7111"> Verwerkingsopdracht 7.11.1 Foreign keys bij Danilo's Pizzeria</h3>
 <ol type="a">
 <li>Tabel <i>besteldePizza</i> heeft een kolom formaatcode. Daarvoor komen de gegevens uit tabel <i>formaat</i> en kolom <b>formaatcode</b>.
 <li>De foreign key verwijst naar kolom <b>omschrijving</b> uit tabel <i>formaat</i>. Dit is niet goed, want het moet verwijzen naar de primary key van tabel <i>formaat</i>, en dus <b>formaatcode</b>.
 </ol>
 
-### Verwerkingsopdracht 7.11.2 Foreign key
+<h3 id="opgave7112"> Verwerkingsopdracht 7.11.2 Foreign key</h3>
 
 De code voor de ontbrekende foreign key is:
 <code>FOREIGN KEY(klantnummer) REFERENCES klant(klantnummer)</code>
@@ -973,6 +1027,5 @@ CREATE TABLE  `bestelling` (
   FOREIGN KEY(klantnummer) REFERENCES klant(klantnummer)
 ) ;
 </code></pre>
--->
 </body>
 </html>
