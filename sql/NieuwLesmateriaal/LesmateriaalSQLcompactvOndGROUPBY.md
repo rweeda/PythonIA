@@ -4,196 +4,10 @@
 
 
 
-## Rekenen
-
-Je kunt rekenen met de waarden in een kolom.  Hiervoor gebruik je `+`, `-`, `*`, `/` in de SELECT-statement.
-
-
-
-| Symbool | Betekenis             | Voorbeeld                         | Uitleg                                |
-|---------|------------------------|-----------------------------------|----------------------------------------|
-| `+`     | Optellen               | `basisprijs + 1.00`               | Tel 1 euro bij de basisprijs op        |
-| `-`     | Aftrekken              | `basisprijs - 0.50`               | Trek 50 cent van de basisprijs af      |
-| `*`     | Vermenigvuldigen       | `basisprijs * 2`                  | Verdubbel de prijs                     |
-| `/`     | Delen                  | `basisprijs / 2`                  | Deel de prijs door twee                |
-
-
-
-<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
-<p>Voorbeeld. De query hieronder telt bij de <b>basisprijs</b> een prijsverhoging van €1,00.</p>
-
-```sql
-SELECT naam, basisprijs + 1.00 AS totaalprijs
-FROM pizza;
-```
-</td><td width="65%">
-
-
-<table border="1">
-  <thead>
-    <tr>
-      <th>naam</th>
-      <th>basisprijs</th>
-      <th>totaalprijs</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Margherita</td>
-      <td>6</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>Napoletana</td>
-      <td>7.5</td>
-      <td>8.5</td>
-    </tr>
-    <tr>
-      <td>Prosciutto</td>
-      <td>7.5</td>
-      <td>8.5</td>
-    </tr>
-    <tr>
-      <td colspan="3" style="text-align:center;">...</td>
-    </tr>
-    <tr>
-      <td>Combinazione</td>
-      <td>10.5</td>
-      <td>11.5</td>
-    </tr>
-  </tbody>
-</table>
-
-
-</td></tr></table>
-
-
-
-### Verwerkingsopdracht Prijs met bezorgkosten
-
-
-<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
-
-Toon per pizza de basisprijs, een bezorgtoeslag van €0,50, en het totaalbedrag.
-</td><td width="65%">
-
-<table border="1">
-  <thead>
-    <tr>
-      <th>naam</th>
-      <th>basisprijs</th>
-      <th>totaalprijs</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Margherita</td>
-      <td>6</td>
-      <td>6.5</td>
-    </tr>
-    <tr>
-      <td>Napoletana</td>
-      <td>7.5</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>Prosciutto</td>
-      <td>7.5</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td colspan="3" style="text-align:center;">...</td>
-    </tr>
-    <tr>
-      <td>Combinazione</td>
-      <td>10.5</td>
-      <td>11</td>
-    </tr>
-  </tbody>
-</table>
-
-</td></tr></table>
-
-
-<p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave491"
-target="_blank">hier</a> de voorbeelduitwerking.</p>
- <!-- ANTWOORD:
-<pre><code class="language-sql"> 
-SELECT naam, basisprijs, basisprijs + 0.50 AS totaalprijs
-FROM pizza;
-</code></pre>
--->
-
-
-### Verwerkingsopdracht Totaalprijs per bestelling 
-
-<p>Stel dat elke pizza €8,00 kost (ongeacht het soort of formaat). We willen de totaalprijs per bestelling zien.</p>
-
-
-<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
-Toon een overzicht zoals hiernaast, met per bestelling het <b>aantal</b> (uit tabel <i>besteldePizza</i>) en de berekende <b>totaalprijs</b>, waarbij je het aantal vermenigvuldigt met 8.00.
-</td><td width="65%">
-<table border="1">
-  <thead>
-    <tr>
-      <th>aantal</th>
-      <th>totaalprijs</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>8</td></tr>
-    <tr><td>1</td><td>8</td></tr>
-    <tr><td>1</td><td>8</td></tr>
-    <tr><td>3</td><td>24</td></tr>
-    <tr><td>2</td><td>16</td></tr>
-    <tr><td colspan="2" style="text-align:center;">...</td></tr>
-    <tr><td>1</td><td>8</td></tr>
-  </tbody>
-</table>
-
-</td></tr></table>
-
-
-<p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave491"
-target="_blank">hier</a> de voorbeelduitwerking.</p>
- <!-- ANTWOORD:
-<pre><code class="language-sql"> 
-SELECT 
-  aantal,
-  aantal * 8.00 AS totaalprijs
-FROM besteldePizza;
-</code></pre>
--->
-
-
-
-
-### Verwerkingsopdracht 
-
-
-<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
-
-</td><td width="65%">
-
-</td></tr></table>
-
-
-<p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave491"
-target="_blank">hier</a> de voorbeelduitwerking.</p>
- <!-- ANTWOORD:
-<pre><code class="language-sql"> 
-
-</code></pre>
--->
-
-
 
 
 ## Volgorde van commando's voor het ophalen van informatie
-<p>In dit onderwerp leer je nieuwe commando's: GROUP BY en HAVING.</p>
+<p>In dit onderwerp leer je twee nieuwe commando's: GROUP BY en HAVING.</p>
 <p>Er zijn zeven commando's die je kunt gebruken om informatie op te halen. De commando’s zijn:</p>
 
 
@@ -224,7 +38,7 @@ LIMIT
 # GROUP BY
 
 <p>
-GROUP BY groepeert rijen die dezelfde waarde hebben in één of meer kolommen. Daarna gebruik je functies zoals COUNT(), SUM(), AVG() of MAX() op elke groep (deze heb je in <a href="https://moodle.informatica-actief.nl/course/view.php?id=1193#section-7">onderwerp 4</a> geleerd). Tussen haakjes geef je aan op welk kolom de functie moet worden toegepast.<br>
+GROUP BY groepeert rijen die dezelfde waarde hebben in één of meer kolommen. Daarna kun je functies zoals COUNT(), SUM(), AVG()  MAX() of MIN() (deze heb je in <a href="https://moodle.informatica-actief.nl/course/view.php?id=1193#section-7">onderwerp 4</a> geleerd) <b>per groep</b> toepassen, in plaats van op de hele tabel. Tussen haakjes geef je aan op welk kolom de functie moet worden toegepast.<br>
 
 Bij GROUP BY staat vaak in de vraag het wordt 'per'. Bijvoorbeeld, hoeveel 'per' bestelling, of 'per klant'.
 </p>
@@ -470,7 +284,7 @@ GROUP BY bestelcode;
 
 ## GROUP BY HAVING
 
-Om alleen bepaalde gegevens te tonen *nadat* je een GROUP BY gebruikt, kun je gebruik maken van HAVING. Deze werkt op waarden zoals `COUNT(*)`, `AVG()`, `SUM()`...
+Met HAVING kun je de resultaten *na* het groeperen filteren.  Hiermee kun je voorwaarden stellen aan groepen, iets wat niet met WHERE kan (want WHERE werkt vóór het groeperen). In HAVING kan je groepsfuncties gebruiken, zoals COUNT(), AVG(), SUM(), MAX() en MIN().
 
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
@@ -509,29 +323,80 @@ HAVING COUNT(*) > 1;
 
 
 
-### Opdracht
-Toon alleen combinaties van bodemcode en omschrijving die meer dan 2 keer voorkomen.
+### Verwerkingsopdracht
+<table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
+Voorbeeld. De volgende query toont alleen bodems die meer dan één keer zijn besteld. HAVING filtert op het aantal per groep.
 
-| bodemcode | omschrijving   | aantal |
-| --------- | -------------- | ------ |
-| 2         | American style | 3      |
-
-
-
-SELECT bodemcode, omschrijving, COUNT(*) AS aantal
+```sql
+SELECT bodemcode, COUNT(*) as aantal_besteld_per_bodem
 FROM besteldepizza
-GROUP BY bodemcode, omschrijving
-HAVING COUNT(*) > 2;
+GROUP BY bodemcode
+HAVING COUNT(*) > 1;
+```
+</td><td width="65%">
+<table border="1">
+  <thead>
+    <tr>
+      <th>bodemcode</th>
+      <th>aantal_besteld_per_bodem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2788</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2905</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>140</td>
+    </tr>
+  </tbody>
+</table>
+</td></tr></table>
+bezorgernummer
+3
+
+</td></tr></table>
+
+
+### Verwerkingsopdracht Ervaren bezorgers
+
 
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
+De manager wil weten welke bezorgers veel ervaring hebben. Een bezorger geldt als "ervaren" als hij of zij meer dan 150 bestellingen heeft bezorgd. Toon het overzicht zoals hiernaast.
 </td><td width="65%">
+ <table border="1">
+        <thead>
+            <tr>
+                <th>Bezorgernummer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>0</td></tr>
+            <tr><td>2</td></tr>
+            <tr><td>3</td></tr>
+            <tr><td>4</td></tr>
+            <tr><td>5</td></tr>
+            <tr><td>6</td></tr>
+            <tr><td>7</td></tr>
+            <tr><td>8</td></tr>
+        </tbody>
+    </table>
 </td></tr></table>
 <p>Bekijk <a
 href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave491"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
  <!--
 <pre><code class="language-sql">
+SELECT bezorgernummer
+FROM bestelling
+GROUP BY bezorgernummer
+HAVING COUNT(*) > 150;
 </code></pre>
 -->
 
@@ -579,9 +444,9 @@ HAVING COUNT(*) > 2000;
 
 
 # Verschil tussen WHERE en HAVING
-Er is een verschil tssen WHERE en HAVING:
+Met zowel de WHERE als HAVING kun je een voorwaarde geven om gegevens te filteren. Er is een belangrijke verschil tussen WHERE en HAVING:
 <ul>
-<li>WHERE werkt op individuele rijen.
+<li>WHERE werkt op individuele rijen, en werkt dus *vóór* het groeperen met GROUP BY.
 <li>HAVING werkt op een groep gegevens, dus *na* een GROUP BY.
 </ul>
 
@@ -732,9 +597,9 @@ HAVING SUM(aantal) > 2000;    -- filter ná de GROUP BY
 
 ## Samenvatting
 <ul>
-<li>Je kunt rekenen met de waarden in een kolom, hiervoor gebruik je `+`, `-`, `*`, `/` in de SELECT-statement.
 <li>De GROUP BY groepeert rijen met dezelfde waarden in een kolom zodat groepsfuncties zoals SUM(), COUNT() of MAX() daarop kunnen worden toegepast.
 <li>De HAVING filtert de groepen na een GROUP BY;
+<li>De WHERE filtert vóór het groeperen;
 <li>Hieronder staat de volgorde waarin de SQL commando's moeten staan:
 <p><img
 src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H1_commandos.png"

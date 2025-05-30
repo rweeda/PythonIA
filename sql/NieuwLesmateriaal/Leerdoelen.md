@@ -131,7 +131,7 @@ Je kunt je werk op je computer opslaan via 'Bestand' en vervolgens 'Bewaar noteb
 ### Overzicht ONDERWERP 2: SELECT - FROM
 
 
-<h4><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H2_dbase_tabel_icon.png" alt="Database en tabel"   role="presentation" class="img-responsive atto_image_button_right">Onderwerp 2: SELECT FROM</h4>
+<h4><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H2_dbase_tabel_icon.png" alt="Database en tabel"   role="presentation" class="img-responsive atto_image_button_right" width="200">Onderwerp 2: SELECT FROM</h4>
 
 
 
@@ -148,8 +148,9 @@ In dit onderwerp:
 <li>leer je het begip query voor een zoekvraag;</li>
 <li>leer je een <code>SELECT ... FROM ... </code> query te gebruiken om informatie uit een tabel te halen;</li>
 <li>leer je een kolom te hernoemen met <code>AS</code>;</li>
-
 <li>maak je kennis met meerdere tabellen uit de database van Danilo's pizzeria;</li>
+<li>leer je `+`, `-`, `*`, `/` rekenen met de waarden in een kolom.</li>
+
 
 </ul>
 
@@ -239,31 +240,54 @@ In dit onderwerp:
 </div>
 
 
-# Overzicht Onderwerp VERDIEPING: GROUP BY, HAVING
+# Overzicht Onderwerp VERDIEPING: GROUP BY en HAVING
 
-<h4><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/Dbase_CRUD.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right">Onderwerp 6</h4>
+<h4>Onderwerp 6: GROUP BY en HAVING<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/Dbase_CRUD.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right"></h4>
 
 
-<p>In dit onderwerp... </p>
+<p>In dit onderwerp komt GROUP BY aan bod. Daarmee kun je rijen met dezelfde waarden groeperen zodat je daarna groepsfuncties (zoals SUM, AVG, COUNT, MAX, en MIN - zie onderwerp 4) per groep kunt toepassen, in plaats van op de hele tabel.
+HAVING komt ook aan bod, waarmee je filtert op de resultaten na het groeperen. Hiermee kun je voorwaarden stellen aan groepen, iets wat niet met WHERE kan (want WHERE werkt vóór het groeperen).
+ </p>
+
+
+In dit onderwerp:
+<ul> 
+<li>leer je met GROUP BY rijen met gegevens die zelefde waarde hebben te groeperen;
+<li>leer je dat je na een GROUP BY, functies zoals COUNT(), SUM(), AVG(), MAX() op MIN() op elke groep kan gebruiken;
+<li>leer je dat HAVING na een GROUP BY de gegevens van een groep filtert;
+<li>leer je het verschil tussen een voorwaarde opgeven met WHERE en HAVING;
+<li>leer je `+`, `-`, `*`, `/` rekenen met de waarden in een kolom.
+</ul>
+
+
+ <div class="activity-item time-block">
+    <div class="fa fa-clock-o fa-3x"><br></div>
+    <br>1 uur
+</div>
+
+
+
+# Overzicht Onderwerp VERDIEPING: Rekenen
+
+<h4>Onderwerp 6: GROUP BY en HAVING<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/Dbase_CRUD.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right"></h4>
+
+
+<p> leer je hoe je kan rekenen met waarden in een kolom.
+ </p>
 
 <p>Leerdoelen</p>
 
 In dit onderwerp:
 <ul> 
 
-
-<li>leer je met `GROUP BY` rijen met gegevens te groeperen zodat je daarna functies kan gebruiken
-<li>leer je met `HAVING` ...
-
-<li>OPTIONEEL??? leer je rekenen met: `+`, `-`, `*`, `/`
+<li>leer je `+`, `-`, `*`, `/` rekenen met de waarden in een kolom.
 </ul>
 
 
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
-    <br>XX uur
+    <br>1 uur
 </div>
-
 
 ###
 <!--
