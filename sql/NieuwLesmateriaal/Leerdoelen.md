@@ -242,7 +242,7 @@ In dit onderwerp:
 
 # Overzicht Onderwerp VERDIEPING: GROUP BY en HAVING
 
-<h4>Onderwerp 6: GROUP BY en HAVING<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/Dbase_CRUD.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right"></h4>
+<h4>Onderwerp 6: GROUP BY en HAVING<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H6_groupby.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right" width="150"></h4>
 
 
 <p>In dit onderwerp komt GROUP BY aan bod. Daarmee kun je rijen met dezelfde waarden groeperen zodat je daarna groepsfuncties (zoals SUM, AVG, COUNT, MAX, en MIN - zie onderwerp 4) per groep kunt toepassen, in plaats van op de hele tabel.
@@ -266,28 +266,6 @@ In dit onderwerp:
 </div>
 
 
-
-# Overzicht Onderwerp VERDIEPING: Rekenen
-
-<h4>Onderwerp 6: GROUP BY en HAVING<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/Dbase_CRUD.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right"></h4>
-
-
-<p> leer je hoe je kan rekenen met waarden in een kolom.
- </p>
-
-<p>Leerdoelen</p>
-
-In dit onderwerp:
-<ul> 
-
-<li>leer je `+`, `-`, `*`, `/` rekenen met de waarden in een kolom.
-</ul>
-
-
- <div class="activity-item time-block">
-    <div class="fa fa-clock-o fa-3x"><br></div>
-    <br>1 uur
-</div>
 
 ###
 <!--

@@ -127,7 +127,7 @@ GROUP BY pizzacode;
 
 
 
-### Verwerkingsopdracht Bestelde pizzasoorten
+### Verwerkingsopdracht 6.2.1 Bestelde pizzasoorten
 
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
@@ -173,7 +173,7 @@ GROUP BY pizzacode;
 
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave491"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave621"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
  <!-- ANTWOORD:
 <pre><code class="language-sql"> 
