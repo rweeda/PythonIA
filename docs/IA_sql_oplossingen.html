@@ -786,6 +786,40 @@ LIMIT 10;
 </ol>
 
 
+
+
+
+### Verwerkingsopdracht 6.2.1 Bestelde pizzasoorten
+
+<pre><code class="language-sql"> 
+SELECT pizzacode, AVG(aantal) AS gemiddeld_aantal
+FROM besteldepizza
+GROUP BY pizzacode;
+</code></pre>
+
+
+
+### Verwerkingsopdracht 6.2.2 Aantal bestellingen per bodemcode
+
+<pre><code class="language-sql"> 
+SELECT bodemcode, COUNT(*) 
+FROM besteldepizza 
+GROUP BY bodemcode;
+</code></pre>
+
+
+### Verwerkingsopdracht 6.2.3 Meest pizza's van één soort
+
+
+<pre><code class="language-sql">
+SELECT bestelcode, MAX(aantal) AS max_aantal
+FROM besteldePizza
+GROUP BY bestelcode;
+</code></pre>
+
+
+
+
 <h1>Onderwerp 7</h1>
 
 

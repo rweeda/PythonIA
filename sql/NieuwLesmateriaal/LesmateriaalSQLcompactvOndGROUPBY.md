@@ -187,7 +187,7 @@ GROUP BY pizzacode;
 
 
 
-### Verwerkingsopdracht Aantal bestellingen per bodemcode
+### Verwerkingsopdracht 6.2.2 Aantal bestellingen per bodemcode
 
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
@@ -221,7 +221,7 @@ GROUP BY pizzacode;
 
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave491"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave622"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
  <!-- ANTWOORD:
 <pre><code class="language-sql"> 
@@ -233,7 +233,7 @@ GROUP BY bodemcode;
 
 
 
-### Verwerkingsopdracht Meest pizza's van één soort
+### Verwerkingsopdracht 6.2.3 Meest pizza's van één soort
 
 <table width="100%"><tr><td style="text-align:left; vertical-align:top; font-size:1.25rem;" width="35%">
 <p>Toon een overzicht van het grootst aantal pizza’s van één soort per bestelling (<b>bestelcode</b>), zoals hiernaast.</p>
@@ -269,7 +269,7 @@ GROUP BY bodemcode;
 
 
 <p>Bekijk <a
-href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave491"
+href="https://rweeda.github.io/PythonIA/docs/IA_sql_oplossingen.html#opgave623"
 target="_blank">hier</a> de voorbeelduitwerking.</p>
  <!-- ANTWOORD:
 <pre><code class="language-sql">
