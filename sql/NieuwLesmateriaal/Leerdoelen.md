@@ -1,5 +1,8 @@
 https://basthon.informatica-actief.nl/?from= https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/SQL_IA_5.5.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
 
+Werkt in 1.1 wel goed.
+<ol style="list-style-type: lower-alpha">
+
 Om de ol's als a b c te krijgen:
 <ul style="list-style: none; padding-left: 1em;">
   <li><b>a.</b></li>
