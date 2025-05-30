@@ -240,8 +240,19 @@ FROM klant;
 </code></pre>
 
 
+<h3 id="opgave271">Verwerkingsopdracht 2.7.1 Prijs met bezorgkosten</h3>
+<pre><code class="language-sql"> 
+SELECT naam, basisprijs, basisprijs + 0.50 AS totaalprijs
+FROM pizza;
+</code></pre>
 
-
+<h3 id="opgave272">Verwerkingsopdracht 2.7.2 Totaalprijs per bestelling</h3>
+<pre><code class="language-sql"> 
+SELECT 
+  aantal,
+  aantal * 8.00 AS totaalprijs
+FROM besteldePizza;
+</code></pre>
 
 
 <hr>
