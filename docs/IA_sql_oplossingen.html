@@ -31,7 +31,7 @@ een BSN.</li>
 
 <li>Voor Danilo's pizzeria zou een uniek nummer een klantnummer kunnen zijn.</li>
 
-<li>Zie tabel hieronder./li>
+<li>Zie tabel hieronder.</li>
 
 </ol>
 
@@ -107,7 +107,8 @@ TABEL: klanten <table border="1">
 <h3 id="opgave151">Waar vind je databases?</h3>
 Voorbeelden van databases zijn
 <ol style="list-style-type: lower-alpha">
-<ul>
+  <li>
+    <ul>
   <li>Webwinkel</li>
   <li>Social media platform</li>
   <li>Magister of SOMtoday</li>
@@ -119,6 +120,8 @@ Voorbeelden van databases zijn
   <li>Bij school database: gegevens over leerlingen zoals adres, cijfers en rooster</li>
  </ul> 
 </ul>
+
+
 <h3 id="opgave171">Verwerkingsopdracht 1.7.1 CRUD rechten van klanten bepalen</h3>
 <ol style="list-style-type: lower-alpha">
 <li>Acties:
@@ -232,8 +235,7 @@ FROM pizza;
 </code></pre>
 
 <h3 id="opgave251">Verwerkingsopdracht 2.5.1 Kolom hernoemen</h3> 
-<pre><code class="language-sql">
-SELECT naam AS bezorgernaam
+<pre><code class="language-sql">SELECT naam AS bezorgernaam
 FROM bezorger;
 </code></pre>
 
@@ -245,16 +247,12 @@ FROM klant;
 
 
 <h3 id="opgave271">Verwerkingsopdracht 2.7.1 Prijs met bezorgkosten</h3>
-<pre><code class="language-sql"> 
-SELECT naam, basisprijs, basisprijs + 0.50 AS totaalprijs
+<pre><code class="language-sql">SELECT naam, basisprijs, basisprijs + 0.50 AS totaalprijs
 FROM pizza;
 </code></pre>
 
 <h3 id="opgave272">Verwerkingsopdracht 2.7.2 Totaalprijs per bestelling</h3>
-<pre><code class="language-sql"> 
-SELECT 
-  aantal,
-  aantal * 8.00 AS totaalprijs
+<pre><code class="language-sql">SELECT aantal, aantal * 8.00 AS totaalprijs
 FROM besteldePizza;
 </code></pre>
 
@@ -271,8 +269,7 @@ FROM bestelling; </code></pre>
 
 
 <h3 id="opgave292">Afsluitende Opdracht 2.9.2 Menu</h3>
-<pre><code class="language-sql">
-SELECT omschrijving, naam
+<pre><code class="language-sql">SELECT omschrijving, naam
 FROM pizza;
 </code></pre>
 
@@ -323,32 +320,28 @@ WHERE naam = 'Ronald Marbus';
 
 
 <h3 id="opgave321">Verwerkingsopdracht 3.2.1 Dure pizza's</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
+<pre><code class="language-sql">SELECT naam, basisprijs
 FROM pizza
 WHERE basisprijs >= 9.50;
 </code></pre>
 
 
 <h3 id="opgave322">Verwerkingsopdracht 3.2.2: Geen 8 euro pizza's</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
+<pre><code class="language-sql">SELECT naam, basisprijs
 FROM pizza
 WHERE basisprijs <> 8;
 </code></pre>
 
 
 <h3 id="opgave331">Verwerkingsopdracht 3.3.1 Alle pizza's waar de letter 'a' in voorkomt</h3>
-<pre><code class="language-sql">
-SELECT naam
+<pre><code class="language-sql">SELECT naam
 FROM pizza
 WHERE naam LIKE '%a%';
 </code></pre>
 
 
 <h3 id="opgave332">Verwerkingsopdracht 3.3.2 Alle klanten met een mobiele telefoonnummer</h3>
-<pre><code class="language-sql">
-SELECT naam, telefoon
+<pre><code class="language-sql">SELECT naam, telefoon
 FROM klant
 WHERE telefoon LIKE '06%';
 </code></pre>
@@ -356,23 +349,20 @@ WHERE telefoon LIKE '06%';
 
 
 <h3 id="opgave361">Verwerkingsopdracht 3.4.1 Pizza's tussen de 8,50 en 10 euro</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
+<pre><code class="language-sql">SELECT naam, basisprijs
 FROM pizza
 WHERE basisprijs >= 8.50 AND basisprijs <= 10;
 </code></pre>
 
 <h3 id="opgave371">Verwerkingsopdracht 3.5.1 Bestellingen met bestelcode</h3>
-<pre><code class="language-sql">
-SELECT *
+<pre><code class="language-sql">SELECT *
 FROM bestelling
 WHERE bestelcode = 13 OR bestelcode = 30;
 </code></pre>
 
 
 <h3 id="opgave352">Verwerkingsopdracht 3.5.2 Alle goedkope of gezonde pizza's</h3>
-<pre><code class="language-sql">
-SELECT *
+<pre><code class="language-sql">SELECT *
 FROM pizza
 WHERE basisprijs < 7.50 OR omschrijving LIKE '%fruit%';
 </code></pre>
@@ -380,8 +370,7 @@ WHERE basisprijs < 7.50 OR omschrijving LIKE '%fruit%';
 
 
 <h3 id="opgave361">Verwerkingsopdracht 3.6.1 Alle pizza's zonder kip</h3>
-<pre><code class="language-sql"> 
-SELECT naam AS pizzanaam, omschrijving
+<pre><code class="language-sql">SELECT naam AS pizzanaam, omschrijving
 FROM pizza
 WHERE omschrijving NOT LIKE '%kip%';
 </code></pre>
@@ -395,8 +384,7 @@ WHERE NOT omschrijving LIKE '%kip%';
 
 
 <h3 id="opgave371">Verwerkingsopdracht 3.7.1 Alle pizza's zonder paprika of ui</h3>
-<pre><code class="language-sql">
-SELECT naam, omschrijving
+<pre><code class="language-sql">SELECT naam, omschrijving
 FROM pizza
 WHERE NOT (omschrijving LIKE '%paprika%' OR omschrijving LIKE '%ui%');
 </code></pre>																								
@@ -408,8 +396,7 @@ WHERE (omschrijving NOT LIKE '%paprika%') AND (omschrijving NOT LIKE '%ui%');
 </code></pre>
 
 <h3 id="opgave372">Verwerkingsopdracht 3.7.2 Toon pizza's die voldoen aan meerdere voorwaarden</h3>
-<pre><code class="language-sql">
-SELECT *
+<pre><code class="language-sql">SELECT *
 FROM pizza
 WHERE basisprijs < 7.5 AND (naam LIKE 'M%' OR naam LIKE '%A');
 </code></pre>
@@ -445,8 +432,8 @@ WHERE basisprijs < 7.0;
 'Nijmegen'). SQL vergelijkt tekst hoofdlettergevoelig. In dit geval zijn er
 klanten die in 'nijmegen' wonen, maar wel in 'Nijmegen'.
 <li>
-De juiste query is:<pre><code class="language-sql"> 
-	SELECT * 
+De juiste query is:<pre><code class="language-sql">
+  SELECT * 
 	FROM klant 
 	WHERE woonplaats = 'Nijmegen'; </code></pre>
 </ol>
@@ -649,7 +636,7 @@ From pizza
 WHERE omschrijving NOT LIKE '%ham%';
 </code></pre>
 
-<h3 id="opgave4124">Afsluitende Opdracht 4.12.4
+<h3 id="opgave4124">Afsluitende Opdracht 4.12.4 Plaatsen met vaste telefoonnummers</li>h3>
 <pre><code class="language-sql">
 SELECT COUNT(DISTINCT woonplaats) AS woonplaatsen_zonder_06
 FROM klant
@@ -862,18 +849,18 @@ HAVING COUNT(*) > 2000;
 SELECT * 
 FROM besteldepizza
 WHERE bodemcode = 1;
-</pre>
-<li>HAVING-filter op groep-niveau<br>
-<pre><code class="language-sql">
+</code></pre></li>
+
+<li>HAVING-filter op groep-niveau:<br><pre><code class="language-sql">
 SELECT bodemcode, COUNT(*) AS aantal
 FROM besteldepizza
 GROUP BY bodemcode
-HAVING COUNT(*) > 1;</pre>
+HAVING COUNT(*) > 1;</code></pre></li>
 <li>Her verschil tussen WHERE en HAVING:
 <ul>
 <li>WHERE gebruik je als je rijen wilt uitsluiten voordat je gaat tellen of groeperen.
 <li>HAVING gebruik je als je groepen wilt filteren nadat je hebt geteld of iets hebt samengevat.
-</ul>
+</ul></li>
 </ol>
 
 <h3 id="opgave642"> Verwerkingsopdracht 6.4.2 Bodems die vaak zijn besteld (maar zonder kleine bestellingen)</h3>
@@ -895,8 +882,7 @@ ORDER BY aantal_besteld_per_bodem DESC;
 </code></pre>
 
 <h3 id="opgave662">  Afsluitende Opdracht 6.6.2 Bekijk hoe vaak een specifieke bodem is gebruikt</h3>
-<pre><code>
-SELECT bodemcode, COUNT(*) AS aantal_besteld
+<pre><code>SELECT bodemcode, COUNT(*) AS aantal_besteld
 FROM besteldepizza
 WHERE bodemcode = 2
 GROUP BY bodemcode
@@ -907,15 +893,14 @@ LIMIT 1;
 
 <h3 id="opgave663">Afsluitende Opdracht 6.6.3 Totale aantal pizza’s per klant</h3>
 
-<pre><code class="language-sql">
-SELECT bestelling.klantnummer, SUM(besteldePizza.aantal)
+<pre><code class="language-sql">SELECT bestelling.klantnummer, SUM(besteldePizza.aantal)
 FROM bestelling
 JOIN besteldePizza ON bestelling.bestelcode = besteldePizza.bestelcode
 GROUP BY bestelling.klantnummer;
 </code></pre>
 
 <h3 id="opgave664">Afsluitende Opdracht 6.6.4 Meest bestelde pizzabodem</h3>
-SELECT bodemcode, COUNT(*) as aantal_besteld
+<pre><code class="language-sql">SELECT bodemcode, COUNT(*) as aantal_besteld
 FROM besteldepizza
 GROUP BY bodemcode
 ORDER BY aantal_besteld DESC
@@ -997,8 +982,8 @@ Als de code geen foutmelding geeft, maar wel een lege tabel oplevert, dan is het
 DROP TABLE bodem;
 </code></pre>
 <li>
--- check:
 <pre><code class="language-sql">
+-- check:
 SELECT *
 FROM bodem;-- ophalen lukt niet omdat de tabel in de vorige stap verwijderd is.
 </code></pre>
@@ -1031,9 +1016,9 @@ RENAME TO grootte;
 <ol type="a">
 <li>Tabel <i>besteldepizza</i> heeft vier foreign keys, namelijk:
 	<ol><li><b>bestelcode</b> uit tabel <i>bestelling</i> 
-	<ol><li><b>pizzacode</b> uit tabel <i>pizza</i> 
-	<ol><li><b>bodemcode</b> uit tabel <i>bodem</i> 
-	<ol><li><b>formaatcode</b> uit tabel <i>formaat</i> 
+<li><b>pizzacode</b> uit tabel <i>pizza</i> 
+<li><b>bodemcode</b> uit tabel <i>bodem</i> 
+<li><b>formaatcode</b> uit tabel <i>formaat</i> 
 	</ol>
 <li>Tabel <i>formaat</i> heeft <b>geen</b> foreign key. Die heeft een primary key <b>formaatcode</b> die vanuit tabel <i>besteldePizza</i> als foreign key gebruikt wordt, maar die verwijst zelf niet naar een ander tabel en heeft dus geen foreign key.
 </ol>
