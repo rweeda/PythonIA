@@ -116,6 +116,49 @@ print( list(trainingsschema.items()) )   # print een lijst van alle trainingsdag
 </ol>
 
 
+
+<h3 id="opgave119">Opdracht 11.9: Je eigen IMDB</h3>
+<pre class="python">
+#a
+film_beoordelingen = {
+    "The Shawshank Redemption": {
+        "jaar": 1994,
+        "beoordeling": 9.3
+    },
+    "The Godfather": {
+        "jaar": 1972,
+        "beoordeling": 9.2
+    },
+    "The Dark Knight": {
+        "jaar": 2008,   
+        "beoordeling": 9
+    }
+}
+#b
+print(film_beoordelingen)
+
+#c
+import json
+#d
+outfile = open('beoordelingen.json', 'w')
+
+#e 
+json.dump(film_beoordelingen, outfile)
+
+#f
+outfile.close()
+</pre>
+
+
+<h3 id="opgave1110">Opdracht 11.10: Gegevens opvragen uit je IMDb bestand</h3>
+<pre class="python">
+import json
+infile = open('beoordelingen.json', 'r')
+ratings = json.load(infile)
+infile.close()
+print(ratings)
+</pre>
+
 <h3 id="opgaveaf151">Afsluitende opdracht 11.1 Aantal voldoendes</h3>
 <pre class="python">
 cijfers = {
@@ -181,6 +224,37 @@ print()
 print("Het toaal aan materialen bedragt", str(totale_som)+ ".")
 </pre>
 
+
+
+<h3 id="opgaveaf153">Afsluitende opdracht 11.3 Geblesseerd</h3>
+import json
+
+# Stap a: Lees het bestand in
+infile = open('trainingsschema.json', 'r') # open het bestand met leesrechten ('r')
+trainingsschema = json.load(infile) 
+
+# Stap b: Print de originele inhoud
+print("Origineel trainingsschema:")
+print(trainingsschema)
+
+# Stap c: Verwijder zaterdag (voetbaltraining)
+del trainingsschema["zaterdag"]
+
+# Stap d: Verander hardlopen op maandag naar wandelen
+trainingsschema["maandag"] = "wandelen"
+
+# Stap e: Voeg donderdag - zwemmen toe
+trainingsschema["donderdag"] = "zwemmen"
+
+# Stap f: Schrijf het aangepaste trainingsschema terug
+json.dump(trainingsschema, outfile) 
+
+# Stap g: Lees het bestand opnieuw in en print het nieuwe schema
+nieuw_schema = open('trainingsschema.json', 'r'):
+nieuw_schema = json.load(nieuw_schema)
+
+print("\nAangepast trainingsschema:")
+print(nieuw_schema)
 
 <br>
 </div>
