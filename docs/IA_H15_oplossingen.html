@@ -119,6 +119,9 @@ print( list(trainingsschema.items()) )   # print een lijst van alle trainingsdag
 
 <h3 id="opgave119">Opdracht 11.9: Je eigen IMDB</h3>
 <pre class="python">
+#c
+import json
+
 #a
 film_beoordelingen = {
     "The Shawshank Redemption": {
@@ -137,25 +140,25 @@ film_beoordelingen = {
 #b
 print(film_beoordelingen)
 
-#c
-import json
+
 #d
-outfile = open('beoordelingen.json', 'w')
+uitvoer_bestand = open('beoordelingen.json', 'w')
 
 #e 
-json.dump(film_beoordelingen, outfile)
+json.dump(film_beoordelingen, uitvoer_bestand)
 
 #f
-outfile.close()
+uitvoer_bestand.close()
 </pre>
 
 
 <h3 id="opgave1110">Opdracht 11.10: Gegevens opvragen uit je IMDb bestand</h3>
 <pre class="python">
 import json
-infile = open('beoordelingen.json', 'r')
-ratings = json.load(infile)
-infile.close()
+
+invoer_bestand = open('beoordelingen.json', 'r')
+ratings = json.load(invoer_bestand)
+invoer_bestand.close()
 print(ratings)
 </pre>
 
@@ -230,41 +233,46 @@ print("Het toaal aan materialen bedragt", str(totale_som)+ ".")
 <pre class="python">
 import json
 
-# Stap a: Lees het bestand in
-infile = open('trainingsschema.json', 'r') # open het bestand met leesrechten ('r')
-trainingsschema = json.load(infile) 
+# De dictionary
+trainingsschema = {
+    "maandag": "hardlopen",
+    "zaterdag": "voetbal",
+    "zondag": "wielrennen"
+}
 
-# Stap b: Print de originele inhoud
+# a. Wegschrijven naar een JSON-bestand
+uitvoer_bestand = open('trainingsschema.json', 'w') # open het bestand met schrijfrechten ('w')
+json.dump(trainingsschema, uitvoer_bestand) 
+
+# b: Lees het bestand in
+invoer_bestand = open('trainingsschema.json', 'r') # open het bestand met leesrechten ('r')
+trainingsschema = json.load(invoer_bestand) 
+
+# c: Print de originele inhoud
 print("Origineel trainingsschema:")
 print(trainingsschema)
 
-# Stap c: Verwijder zaterdag (voetbaltraining)
+# d: Verwijder zaterdag (voetbaltraining)
 del trainingsschema["zaterdag"]
 
-# Stap d: Verander hardlopen op maandag naar wandelen
+# e: Verander hardlopen op maandag naar wandelen
 trainingsschema["maandag"] = "wandelen"
 
-# Stap e: Voeg donderdag - zwemmen toe
+# f: Voeg donderdag - zwemmen toe
 trainingsschema["donderdag"] = "zwemmen"
 
-# Stap f: Schrijf het aangepaste trainingsschema terug
-json.dump(trainingsschema, outfile) 
+# g: Schrijf het aangepaste trainingsschema terug
+json.dump(trainingsschema, uitvoer_bestand) 
 
-# Stap g: Lees het bestand opnieuw in en print het nieuwe schema
-nieuw_schema = open('trainingsschema.json', 'r'):
+# h: Lees het bestand opnieuw in en print het nieuwe schema
+nieuw_schema = open('trainingsschema.json', 'r')
 nieuw_schema = json.load(nieuw_schema)
 
 print("\nAangepast trainingsschema:")
 print(nieuw_schema)
 </pre>
-Ter informatie, het besstand trainingsschema.json ziet er als volgt uit:
-<pre class="python">
-{
-  "maandag": "hardlopen",
-  "zaterdag": "voetbal",
-  "zondag": "wielrennen"
-}
-</pre>
+
+
 
 <br>
 </div>
