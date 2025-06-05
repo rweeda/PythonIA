@@ -59,14 +59,8 @@ Je kunt je werk op je computer opslaan via 'Bestand' en vervolgens 'Bewaar noteb
 
 <p>Er is een <a href="https://moodle.informatica-actief.nl/mod/url/view.php?id=84161">werkruimte</a> ingericht om query's uit te voeren op de database van Danilo's Pizzeria.</p>
 <!--
-
 ### Overzicht Onderwerp 1: Inleiding databases
-
-
-
 <p>In dit onderwerp:</p>
-
-
 <ul>
 <li>leer je dat een database gebruikt wordt om data op een gestructureerde manier (in tabellen) op te slaan;
 <li>leer je dat gebruikers van een database verschillende rechten hebben, bijvoorbeeld om data in te voeren (CREATE), lezen (READ), aan te passen (UPDATE), of te verwijderen (DELETE) - de zogeheten CRUD rechten;
@@ -75,12 +69,9 @@ Je kunt je werk op je computer opslaan via 'Bestand' en vervolgens 'Bewaar noteb
 <li>leer je met voorwaarden aan de gegevens te stellen die getoond moeten worden;
 <li>leer je hoe tabellen aan elkaar gekoppeld zijn en hoe je gegevens uit verschillende tabellen kunt combineren.
 </ul>
-
-
 <p>
 Je kunt je werk op je computer opslaan via 'Bestand' en vervolgens 'Bewaar notebook als...'. Je kunt je werk in de leeromgeving ook tussentijds opslaan of inleveren. Zie hiervoor 'Opslaan of inleveren' aan het einde van elk onderwerp.
 </p>
-
  <div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
     <br>1 uur
@@ -159,9 +150,7 @@ In dit onderwerp:
 
 ### Overzicht 3: WHERE
 
-<h4><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H3_dbase_where_icon.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right">Onderwerp 3: WHERE</h4>
-
-
+<h4><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H3_dbase_where_icon.png" alt="Database aanpassen" role="presentation" class="img-responsive atto_image_button_right" width="200">Onderwerp 3: WHERE</h4>
 
 
 <p>In dit onderwerp leer je hoe je met WHERE informatie kunt opvragen die aan specifieke voorwaarden moet voldoen. We breiden WHERE uit met wiskundige operatoren, logische operatoren en leren met de LIKE te zoeken naar delen van teksten. Daarnaast leer je hoe je omgaat met fouten door foutmeldingen lezen en fouten op te sporen. Ook leer je commentaar te gebruiken, en het schrijven van nette queries om fouten te voorkomen.</p>
@@ -169,14 +158,26 @@ In dit onderwerp:
 <p>Leerdoelen</p>
 
 In dit onderwerp:
+<ul>
 
+    <li>leer je <code>WHERE</code> te gebruiken om voorwaarden aan de opgehaalde informatie te stellen;</li>
+    <li>leer je wiskundige operatoren gebruiken: '&lt;', '&lt;=', '&gt;', '&gt;=' en '&lt;&gt;';</li>
+    <li>leer je zoeken met <code>LIKE</code> en joker '%';
+    </li>
+    <li>leer je logische operatoren <code>AND</code>, <code>OR</code>, <code>NOT</code> te gebruiken, en combinaties daarvan;
 
- <div class="activity-item time-block">
+    </li>
+    <li>leer je gebruik te maken van commentaar;</li>
+    <li>leer je nette queries te schrijven;</li>
+    <li>leer je fouten op te sporen en op te lossen.</li>
+</ul>
+
+<div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
     <br>2 uur
 </div>
 
-### Overzicht Onderwerp 4: 
+### Overzicht Onderwerp 4: LIMIT, ORDER BY en groepsfuncties
 
 <h4><!--<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/Dbase_CRUD.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right">-->Onderwerp 4: LIMIT, ORDER BY en groepsfuncties</h4>
 
@@ -191,11 +192,9 @@ In dit onderwerp:
 
 In dit onderwerp:
 <ul> 
-
 <li>leer je welke SQL commando's er zijn en in welk volgorde ze staan;</li>
 <li>leer je het aantal rijen te beperken met <code>LIMIT</code>;</li>
 <li>leer je gegevens in een kolom sorteren met <code>ORDER BY</code>;
-
 <li>leer je SQL functies gebruiken op kolommen: <code>COUNT()</code>, <code>MIN()</code>, <code>MAX()</code>, <code>SUM()</code>, <code>AVG()</code>;
 <li>leer je met <code>DISTINCT</code> alleen unieke waarden terug te krijgen door dubbele rijen uit het resultaat te verwijderen;
 <li>leer je met <code>COUNT(DISTINCT ..)</code> het aantal unieke waarden in een kolom te tellen.
@@ -236,7 +235,7 @@ In dit onderwerp:
 </div>
 
 
-# Overzicht Onderwerp VERDIEPING: GROUP BY en HAVING
+# Overzicht Onderwerp 6 VERDIEPING: GROUP BY en HAVING
 
 <h4>Onderwerp 6: GROUP BY en HAVING<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H6_groupby.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right" width="150"></h4>
 
@@ -251,8 +250,7 @@ In dit onderwerp:
 <li>leer je met GROUP BY rijen met gegevens die zelefde waarde hebben te groeperen;
 <li>leer je dat je na een GROUP BY, functies zoals COUNT(), SUM(), AVG(), MAX() op MIN() op elke groep kan gebruiken;
 <li>leer je dat HAVING na een GROUP BY de gegevens van een groep filtert;
-<li>leer je het verschil tussen een voorwaarde opgeven met WHERE en HAVING;
-<li>leer je `+`, `-`, `*`, `/` rekenen met de waarden in een kolom.
+<li>leer je het verschil tussen een voorwaarde opgeven met WHERE en HAVING.
 </ul>
 
 

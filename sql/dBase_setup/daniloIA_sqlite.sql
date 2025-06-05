@@ -197,7 +197,7 @@ INSERT INTO `pizza` (`pizzacode`, `naam`, `omschrijving`, `basisprijs`) VALUES
 (5, 'Salame', 'Tomaat, kaas, salami en oregano', '7.50'),
 (6, 'Cippola', 'Tomaat, kaas, uien en oregano', '6.50'),
 (7, 'Borromea', 'Tomaat, kaas, ham, champignons en oregano', '7.50'),
-(8, 'Hawai', 'Tomaat, kaas, ham, annanas en oregano', '7.50'),
+(8, 'Hawaii', 'Tomaat, kaas, ham, annanas en oregano', '7.50'),
 (9, 'Calimero', 'Tomaat, kaas, champignons, salami, uien en oregano', '7.50'),
 (10, 'Capricciosa', 'Tomaat, kaas, ham, champignons, paprika, artisjokken en oregano', '8.00'),
 (11, 'Primavera', 'Tomaat, kaas, ham, salami en oregano', '8.00'),
