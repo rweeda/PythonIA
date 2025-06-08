@@ -141,7 +141,7 @@ dierentuin = {
 print("Er zijn", len(dierentuin), "verschillende diersoorten in de dierentuin.")
 </pre>
 
-<h3 id="opgave1671">16.7.1 Opdracht geneste dictionary doorlopen met een for-loop</h3>
+<h3 id="opgave1671">Opdracht 16.7.1 Geneste dictionary doorlopen met een <code>for</code>-loop</h3>
 <pre class="python">
 dierentuin = {
     "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
@@ -210,12 +210,13 @@ steden = {
     "São Paulo": {"land": "Brazilië", "inwoners": 12330000, "werelddeel": "Zuid-Amerika"},
     "Tokyo": {"land": "Japan", "inwoners": 13960000, "werelddeel": "Azië"}
 }
-miljoenenstedenLijst =[]                            # maak een lege lijst
-for stad, gegevens in steden.items():               # loop door de dictionary en haal de gegevens voor elke stad op
-	if gegevens["inwoners"] > 1000000 :              # als er meer dan 1 miljoen inwoners zijn
-		miljoenenstedenLijst.append( stad )	        # voeg stad toe aan miljoenenstedenLijst
 
-print("Lijst met miljoenensteden:", miljoenenstedenLijst)
+miljoenensteden_dictionary= {}                       # maak een lege dictioonary aan voor miljoenensteden
+for stad, gegevens in steden.items():                # loop door de dictionary en haal de gegevens voor elke stad op
+	if gegevens["inwoners"] > 1000000 :              # als er meer dan 1 miljoen inwoners zijn
+		miljoenensteden_dictionary[stad] = gegevens	 # voeg stad toe aan de dictionary
+
+print("Dictionary met miljoenensteden:", miljoenensteden_dictionary)
 </pre>
 
 <h3 id="opgave1692">Opdracht 16.9.2 Lijst van alle dieren in de Savanne</h3>
@@ -228,16 +229,16 @@ dierentuin = {
     "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
 }
 
-savanneLijst = []                                 # maak een lege lijst
+savanne_dictionary = {}                          # maak een lege dictinary aan voor dieren in de Savanne
 for dier, gegevens in dierentuin.items():        # loop door de dictionary en haal de gegevens voor elk dier op
-    if gegevens["verblijf"] == "Savanne":         # als het verblijf Savanne is
-        savanneLijst.append(dier)                  # voeg het dier toe aan savanneLijst
+    if gegevens["verblijf"] == "Savanne":        # als het verblijf Savanne is
+        savanne_dictionary[dier] = gegevens      # voeg het dier toe aan savanne_dictionary       
 
-print(savanneLijst)
+print(savanne_dictionary)
 </pre>
 
 
-
+<!--
 <h3 id="opgave1693">Opdracht 16.9.3 Lijst van alle dieren die vlees eten</h3>
 <pre class="python">
 
@@ -249,16 +250,16 @@ dierentuin = {
     "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
 }
 
-vleesDiet = []                                 # maak een lege lijst
-for dier, gegevens in dierentuin.items():        # loop door de dictionary en haal de gegevens voor elk dier op
-    if "vlees" in gegevens["dieet"]:            # als er vlees in het dieet van het dier zit
-        vleesDiet.append(dier)                  # voeg het dier toe aan vleesDiet
+vleesdieet_dictionary = {}                          # maak een lege dictionary aan voor dieren met vlees in hun dieet 
+for dier, gegevens in dierentuin.items():        	# loop door de dictionary en haal de gegevens voor elk dier op
+    if "vlees" in gegevens["dieet"]:            	# als er vlees in het dieet van het dier zit
+        vleesdieet_dictionary[dier] = gegevens      # voeg het dier toe aan vleesdieet_dictionary
 
-print(vleesDiet)
+print(vleesdieet_dictionary)
 </pre>
+-->
 
-
-<h3 id="opgave1694">Opdracht 16.9.4 Lijst van alle benodigde eten</h3>
+<h3 id="opgave1693">Opdracht 16.9.3 Lijst van alle benodigde eten</h3>
 <pre class="python">
 dierentuin = {
     "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
@@ -267,16 +268,17 @@ dierentuin = {
     "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
     "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
 }
+</pre>
 
-
-voedingLijst = []                                 # maak een lege lijst
+<pre class="python">
+voedingLijst = []                                # maak een lege lijst
 for dier, gegevens in dierentuin.items():        # loop door de dictionary en haal de gegevens voor elk dier op
-    voedingLijst.append(gegevens["dieet"])                   
+    voedingLijst.append(gegevens["dieet"])       # voeg het dieet van elk dier toe aan de voedingLijst                  
 print(voedingLijst)
-
+</pre>
 OF
 
-
+<pre class="python">
 voedingLijst = []                                 # maak een lege lijst
 for dier, gegevens in dierentuin.items():        # loop door de dictionary en haal de gegevens voor elk dier op             
     voedingLijst += gegevens["dieet"]     
@@ -982,14 +984,62 @@ profielen = {
     }
 }
 
-# Verwijder profielen met meer dan 10.000 posts
-spamvrij = {}
-for gebruikersnaam, gegevens in profielen.items():
-    if gegevens["posts"] <= 10000:
-        spamvrij[gebruikersnaam] = gegevens
+# Maak nieuwe dictionary met profielen met 10.000 posts of minder
+spamvrij = {}                                       # Dictionary voor profielen zonder spam
+for gebruikersnaam, gegevens in profielen.items():  # Loop door alle profielen
+    if gegevens["posts"] <= 10000:                  
+        spamvrij[gebruikersnaam] = gegevens          # Voeg profiel toe aan spamvrij als posts <= 10000  
 
 print("Profielen zonder spam:")
 print(spamvrij)
+</pre>
+
+
+<h3 id="opgave161613">Afsluitende opdracht 16.16.13</h3>
+<pre class="python">
+import json
+
+profielen = { 
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
+
+# a. Sla de data op in een JSON-bestand
+bestand = open("profielen.json", "w")
+json.dump(profielen, bestand)
+
+
+# b. Sluit het JSON-bestand
+bestand.close()
+
+# c. Open het bestand opnieuw en laad de data
+bestand = open("profielen.json", "r")
+ingeladen_profielen = json.load(bestand)
+
+# d. Print de dictionary
+print(ingeladen_profielen)
 </pre>
 <br>
 </div>
