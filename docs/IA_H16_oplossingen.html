@@ -417,6 +417,8 @@ dierentuin = {
     "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
     "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
     "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
+
 totaal = 0
 for dier in dierentuin:
     totaal += dierentuin[dier]["aantal"]
@@ -424,6 +426,23 @@ for dier in dierentuin:
 print("Het totaal aantal dieren is:", totaal)
 </pre>
 
+
+<h3 id="opgave16131">Opdracht 16.13.2 Aantal zoogdieren</h3>
+<pre class="python">
+dierentuin = {
+    "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
+    "Pinguïn": {"soort": "Vogel", "verblijf": "Poolgebied", "dieet": ["vis", "kril"], "aantal": 15},
+    "Python": {"soort": "Reptiel", "verblijf": "Terrarium", "dieet": ["muizen", "ratten"], "aantal": 3},
+    "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
+    "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
+}
+
+aantal_zoogdieren = 0
+for dier in dierentuin:
+    if dierentuin[dier]["soort"] == "Zoogdier":
+        aantal_zoogdieren += dierentuin[dier]["aantal"]
+print("Aantal zoogdieren in de dierentuin:", aantal_zoogdieren)
+</pre>
 
 <h3 id="opgave16141">Opdracht 16.14.1 Gemiddeld aantal diersoort van elk soort</h3>
 <pre class="python">
@@ -434,8 +453,6 @@ dierentuin = {
     "Olifant": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["planten", "fruit", "bladeren"], "aantal": 1},
     "IJsbeer": {"soort": "Zoogdier", "verblijf": "Poolgebied", "dieet": ["vlees"], "aantal": 2}
 }
-
-
 
 som = 0
 for dier in dierentuin:
@@ -451,7 +468,7 @@ print("Het gemiddelde aantal dieren per diersoort is:", gemiddeld)
 
 
 
-<h3 id="opgave16141">16.15.1 Kleinst aantal exemplaren</h3>
+<h3 id="opgave16151">16.15.1 Kleinst aantal exemplaren</h3>
 <pre class="python">
 dierentuin = {
     "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
@@ -481,12 +498,12 @@ print("Het dier met het minste aantal is de", dier_met_minste, "met", min_aantal
 
 
 
-<h3 id="opgave16142">16.15.2 Meeste exemplaren</h3>
+<h3 id="opgave16152">16.15.2 Meeste exemplaren</h3>
 <pre class="python">
 # Startwaarden instellen:
-# - max_aantal wordt op 0 gezet, omdat elk dier minstens 1 exemplaar heeft
+# - max_aantal wordt op min oneiding gezet (-inf)
 # - dier_met_meeste houdt bij van welk dier dit is
-max_aantal = 0
+max_aantal = float("-inf")
 dier_met_meeste = ""
 
 # Loop door elk dier en bijbehorende informatie in de dictionary
@@ -498,10 +515,11 @@ for dier, info in dierentuin.items():
         dier_met_meeste = dier
 
 # Toon het resultaat netjes in een zin
-print("Het dier met het meeste aantal is de", dier_met_meeste, "met", max_aantal, "exemplaren.")
+print("Het dier waarvan er het meeste zijn is de", dier_met_meeste, "met", max_aantal, "exemplaren.")
 </pre>
 
 <h3 id="opgave16161">Afsluitende opdracht 16.16.1</h3>
+<pre class="python">
 profielen = {
     "skydiver_22": {
         "bio": "Ik hou van katten en gamen",
@@ -534,8 +552,445 @@ for profiel, gegevens in profielen.items():
         print("Profiel", profiel, "heeft meer dan 100 volgers")
 
 </pre>
+<h3 id="opgave16162">Afsluitende opdracht 16.16.2</h3>
+<pre class="python">
+profielen = {
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
+
+def profielen_met_games(profielen):
+    resultaat = []
+    for gebruikersnaam, gegevens in profielen.items():
+        if "games" in gegevens["interesses"]:
+            resultaat.append(gebruikersnaam)
+    return resultaat
+# Test de functie
+print(profielen_met_games(profielen))
+</pre>
 
 
+<h3 id="opgave16163">Afsluitende opdracht 16.16.3</h3>
+<pre class="python">
+profielen = {
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
+
+def totaal_aantal_volgers(profielen):
+    totaal = 0
+    for gegevens in profielen.values():
+        totaal += gegevens["volgers"]
+    return totaal
+    
+# Functie aanroepen
+totaal = totaal_aantal_volgers(profielen)
+print("Totaal aantal volgers:", totaal)
+
+</pre>
+
+<h3 id="opgave16164">Afsluitende opdracht 16.16.4</h3>
+<pre class="python">
+profielen = {
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
+
+def gemiddeld_aantal_posts(profielen):
+    totaal_posts = 0
+    for gegevens in profielen.values():
+        totaal_posts += gegevens["posts"]
+    gemiddeld = totaal_posts / len(profielen)
+    return gemiddeld
+
+# Functie aanroepen
+gemiddeld = gemiddeld_aantal_posts(profielen)
+print("Gemiddeld aantal posts:", gemiddeld)
+
+</pre>
+
+<h3 id="opgave16165">Afsluitende opdracht 16.16.5</h3>
+<pre class="python">
+profielen = {
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
+
+# Maak een lijst van profielen met 60 of meer posts
+profielen_veel_posts = []
+
+for gebruiker in profielen:
+    if profielen[gebruiker]["posts"] >= 60:
+        profielen_veel_posts.append(gebruiker)
+
+# Print de overgebleven profielen
+print("Overgebleven profielen:", profielen_veel_posts)
+</pre>
+
+<h3 id="opgave16166">Afsluitende opdracht 16.16.6</h3>
+<pre class="python">
+profielen = {
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
+
+profielnaam = input("Voer een profielnaam in: ")
+if profielnaam in profielen:
+    print("Profiel", profielnaam, "bestaat al!")
+else:
+    bio = input("Voer een korte bio in: ")
+    interesses = input("Voer je interesse in: ")
+
+    profielen[profielnaam] = {
+        "bio": bio,
+        "volgers": 0,
+        "posts": 0,
+        "interesses": interesses
+    }
+
+    print("Nieuw profiel", profielnaam, "toegevoegd.")
+
+</pre>
+
+<h3 id="opgave16167">Afsluitende opdracht 16.16.7</h3>
+<pre class="python">
+profielen = {
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
+
+for naam in profielen:
+    profielen[naam]["volgers"] += 1
+
+# Print alle bijgewerkte volgersaantallen
+print("Volgers bijgewerkt:", profielen)
+</pre>
+
+<h3 id="opgave16168">Afsluitende opdracht 16.16.8</h3>
+<pre class="python">
+profielen = {
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
+
+ingevoerde_interesse = input("Welke interesse wil je zoeken? ")
+   
+for naam, gegevens in profielen.items():
+    if ingevoerde_interesse in gegevens["interesses"]:
+        print(naam, "heeft ook de interesse", ingevoerde_interesse)
+</pre>
+
+<h3 id="opgave16169">Afsluitende opdracht 16.16.9</h3>
+<pre class="python">
+profielen = {
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
+
+unieke_lijst = []
+for gegevens in profielen.values():
+    for interesse in gegevens["interesses"]:
+        if interesse not in unieke_lijst:
+            unieke_lijst.append(interesse)
+print("Alle unieke interesses:", unieke_lijst)
+</pre>
+
+<h3 id="opgave161610">Afsluitende opdracht 16.16.10</h3>
+<pre class="python">
+profielen = {
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
+
+# Zoek profielen met >100 volgers en interesse in 'fotografie'
+resultaat = []
+for gebruikersnaam, gegevens in profielen.items():
+    if gegevens["volgers"] > 100 and "fotografie" in gegevens["interesses"]:
+        resultaat.append(gebruikersnaam)
+
+print("Populaire fotografieprofielen:", resultaat)
+</pre>
+
+
+<h3 id="opgave161611">Afsluitende opdracht 16.16.11</h3>
+<pre class="python">
+profielen = { 
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    }
+}
+
+# Zoek bio's van mensen die 'programmeren' als interesse hebben OF meer posts dan volgers
+for profiel in profielen.values():
+    if "programmeren" in profiel["interesses"] or profiel["posts"] > profiel["volgers"]:
+        print(profiel["bio"])
+
+</pre>
+
+
+<h3 id="opgave161612">Afsluitende opdracht 16.16.12</h3>
+<pre class="python">
+profielen = { 
+    "skydiver_22": {
+        "bio": "Ik hou van katten en gamen",
+        "volgers": 134,
+        "posts": 47,
+        "interesses": ["dieren", "games", "fotografie"]
+    },
+    "dancequeen": {
+        "bio": "Altijd aan het dansen",
+        "volgers": 245,
+        "posts": 82,
+        "interesses": ["muziek", "games", "vloggen"]
+    },
+    "bookworm": {
+        "bio": "Ik lees elke dag",
+        "volgers": 98,
+        "posts": 133,
+        "interesses": ["boeken", "schrijven", "fotografie"]
+    },
+    "techie99": {
+        "bio": "Fan van programmeren en robots",
+        "volgers": 187,
+        "posts": 59,
+        "interesses": ["programmeren", "AI", "games"]
+    },
+    "spam_king": {
+        "bio": "Volg mij voor 10.000 updates per dag!",
+        "volgers": 5,
+        "posts": 25000,
+        "interesses": ["reclame", "spam", "massaposts"]
+    }
+}
+
+# Verwijder profielen met meer dan 10.000 posts
+spamvrij = {}
+for gebruikersnaam, gegevens in profielen.items():
+    if gegevens["posts"] <= 10000:
+        spamvrij[gebruikersnaam] = gegevens
+
+print("Profielen zonder spam:")
+print(spamvrij)
+</pre>
 <br>
 </div>
 <br>

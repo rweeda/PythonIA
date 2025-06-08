@@ -1,0 +1,83 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "filter dictionary",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "maak een lege dictionary aan",
+                        "child": {
+                            "id": 40,
+                            "basicTree": {
+                                "basicTreeType": "ForEach",
+                                "content": "sleutel in dictionary",
+                                "child1": {
+                                    "id": 50,
+                                    "basicTree": {
+                                        "basicTreeType": "If",
+                                        "content": "gegeven gewenst is",
+                                        "child1": {
+                                            "id": 61,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 80,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "voeg sleutel toe aan nieuwe dictionary",
+                                                "child": {
+                                                    "id": 63,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child3": {
+                                            "id": 51,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child2": {
+                                    "id": 120,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "print nieuwe dictionary",
+                                        "child": {
+                                            "id": 1,
+                                            "basicTree": {
+                                                "basicTreeType": "End"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 150,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}
