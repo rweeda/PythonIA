@@ -53,6 +53,7 @@ dierentuin = {
 
 #b: Print alle informatie over de Pinguïn
 print("Alle informatie over de Pinguïn:", dierentuin["Pinguïn"])
+
 #c: Print de verblijf van de Pinguïn 
 print("Het verblijf van de Pinguïn is:", dierentuin["Pinguïn"]["verblijf"])
 </pre>
@@ -172,7 +173,7 @@ for stad_info in steden.values():
         gevonden = True # zet de vlag op True
 
 if gevonden == True: # als de vlag op True staat
-	print("Stad met meerr dan 2 miljoen inwoners gevonden!") # print bevestiging dat waarde is gevonden
+	print("Stad met meer dan 2 miljoen inwoners gevonden!") # print bevestiging dat waarde is gevonden
 else:
 	print("Geen stad met meer dan 2 miljoen inwoners gevonden.") # of print dat de waarde niet is gevonden
 </pre>
@@ -408,7 +409,7 @@ for dier, gegevens in dierentuin.items():	#voor elk dier in de dictionary dieren
 </pre>
 
 
-<h3 id="opgave16131">Opdracht 16.13.1 Totaal aantal dieren
+<h3 id="opgave16131">Opdracht 16.13.1 Totaal aantal dieren</h3>
 <pre class="python">
 dierentuin = {
     "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
@@ -424,7 +425,7 @@ print("Het totaal aantal dieren is:", totaal)
 </pre>
 
 
-<h3 id="opgave16141">Opdracht 16.14.1 Gemiddeld aantal diersoort van elk soort
+<h3 id="opgave16141">Opdracht 16.14.1 Gemiddeld aantal diersoort van elk soort</h3>
 <pre class="python">
 dierentuin = {
     "Leeuw": {"soort": "Zoogdier", "verblijf": "Savanne", "dieet": ["vlees"], "aantal": 2},
@@ -446,6 +447,7 @@ print("Het totaal aantal diersoorten is:", len(dierentuin) )
 gemiddeld = som / len(dierentuin)
 print("Het gemiddelde aantal dieren per diersoort is:", gemiddeld)
 
+</pre>
 
 
 
