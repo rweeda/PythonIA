@@ -1,0 +1,119 @@
+
+    <h1>Esthetiek</h1>
+	
+		
+	<p>Esthetiek is een van de vier bouwstenen van spelervaring. Esthetiek gaat over de beleving van een game. Denk aan de sfeer, het geluid, de kleuren en stijl. Het bepaalt hoe een speler zich voelt tijdens het spelen. Is de game spannend, rustgevend, grappig, of juist frustrerend?</p>
+
+	<ul>
+	<li>Welke kleuren en vormen zie je?
+	<li>Hoe klinkt het spel?
+	<li>Welke sfeer roept het op?
+	</ul>
+
+ 
+ 
+
+    <h2>Voorbeeld: Tetris</h2>
+    <p>De esthetiek van Tetris is eenvoudig maar functioneel: blokken in felle kleuren, een zwart speelveld en een herkenbaar muziekje dat steeds sneller gaat. Deze minimalistische stijl helpt de speler zich volledig te concentreren op de gameplay. De simpele visuals en versnellende muziek versterken de spanning en maken het spel verslavend. Zonder deze esthetische keuzes zou Tetris waarschijnlijk minder meeslepend aanvoelen.</p>
+	
+	
+	
+ 
+ 
+ 
+	<p>Een belangrijk onderdeel van esthetiek is de <i>artwork</i>.
+	
+	
+	
+	<h5>2D artwork</h5>
+<p>Spellen met simpele graphics gebruiken plaatjes van een paar honderd pixels om de game-objecten (speler, vijanden, power ups, pick ups, enz, enz) te laten zien. Zulke plaatjes noemen we <em>sprites</em>. Vaak zitten ze samen in een soort vellen, <em>sprite sheets</em>.</p>
+
+
+<p><img src="https://moodle.informatica-actief.nl/draftfile.php/147455/user/draft/612917026/gda5_spritesheet.png" alt="sprite sheet" width="326" height="102" class="img-responsive atto_image_button_text-bottom"><br></p>
+<p><em>Sprite sheet (stukje)</em></p>
+
+<p>De figuurtjes in een spel kun je laten bewegen door filmstripjes van sprites te maken. iedere keer dat het spel opnieuw op het scherm gezet wordt (gerenderd wordt), ga je naar het volgende <em>frame</em>. Daardoor gaat de pacman hieronder happen.</p>
+
+
+<p><img src="https://moodle.informatica-actief.nl/draftfile.php/147455/user/draft/612917026/gda6_pacman_allframes.png" alt="frames pacman" width="544" height="32" class="img-responsive atto_image_button_text-bottom"><br></p>
+<p>=&nbsp;<img src="https://moodle.informatica-actief.nl/draftfile.php/147455/user/draft/612917026/gda6_pacman_anim.gif" alt="pacman geanimeerd" width="32" height="32" class="img-responsive atto_image_button_text-bottom"></p>
+<p><em>Pacman-frames</em></p>
+
+
+<h5>3D artwork</h5>
+<p>Bij grote spellen gaat het er heel anders aan toe. Om te beginnen is het in 3D, dan heb je draadmodel nodig - een <em>static mesh</em> - dat je van alle kanten kunt bekijken. Ook heb je een speciaal plaatje nodig, meestal <em>texture</em> genoemd, dat je om de mesh heen kunt vouwen, zodat het er echt als een figuur of voorwerp uitziet. Om beweging in 3D mogelijk te maken hebben poppetjes een soort van intern skelet, een <em>rig</em>, met botten die kunnen bewegen. Bij het weergeven van de mesh moet je dan wel precies bepalen hoe de mesh vervormt als bijvoorbeeld een arm beweegt.</p>
+</p>
+<p><img src="https://moodle.informatica-actief.nl/draftfile.php/147455/user/draft/612917026/gda7_Pine_Hueendraadmodel.png" alt="3d char en mesh" width="1032" height="611" class="img-responsive atto_image_button_text-bottom"><br></p>
+<p><em>Game character en het draadmodel</em></p>
+
+
+
+
+
+
+<p>Al die technieken kun je gebruiken om een eigen visuele sfeer te maken. Wordt het een <em>realistische</em> wereld, <em>horror</em>, <em>cartoony</em> of iets speciaals als <em>steampunk</em>?</p>
+
+<p><img src="https://moodle.informatica-actief.nl/draftfile.php/147455/user/draft/612917026/gda8_Pine_Switch_Screenshot_01.png" alt="pine" width="640" height="360" class="img-responsive atto_image_button_text-bottom"><br></p>
+<p><em>Beeld uit de game Pine van het Nederlandse Twirlbound</em></p>
+
+
+<p>Helaas, in deze module gaan we niet dieper in op (het creëren van) game art. De reden: Game art, characters en animaties zijn krankzinnig veel werk, als je ze echt mooi wilt maken. In de game die je gaat ontwikkelen kun je gebruik maken van bestaande game art, muziek en geluiden. Daarvan is voldoende te vinden op internet. </p>
+	
+	
+<p class="opdracht">Opdracht 1.X: Sprite packs</p>
+We bekijken een paar bestaande sprite 
+<ol style="list-style-type: lower-alpha">
+    <li>
+Ga naar: 
+https://kenney.nl/assets/category:2D?sort=update
+
+<li>Download een pack die je leuk lijkt
+<li>Ga in de gedownloadde bestanden op zoek naar een .png afbeelding die je mooi of grapig vind.
+
+<!--ZIE OOK Om images te gebruiken: C:\Users\renskeweeda\OneDrive - Montessori College\Vakgroep_Informatica\Vakgroep_zaken\Lessen_Lukas\Agora 5\CorderiusPlay\Assets-pirate\PNG\Default size\Ship parts-->
+    </li>
+</ol>
+
+	
+	
+	<!--
+
+    <h2>Wat is een moodboard?</h2>
+    <p>Een <strong>moodboard</strong> is een visuele collage van beelden, kleuren, vormen en soms ook tekst of geluid die de sfeer en stijl van een ontwerpidee weergeven. In de context van game design helpt een moodboard om de gewenste emotie en uitstraling van een game vast te leggen voordat je begint met bouwen.</p>
+    <p>Je kunt op een moodboard zetten:</p>
+    <ul>
+        <li>Kleurenpaletten</li>
+        <li>Afbeeldingen van omgevingen of stijlvoorbeelden</li>
+        <li>Inspirerende beelden van andere games</li>
+        <li>Typografie en geluiden</li>
+    </ul>
+	
+	<p>Waarom zou je een moodboard gebruiken?
+	<ul>
+	<li>Om gevoel en sfeer over te brengen die je in je game wilt creëren.</li>
+	<li>Om jezelf (en anderen) te helpen bij het kiezen van stijl, kleuren, muziek en animatie.</li>
+	<li>Om inspiratie te verzamelen en visueel te maken wat je voor ogen hebt.</li>
+	</ul>
+
+
+    <h3>Voorbeeld: Moodboard voor een ontspannende puzzelgame</h3>
+    <ul>
+        <li>🎨<strong>Kleuren:</strong> Zachte blauwtinten, wit, lichtgroen</li>
+        <li>🖼<strong>Afbeeldingen:</strong> Rustige natuur, eenvoudige geometrische vormen</li>
+        <li>🧍<strong>Personages:</strong> Geen of abstracte vormen</li>
+        <li>🔤<strong>Lettertype:</strong> Ronde, zachte letters zonder schreven</li>
+        <li>🔊<strong>Geluid:</strong> Kalme achtergrondmuziek, zachte klikgeluiden</li>
+        <li>🎮<strong>Inspiratiegames:</strong> Monument Valley, Alto's Adventure</li>
+    </ul>
+
+
+    <h2>Opdracht: Moodboard maken</h2>
+    <p><strong>Doel:</strong> Ontwerp de sfeer van je eigen game.</p>
+    <p><strong>Opdracht:</strong></p>
+    <ol>
+        <li>Bedenk wat voor gevoel jouw game moet oproepen (bijv. spanning, vrolijkheid, mysterie).</li>
+        <li>Zoek afbeeldingen, kleurenpaletten en geluidsfragmenten die daarbij passen.</li>
+        <li>Maak een digitaal moodboard (bijv. in Canva of Google Slides) en voeg korte toelichtingen toe.</li>
+        <li>Presenteer je moodboard aan een klasgenoot en geef elkaar feedback.</li>
+    </ol>-->
+
