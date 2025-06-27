@@ -1,0 +1,222 @@
+<p><h4>Mechanics: Toestanden</h4>	<img src="https://rweeda.github.io/PythonIA/docs/Pygame/img/gaming_mechanics.png" alt="Mechanicss" width="255" align="right">
+</p>	
+
+<p>In dit onderwerp leer je een game te omschrijven met behulp van een toestandsdiagrammen. 
+
+<br>Als inleiding op toestandsdiagrammen analyzeren we een game aan de hand van een videofragment.</p>
+
+<p class="opdracht">Opdracht: toestanden in games</p>
+<ol style="list-style-type: lower-alpha">
+    <li>Bekijk het volgende fragment uit een game waarin de hoofdrolspeler een bewaker moet proberen uit te schakelen.
+	<li>Kijk goed naar de bewaker en beschrijf in welke toestanden de bewaker kan zijn.</li>
+	<li>Beschrijf ook hoe de bewaker in elk van die toestanden terecht komt. Met andere woorden: wat moet er gebeuren voordat de bewaker in een bepaalde toestand terecht komt.</li>
+</ol>	
+<p><b><i>Film toestanden bewaker</i></b>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/it9t0whAyPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</p>
+	
+
+
+<p class="opdracht">Opdracht: toestanden in games</p>
+<ol style="list-style-type: lower-alpha">
+    <li>Bekijk het volgende fragment uit een game waarin de hoofdrolspeler een bewaker moet proberen uit te schakelen.
+	<li>Kijk goed naar de bewaker en beschrijf in welke toestanden de bewaker kan zijn.</li>
+	<li>Beschrijf ook hoe de bewaker in elk van die toestanden terecht komt. Met andere woorden: wat moet er gebeuren voordat de bewaker in een bepaalde toestand terecht komt.</li>
+</ol>	
+<p><b><i>Film toestanden bewaker</i></b>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/it9t0whAyPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</p>
+
+
+<hr>
+	
+<p>Wellicht heb je tijdens het bekijken van het filmpje over de bewaker de volgende toestanden gevonden, ook al noem je ze waarschijnlijk anders:</p>
+<p></p>
+<ul>
+    <li>Waakzaam, rondkijkend</li>
+    <li>Klaar voor actie, alert rondkijkend</li>
+    <li>Alarm, achter vijand aan lopend</li>
+    <li>Verdwaasd rondlopend</li>
+    <li>Dood</li>
+</ul>
+
+
+<p>Op basis van deze toestanden kun je een toestandsdiagram maken, waarin duidelijk wordt hoe de bewaker van de ene toestand in de andere komt. <br>De getallen geven de toestanden aan zoals hierboven staat beschreven.</p>
+<p><img src="https://rweeda.github.io/PythonIA/docs/Pygame/img/toestandsdiagram_physcomp.png" alt="" width="665" height="390" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+<p>Je kunt in het toestandsdiagram bijvoorbeeld zien dat als de bewaker in toestand 1 is en hij ziet een vijand, dan wordt de toestand van de bewaker 2.</p>
+<p>In de bovenstaande uitwerking zie je totaal 5 toestanden en 6 toestandsovergangen. Misschien zijn er wel meer hoor, alleen in dit korte fragment kun je ze niet allemaal zien.<br></p>
+<p>Het losse pijltje naar toestand 1 betekent dat dit de begintoestand is, oftewel de initiële toestand.</p>
+
+
+
+
+<!--
+<iframe src="https://moodle.informatica-actief.nl/mod/hvp/embed.php?id=54125" width="600" height="271" frameborder="0" allowfullscreen="allowfullscreen" style="width: 100%; height: 299px;"></iframe>
+<script src="https://moodle.informatica-actief.nl/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
+-->
+
+<p class="opdracht">Opdracht X.X: Benoem de juiste toestanden</p>
+
+Vul de ontbrekende tekst in:
+<ol style="list-style-type: lower-alpha"> 
+<li>De toestandsdiagram houdt de ________ van de bewaker bij.</li>
+<li>Als de bewaker ________ keer achter elkaar wordt geschopt gaat die dood.</li>
+<li>Als de bewaker alert rondkijkt dan kan hij óf naar toestand ________ gaan of teruggaan naar toestand ________.</li>
+<li>Als de bewaker alert rondkijkt en hij ziet de vijand niet meer, dan gaat hij terug naar toestand ________.</li>
+<li>Als de bewaker geschopt is dan kan hij ________ (wel/niet) terug naar toestand waakzaam.</li>
+</ol>
+
+<!-- ANTWOORDEN
+
+<ol style="list-style-type: lower-alpha"> 
+<li>De toestandsdiagram houdt de toestand van de bewaker bij.</li>
+<li>Als de bewaker twee keer achter elkaar wordt geschopt gaat die dood.</li>
+<li>Als de bewaker alert rondkijkt dan kan hij of naar toestand alarm gaan of teruggaan naar toestand waakzaam.</li>
+<li>Als de bewaker alert rondkijkt en hij ziet de vijand niet meer, dan gaat hij terug naar toestand waakzaam.</li>
+<li>Als de bewaker geschopt is dan kan hij niet terug naar toestand waakzaam.</li>
+</ol>
+
+-->
+
+
+<p>In games gebeurt er van alles tegelijk: een speler drukt op een toets, een vijand beweegt, een score verandert, of het spel eindigt plotseling. Om al dat gedrag goed te begrijpen én te ontwerpen, gebruiken game-ontwikkelaars vaak een <strong>toestandsdiagram</strong> (in het Engels: <em>state diagram</em>). Zo’n diagram laat zien in welke toestanden een spel zich kan bevinden (zoals “spel start”, “spel loopt”, “spel voorbij”) en hoe het spel van de ene naar de andere toestand gaat. Elke pijl in het diagram laat een gebeurtenis of actie zien die de overgang veroorzaakt.</p> 
+
+<p>Voor het maken van je eigen game is een toestandsdiagram erg handig. Het helpt je logisch nadenken over hoe je spel werkt, wat er moet gebeuren na een bepaalde actie, en hoe je het gedrag kunt programmeren. Zeker als je werkt met een game engine zoals <i>coderius-play</i>, waarin je met verschillende ‘scenes’ of spelstaten werkt, is zo’n schema een goed hulpmiddel om overzicht te houden. Het dwingt je om gestructureerd te denken en fouten in je ontwerp vroeg te herkennen. Ook kun je met een diagram makkelijker uitleggen aan anderen hoe je spel werkt. </p>
+
+
+
+
+   	
+<p class="opdracht">Opdracht X.X: Toestandsdiagram van pong</p>
+
+Je oefent nu om het gedrag van een game overzichtelijk wee te geven met een toestandsdiagram.
+
+<ol style="list-style-type: lower-alpha"> 
+<li>Speel of bekijk het klassieke spel <a href="https://freepong.org/">Pong</a> voor maximaal 2 minuten (kies eenspeler). Wat gebeurt er allemaal tijdens het spelen?</li>
+<li>Bedenk wat een speler allemaal kan doen in jouw game (bijv. springen, schieten, bouwen).</li>
+<li>Noteer minstens 5 verschillende toestanden die het spel kan hebben (zoals: "Startscherm", "Game actief", "Bal raakt paddle", "Game over").</li>
+
+<li>Teken een toestandsdiagram. Gebruik hiervoor eventueel <a href="https://madebyevan.com/fsm/">deze online tool</a>:
+
+	<ul>
+	<li>Teken de toestanden als cirkels.</li>
+	<li>Teken pijlen tussen de toestanden: deze geven aan hoe het spel verandert.</li>
+	<li>Schrijf bij elke pijl de trigger die de overgang veroorzaakt (zoals: "pijltje omhoog ingedrukt", "bal raakt paddle", "bal voorbij paddle", "score bereikt 5").
+	</ul>
+
+<li>Bespreek je diagram met een klasgenoot. Hebben jullie dezelfde toestanden? Zijn jullie triggers logisch? Wat zou je kunnen verbeteren?</li>
+
+</ol>
+
+
+<!-- VOORBEELD ANTWOORD: 
+
+| Van toestand  | Naar toestand    | Trigger                       |
+| ------------- | ---------------- | ----------------------------- |
+| Startscherm   | Game actief      | Speler drukt op spatiebalk    |
+| Game actief   | Bal raakt paddle | Botsing met paddle            |
+| Game actief   | Punt gescoord    | Bal voorbij paddle            |
+| Punt gescoord | Game actief      | Na korte pauze / toetsaanslag |
+| Game actief   | Game over        | Score bereikt 5               |
+
+
+
+img/toestandsdiagram_pong.png
+-->
+
+
+<hr>
+	
+<p>Wellicht heb je tijdens het bekijken van het filmpje over de bewaker de volgende toestanden gevonden, ook al noem je ze waarschijnlijk anders:</p>
+<p></p>
+<ul>
+    <li>Waakzaam, rondkijkend</li>
+    <li>Klaar voor actie, alert rondkijkend</li>
+    <li>Alarm, achter vijand aan lopend</li>
+    <li>Verdwaasd rondlopend</li>
+    <li>Dood</li>
+</ul>
+
+
+<p>Op basis van deze toestanden kun je een toestandsdiagram maken, waarin duidelijk wordt hoe de bewaker van de ene toestand in de andere komt. <br>De getallen geven de toestanden aan zoals hierboven staat beschreven.</p>
+<p><img src="img/toestandsdiagram_physcomp.png" alt="" width="665" height="390" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+<p>Je kunt in het toestandsdiagram bijvoorbeeld zien dat als de bewaker in toestand 1 is en hij ziet een vijand, dan wordt de toestand van de bewaker 2.</p>
+<p>In de bovenstaande uitwerking zie je totaal 5 toestanden en 6 toestandsovergangen. Misschien zijn er wel meer hoor, alleen in dit korte fragment kun je ze niet allemaal zien.<br></p>
+<p>Het losse pijltje naar toestand 1 betekent dat dit de begintoestand is, oftewel de initiële toestand.</p>
+
+
+
+
+<!--
+<iframe src="https://moodle.informatica-actief.nl/mod/hvp/embed.php?id=54125" width="600" height="271" frameborder="0" allowfullscreen="allowfullscreen" style="width: 100%; height: 299px;"></iframe>
+<script src="https://moodle.informatica-actief.nl/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
+-->
+
+<p class="opdracht">Opdracht X.X: Benoem de juiste toestanden</p>
+
+Vul de ontbrekende tekst in:
+<ol style="list-style-type: lower-alpha"> 
+<li>De toestandsdiagram houdt de ________ van de bewaker bij.</li>
+<li>Als de bewaker ________ keer achter elkaar wordt geschopt gaat die dood.</li>
+<li>Als de bewaker alert rondkijkt dan kan hij óf naar toestand ________ gaan of teruggaan naar toestand ________.</li>
+<li>Als de bewaker alert rondkijkt en hij ziet de vijand niet meer, dan gaat hij terug naar toestand ________.</li>
+<li>Als de bewaker geschopt is dan kan hij ________ (wel/niet) terug naar toestand waakzaam.</li>
+</ol>
+
+<!-- ANTWOORDEN
+
+<ol style="list-style-type: lower-alpha"> 
+<li>De toestandsdiagram houdt de toestand van de bewaker bij.</li>
+<li>Als de bewaker twee keer achter elkaar wordt geschopt gaat die dood.</li>
+<li>Als de bewaker alert rondkijkt dan kan hij of naar toestand alarm gaan of teruggaan naar toestand waakzaam.</li>
+<li>Als de bewaker alert rondkijkt en hij ziet de vijand niet meer, dan gaat hij terug naar toestand waakzaam.</li>
+<li>Als de bewaker geschopt is dan kan hij niet terug naar toestand waakzaam.</li>
+</ol>
+
+-->
+
+
+<p>In games gebeurt er van alles tegelijk: een speler drukt op een toets, een vijand beweegt, een score verandert, of het spel eindigt plotseling. Om al dat gedrag goed te begrijpen én te ontwerpen, gebruiken game-ontwikkelaars vaak een <strong>toestandsdiagram</strong> (in het Engels: <em>state diagram</em>). Zo’n diagram laat zien in welke toestanden een spel zich kan bevinden (zoals “spel start”, “spel loopt”, “spel voorbij”) en hoe het spel van de ene naar de andere toestand gaat. Elke pijl in het diagram laat een gebeurtenis of actie zien die de overgang veroorzaakt.</p> 
+
+<p>Voor het maken van je eigen game is een toestandsdiagram erg handig. Het helpt je logisch nadenken over hoe je spel werkt, wat er moet gebeuren na een bepaalde actie, en hoe je het gedrag kunt programmeren. Zeker als je werkt met een game engine zoals <i>coderius-play</i>, waarin je met verschillende ‘scenes’ of spelstaten werkt, is zo’n schema een goed hulpmiddel om overzicht te houden. Het dwingt je om gestructureerd te denken en fouten in je ontwerp vroeg te herkennen. Ook kun je met een diagram makkelijker uitleggen aan anderen hoe je spel werkt. </p>
+
+
+
+
+   	
+<p class="opdracht">Opdracht X.X: Toestandsdiagram van pong</p>
+
+Je oefent nu om het gedrag van een game overzichtelijk wee te geven met een toestandsdiagram.
+
+<ol style="list-style-type: lower-alpha"> 
+<li>Speel of bekijk het klassieke spel <a href="https://freepong.org/">Pong</a> voor maximaal 2 minuten (kies eenspeler). Wat gebeurt er allemaal tijdens het spelen?</li>
+<li>Bedenk wat een speler allemaal kan doen in jouw game (bijv. springen, schieten, bouwen).</li>
+<li>Noteer minstens 5 verschillende toestanden die het spel kan hebben (zoals: "Startscherm", "Game actief", "Bal raakt paddle", "Game over").</li>
+
+<li>Teken een toestandsdiagram. Gebruik hiervoor eventueel <a href="https://madebyevan.com/fsm/">deze online tool</a>:
+
+	<ul>
+	<li>Teken de toestanden als cirkels.</li>
+	<li>Teken pijlen tussen de toestanden: deze geven aan hoe het spel verandert.</li>
+	<li>Schrijf bij elke pijl de trigger die de overgang veroorzaakt (zoals: "pijltje omhoog ingedrukt", "bal raakt paddle", "bal voorbij paddle", "score bereikt 5").
+	</ul>
+
+<li>Bespreek je diagram met een klasgenoot. Hebben jullie dezelfde toestanden? Zijn jullie triggers logisch? Wat zou je kunnen verbeteren?</li>
+
+</ol>
+
+
+<!-- VOORBEELD ANTWOORD: 
+
+| Van toestand  | Naar toestand    | Trigger                       |
+| ------------- | ---------------- | ----------------------------- |
+| Startscherm   | Game actief      | Speler drukt op spatiebalk    |
+| Game actief   | Bal raakt paddle | Botsing met paddle            |
+| Game actief   | Punt gescoord    | Bal voorbij paddle            |
+| Punt gescoord | Game actief      | Na korte pauze / toetsaanslag |
+| Game actief   | Game over        | Score bereikt 5               |
+
+
+
+img/toestandsdiagram_pong.png
+-->
