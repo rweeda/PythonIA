@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Binair tellen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 1em;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 0.5em;
+            text-align: left;
+        }
+        .code {
+            font-family: monospace;
+            background-color: #f4f4f4;
+            padding: 0.5em;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Binair tellen</h1>
+    
+<p>Als een computer alleen 0 en 1 kent, kan een computer dan tot 4 tellen? Het antwoord is "ja". We gaan nu kijken hoe dat zit.</p>
+<p>Op de volgende kaarten staan stipjes.</p>
+
+
+<table style="width: 800px;">
+  <tr>
+    <td><img src="img/16.png" alt="16" style="height: 200px; display: block;"></td>
+    <td><img src="img/8.png" alt="8" style="height: 200px; display: block;"></td>
+    <td><img src="img/4.png" alt="4" style="height: 200px; display: block;"></td>
+    <td><img src="img/2.png" alt="2" style="height: 200px; display: block;"></td>
+    <td><img src="img/1.png" alt="1" style="height: 200px; display: block;"></td>
+  </tr>
+</table>
+
+<p> De stipjes geven de waarde van ieder kaart aan. We kunnen deze kaarten omdraaien. De achterkant is zwart zonder stipjes.</p>
+<p>We coderen de kaarten zo:</p>
+<ul>
+<li>0: een kaart is omgedraaid zodat je geen stipjes ziet (zwart)</li>
+<li>1: een kaart waarvan je de stipjes ziet</li>
+</ul>
+<p>Het decimaal getal 5 weergeven als binair getal gaat zo: <span class="code">00101</span> (4+1=5)</p>
+
+<table style="width: 800px;">
+  <tr>
+    <td></td> <!-- empty left column -->
+    <td><img src="img/0.png" alt="16" style="height: 200px;"></td>
+    <td><img src="img/0.png" alt="8" style="height: 200px;"></td>
+    <td><img src="img/4.png" alt="4" style="height: 200px;"></td>
+    <td><img src="img/0.png" alt="2" style="height: 200px;"></td>
+    <td><img src="img/1.png" alt="1" style="height: 200px;"></td>
+  </tr>
+  <tr>
+    <td><i>binair</i></td> <!-- empty left column -->
+    <td style="text-align: center;">0</td>
+    <td style="text-align: center;">0</td>
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">0</td>
+    <td style="text-align: center;">1</td>
+  </tr>
+</table>
+
+
+
+<p>Het decimaal getal 19 weergeven als binair getal gaat zo: <span class="code">10011</span> (16+2+1)</p>
+
+
+<table style="width: 800px;">
+  <tr>
+    <td></td> <!-- empty left column -->
+    <td><img src="img/16.png" alt="16" style="height: 200px;"></td>
+    <td><img src="img/0.png" alt="8" style="height: 200px;"></td>
+    <td><img src="img/0.png" alt="4" style="height: 200px;"></td>
+    <td><img src="img/2.png" alt="2" style="height: 200px;"></td>
+    <td><img src="img/1.png" alt="1" style="height: 200px;"></td>
+  </tr>
+  <tr>
+    <td><i>binair</i></td> <!-- empty left column -->
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">0</td>
+    <td style="text-align: center;">0</td>
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">1</td>
+  </tr>
+</table>
+
+
+
+<p>Het grootste getal met 5 bits is 31 (dec) = <span class="code">11111</span> (bin). Daarmee kun je de getallen 0 t/m 31 maken.</p>
+
+
+
+<table style="width: 800px;">
+  <tr>
+    <td></td> <!-- empty left column -->
+    <td><img src="img/16.png" alt="16" style="height: 200px;"></td>
+    <td><img src="img/8.png" alt="8" style="height: 200px;"></td>
+    <td><img src="img/4.png" alt="4" style="height: 200px;"></td>
+    <td><img src="img/2.png" alt="2" style="height: 200px;"></td>
+    <td><img src="img/1.png" alt="1" style="height: 200px;"></td>
+  </tr>
+  <tr>
+    <td><i>binair</i></td> <!-- empty left column -->
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">1</td>
+  </tr>
+</table>
+
+
+
+<p><strong>Afspraak:</strong> we schrijven altijd <span class="code">(dec)</span> of <span class="code">(bin)</span> bij een getal om het stelsel aan te geven.</p>
+
+<p>Zo is 10(dec) gelijk aan tien (dec), en 10(bin) gelijk aan twee (dec).</p>
+</body>
+</html>

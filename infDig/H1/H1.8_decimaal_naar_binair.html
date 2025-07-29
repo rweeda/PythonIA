@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Decimaal naar binair</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 1em;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 0.5em;
+            text-align: left;
+        }
+        .code {
+            font-family: monospace;
+            background-color: #f4f4f4;
+            padding: 0.5em;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Decimaal naar binair</h1>
+    
+<p>Er zijn twee methoden om van decimaal naar binair om te rekenen:</p>
+<h2>Methode 1: Delen door 2</h2>
+<p>Deel steeds door 2 en noteer de rest. Lees daarna van onder naar boven.</p>
+<table>
+<tr><th>Deling</th><th>Rest</th></tr>
+<tr><td>22 : 2 = 11</td><td>0</td></tr>
+<tr><td>11 : 2 = 5</td><td>1</td></tr>
+<tr><td>5 : 2 = 2</td><td>1</td></tr>
+<tr><td>2 : 2 = 1</td><td>0</td></tr>
+<tr><td>1 : 2 = 0</td><td>1</td></tr>
+</table>
+<p><strong>Resultaat:</strong> 10110 (binair)</p>
+
+<h2>Methode 2: 2-machten zoeken</h2>
+<p>Kies de grootste macht van 2 die in het getal past en ga zo verder.</p>
+<p><strong>Voorbeeld:</strong> 10 (decimaal)</p>
+<p>De getallen 8 + 2 = 10 → posities 2^3 en 2^1 krijgen een 1</p>
+<p><strong>Resultaat:</strong> <span class="code">01010</span> (binair)</p>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="shortanswer">
+    <name>
+      <text>35(dec) naar bin</text>
+    </name>
+    <questiontext format="html">
+      <text>Zet het decimale getal 35 om naar binair</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>100011</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>63(dec) naar bin</text>
+    </name>
+    <questiontext format="html">
+      <text>Zet het decimale getal 63 om naar binair</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>111111</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>149(dec) naar bin</text>
+    </name>
+    <questiontext format="html">
+      <text>Zet het decimale getal 149 om naar binair</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>10010101</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>833(dec) naar bin</text>
+    </name>
+    <questiontext format="html">
+      <text>Zet het decimale getal 833 om naar binair.</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>1101000001</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>1024(dec) naar bin</text>
+    </name>
+    <questiontext format="html">
+      <text>Zet het decimale getal 1024 om naar binair.</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>10000000000</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>111(bin) naar dec</text>
+    </name>
+    <questiontext format="html">
+      <text>Zet het binaire getal 0000 0111 om naar decimaal.</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>7</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>10000(bin) naar dec</text>
+    </name>
+    <questiontext format="html">
+      <text>Zet het binaire getal 0001 0000 om naar decimaal</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>16</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>10101010(bin) naar dec</text>
+    </name>
+    <questiontext format="html">
+      <text>Zet het binaire getal 1010 1010 om naar decimaal.</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>170</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>1100(bin) naar dec</text>
+    </name>
+    <questiontext format="html">
+      <text>Zet het binaire getal 1100 om naar decimaal.</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>12</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>110 1100 0101(bin) naar dec</text>
+    </name>
+    <questiontext format="html">
+      <text>Zet het binaire getal 0110 1100 0101 om naar decimaal.</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>1733</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>15KB naar bytes</text>
+    </name>
+    <questiontext format="html">
+      <text>Hoeveel bytes is 15 KB?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>15000</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>1024GB naar bytes</text>
+    </name>
+    <questiontext format="html">
+      <text>Hoeveel bytes is 1024 GB?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>1024000000000</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>8TB naar bytes</text>
+    </name>
+    <questiontext format="html">
+      <text>Hoeveel bytes is 8 TB?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>8000000000000</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>63MB naar bytes</text>
+    </name>
+    <questiontext format="html">
+      <text>Hoeveel bytes is 63 MB?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>63000000</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>32bits naar bytes</text>
+    </name>
+    <questiontext format="html">
+      <text>Hoeveel bytes is 32 bits?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>4</text>
+      <feedback>
+        <text>Correct!</text>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

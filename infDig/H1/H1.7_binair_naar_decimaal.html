@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Binair naar decimaal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 1em;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 0.5em;
+            text-align: left;
+        }
+        .code {
+            font-family: monospace;
+            background-color: #f4f4f4;
+            padding: 0.5em;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Binair naar decimaal</h1>
+    
+<p>Wil je van binair naar decimaal rekenen? Dan is het handig om te werken met de machten van 2.</p>
+<p><strong>Voorbeeld:</strong> 010110 (binair) = ??? (decimaal)</p>
+<table>
+<tr><th>Binair</th><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><th>2-machten</th><td>2^5</td><td>2^4</td><td>2^3</td><td>2^2</td><td>2^1</td><td>2^0</td></tr>
+<tr><th>Berekening</th><td>0×32</td><td>1×16</td><td>0×8</td><td>1×4</td><td>1×2</td><td>0×1</td></tr>
+<tr><th>Resultaat</th><td>0</td><td>16</td><td>0</td><td>4</td><td>2</td><td>0</td></tr>
+</table>
+<p><strong>Uitkomst:</strong> 16 + 4 + 2 = <strong>22 (dec)</strong></p>
+
+</body>
+</html>
