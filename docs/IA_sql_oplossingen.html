@@ -597,46 +597,46 @@ LIMIT 8;
 </code></pre>
 
 
-<h3 id="opgave441">Verwerkingsopdracht 4.4.1 Unieke bezorgdata</h3>
+<h3 id="opgave441">Verwerkingsopdracht 4.5.1 Unieke bezorgdata</h3>
 <pre><code class="language-sql">
 SELECT DISTINCT bestel_datum
 FROM bestelling;
 </code></pre>
 
 
-<h3 id="opgave451">Verwerkingsopdracht 4.5.1 Pizza's tellen</h3>
+<h3 id="opgave451">Verwerkingsopdracht 4.6.1 Pizza's tellen</h3>
 <pre><code class="language-sql">
-SELECT COUNT(besteldepizzacode) AS aantal_pizzas
+SELECT COUNT(besteldepizzacode) AS aantal_bestelde_pizzas
 FROM besteldePizza;
 </code></pre>
 
-<h3 id="opgave461">Verwerkingsopdracht 4.6.1 Unieke pizzacode's tellen</h3>
+<h3 id="opgave461">Verwerkingsopdracht 4.7.1 Unieke pizzacode's tellen</h3>
 <pre><code class="language-sql">
 SELECT COUNT(DISTINCT pizzacode) AS aantal_pizzas
 FROM besteldePizza;
 </code></pre>
 
 
-<h3 id="opgave471">Verwerkingsopdracht 4.7.1 Vroegste bezorging</h3>
+<h3 id="opgave471">Verwerkingsopdracht 4.8.1 Vroegste bezorging</h3>
 <pre><code class="language-sql">
 SELECT MIN(bezorg_tijd) AS vroegste_bezorging
 FROM bestelling;
 </code></pre>
 
-<h3 id="opgave481">Verwerkingsopdracht 4.8.1 Duurste bodem</h3>
+<h3 id="opgave481">Verwerkingsopdracht 4.9.1 Duurste bodem</h3>
 <pre><code class="language-sql">
 SELECT MAX(plusprijs) AS hoogste_toeslag
 FROM bodem;
 </code></pre>
 
-<h3 id="opgave491">Verwerkingsopdracht 4.9.1 Totaal van alle kortingen</h3>
+<h3 id="opgave491">Verwerkingsopdracht 4.10.1 Totaal van alle kortingen</h3>
 <pre><code class="language-sql">
 SELECT SUM(korting) AS totaal_korting
 FROM bestelling;
 </code></pre>
 
 
-<h3 id="opgave4101">Verwerkingsopdracht 4.10.1 Gemiddelde toeslag</h3>
+<h3 id="opgave4101">Verwerkingsopdracht 4.11.1 Gemiddelde toeslag</h3>
 <pre><code class="language-sql">
 SELECT AVG(plusprijs) AS gemiddelde_bodem_toeslag
 FROM bodem;
@@ -644,7 +644,7 @@ FROM bodem;
 
 <h1 id="SQL4AfOpgaven">Afsluitende Opdrachten Onderwerp 4</h1>
 
-<h3 id="opgave4121">Afsluitende Opdracht 4.12.1 De drie duurste pizza's</h3>
+<h3 id="opgave4121">Afsluitende Opdracht 4.13.1 De drie duurste pizza's</h3>
 <pre><code class="language-sql">
 SELECT naam, formaatcode, basisprijs
 FROM pizza
@@ -652,7 +652,7 @@ ORDER BY basisprijs DESC
 LIMIT 3;
 </code></pre>
 
-<h3 id="opgave4122">Afsluitende Opdracht 4.12.2 Vijf goedkoopste pizza's</h3>
+<h3 id="opgave4122">Afsluitende Opdracht 4.13.2 Vijf goedkoopste pizza's</h3>
 <pre><code class="language-sql">
 SELECT naam, basisprijs
 FROM pizza
@@ -663,35 +663,35 @@ LIMIT 5;
 
 
 
-<h3 id="opgave4123">Afsluitende Opdracht 4.12.3 Gemiddelde prijs</h3>
+<h3 id="opgave4123">Afsluitende Opdracht 4.13.3 Gemiddelde prijs</h3>
 <pre><code class="language-sql">
 SELECT avg(basisprijs) AS gemiddelde_prijs_zonder_ham
 From pizza
 WHERE omschrijving NOT LIKE '%ham%';
 </code></pre>
 
-<h3 id="opgave4124">Afsluitende Opdracht 4.12.4 Plaatsen met vaste telefoonnummers</li>h3>
+<h3 id="opgave4124">Afsluitende Opdracht 4.13.4 Plaatsen met vaste telefoonnummers</li>h3>
 <pre><code class="language-sql">
 SELECT COUNT(DISTINCT woonplaats) AS woonplaatsen_zonder_06
 FROM klant
 WHERE telefoon NOT LIKE '06%';
 </code></pre>
 
-<h3 id="opgave4125">Afsluitende Opdracht 4.12.5 Aantal normale pizza's</h3>
+<h3 id="opgave4125">Afsluitende Opdracht 4.13.5 Aantal normale pizza's</h3>
 <pre><code class="language-sql">
 SELECT COUNT(pizzacode) AS aantal
 FROM pizza
 WHERE basisprijs >= 7 AND basisprijs <= 10;
 </code></pre>
 
-<h3 id="opgave4126">Afsluitende Opdracht 4.12.6 Totale toeslagen</h3>
+<h3 id="opgave4126">Afsluitende Opdracht 4.13.6 Totale toeslagen</h3>
 <pre><code class="language-sql">
 SELECT SUM(plusprijs) AS totaal_toeslagen
 FROM formaat
 WHERE plusprijs > 1;
 </code></pre>
 
-<h3 id="opgave4127">Afsluitende Opdracht 4.12.7</h3>
+<h3 id="opgave4127">Afsluitende Opdracht 4.13.7</h3>
 <pre><code class="language-sql">
 SELECT max(basisprijs) AS duurste
 FROM pizza

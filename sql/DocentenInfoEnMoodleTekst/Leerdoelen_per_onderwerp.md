@@ -153,9 +153,11 @@ In dit onderwerp:
 <li>leer je welke SQL commando's er zijn en in welk volgorde ze staan;</li>
 <li>leer je het aantal rijen te beperken met <code>LIMIT</code>;</li>
 <li>leer je gegevens in een kolom sorteren met <code>ORDER BY</code>;
-<li>leer je SQL functies gebruiken op kolommen: <code>COUNT()</code>, <code>MIN()</code>, <code>MAX()</code>, <code>SUM()</code>, <code>AVG()</code>;
+<li>leer je wat groepsfuncties zijn en hoe je die kunt gebruiken;
 <li>leer je met <code>DISTINCT</code> alleen unieke waarden terug te krijgen door dubbele rijen uit het resultaat te verwijderen;
-<li>leer je met <code>COUNT(DISTINCT ..)</code> het aantal unieke waarden in een kolom te tellen.
+<li>leer je met <code>COUNT(DISTINCT ..)</code> het aantal unieke waarden in een kolom te tellen;
+<li>leer je andere groepsfuncties gebruiken op kolommen: <code>COUNT()</code>, <code>MIN()</code>, <code>MAX()</code>, <code>SUM()</code>, <code>AVG()</code>.
+
 
 </ul>
 
