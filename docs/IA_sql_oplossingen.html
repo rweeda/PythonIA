@@ -763,14 +763,12 @@ JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode
 JOIN formaat ON besteldePizza.formaatcode = formaat.formaatcode;
 </code></pre>
 
-<h3 id="opgave553">Afsluitende Opdracht 5.5.3 Klanten en hun bezorgers</h3>
-<pre><code class="language-sql">SELECT
-  klant.naam AS klantnaam,
-  klant.adres AS klantadres,
-  bezorger.naam AS bezorgernaam
-FROM bestelling
-JOIN klant ON bestelling.klantnummer = klant.klantnummer
-JOIN bezorger ON bestelling.bezorgercode = bezorger.bezorgercode;
+<h3 id="opgave553">Afsluitende Opdracht 5.5.3 Wie heeft welke pizza besteld?</h3>
+<pre><code class="language-sql">SELECT klant.naam, pizza.naam
+FROM klant
+JOIN bestelling ON klant.klantnummer = bestelling.klantnummer
+JOIN besteldePizza ON bestelling.bestelcode = besteldePizza.bestelcode
+JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode;
 </code></pre>
 
 <h3 id="opgave554">Afsluitende Opdracht 5.5.4 Bestellingen van klanten uit Enschede of Hengelo</h3>
@@ -952,6 +950,64 @@ CREATE TABLE  `bestelling` (
   FOREIGN KEY(klantnummer) REFERENCES klant(klantnummer)
 ) ;
 </code></pre>
+
+
+<!--
+<h2>Afsluitende opdrachten – Hoofdstuk 6</h2>
+
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Opdracht</th>
+      <th>SQL-oplossing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Voeg Pizza Tonno toe</strong><br>
+        Naam: <i>Pizza Tonno</i><br>
+        Omschrijving: <i>Tomaat, kaas en tonijn</i><br>
+        Prijs: €7,90
+      </td>
+      <td><pre><code>INSERT INTO pizza
+VALUES (NULL, 'Pizza Tonno', 'Tomaat, kaas en tonijn', 7.90);</code></pre></td>
+    </tr>
+    <tr>
+      <td><strong>2. Verhoog prijs Margherita naar €6,50</strong></td>
+      <td><pre><code>UPDATE pizza
+SET basisprijs = 6.50
+WHERE naam = 'Margherita';</code></pre></td>
+    </tr>
+    <tr>
+      <td><strong>3. Verwijder bestelling met bestelcode 999</strong></td>
+      <td><pre><code>DELETE FROM bestelling
+WHERE bestelcode = 999;</code></pre></td>
+    </tr>
+    <tr>
+      <td><strong>4. Zoek naar pizza’s met "shoarma"</strong></td>
+      <td><pre><code>SELECT * FROM pizza
+WHERE naam LIKE '%shoarma%'
+   OR omschrijving LIKE '%shoarma%';</code></pre></td>
+    </tr>
+    <tr>
+      <td><strong>5. Voeg nieuwe bestelling toe voor klant 3 (pizza 8, bezorger 2)</strong></td>
+      <td>
+<pre><code>-- Stap 1: bestelling invoeren
+INSERT INTO bestelling
+VALUES (NULL, 3, 2, '2025-07-29 12:00:00');
+
+-- Stap 2: pizza koppelen (stel bestelcode = 105)
+INSERT INTO besteldePizza
+VALUES (NULL, 105, 8);</code></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+-->
+
+
 
 
 <h1 id="SQL7">Onderwerp 7: GROUP BY, HAVING</h1>
