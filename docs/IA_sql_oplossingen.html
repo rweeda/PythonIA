@@ -657,7 +657,7 @@ LIMIT 3;
 SELECT naam, basisprijs
 FROM pizza
 WHERE basisprijs < 8
-ORDER BY basisprijs DESC
+ORDER BY naam
 LIMIT 5;
 </code></pre>
 
@@ -701,8 +701,7 @@ WHERE omschrijving LIKE "%vis%" OR naam LIKE "%a";
 
 <h1 id="SQL5">Onderwerp 5: JOIN</h1>
 <h3 id="opgave511">Verwerkingsopdracht 5.1.1 Koppelingen tussen tabellen </h3>
-A (<em>klant</em> en <em>bestelling</em>).<p> Toelichting: De tabel <em>bestelling</em> bevat de kolom <b>klantnummer</b> die verwijst naar een rij in de tabel <em>klant</em>.</p>
-
+C. <em>besteldepizza</em> en <em>formaat</em>
 
 
 <h3 id="opgave521">Verwerkingsopdracht 5.2.1 Nut van een JOIN</h3>
@@ -729,6 +728,15 @@ FROM besteldepizza
 JOIN pizza ON besteldepizza.pizzacode = pizza.pizzacode
 JOIN bodem ON besteldepizza.bodemcode = bodem.bodemcode;
 </code></pre>
+
+<h3 id="opgave532">Verwerkingsopdracht 5.3.2: Overzicht van alle pizza's dat elk klant heeft besteld</h3>
+<pre><code class="language-sql">
+SELECT klant.naam, klant.postcode, besteldePizza.pizzacode
+FROM klant
+JOIN bestelling ON klant.klantnummer = bestelling.klantnummer
+JOIN besteldePizza ON bestelling.bestelcode = besteldePizza.bestelcode;
+</code></pre>
+
 
 
 <h1 id="SQL5AfOpgaven">Afsluitende Opdrachten Onderwerp 5</h1>
