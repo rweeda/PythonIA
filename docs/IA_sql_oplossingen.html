@@ -128,34 +128,34 @@ TABEL: klanten <table border="1">
 </table>
 
 
-<h3 id="opgave151">Waar vind je databases?</h3>
+<h3 id="opgave151">Verwerkingsopdracht 1.5.1 Waar vind je databases?</h3>
 Voorbeelden van databases zijn
 <ol style="list-style-type: lower-alpha">
-  <li>
-    <ul>
-  <li>Webwinkel</li>
-  <li>Social media platform</li>
-  <li>Magister of SOMtoday</li>
-</ul>
- <li>
-  <ul>
-  <li>Bij webwinkel: productenlijst</li>
-  <li>Bij social media platform: posts</li>
-  <li>Bij school database: gegevens over leerlingen zoals adres, cijfers en rooster</li>
- </ul>
-</ul>
+        <li>
+                <ul>
+                <li>Webwinkel</li>
+                <li>Social media platform</li>
+                <li>Magister of SOMtoday</li>
+                </ul>
+        <li>
+                <ul>
+                <li>Bij webwinkel: productenlijst</li>
+                <li>Bij social media platform: posts</li>
+                <li>Bij school database: gegevens over leerlingen zoals adres, cijfers en rooster</li>
+                </ul>
+</ol>
 
 
 <h3 id="opgave171">Verwerkingsopdracht 1.7.1 CRUD rechten van klanten bepalen</h3>
 <ol style="list-style-type: lower-alpha">
 <li>Acties:
-	<ul>
+<ul>
 <li>Create: Ja, bij het aanmaken van een nieuw account.
 <li>Read: Ja, mag eigen gegevens bekijken.
 <li>Update: Ja, mag eigen gegevens wijzigen (zoals wachtwoord of adres).
 <li>Delete: Meestal niet zelf; alleen door een beheerder.
 </ul>
-<li>Klanten mogen alleen hun eigen gegevens zien en invoeren, maar niet wijzigen of verwijderen. Dit voorkomt fouten en misbruik, en beschermt de privacy van andere klanten.
+<li>Klanten mogen alleen hun eigen gegevens zien, invoeren en wijzigen, maar niet verwijderen. Dit voorkomt fouten en misbruik, en beschermt de privacy van andere klanten.
 </ol>
 
 <h3 id="opgave172">Verwerkingsopdracht 1.7.2 CRUD Rechten van de bezorger bepalen</h3>
@@ -409,16 +409,28 @@ WHERE NOT omschrijving LIKE '%kip%';
 
 
 <h3 id="opgave371">Verwerkingsopdracht 3.7.1 Alle pizza's zonder paprika of ui</h3>
-<pre><code class="language-sql">SELECT naam, omschrijving
-FROM pizza
-WHERE NOT (omschrijving LIKE '%paprika%' OR omschrijving LIKE '%ui%');
-</code></pre>																								
-Ook goed:							
-<pre><code class="language-sql">
+
+<ol type ="a">
+<li>De volgende pizza's worden getoond:
+        <ul>
+        <li>Prosciutto (ham)
+        <li>Funghi (champignons)
+        <li>Borromea (ham én champignons)
+        <li>Hawaii (ham)
+        <li>Calimero (champignons én salami) - Deze hoort er eigenlijk niet bij!
+        </ul>
+</li>
+<li>In SQL wordt de NOT als eerste uitgevoerd, dan AND en dan OR.<br>
+Hierdoor wordt de pizza Calimero, die champignons én salami bevat, toch meegenomen. Dat is niet wat de Luna wil.
+</li>
+<li><pre><code class="language-sql">
 SELECT naam, omschrijving
 FROM pizza
-WHERE (omschrijving NOT LIKE '%paprika%') AND (omschrijving NOT LIKE '%ui%');
-</code></pre>
+WHERE (omschrijving LIKE '%ham%' OR omschrijving LIKE '%champignons%')
+  AND NOT omschrijving LIKE '%salami%';
+</code></pre></li>
+<li>Calimero staat nu terecht niet meer in het resultaat, omdat deze salami bevat.</li>
+</ol>
 
 <h3 id="opgave372">Verwerkingsopdracht 3.7.2 Toon pizza's die voldoen aan meerdere voorwaarden</h3>
 <pre><code class="language-sql">SELECT *
