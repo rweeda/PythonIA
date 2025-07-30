@@ -195,7 +195,7 @@ In dit onderwerp:
 </div>
 
 
-# Overzicht Onderwerp 6 VERDIEPING: GROUP BY en HAVING
+# Overzicht Onderwerp 7 VERDIEPING: GROUP BY en HAVING
 
 <h4>Onderwerp 6: GROUP BY en HAVING<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H6_groupby.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right" width="150"></h4>
 
