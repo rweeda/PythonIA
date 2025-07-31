@@ -38,10 +38,8 @@ Je kunt je werk op je computer opslaan via 'Bestand' en vervolgens 'Bewaar noteb
 
 ### Overzicht ONDERWERP 1: Kennismaken met databases
 <!-->
-<h5><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H1_overzicht.png" alt="logo onderwerp 1" style="float: right; margin: 4px;" width="150" height="151">
-1: Kennismaking met databases<br></h5>-->
-
-<h4><<img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H1_1_pizzabezorger.png" alt="afbeelding van een pizza bezorger"   role="presentation" class="img-responsive atto_image_button_right" style="float: right; margin: 4px;" width="150">Onderwerp 1: Kennismaken met databases</h4>
+<h5><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/H1_overzicht.png" alt="logo onderwerp 1" style="float: right; margin: 4px;" width="200">
+    1: Kennismaking met databases<br></h5>
 
 
 <p>Data is overal. In dit onderwerp leer je hoe gegevens op een gestructureerde manier in tabellen van een database worden opgeslagen. Zo kun je snel en eenvoudig informatie opvragen wanneer je die nodig hebt. Zo’n verzoek noem je een <strong>query</strong>, en daarvoor gebruik je een speciale vraagtaal: <strong>SQL</strong>, wat staat voor <em>Structured Query Language</em>. Dit is de standaardtaal om met databases te werken.</p>
@@ -50,28 +48,24 @@ Je kunt je werk op je computer opslaan via 'Bestand' en vervolgens 'Bewaar noteb
 
 <p>We beginnen met het verkennen van databases. Wat zijn het? Waar kom je ze tegen? Hoe zijn ze opgebouwd? En hoe kun je er nuttige informatie uit halen? In deze cursus werk je met de database van Pizzeria Danilo als voorbeeld.</p>
 
-<p>Met SQL kun je gegevens in een database invoeren (Create), opzoeken (Read), aanpassen (Update) en verwijderen (Delete). Afgekort heten deze acties <strong>CRUD</strong>. Om te zorgen dat informatie veilig blijft, hebben gebruikers vaak verschillende rechten. Niet iedereen mag zomaar tabellen verwijderen of alle gegevens inzien. In dit onderwerp leer je nadenken over wie welke acties mag uitvoeren op een database, zoals het aanpassen, toevoegen of verwijderen van gegevens.</p>
-
 <p>In dit onderwerp:</p>
 <ul>
-  <li>leer je dat een <strong>database</strong> wordt gebruikt om data op een gestructureerde manier (in tabellen) op te slaan;</li>
-  <li>leer je zelf een eenvoudige tabel ontwerpen;</li>
-  <li>maak je kennis met de drie datatypen in <em>SQLite</em>: <strong>TEXT</strong> (tekst), <strong>INTEGER</strong> (geheel getal) en <strong>REAL</strong> (kommagetal);</li>
-  <li>leer je dat elke tabel een <em>primary key</em> heeft: een kolom waarin elke rij een unieke waarde bevat;</li>
-  <li>leer je wat een <em>databasemanagementsysteem</em> (DBMS) is;</li>
-  <li>leer je dat gebruikers van een database verschillende rechten kunnen hebben, bijvoorbeeld om data in te voeren (CREATE), te lezen (READ), aan te passen (UPDATE) of te verwijderen (DELETE) — de zogeheten <strong>CRUD-rechten</strong>;</li>
-  <li>leer je het verschil tussen gegevens, data en informatie.</li>
+    <li>leer je de begrippen <b>database</b>, <b>SQL</b> en <b>SQLite</b> kennen;</li>
+    <li>ontdek je dat een database een georganiseerde verzameling gegevens is, opgeslagen in tabellen met rijen en kolommen;</li>
+    <li>leer je hoe data gestructureerd wordt opgeslagen in tabellen;</li>
+    <li>maak je kennis met de drie datatypen in SQLite: <code>TEXT</code> (tekst), <code>INTEGER</code> (geheel getal) en <code>REAL</code> (kommagetal);</li>
+    <li>leer je dat elke tabel een <b>primary key</b> heeft: een kolom waarvan elk rij een unieke waarde bevat;</li>
+    <li>ontwerp je zelf een eenvoudige tabel;</li>
+    <li>leer je wat een <emb>databasemanagementsysteem</b> (DBMS) is en waar die voor gebruikt wordt.</li>
 </ul>
-
-
-</p>
+<p></p>
 <p>
- <div class="activity-item time-block">
+</p>
+<div class="activity-item time-block">
     <div class="fa fa-clock-o fa-3x"><br></div>
     <br>1 uur
 </div>
-</p>
-
+<p></p>
 
 ### Overzicht ONDERWERP 2: SELECT - FROM
 
@@ -231,10 +225,7 @@ In dit onderwerp:
 <h4><img src="https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/img/Dbase_CRUD.png" alt="Database aanpassen"   role="presentation" class="img-responsive atto_image_button_right" width="150">Onderwerp 7: Create - Read - Update - Delete uitvoeren</h4>
 
 
-<p>Naast het opzoeken van informatie, kun je met SQL ook tabellen maken, 
-vullen, aanpassen en verwijderen. Deze acties heten CRUD (Create, Read, 
-Update, Delete). In deze onderwerp leer je met SQL alle acties uit te voeren: eerste het invoeren, aanpassen en verwijderen van gegevens uit tabellen. Daarna leer je ook hoe je tabellen zelf kunt aanmaken, aanpassen en verwijderen.
-</p>
+<p>Deze acties heten CRUD (Create, Read, Update, Delete). In dit onderwerp leer je al deze acties uitvoeren met SQL: eerst het invoeren, aanpassen en verwijderen van gegevens, daarna het maken, wijzigen en verwijderen van tabellen.</p>
 
 <p>Elke keer dat je de webpagina ververst, wordt de oorspronkelijke database hersteld. Je hoeft dus niet bang te zijn om iets fout te doen — experimenteren mag!</p>
 
