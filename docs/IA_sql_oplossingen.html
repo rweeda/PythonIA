@@ -913,7 +913,7 @@ RENAME TO grootte;
 
 
 
-<h3 id="opgave7101">Verwerkingsopdracht 6.10.1 Foreign keys bij Danilo's Pizzeria</h3>
+<h3 id="opgave7101">Verwerkingsopdracht 6.9.1 Foreign keys bij Danilo's Pizzeria</h3>
 <ol type="a">
 <li>De tabel <i>besteldepizza</i> heeft vier foreign keys, namelijk:
 	<ol><li><b>bestelcode</b> uit tabel <i>bestelling</i>
@@ -924,19 +924,19 @@ RENAME TO grootte;
 <li>De tabel <i>formaat</i> heeft <b>geen</b> foreign key. Ze heeft een primary key <b>formaatcode</b> die vanuit tabel <i>besteldePizza</i> als foreign key gebruikt wordt, maar ze verwijst zelf niet naar een andere tabel en heeft dus geen foreign key.
 </ol>
 
-<h3 id="opgave7111">Verwerkingsopdracht 6.11.1 Foreign keys bij Danilo's Pizzeria</h3>
+<h3 id="opgave7111">Verwerkingsopdracht 6.10.1 Foreign keys bij Danilo's Pizzeria</h3>
 <ol type="a">
 
 <li>Tabel <i>besteldePizza</i> heeft een kolom <b>formaatcode</b>. Daarvoor komen de gegevens uit de tabel <i>formaat</i> en de primary key-kolom <b>formaatcode</b>.
 <li>De foreign key verwijst naar kolom <b>omschrijving</b> uit de tabel <i>bodem</i>. Dit is niet correct, want een foreign key moet verwijzen naar de primary key van de tabel <i>bodem</i>, en dus <b>bodemcode</b>.
 </ol>
 
-<h3 id="opgave7112">Verwerkingsopdracht 6.11.2 Debuggen van een foutieve foreign key</h3>
+<h3 id="opgave7112">Verwerkingsopdracht 6.10.2 Debuggen van een foutieve foreign key</h3>
 De <b>boncode</b> in de tabel <i>kortingsbonnen</i> is de primary key. Maar de code van de foreign key staat in de <code>CREATE TABLE</code> van de tabel <i>kortingsbonnen</i>. Dat is niet goed.<br>
 
 Deze primary key uit de tabel <i>kortingsbonnen</i> moet worden gekoppeld aan een kolom in een andere tabel, namelijk tabel <i>bestelling</i>. De code voor de foreign key moet dus in de <code>CREATE TABLE</code> van tabel <i>bestelling</i> worden toegevoegd.
 
-<h3 id="opgave7113">Verwerkingsopdracht 6.11.3 Foreign key teovoegen</h3>
+<h3 id="opgave7113">Verwerkingsopdracht 6.10.3 Foreign key teovoegen</h3>
 
 <ol type="a">
 <li>
@@ -962,14 +962,14 @@ CREATE TABLE bestelling (
 <li>De kolom <b>bestelcode</b> is een primary key in de tabel <i>bestelling</i>. De foreign key moet dus in de <code>CREATE TABLE</code> van tabel <i>besteldePizza</i> staan.</li>
 </ol>
 
-<h3 id="opgave7131">Afsluitende Opdracht 6.13.1 Keys bepalen</h3>
+<h3 id="opgave7131">Afsluitende Opdracht 6.12.1 Keys bepalen</h3>
 <ol type="a">
 <li>Kolom <b>reviewcode</b></li>
 <li>De tabel <i>review</i></li>
 </ol>
 
 
-<h3 id="opgave7132">Afsluitende Opdracht 6.13.2 Tabel <i>review</i> aanmaken</h3>
+<h3 id="opgave7132">Afsluitende Opdracht 6.12.2 Tabel <i>review</i> aanmaken</h3>
 <ol type="a">
 <li><pre><code>CREATE TABLE review (
     reviewcode INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -990,7 +990,7 @@ FROM review;</code></pre></li>
 
 
 
-<h3 id="opgave7133">Afsluitende Opdracht 6.13.3 Reviews verwijderen en aanpassen</h3>
+<h3 id="opgave7133">Afsluitende Opdracht 6.12.3 Reviews verwijderen en aanpassen</h3>
 <ol type="a">
 <li><pre><code class="language-sql">DELETE FROM review WHERE reviewcode = 2;
 </pre></code>
@@ -1005,7 +1005,7 @@ FROM review;</code></pre></li>
 </ol>
 
 
-<h3 id="opgave7134">Afsluitende Opdracht 6.13.4 Kolom <b>datum</b> toevoegen
+<h3 id="opgave7134">Afsluitende Opdracht 6.12.4 Kolom <b>datum</b> toevoegen
 <ol type="a">
 <li><pre><code class="language-sql">
 ALTER TABLE review ADD COLUMN datum TEXT;
@@ -1020,7 +1020,7 @@ UPDATE review SET datum = '2025-08-15' where reviewcode = 3;
 FROM review;</code></pre></li>
 </ol>
 
-<h3 id="opgave7135">Afsluitende Opdracht 6.13.5 Kolom <b>opmerking</b> hernoemen</h3>
+<h3 id="opgave7135">Afsluitende Opdracht 6.12.5 Kolom <b>opmerking</b> hernoemen</h3>
 <ol type="a">
 <li>
 <pre><code class="language-sql">ALTER TABLE review RENAME COLUMN opmerking TO toelichting;
@@ -1031,7 +1031,7 @@ FROM beoordeling;
 </code></pre></li>
 </ol>
 
-<h3 id="opgave7136">Afsluitende Opdracht 6.13.6 Tabel <i>review</i> hernoemen</h3>
+<h3 id="opgave7136">Afsluitende Opdracht 6.12.6 Tabel <i>review</i> hernoemen</h3>
 <ol type="a">
 <li><pre><code class="language-sql">
 ALTER TABLE review RENAME TO beoordeling;
@@ -1042,7 +1042,7 @@ FROM beoordeling;
 </code></pre></li>
 </ol>
 
-<h3 id="opgave7137">Afsluitende Opdracht 6.13.7 Tabel <i>beoordeling</i> verwijderen</h3>
+<h3 id="opgave7137">Afsluitende Opdracht 6.12.7 Tabel <i>beoordeling</i> verwijderen</h3>
 <ol type="a">
 <li><pre><code class="language-sql">
 DROP TABLE beoordeling;
