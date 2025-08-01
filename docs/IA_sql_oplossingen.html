@@ -10,12 +10,14 @@
 
 </head>
 <body>
+  <div class="content">
   <h1>UITWERKINGEN</h1>
   <hr>
+
 <h1 id="SQL1">Onderwerp 1: Databases</h1>
 
 <hr>
-<div class="content">
+
 <h3 id="opgave111">Verwerkingsopdracht 1.1.1 Kolommen kiezen bij het ontwerp van een tabel</h3>
 <ol style="list-style-type: lower-alpha">
 
@@ -282,7 +284,7 @@ FROM besteldePizza;
 
 
 <hr>
-<h1 id="SQL2AfOpgaven">Afsluitende Opdrachten Onderwerp 2</h1>
+<h1 id="SQL2AfOpgaven">Afsluitende Opdrachten Onderwerp 2: SQL SELECT-FROM</h1>
 
 
 <hr>
@@ -400,9 +402,7 @@ FROM pizza
 WHERE omschrijving NOT LIKE '%kip%';
 </code></pre>
 ook goed:
-<pre><code class="language-sql">
-ANTWOORD:
-SELECT naam, omschrijving
+<pre><code class="language-sql">SELECT naam, omschrijving
 FROM pizza
 WHERE NOT omschrijving LIKE '%kip%';
 </code></pre>
@@ -423,8 +423,7 @@ WHERE NOT omschrijving LIKE '%kip%';
 <li>In SQL wordt de NOT als eerste uitgevoerd, dan AND en dan OR.<br>
 Hierdoor wordt de pizza Calimero, die champignons én salami bevat, toch meegenomen. Dat is niet wat de Luna wil.
 </li>
-<li><pre><code class="language-sql">
-SELECT naam, omschrijving
+<li><pre><code class="language-sql">SELECT naam, omschrijving
 FROM pizza
 WHERE (omschrijving LIKE '%ham%' OR omschrijving LIKE '%champignons%')
   AND NOT omschrijving LIKE '%salami%';
@@ -449,8 +448,7 @@ WHERE basisprijs < 7.5 AND (naam LIKE 'M%' OR naam LIKE '%A');
 <li>Commentaar toevoegen met '--'.
 </ol>
 
-<pre><code class="language-sql">
-SELECT naam, basisprijs  -- spatie na de komma
+<pre><code class="language-sql">SELECT naam, basisprijs  -- spatie na de komma
 FROM pizza               -- Elke SQL commando op een nieuwe regel en in hoofdletters
 WHERE basisprijs < 8;    -- afsluiten met een ';'
 </code></pre>
@@ -469,10 +467,9 @@ WHERE basisprijs < 7.0;
 'Nijmegen'). SQL vergelijkt tekst hoofdlettergevoelig. In dit geval zijn er
 klanten die in 'nijmegen' wonen, maar wel in 'Nijmegen'.
 <li>
-De juiste query is:<pre><code class="language-sql">
-  SELECT *
-	FROM klant
-	WHERE woonplaats = 'Nijmegen'; </code></pre>
+De juiste query is:<pre><code class="language-sql">SELECT *
+FROM klant
+WHERE woonplaats = 'Nijmegen'; </code></pre>
 </ol>
 
 <h3 id="opgave3103">Verwerkingsopdracht 3.10.3 Fout in query (3)  </h3>
@@ -489,11 +486,10 @@ FROM pizza
 WHERE basispijs < 7.0; </code></pre>
 
 
-<h1 id="SQL3AfOpgaven">Afsluitende Opdrachten Onderwerp 3</h1>
+<h1 id="SQL3AfOpgaven">Afsluitende Opdrachten Onderwerp 3: WHERE</h1>
 
 <h3 id="opgave3121">Afsluitende Opdracht 3.12.1 Klanten in een specifieke plaats</h3>
-<pre><code class="language-sql">
-SELECT klantnummer, naam, woonplaats
+<pre><code class="language-sql">SELECT klantnummer, naam, woonplaats
 FROM klant
 WHERE woonplaats = 'Hengelo';
 </code></pre>
@@ -501,8 +497,7 @@ WHERE woonplaats = 'Hengelo';
 
 
 <h3 id="opgave3122">Afsluitende Opdracht 3.12.2 Debuggen en herschrijven van slordige query</h3>
-<pre><code class="language-sql">
--- Er ontbreekt een komma tussen de kolommen.
+<pre><code class="language-sql">-- Er ontbreekt een komma tussen de kolommen.
 -- Er ontbreekt een puntkomma aan het eind.
 SELECT naam, basisprijs
 FROM pizza
@@ -511,24 +506,21 @@ WHERE basisprijs < 7;
 
 
 <h3 id="opgave3123">Afsluitende Opdracht 3.12.3 Alle goedkope pizza's met een 'C'</h3>
-<pre><code class="language-sql">
-SELECT naam
+<pre><code class="language-sql">SELECT naam
 FROM pizza
 WHERE naam LIKE 'C%' AND basisprijs <= 8.0;
 </code></pre>
 
 
 <h3 id="opgave3124">Afsluitende Opdracht 3.12.4 Dure salami</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
+<pre><code class="language-sql">SELECT naam, basisprijs
 FROM pizza
 WHERE basisprijs >= 9
   AND omschrijving LIKE '%salami%';
 </code></pre>
 
 <h3 id="opgave3125">Afsluitende Opdracht 3.12.5 Toon 3 pizza's zonder vlees, met een 'a' in de naam</h3>
-<pre><code class="language-sql">
-SELECT naam, omschrijving
+<pre><code class="language-sql">SELECT naam, omschrijving
 FROM pizza
 WHERE omschrijving NOT LIKE '%ham%'
   AND omschrijving NOT LIKE '%salami%'
@@ -538,8 +530,7 @@ WHERE omschrijving NOT LIKE '%ham%'
 
 
 <h3 id="opgave3126">Afsluitende Opdracht 3.12.6 Pizza's met 'special' of duurder dan €10</h3>
-<pre><code class="language-sql">
-SELECT naam
+<pre><code class="language-sql">SELECT naam
 FROM pizza
 WHERE omschrijving LIKE '%special%'
    OR basisprijs > 9;
@@ -547,8 +538,7 @@ WHERE omschrijving LIKE '%special%'
 
 
 <h3 id="opgave3127">Afsluitende Opdracht 3.12.7 Bezorgers met naam H maar die NIET met J begint</h3>
-<pre><code class="language-sql">
-SELECT naam AS bezorgernaam
+<pre><code class="language-sql">SELECT naam AS bezorgernaam
 FROM bezorger
 WHERE (naam LIKE 'H%' OR naam LIKE 'J%') AND naam NOT LIKE '%A%';
 </code></pre>
@@ -566,8 +556,7 @@ WHERE (naam LIKE 'H%' OR naam LIKE 'J%') AND naam NOT LIKE '%A%';
 
 
 <h3 id="opgave421">Verwerkingsopdracht 4.2.1 Alleen de eerste drie pizza's</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
+<pre><code class="language-sql">SELECT naam, basisprijs
 FROM pizza
 LIMIT 3;
 </code></pre>
@@ -575,22 +564,19 @@ LIMIT 3;
 
 
 <h3 id="opgave431">Verwerkingsopdracht 4.3.1 de drie duurste pizza's</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
+<pre><code class="language-sql">SELECT naam, basisprijs
 FROM pizza
 ORDER BY basisprijs;
 </code></pre>
 Ook goed:
-<pre><code class="language-sql">
-SELECT naam, basisprijs
+<pre><code class="language-sql">SELECT naam, basisprijs
 FROM pizza
 ORDER BY basisprijs ASC;
 </code></pre>
 
 
 <h3 id="opgave432">Verwerkingsopdracht 4.3.2 De vijf laatste bezorgingen</h3>
-<pre><code class="language-sql">
-SELECT bestelcode, bestel_datum
+<pre><code class="language-sql">SELECT bestelcode, bestel_datum
 FROM bestelling
 ORDER BY bestel_datum DESC
 LIMIT 8;
@@ -598,63 +584,54 @@ LIMIT 8;
 
 
 <h3 id="opgave441">Verwerkingsopdracht 4.5.1 Unieke bezorgdata</h3>
-<pre><code class="language-sql">
-SELECT DISTINCT bestel_datum
+<pre><code class="language-sql">SELECT DISTINCT bestel_datum
 FROM bestelling;
 </code></pre>
 
 
 <h3 id="opgave451">Verwerkingsopdracht 4.6.1 Pizza's tellen</h3>
-<pre><code class="language-sql">
-SELECT COUNT(besteldepizzacode) AS aantal_bestelde_pizzas
+<pre><code class="language-sql">SELECT COUNT(besteldepizzacode) AS aantal_bestelde_pizzas
 FROM besteldePizza;
 </code></pre>
 
 <h3 id="opgave461">Verwerkingsopdracht 4.7.1 Unieke pizzacode's tellen</h3>
-<pre><code class="language-sql">
-SELECT COUNT(DISTINCT pizzacode) AS aantal_pizzas
+<pre><code class="language-sql">SELECT COUNT(DISTINCT pizzacode) AS aantal_pizzas
 FROM besteldePizza;
 </code></pre>
 
 
 <h3 id="opgave471">Verwerkingsopdracht 4.8.1 Vroegste bezorging</h3>
-<pre><code class="language-sql">
-SELECT MIN(bezorg_tijd) AS vroegste_bezorging
+<pre><code class="language-sql">SELECT MIN(bezorg_tijd) AS vroegste_bezorging
 FROM bestelling;
 </code></pre>
 
 <h3 id="opgave481">Verwerkingsopdracht 4.9.1 Duurste bodem</h3>
-<pre><code class="language-sql">
-SELECT MAX(plusprijs) AS hoogste_toeslag
+<pre><code class="language-sql">SELECT MAX(plusprijs) AS hoogste_toeslag
 FROM bodem;
 </code></pre>
 
 <h3 id="opgave491">Verwerkingsopdracht 4.10.1 Totaal van alle kortingen</h3>
-<pre><code class="language-sql">
-SELECT SUM(korting) AS totaal_korting
+<pre><code class="language-sql">SELECT SUM(korting) AS totaal_korting
 FROM bestelling;
 </code></pre>
 
 
 <h3 id="opgave4101">Verwerkingsopdracht 4.11.1 Gemiddelde toeslag</h3>
-<pre><code class="language-sql">
-SELECT AVG(plusprijs) AS gemiddelde_bodem_toeslag
+<pre><code class="language-sql">SELECT AVG(plusprijs) AS gemiddelde_bodem_toeslag
 FROM bodem;
  </code></pre>
 
-<h1 id="SQL4AfOpgaven">Afsluitende Opdrachten Onderwerp 4</h1>
+<h1 id="SQL4AfOpgaven">Afsluitende Opdrachten Onderwerp 4: LIMIT, ORDER BY en groepsfuncties</h1>
 
 <h3 id="opgave4121">Afsluitende Opdracht 4.13.1 De drie duurste pizza's</h3>
-<pre><code class="language-sql">
-SELECT naam, formaatcode, basisprijs
+<pre><code class="language-sql">SELECT naam, formaatcode, basisprijs
 FROM pizza
 ORDER BY basisprijs DESC
 LIMIT 3;
 </code></pre>
 
 <h3 id="opgave4122">Afsluitende Opdracht 4.13.2 Vijf goedkoopste pizza's</h3>
-<pre><code class="language-sql">
-SELECT naam, basisprijs
+<pre><code class="language-sql">SELECT naam, basisprijs
 FROM pizza
 WHERE basisprijs < 8
 ORDER BY naam
@@ -664,36 +641,31 @@ LIMIT 5;
 
 
 <h3 id="opgave4123">Afsluitende Opdracht 4.13.3 Gemiddelde prijs</h3>
-<pre><code class="language-sql">
-SELECT avg(basisprijs) AS gemiddelde_prijs_zonder_ham
+<pre><code class="language-sql">SELECT avg(basisprijs) AS gemiddelde_prijs_zonder_ham
 From pizza
 WHERE omschrijving NOT LIKE '%ham%';
 </code></pre>
 
 <h3 id="opgave4124">Afsluitende Opdracht 4.13.4 Plaatsen met vaste telefoonnummers</li>h3>
-<pre><code class="language-sql">
-SELECT COUNT(DISTINCT woonplaats) AS woonplaatsen_zonder_06
+<pre><code class="language-sql">SELECT COUNT(DISTINCT woonplaats) AS woonplaatsen_zonder_06
 FROM klant
 WHERE telefoon NOT LIKE '06%';
 </code></pre>
 
 <h3 id="opgave4125">Afsluitende Opdracht 4.13.5 Aantal normale pizza's</h3>
-<pre><code class="language-sql">
-SELECT COUNT(pizzacode) AS aantal
+<pre><code class="language-sql">SELECT COUNT(pizzacode) AS aantal
 FROM pizza
 WHERE basisprijs >= 7 AND basisprijs <= 10;
 </code></pre>
 
 <h3 id="opgave4126">Afsluitende Opdracht 4.13.6 Totale toeslagen</h3>
-<pre><code class="language-sql">
-SELECT SUM(plusprijs) AS totaal_toeslagen
+<pre><code class="language-sql">SELECT SUM(plusprijs) AS totaal_toeslagen
 FROM formaat
 WHERE plusprijs > 1;
 </code></pre>
 
 <h3 id="opgave4127">Afsluitende Opdracht 4.13.7</h3>
-<pre><code class="language-sql">
-SELECT max(basisprijs) AS duurste
+<pre><code class="language-sql">SELECT max(basisprijs) AS duurste
 FROM pizza
 WHERE omschrijving LIKE "%vis%" OR naam LIKE "%a";
 </code></pre>
@@ -710,8 +682,7 @@ C. Omdat de naam van de pizza niet in tabel <i>besteldepizza</i> staat.
 
 
 <h3 id="opgave522">Verwerkingsopdracht 5.2.2 BesteldePizza, besteldatum en bezorgtijd</h3>
-<pre><code class="language-sql">
-SELECT besteldePizza.besteldepizzacode, bestelling.bestel_datum, bestelling.bezorg_tijd
+<pre><code class="language-sql">SELECT besteldePizza.besteldepizzacode, bestelling.bestel_datum, bestelling.bezorg_tijd
 FROM besteldePizza
 JOIN bestelling ON besteldePizza.bestelcode = bestelling.bestelcode;
 </code></pre>
@@ -722,16 +693,14 @@ Een JOIN koppelt rijen van twee tabellen aan elkaar via een gemeenschappelijke k
 
 
 <h3 id="opgave531">Verwerkingsopdracht 5.3.1: Overzicht van naam en bodem van alle bestelde pizza's</h3>
-<pre><code class="language-sql">
-SELECT besteldepizza.bestelcode, pizza.naam AS pizzanaam, bodem.omschrijving AS bodembeschrijving
+<pre><code class="language-sql">SELECT besteldepizza.bestelcode, pizza.naam AS pizzanaam, bodem.omschrijving AS bodembeschrijving
 FROM besteldepizza
 JOIN pizza ON besteldepizza.pizzacode = pizza.pizzacode
 JOIN bodem ON besteldepizza.bodemcode = bodem.bodemcode;
 </code></pre>
 
 <h3 id="opgave532">Verwerkingsopdracht 5.3.2: Overzicht van alle pizza's dat elk klant heeft besteld</h3>
-<pre><code class="language-sql">
-SELECT klant.naam, klant.postcode, besteldePizza.pizzacode
+<pre><code class="language-sql">SELECT klant.naam, klant.postcode, besteldePizza.pizzacode
 FROM klant
 JOIN bestelling ON klant.klantnummer = bestelling.klantnummer
 JOIN besteldePizza ON bestelling.bestelcode = besteldePizza.bestelcode;
@@ -739,12 +708,10 @@ JOIN besteldePizza ON bestelling.bestelcode = besteldePizza.bestelcode;
 
 
 
-<h1 id="SQL5AfOpgaven">Afsluitende Opdrachten Onderwerp 5</h1>
+<h1 id="SQL5AfOpgaven">Afsluitende Opdrachten Onderwerp 5: JOIN</h1>
 
 <h3 id="opgave551">Afsluitende Opdracht 5.5.1 Omschrijving van de bodem bij een bestelling</h3>
-
-<pre><code class="language-sql">
-SELECT besteldepizza.besteldepizzacode, bodem.omschrijving
+<pre><code class="language-sql">SELECT besteldepizza.besteldepizzacode, bodem.omschrijving
 FROM besteldepizza
 JOIN bodem ON besteldepizza.bodemcode = bodem.bodemcode;
 </code></pre>
@@ -753,11 +720,7 @@ JOIN bodem ON besteldepizza.bodemcode = bodem.bodemcode;
 
 
 <h3 id="opgave552">Afsluitende Opdracht 5.5.2 Een overzicht van de bestelde pizza en het formaat</h3>
-<pre><code class="language-sql">
-SELECT
-  besteldePizza.besteldepizzacode,
-  pizza.naam AS pizzanaam,
-  formaat.omschrijving AS formaat
+<pre><code class="language-sql">SELECT besteldePizza.besteldepizzacode, pizza.naam AS pizzanaam, formaat.omschrijving AS formaat
 FROM besteldePizza
 JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode
 JOIN formaat ON besteldePizza.formaatcode = formaat.formaatcode;
@@ -772,8 +735,7 @@ JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode;
 </code></pre>
 
 <h3 id="opgave554">Afsluitende Opdracht 5.5.4 Bestellingen van klanten uit Enschede of Hengelo</h3>
-<pre><code class="language-sql">
-SELECT bestelcode, bestelling.klantnummer
+<pre><code class="language-sql">SELECT bestelcode, bestelling.klantnummer
 FROM bestelling
 JOIN klant  ON bestelling.klantnummer = klant.klantnummer
 WHERE woonplaats = 'Enschede' OR woonplaats = 'Hengelo'
@@ -781,13 +743,7 @@ LIMIT 3;
 </code></pre>
 
 <h3 id="opgave535">Afsluitende Opdracht 5.5.5 Bezorgerinformatie</h3>
-<pre><code class="language-sql">
-SELECT
-    bezorger.naam AS bezorgernaam,
-    klant.naam AS klantnaam,
-    klant.adres,
-    klant.postcode,
-    klant.woonplaats
+<pre><code class="language-sql">SELECT bezorger.naam AS bezorgernaam, klant.naam AS klantnaam, klant.adres, klant.postcode, klant.woonplaats
 FROM bestelling
 JOIN bezorger ON bestelling.bezorgernummer = bezorger.bezorgernummer
 JOIN klant ON bestelling.klantnummer = klant.klantnummer
@@ -795,11 +751,7 @@ LIMIT 5;
 </code></pre>
 
 <h3 id="opgave556">Afsluitende Opdracht 5.5.6 Voor de kok</h3>
-<pre><code class="language-sql">
-SELECT
-    pizza.naam AS pizzanaam,
-    formaat.omschrijving AS formaat,
-    bodem.omschrijving AS bodem
+<pre><code class="language-sql">SELECT pizza.naam AS pizzanaam, formaat.omschrijving AS formaat, bodem.omschrijving AS bodem
 FROM besteldePizza
 JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode
 JOIN formaat ON besteldePizza.formaatcode = formaat.formaatcode
@@ -824,14 +776,13 @@ FROM pizza;
 
 <h3 id="opgave712">Verwerkingsopdracht 6.1.2 Een nieuwe glutenvrije bodem</h3>
 Antwoord: B<br>
-Toelichting: bodemcode is een AUTOINCREMENT-veld en moet je dus NULL invullen.
+Toelichting: <b>bodemcode</b> is een AUTOINCREMENT-veld en moet je dus NULL invullen.
 Bij antwoord D ontbreken aanhalingstekens en het euroteken is fout in SQL.
 
 
 
 <h3 id="opgave713">Verwerkingsopdracht 6.1.3 Pan-bodem toevoegen</h3>
-<pre><code class="language-sql">
-INSERT INTO formaat
+<pre><code class="language-sql">INSERT INTO formaat
 VALUES (NULL, 'XXL', 2.00);
 -- check:
 SELECT *
@@ -840,8 +791,7 @@ FROM formaat;
 
 
 <h3 id="opgave722"> Verwerkingsopdracht 6.2.2 Verwijder de Pazza pizza</h3>
-<pre><code class="language-sql">
-UPDATE pizza
+<pre><code class="language-sql">UPDATE pizza
 SET basisprijs = 8.00
 WHERE naam = "Pazza";
 -- check:
@@ -850,8 +800,7 @@ FROM pizza;
 </code></pre>
 
 <h3 id="opgave731"> Verwerkingsopdracht 6.3.1 Pas de prijs van een pizza aan</h3>
-<pre><code class="language-sql">
-UPDATE pizza
+<pre><code class="language-sql">UPDATE pizza
 SET basisprijs = 8.00
 WHERE naam = "Margherita";
 </code></pre>
@@ -859,9 +808,7 @@ WHERE naam = "Margherita";
 
 <h3 id="opgave741"> Verwerkingsopdracht 6.4.1 Nieuwe tabel kortingsbon aanmaken</h3>
 <ol type="a">
-<li>
-<pre><code class="language-sql">
-CREATE TABLE kortingsbon (
+<li><pre><code class="language-sql">CREATE TABLE kortingsbon (
     boncode INTEGER PRIMARY KEY AUTOINCREMENT,
     korting REAL,
     datum TEXT
@@ -880,13 +827,11 @@ Als de code geen foutmelding geeft, maar wel een lege tabel oplevert, dan is het
 <h3 id="opgave751"> Verwerkingsopdracht 6.5.1 Verwijder tabel bodem</h3>
 <ol type="a">
 <li>
-<pre><code class="language-sql">
--- verwijderen:
+<pre><code class="language-sql">-- verwijderen:
 DROP TABLE bodem;
 </code></pre>
 <li>
-<pre><code class="language-sql">
--- check:
+<pre><code class="language-sql">-- check:
 SELECT *
 FROM bodem;-- ophalen lukt niet omdat de tabel in de vorige stap verwijderd is.
 </code></pre>
@@ -895,20 +840,17 @@ FROM bodem;-- ophalen lukt niet omdat de tabel in de vorige stap verwijderd is.
 
 
 <h3 id="opgave761"> Verwerkingsopdracht 6.6.1 Kolom geboortedatum toevoegen</h3>
-<pre><code class="language-sql">
-ALTER TABLE klant
+<pre><code class="language-sql">ALTER TABLE klant
 ADD geboortedatum TEXT;
 </code></pre>
 
 <h3 id="opgave771"> Verwerkingsopdracht 6.7.1 Kolom <b>naam</b> hernoemen naar <b>klantnaam</b></h3>
-<pre><code class="language-sql">
-ALTER TABLE klant
+<pre><code class="language-sql">ALTER TABLE klant
 RENAME COLUMN naam TO klantnaam;
 </code></pre>
 
 <h3 id="opgave781"> Verwerkingsopdracht 6.8.1 Tabel hernoemen naar grootte</h3>
-<pre><code class="language-sql">
-ALTER TABLE formaat
+<pre><code class="language-sql">ALTER TABLE formaat
 RENAME TO grootte;
 </code></pre>
 
@@ -947,8 +889,7 @@ De code voor de ontbrekende foreign key is:
 <br>
 
 De complete SQL code voor het maken van de tabel <i>bestelling</i> is dan:
-<pre><code class="language-sql">
-CREATE TABLE bestelling (
+<pre><code class="language-sql">CREATE TABLE bestelling (
   bestelcode INTEGER PRIMARY KEY NOT NULL,
   bestel_datum TEXT,
   bestel_tijd TEXT,
@@ -963,6 +904,11 @@ CREATE TABLE bestelling (
 </li>
 <li>De kolom <b>bestelcode</b> is een primary key in de tabel <i>bestelling</i>. De foreign key moet dus in de <code>CREATE TABLE</code> van tabel <i>besteldePizza</i> staan.</li>
 </ol>
+
+
+
+
+<h1 id="SQL6AfOpgaven">Afsluitende Opdrachten Onderwerp 6: Create - Read - Update - Delete</h1>
 
 <h3 id="opgave7131">Afsluitende Opdracht 6.12.1 Keys bepalen</h3>
 <ol type="a">
@@ -1007,14 +953,12 @@ FROM review;</code></pre></li>
 </ol>
 
 
-<h3 id="opgave7134">Afsluitende Opdracht 6.12.4 Kolom <b>datum</b> toevoegen
+<h3 id="opgave7134">Afsluitende Opdracht 6.12.4 Kolom <b>datum</b> toevoegen</h3>
 <ol type="a">
-<li><pre><code class="language-sql">
-ALTER TABLE review ADD COLUMN datum TEXT;
+<li><pre><code class="language-sql">ALTER TABLE review ADD COLUMN datum TEXT;
 </code></pre>
 </li>
-<li><pre><code class="language-sql">
-UPDATE review SET datum = '2025-07-30' where reviewcode = 1;
+<li><pre><code class="language-sql">UPDATE review SET datum = '2025-07-30' where reviewcode = 1;
 UPDATE review SET datum = '2025-08-15' where reviewcode = 3;
 </code></pre>
 </li>
@@ -1035,8 +979,7 @@ FROM beoordeling;
 
 <h3 id="opgave7136">Afsluitende Opdracht 6.12.6 Tabel <i>review</i> hernoemen</h3>
 <ol type="a">
-<li><pre><code class="language-sql">
-ALTER TABLE review RENAME TO beoordeling;
+<li><pre><code class="language-sql">ALTER TABLE review RENAME TO beoordeling;
 </code></pre>
 </li>
 <li><pre><code class="language-sql">SELECT *
@@ -1116,9 +1059,7 @@ VALUES (NULL, 105, 8);</code></pre>
 
 
 <h3 id="opgave621"> Verwerkingsopdracht 7.2.1 Bestelde pizzasoorten</h3>
-
-<pre><code class="language-sql">
-SELECT pizzacode, AVG(aantal) AS gemiddeld_aantal
+<pre><code class="language-sql">SELECT pizzacode, AVG(aantal) AS gemiddeld_aantal
 FROM besteldepizza
 GROUP BY pizzacode;
 </code></pre>
@@ -1126,19 +1067,14 @@ GROUP BY pizzacode;
 
 
 <h3 id="opgave622"> Verwerkingsopdracht 7.2.2 Aantal bestellingen per bodemcode</h3>
-
-<pre><code class="language-sql">
-SELECT bodemcode, COUNT(*)
+<pre><code class="language-sql">SELECT bodemcode, COUNT(*)
 FROM besteldepizza
 GROUP BY bodemcode;
 </code></pre>
 
 
 <h3 id="opgave623">Verwerkingsopdracht 7.2.3 Meest pizza's van één soort</h3>
-
-
-<pre><code class="language-sql">
-SELECT bestelcode, MAX(aantal) AS max_aantal
+<pre><code class="language-sql">SELECT bestelcode, MAX(aantal) AS max_aantal
 FROM besteldePizza
 GROUP BY bestelcode;
 </code></pre>
@@ -1146,9 +1082,7 @@ GROUP BY bestelcode;
 
 
 <h3 id="opgave631"> Verwerkingsopdracht 7.3.1 Bestelde bodems</h3>
-
-<pre><code class="language-sql">
-SELECT bodemcode, COUNT(*) as aantal_besteld_per_bodem
+<pre><code class="language-sql">SELECT bodemcode, COUNT(*) as aantal_besteld_per_bodem
 FROM besteldepizza
 GROUP BY bodemcode
 HAVING COUNT(*) > 1;
@@ -1157,8 +1091,7 @@ HAVING COUNT(*) > 1;
 
 
 <h3 id="opgave632"> Verwerkingsopdracht 7.3.2 Ervaren bezorgers</h3>
-<pre><code class="language-sql">
-SELECT bezorgernummer
+<pre><code class="language-sql">SELECT bezorgernummer
 FROM bestelling
 GROUP BY bezorgernummer
 HAVING COUNT(*) > 150;
@@ -1167,9 +1100,7 @@ HAVING COUNT(*) > 150;
 
 
 <h3 id="opgave633"> Verwerkingsopdracht 7.3.3 Bodems met meer dan 2000 bestellingen</h3>
-
-<pre><code class="language-sql">
-SELECT bodemcode, COUNT(*) AS aantal_bestellingen
+<pre><code class="language-sql">SELECT bodemcode, COUNT(*) AS aantal_bestellingen
 FROM besteldePizza
 GROUP BY bodemcode
 HAVING COUNT(*) > 2000;
@@ -1180,14 +1111,12 @@ HAVING COUNT(*) > 2000;
 
 <h3 id="opgave641"> Verwerkingsopdracht 7.4.1 Verschil tussen WHERE en HAVING</h3>
 <ol type="a">
-<li>WHERE-filter op rij-niveau:<br><pre><code class="language-sql">
-SELECT *
+<li>WHERE-filter op rij-niveau:<br><pre><code class="language-sql">SELECT *
 FROM besteldepizza
 WHERE bodemcode = 1;
 </code></pre></li>
 
-<li>HAVING-filter op groep-niveau:<br><pre><code class="language-sql">
-SELECT bodemcode, COUNT(*) AS aantal
+<li>HAVING-filter op groep-niveau:<br><pre><code class="language-sql">SELECT bodemcode, COUNT(*) AS aantal
 FROM besteldepizza
 GROUP BY bodemcode
 HAVING COUNT(*) > 1;</code></pre></li>
@@ -1199,9 +1128,7 @@ HAVING COUNT(*) > 1;</code></pre></li>
 </ol>
 
 <h3 id="opgave642"> Verwerkingsopdracht 7.4.2 Bodems die vaak zijn besteld (maar zonder kleine bestellingen)</h3>
-
-<pre><code class="language-sql">
-SELECT bodemcode, SUM(aantal) AS totaal_besteld
+<pre><code class="language-sql">SELECT bodemcode, SUM(aantal) AS totaal_besteld
 FROM besteldePizza
 WHERE aantal > 1             -- filter op rij-niveau vóór de GROUP BY
 GROUP BY bodemcode
@@ -1209,11 +1136,10 @@ HAVING SUM(aantal) > 2000;    -- filter ná de GROUP BY
 </code></pre>
 
 
-<h1 id="SQL7AfOpgaven">Afsluitende Opdrachten Onderwerp 7</h1>
+<h1 id="SQL7AfOpgaven">Afsluitende Opdrachten Onderwerp 7: GROUP BY, HAVING</h1>
 
 <h3 id="opgave661">  Afsluitende Opdracht 7.6.1 Aantal bestellingen per bodem</h3>
-<pre><code class="language-sql">
-SELECT bodemcode, COUNT(*) AS aantal_besteld_per_bodem
+<pre><code class="language-sql">SELECT bodemcode, COUNT(*) AS aantal_besteld_per_bodem
 FROM besteldePizza
 GROUP BY bodemcode
 ORDER BY aantal_besteld_per_bodem DESC;
@@ -1230,7 +1156,6 @@ LIMIT 1;
 </code></pre>
 
 <h3 id="opgave663">Afsluitende Opdracht 7.6.3 Totale aantal pizza’s per klant</h3>
-
 <pre><code class="language-sql">SELECT bestelling.klantnummer, SUM(besteldePizza.aantal)
 FROM bestelling
 JOIN besteldePizza ON bestelling.bestelcode = besteldePizza.bestelcode
