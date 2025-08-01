@@ -857,7 +857,7 @@ WHERE naam = "Margherita";
 </code></pre>
 
 
-<h3 id="opgave741"> Verwerkingsopdracht 6.4.1 Nieuwe tabel kortingsbonnen aanmaken</h3>
+<h3 id="opgave741"> Verwerkingsopdracht 6.4.1 Nieuwe tabel kortingsbon aanmaken</h3>
 <ol type="a">
 <li>
 <pre><code class="language-sql">
@@ -871,6 +871,8 @@ CREATE TABLE kortingsbon (
 <li>
 Als de code geen foutmelding geeft, maar wel een lege tabel oplevert, dan is het aanmaken gelukt. Met <code>CREATE TABLE</code> heb je alleen de tabel aangemaakt. Met <code>INSERT INTO</code> kun je daarna gegevens invoeren.
 </li>
+<li><pre><code class="language-sql">INSERT INTO kortingsbon VALUES (NULL,0.50,"2025-12-20");</code></pre></li>
+
 </ol>
 
 
@@ -932,9 +934,9 @@ RENAME TO grootte;
 </ol>
 
 <h3 id="opgave7112">Verwerkingsopdracht 6.10.2 Debuggen van een foutieve foreign key</h3>
-De <b>boncode</b> in de tabel <i>kortingsbonnen</i> is de primary key. Maar de code van de foreign key staat in de <code>CREATE TABLE</code> van de tabel <i>kortingsbonnen</i>. Dat is niet goed.<br>
+De <b>boncode</b> in de tabel <i>kortingsbon</i> is de primary key. Maar de code van de foreign key staat in de <code>CREATE TABLE</code> van de tabel <i>kortingsbon</i>. Dat is niet goed.<br>
 
-Deze primary key uit de tabel <i>kortingsbonnen</i> moet worden gekoppeld aan een kolom in een andere tabel, namelijk tabel <i>bestelling</i>. De code voor de foreign key moet dus in de <code>CREATE TABLE</code> van tabel <i>bestelling</i> worden toegevoegd.
+Deze primary key uit de tabel <i>kortingsbon</i> moet worden gekoppeld aan een kolom in een andere tabel, namelijk tabel <i>bestelling</i>. De code voor de foreign key moet dus in de <code>CREATE TABLE</code> van tabel <i>bestelling</i> worden toegevoegd.
 
 <h3 id="opgave7113">Verwerkingsopdracht 6.10.3 Foreign key teovoegen</h3>
 
