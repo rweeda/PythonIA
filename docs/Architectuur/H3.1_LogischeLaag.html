@@ -1,0 +1,810 @@
+
+
+<h2>3.1 Onderdelen van de logische laag</h2>
+
+
+<p>
+Stel je voor: je ontgrendelt je telefoon met je duimafdruk. Even later verschijnt er een melding dat er een update klaarstaat. Maar… is dat iets wat een app regelt? Of zit dat anders in elkaar?
+</p>
+<p> 
+Om dat te begrijpen, kijken we naar de <strong>logische laag</strong> van je apparaat. Een digitaal apparaat werkt dankzij een combinatie van hardware en software. De software die de hardware aanstuurt noemen we <strong>systeemsoftware</strong>. Deze systeemsoftware vormt de <strong>logische laag</strong> in het drielagenmodel, tussen de fysieke laag (hardware) en de toepassingenlaag (apps).
+</p>
+
+
+<p>
+De logische laag bestaat uit verschillende onderdelen van de systeemsoftware die samen zorgen dat je apparaat goed werkt. Deze onderdelen zijn:
+</p>
+
+<ul>
+  <li><strong>Besturingssysteem:</strong> stuurt de hardware aan, beheert het geheugen, regelt beveiliging en voert opdrachten van apps en gebruikers uit;</li>
+  <li><strong>Drivers:</strong> zorgen dat het besturingssysteem met specifieke hardware kan communiceren (zie hoofdstuk 2);</li>
+  <li><strong>Beheertools:</strong> programma's zoals taakbeheer of instellingen waarmee je het systeem kunt beheren;</li>
+  <li><strong>Systeemdiensten:</strong> achtergrondprocessen zoals wifi, updates of opslagbeheer die zorgen dat alles soepel blijft werken.</li>
+</ul>
+
+<img src="img/3.1_onderdelenLogischeLaag.png" width="400" alt="onderdelen van de logische laag">
+
+<p>
+Samen zorgen deze onderdelen ervoor dat apps soepel met de hardware samenwerken. De logische laag is dus de spil tussen wat jij doet en wat het apparaat uitvoert.
+</p>
+
+
+<p>
+Het belangrijkste onderdeel van de systeemsoftware is het <strong>besturingssysteem</strong>, zoals Windows, macOS, Android of iOS. Dit systeem voert basistaken uit zoals:
+</p>
+<ul>
+  <li>Aansturen van hardware (bijv. scherm, toetsenbord, processor);</li>
+  <li>Beheren van werkgeheugen;</li>
+  <li>Toekennen van rechten (bijv. schermvergrendelen, dat een app toegang krijgt tot camera of bestanden);</li>																																													
+  <li>Uitvoeren van opdrachten van de gebruiker en apps.</li>
+</ul>
+
+
+
+   <!--
+<p>
+In de volgende paragrafen gaan we dieper in op hoe het besturingssysteem werkt, welke diensten het levert, en hoe de logische laag communiceert met de andere lagen. Tot slot kijken we naar de verschillen tussen besturingsystemen.</p>
+
+-->
+
+<h3>Opdracht 1: Onderdelen van de logische laag</h3>
+<p>Welk van de onderstaande onderdelen hoort <strong>niet</strong> bij de systeemsoftware in de logische laag?</p>
+
+<ol type="A">
+  <li>Systeemdiensten</li>
+  <li>Processor</li>
+  <li>Beheertools</li>
+  <li>Besturingssysteem</li>
+  <li>Drivers</li>
+</ol>
+
+<p><strong>Antwoord Opdracht 1:</strong> B. De processor is een onderdeel van de hardware en hoort bij de fysieke laag, niet bij de logische laag of de systeemsoftware.</p>
+
+
+
+
+
+<h3>Opdracht 2: Koppel de begrippen</h3>
+<p>Koppel elk begrip aan de juiste beschrijving.</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Beschrijving</th>
+    <th>Begrippen</th>
+  </tr>
+  <tr>
+    <td>1. Stelt je in staat het systeem in te stellen of te controleren.</td>
+    <td>A. Systeemdiensten</td>
+  </tr>
+  <tr>
+    <td>2. Zorgt ervoor dat apps en hardware goed met elkaar kunnen samenwerken.</td>
+    <td>B. Driver</td>
+  </tr>
+  <tr>
+    <td>3. Draaien op de achtergrond en zorgen dat bijvoorbeeld wifi blijft werken.</td>
+    <td>C. Logische laag</td>
+  </tr>
+  <tr>
+    <td>4. Maakt communicatie mogelijk tussen het besturingssysteem en aangesloten apparaten.</td>
+    <td>D. Beheertools</td>
+  </tr>
+</table>
+
+<h4>Antwoorden:</h4>
+<ul>
+  <li>1 – D. Beheertools</li>
+  <li>2 – C. Logische laag</li>
+  <li>3 – A. Systeemdiensten</li>
+  <li>4 – B. Driver</li>
+</ul>
+
+
+
+<h2>3.2 Wat is een besturingssysteem?</h2>
+
+
+
+<p>
+Het besturingssysteem is het centrale onderdeel van de logische laag. Het zorgt dat je apparaat stabiel, veilig en efficiënt werkt. Dit is het hart van de <b>systeemsoftware</b> in de logische laag. Zonder besturingssysteem kun je geen apps gebruiken, geen bestanden openen en geen verbinding maken met internet. Het besturingssysteem zorgt ervoor dat alles soepel verloopt: het stuurt de hardware aan, beheert het geheugen, regelt beveiliging en verdeelt de taken tussen apps.
+</p>
+
+<p>																			 
+Voorbeelden van besturingssystemen:
+																					
+</p>
+<ul>
+  <li><strong>Smartphones/tablets:</strong> Android, iOS</li>
+  <li><strong>Laptops/desktops:</strong> Windows, macOS, Linux, ChromeOS</li>
+</ul>
+
+<img src="img/besturingssystemen.png" width="400" alt="Iconen van besturingssystemen">
+
+
+
+<h3>Opdracht 3: Waar of niet waar?</h3>
+<p>Kruis aan of de onderstaande beweringen waar of niet waar zijn.</p>
+
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Bewerking</th>
+    <th>Waar</th>
+    <th>Niet waar</th>
+  </tr>
+  <tr>
+    <td>Zonder besturingssysteem kun je geen apps gebruiken.</td>
+    <td><input type="checkbox" name="vraag1-ja"></td>
+    <td><input type="checkbox" name="vraag1-nee"></td>
+  </tr>
+  <tr>
+    <td>Android en iOS zijn besturingssystemen voor desktops.</td>
+    <td><input type="checkbox" name="vraag2-ja"></td>
+    <td><input type="checkbox" name="vraag2-nee"></td>
+  </tr>
+  <tr>
+    <td>Het besturingssysteem beheert het werkgeheugen.</td>
+    <td><input type="checkbox" name="vraag3-ja"></td>
+    <td><input type="checkbox" name="vraag3-nee"></td>
+  </tr>
+  <tr>
+    <td>Windows en macOS zijn voorbeelden van apps die je kunt downloaden.</td>
+    <td><input type="checkbox" name="vraag4-ja"></td>
+    <td><input type="checkbox" name="vraag4-nee"></td>
+  </tr>
+</table>
+
+<h4>Antwoord Opdracht 3:</h4>
+<ol>
+  <li>Waar</li>
+  <li>Niet waar</li>
+  <li>Waar</li>
+  <li>Niet waar</li>
+</ol>
+
+
+<h2>3.3 Taken van het besturingssysteem</h2>
+
+<p>
+Het besturingssysteem heeft veel verantwoordelijkheden. Het zorgt ervoor dat je apparaat stabiel, veilig en efficiënt werkt.</p>
+
+
+
+<p>Voorbeeld. Een van de taken van het besturingssysteem is <strong>taakbeheer</strong>. Dit houdt in dat de rekenkracht van de processor verdeeld wordt over meerdere apps en processen. Zo kun je tegelijk een video kijken, muziek luisteren en bestanden downloaden, zonder dat je apparaat vastloopt. In Windows kun je via het programma <em>Taakbeheer</em> zien welke processen actief zijn, hoeveel geheugen of rekenkracht ze gebruiken, en eventueel apps afsluiten die niet goed werken.
+</p>
+<p>
+<img src="img/taakbeheer.png" /><br/>
+<i>De taakbeheer van Microsoft Windows geeft een overzicht van de actieve programma's.</i>
+</p>
+
+
+
+<p>Hieronder zie je de belangrijkste taken van het besturingssysteem:
+</p>
+
+<ul>
+  <li><strong>Hardware aansturen:</strong> samenwerking tussen processor, geheugen, opslag, enz.</li>
+  <li><strong>Geheugenbeheer:</strong> toewijzing van werkgeheugen (RAM) aan actieve apps</li>
+  
+  <li><strong>Taakbeheer:</strong> verdeling van rekenkracht over meerdere processen</li>
+  <li><strong>Bestandsbeheer:</strong> openen, opslaan en organiseren van bestanden</li>
+  <li><strong>Beveiliging:</strong> bescherming tegen virussen en ongewenste toegang</li>
+  <li><strong>Gebruikersinterface (GUI):</strong> vensters, knoppen en menu’s om het systeem te bedienen</li>
+</ul>
+
+
+
+
+<!--
+<p>
+De taken van het besturingssysteem zorgen ervoor dat alles op jouw apparaat soepel en veilig verloopt. De communicatie met de apps en de hardware komt in de volgende paragraaf aan bod.
+</p>
+-->
+
+
+<!--
+<p>Alle communicatie tussen apps (toepassingenlaag) en hardware (fysieke laag) verloopt via het besturingssysteem. Het besturingssysteem vormt daarmee de schakel tussen apps en hardware. Het zorgt dat alles soepel en veilig werkt, zonder dat apps of gebruikers zich met de techniek hoeven bezig te houden. Het besturingssysteem stuurt bijvoorbeeld het beeldscherm van je computer en je speakers aan. Ook zorgt
+het besturingssysteem voor de communicatie tussen de onderdelen binnen in de computer.</p>
+
+<p>Het besturingssysteem heeft een aantal taken en levert een aantal diensten aan andere lagen:
+
+<ul>
+<li>Beheer van taken: Zorgt dat apps starten, stoppen, en in de juiste volgorde worden uitgevoerd. Als er meerdere programma's tegelijkertijd actief zijn, zorgt het voor het verdelen van CPU rekentijd over verschillende taken. Zo kun je bijvoorbeeld muziek luisteren én berichten sturen tegelijk.</td>
+
+<li>Beheer van randapparatuur: Stuurt met hehulp van drivers de hardware aan, bijvoorbeeld werkgeheugen, opslag, camera, touchscreen en printer. Apps hoeven dit zelf niet te regelen.</li>
+
+<li>Beheer van bestanden: Organiseert en beheert toegang tot bestanden en mappen (zoals foto's, documenten, apps). Als een app iets wil opslaan of openen, regelt het besturingssysteem dat.</li>
+
+<li>Beheer van geheugen: Verdeelt het werkgeheugen (RAM) tussen actieve processen zodat alles soepel draait.
+
+<li>Beveiliging en rechtenbeheer: Beschermt je apparaat en gegevens. Het bepaalt wat apps of gebruikers wel/niet mogen doen. Bijvoorbeeld: apps mogen je camera niet zomaar gebruiken.
+      
+<li>Netwerkbeheer: Zorgt voor toegang tot wifi en internet, ook voor apps.
+
+<li>Gebruikersinterface (GUI): Het besturingssysteem zorgt voor een gebruikersvriendelijke manier om met de computer te werken, vaak via een GUI (vensters, pictogrammen, menu’s).
+
+
+<li>Interface voor toepassingen (API’s): Geeft apps makkelijke 'snelkoppelingen' (API’s) om met de hardware te werken. Daardoor hoeven apps niet zelf te weten hoe ze bijvoorbeeld een foto maken, ze vragen het aan het Besturingssysteem via een API.
+
+
+</ul>
+</p>
+-->
+
+
+<!--
+
+<h3>Opdracht 4: Het besturingssysteem</h3>
+Wat behoort NIET tot het besturingssysteem?
+<ol type="A">
+<li>Bestandsbeheer
+<li>Berekeningen uitvoeren
+<li>Procesbeheer
+<li>Beveiliging
+</ol>
+
+Antwoord Opdracht 4: B - Berekeningen uitvoeren
+-->
+
+
+<h3>Opdracht 4: Taken van het besturingssysteem</h3>
+<p>Welke van de onderstaande is <strong>geen</strong> taak van het besturingssysteem?</p>
+<ol type="A">
+  <li>Het beheren van het werkgeheugen</li>
+  <li>Zorgen dat apps veilig en stabiel draaien</li>
+  <li>Het bepalen hoe snel een game vijanden laat bewegen</li>
+  <li>Het aansturen van de aangesloten hardware</li>
+</ol>
+<p>Antwoord Opdracht 4: C</p>
+
+
+
+
+
+
+<h3>Opdracht 5: Wat doet het besturingssysteem?</h3>
+
+<p><strong>Situatie:</strong> Je opent een foto vanuit je bestandenmap, bewerkt deze in een fotobewerkingsapp en slaat hem daarna op onder een nieuwe naam.</p>
+
+<p><strong>Opdracht:</strong> Koppel de juiste taak van het besturingssysteem aan de bijbehorende actie. Kies uit:</p>
+
+<ul>
+  <li><strong>A.</strong> Geheugenbeheer</li>
+  <li><strong>B.</strong> Bestandsbeheer</li>
+  <li><strong>C.</strong> Beveiliging</li>
+  <li><strong>D.</strong> Taakbeheer</li>
+</ul>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Actie</th>
+      <th>Taak van het besturingssysteem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1. De aangepaste afbeelding wordt opnieuw opgeslagen</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>2. De app draait tegelijk met Spotify op de achtergrond</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>3. Het systeem blokkeert een onbekende app die toegang wil tot je bestanden</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>4. Het werkgeheugen wordt verdeeld over beide apps</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>5. De foto wordt geopend in de app</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Antwoord Opdracht 5</h4>
+<ul>
+  <li>1 – B. Bestandsbeheer</li>
+  <li>2 – D. Taakbeheer</li>
+  <li>3 – C. Beveiliging</li>
+  <li>4 – A. Geheugenbeheer</li>
+  <li>5 – B. Bestandsbeheer</li>
+</ul>
+
+<h3>Opdracht 6: Taakbeheer</h3>
+Welke van de onderstaande taken hoort bij taakbeheer in het besturingssysteem?
+
+<ol type="A"> 
+<li>Het regelen van toegang tot bestanden op je SSD.</li>
+<li>Het verdelen van rekenkracht van de processor over verschillende processen.</li> 
+<li>Het beveiligen van je apparaat tegen virussen.</li> 
+<li>Het weergeven van knoppen en menu’s op je scherm.</li> 
+</ol>
+
+
+Antwoord Opdracht 6: B
+
+
+<!--
+<h3>Verwerkingsopdracht: Zonder geheugenbeheer</h3>
+<p>Wat zou er gebeuren als er geen geheugenbeheer zou zijn in het besturingssysteem?</p>
+
+
+ANTWOORD:
+Dan kunnen meerdere apps tegelijk het geheugen gebruiken zonder coördinatie, wat leidt tot fouten, vertraging of vastlopen van het systeem.
+-->
+
+
+<h2>3.4 De logische laag als brug</h2>
+
+
+<p>
+In het drielagenmodel vormt de <strong>logische laag</strong> de brug tussen de fysieke laag (de hardware) en de toepassingenlaag (de apps die jij gebruikt). Dankzij deze laag kunnen apps veilig en efficiënt gebruikmaken van de hardware, zonder dat ze hoeven te weten hoe elk onderdeel precies werkt.
+</p>
+
+<p>
+Om die brugfunctie goed te vervullen, maakt de logische laag gebruik van drie belangrijke hulpmiddelen (de eerste twee heb je al in hoofdstuk 2 leren kennen):
+</p>
+
+<ul>
+  <li><strong>API’s (Application Programming Interfaces):</strong> Hiermee kunnen apps opdrachten geven aan het besturingssysteem, zonder te weten hoe de hardware werkt. Een app hoeft bijvoorbeeld niet te weten hoe een camera precies functioneert – via een API vraagt de app eenvoudig: “Maak een foto.”</li>
+
+  <li><strong>Drivers:</strong> Deze stuurprogramma’s zorgen dat het besturingssysteem met de hardware kan communiceren. Elke printer, muis of grafische kaart heeft zijn eigen driver nodig. Zonder driver begrijpt het besturingssysteem de hardware niet.</li>
+
+  <li><strong>Diensten van de logische laag:</strong> Dit zijn standaardfuncties die het besturingssysteem aanbiedt aan apps, zoals het openen van bestanden, geheugenbeheer of beveiliging. Ze zorgen ervoor dat veelvoorkomende taken automatisch en betrouwbaar worden uitgevoerd.</li>
+</ul>
+
+
+<img src="img/drielagen_interface_gebruiker.png" alt="Drielagenmodel" width="300" />
+
+
+<p>
+Samen zorgen deze drie onderdelen ervoor dat apps eenvoudig met de hardware kunnen werken, zonder ingewikkelde code. De logische laag vangt verzoeken op via de API’s, gebruikt drivers om met de hardware te praten, en voert taken uit via zijn diensten.
+</p>
+
+
+
+
+<h3>Diensten: hoe apps gebruikmaken van de functies van het besturingssysteem</h3>
+
+<p>
+Je hebt gezien dat het besturingssysteem allerlei belangrijke taken uitvoert, zoals geheugenbeheer, bestandsbeheer en beveiliging. Maar hoe maken apps daar gebruik van? Via de logische laag worden deze functies als <strong>diensten</strong> aangeboden aan andere software, zoals apps. Deze diensten zorgen ervoor dat apps op een veilige en makkelijke manier kunnen samenwerken met de hardware.
+</p>
+
+
+<p>
+Hieronder zie je welke belangrijke diensten de logische laag levert, en wat ze doen:
+</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr>
+<th>Dienst</th>
+<th>Wat houdt dat in?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Verwerking van opdrachten</strong></td>
+<td>Stuurt de processor aan om opdrachten van apps uit te voeren.</td>
+</tr>
+<tr>
+<td><strong>Toegang tot opslag</strong></td>
+<td>Regelt dat bestanden worden opgeslagen of geopend op de harde schijf of SSD.</td>
+</tr>
+<tr>
+<td><strong>Geheugenbeheer</strong></td>
+<td>Deelt het RAM-geheugen toe aan actieve apps en processen.</td>
+</tr>
+<tr>
+<td><strong>Invoer verwerken</strong></td>
+<td>Verwerkt toetsen, muisbewegingen of aanrakingen van het scherm en stuurt die door naar de juiste app.</td>
+</tr>
+<tr>
+<td><strong>Uitvoer regelen</strong></td>
+<td>Zorgt dat apps iets kunnen laten zien of horen via scherm en luidsprekers.</td>
+</tr>
+<tr>
+<td><strong>Beveiliging en toegang</strong></td>
+<td>Bepaalt welke apps toegang hebben tot onderdelen zoals camera, bestanden of netwerk.</td>
+</tr>
+<tr>
+<td><strong>Netwerkverbinding</strong></td>
+<td>Levert netwerkdiensten waarmee apps verbinding maken met internet of andere apparaten.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<p>
+Zonder deze diensten zouden apps zelf moeten regelen hoe ze gegevens opslaan, invoer verwerken of verbinding maken met het internet — en dat is onpraktisch en onveilig. Dankzij de logische laag kunnen apps veilig, efficiënt en zonder technische details met de hardware samenwerken.
+</p>
+
+
+
+<h3>Opdracht 7: Belangrijkste taken van het besturingssysteem</h3>
+
+<p>Wat is de belangrijkste taak van het besturingssysteem in de logische laag?</p>
+<ol type="A">
+<li>Het besturingssysteem maakt verbinding met internet om updates te downloaden.
+<li>Het besturingssysteem zorgt voor de communicatie tussen apps en beheert het gebruik van de hardware.
+<li>Het besturingssysteem vervangt de apps zodat gebruikers geen programma's meer hoeven te installeren.
+<li>Het besturingssysteem maakt rechtstreeks contact met de cloud zonder tussenkomst van software of hardware.</li>
+</ol>
+
+Antwoord opdracht 7:
+B) Het besturingssysteem zorgt voor de communicatie tussen apps in de toepassingenlaag en beheert het gebruik van de hardware in de fysieke laag.
+
+
+
+
+
+<!--
+<h3>Opdracht 8: Taak aan voorbeeld koppelen</h3>
+<p>Koppel de taak van het besturingssysteem aan het juiste voorbeeld:</p>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr>
+  <th>Taak van het besturingssysteem</th>
+  <th>Voorbeeld</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>A. Beheer van bestanden</td>
+  <td>1. Blokkeert microfoon voor onbekende app</td>
+</tr>
+<tr>
+  <td>B. Beveiliging en rechtenbeheer</td>
+  <td>2. Opent een foto</td>
+</tr>
+<tr>
+  <td>C. Beheer van randapparatuur</td>
+  <td>3. Start een app op</td>
+</tr>
+<tr>
+  <td>D. Beheer van taken</td>
+  <td>4. Stuurt de wifi-chip aan</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Antwoord opdracht 8:</h4>
+<ul>
+  <li>A – 2</li>
+  <li>B – 1</li>
+  <li>C – 4</li>
+  <li>D – 3</li>
+</ul>
+-->
+
+<h3>Opdracht 8: Koppel dienst aan voorbeeld</h3>
+
+<p>Koppel de dienst van de logische laag aan het juiste voorbeeld:</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Dienst van de logische laag</th>
+      <th>Voorbeeld</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A. Geheugenbeheer</td>
+      <td>1. Een tik op het scherm wordt doorgestuurd naar een app</td>
+    </tr>
+    <tr>
+      <td>B. Beveiliging en toegang</td>
+      <td>2. Een document wordt opgeslagen op de SSD</td>
+    </tr>
+    <tr>
+      <td>C. Invoer verwerken</td>
+      <td>3. Twee apps gebruiken tegelijk het werkgeheugen zonder elkaar te storen</td>
+    </tr>
+    <tr>
+      <td>D. Toegang tot opslag</td>
+      <td>4. Een app krijgt geen toestemming om de camera te gebruiken</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Antwoord Opdracht 8:</h4>
+<ul>
+  <li>A – 3</li>
+  <li>B – 4</li>
+  <li>C – 1</li>
+  <li>D – 2</li>
+</ul>
+
+
+
+
+<h2>3.5 Samenwerking tussen componenten in de logische laag</h2>
+De onderdelen van het besturingssysteem werken samen om je apparaat vlot te laten werken. We bekijken wat het besturingsysteem doet wanneer je de camera-app opent:
+<ul>
+<li>Procesbeheer start de app;
+<li>Apparaatbeheer stuurt de camera aan via de juiste driver;
+<li>Geheugenbeheer reserveert werkgeheugen om de app snel te laten werken;
+<li>Bestandsbeheer slaat je foto op in de juiste map;
+<li>Beveiliging controleert of de app toegang heeft tot de camera.
+</ul>
+Alles gebeurt automatisch – het besturingssysteem regelt dit op de achtergrond.
+
+
+
+<h3>Opdracht 9: Samenwerking tussen apps en hardware</h3>
+<p>Welke taken voert een besturingssysteem uit om apps te laten samenwerken met de hardware? (Meerdere antwoorden mogelijk)</p>
+<ol type="A">
+<li>Het regelt dat meerdere apps tegelijk kunnen draaien zonder problemen.
+<li>Het organiseert hoe bestanden worden opgeslagen en teruggevonden.
+<li>Het zorgt dat apps rechtstreeks met de processor praten, zonder regels.
+<li>Het beschermt het apparaat tegen onbevoegde toegang door apps.
+<li>Het voorkomt dat apps kunnen samenwerken met randapparaten zoals printers.
+</li></ol>
+
+Antwoord opdracht 9:
+Juist: A), B) en D)<br>
+Toelichting:
+A) is juist, het besturingssysteem zorgt ervoor dat meerdere apps tegelijk kunnen draaien zonder dat het apparaat vastloopt.
+B) is juist, het besturingssysteem organiseert hoe bestanden worden opgeslagen en teruggevonden, zodat apps gemakkelijk gegevens kunnen opslaan en ophalen.
+C) is fout, het OS regelt juist de communicatie, apps praten niet zomaar rechtstreeks met de processor.
+D) is juist, het besturingssysteem beschermt het apparaat tegen ongewenste toegang door apps en zorgt dat alleen veilige, toegestane handelingen uitgevoerd worden.
+E) is fout, het OS maakt samenwerking met randapparaten mogelijk, niet onmogelijk.
+
+
+
+
+<!--
+<h3>Opdracht 10: Samenwerking in de logische laag</h3>
+<p>
+Stel: je opent een bijlage uit een e-mail, bijvoorbeeld een PDF-bestand. Leg uit hoe verschillende onderdelen van de logische laag (zoals besturingssysteem, systeemdiensten, drivers of beheertools) samenwerken om dit mogelijk te maken.
+</p>
+
+<h4>Voorbeeldantwoord opdracht 10:</h4>
+<p>
+Het <strong>besturingssysteem</strong> regelt de samenwerking tussen apps en hardware. Een <strong>systeemdienst</strong> zorgt voor de netwerkverbinding om het bestand te downloaden. Zodra het bestand binnen is, zorgt het <strong>bestandsbeheer</strong> van het besturingssysteem dat het op de juiste plek wordt opgeslagen. De juiste <strong>driver</strong> regelt de communicatie met het opslagapparaat (zoals de interne opslag of SD-kaart). Als je de PDF opent, zorgt het <strong>geheugenbeheer</strong> ervoor dat de PDF-app genoeg werkgeheugen krijgt, en het <strong>taakbeheer</strong> houdt bij welke apps actief zijn.
+</p>
+-->
+
+<h3>Opdracht 10: Koppel de onderdelen aan hun taak</h3>
+<p>
+Stel: je opent op je smartphone een bijlage uit een e-mail, bijvoorbeeld een PDF-bestand. Koppel elk onderdeel van de logische laag aan wat het op dat moment doet.
+</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Onderdeel van de logische laag</th>
+      <th>Wat gebeurt er?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A. Besturingssysteem</td>
+      <td>1. Zorgt dat het opslagapparaat correct wordt aangestuurd bij het opslaan van het bestand.</td>
+    </tr>
+    <tr>
+      <td>B. Systeemdienst</td>
+      <td>2. Zorgt dat de apps samenwerken met de hardware en regelt toegang tot de opslaglocatie.</td>
+    </tr>
+    <tr>
+      <td>C. Driver</td>
+      <td>3. Houdt bij welke apps tegelijk actief zijn, zoals je mail-app en PDF-viewer.</td>
+    </tr>
+    <tr>
+      <td>D. Geheugenbeheer</td>
+      <td>4. Downloadt het bestand via wifi of mobiel internet.</td>
+    </tr>
+    <tr>
+      <td>E. Taakbeheer</td>
+      <td>5. Verdeelt het RAM-gebruik zodat de PDF-app goed kan draaien.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Antwoorden:</h4>
+<img src="H3_antwoordOpdracht10.png">
+
+<ul>
+  <li>A – 2: Het besturingssysteem regelt de samenwerking tussen apps en hardware, en de toegang tot bestanden.</li>
+  <li>B – 4: De systeemdienst regelt netwerkverkeer zoals het downloaden via wifi of mobiel internet.</li>
+  <li>C – 1: De driver zorgt dat de opslag correct wordt aangestuurd bij het opslaan van het bestand.</li>
+  <li>D – 5: Geheugenbeheer verdeelt het RAM zodat beide apps goed kunnen draaien.</li>
+  <li>E – 3: Taakbeheer houdt bij welke apps tegelijk actief zijn (mail + PDF-viewer).</li>
+</ul>
+
+
+<h2>3.6 Verschillende besturingssystemen</h2>
+
+
+<p>Een besturingssysteem is specifiek ontworpen voor een bepaald type apparaat. Voor smartphones en tablets gebruik je bijvoorbeeld Android, of iOS op Apple-apparaten. Op Apple-laptops en desktops draait macOS, en op Chromebooks ChromeOS. Andere laptops en desktopcomputers gebruiken meestal Windows of Linux. Omdat toepassingen communiceren met het besturingssysteem, zijn apps afgestemd op een specifiek besturingssysteem. Een app die voor iOS is ontwikkeld, kan daarom niet zonder aanpassingen worden geïnstalleerd op Android.</p>
+
+
+
+
+
+<p>De tabel hieronder geeft een overzicht van de grootste verschillen tussen de vier besturingssystemen voor computers en laptops.</p>
+
+<table border="1">
+<thead>
+<tr>
+<th>Kenmerk</th>
+<th>Windows<br>
+<img src="img/icoon_windows.png" width="100">
+</th>
+<th>macOS<br>
+<img src="img/icoon_iOS.png" width="100"></th>
+<th>Linux<br>
+<img src="img/icoon_Linux.png" width="100"></th>
+<th>ChromeOS<br>
+<img src="img/icoon_Chrome.png" width="100"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prijs: Wat kost het besturingssysteem en/of apparaat?</td>
+<td>Besturingssysteem is betaald (vaak meegeleverd met de pc). Grote keuze in de samenstelling van een apparaat, en dus ook de prijs.</td>
+<td>Duurder. Alleen Apple-hardware mogelijk.</td>
+<td>Gratis en open source.</td>
+<td>Chromebooks zijn zeer goedkoop.</td>
+</tr>
+<tr>
+<td>Vrijheid: Hoeveel controle heb je over het systeem?</td>
+<td>Beperkt: Microsoft bepaalt veel.</td>
+<td>Beperkt: Apple sluit systeem af.</td>
+<td>Volledige controle mogelijk.</td>
+<td>Beperkt tot Google’s keuzes.</td>
+</tr>
+<tr>
+<td>Gemak voor beginners: Hoe makkelijk is het om ermee te werken zonder veel technische kennis?</td>
+<td>Groot gemak: herkenbaar voor velen.</td>
+<td>Groot gemak: intuïtieve vormgeving.</td>
+<td>Lager gemak: hangt af van de versie.</td>
+<td>Zeer hoog gemak: alles draait om eenvoud.</td>
+</tr>
+<tr>
+<td>Software-aanbod: Welke programma’s kun je gebruiken?</td>
+<td>Zeer breed: veel games en kantoorsoftware</td>
+<td>Breed: sterke creatieve software, minder games</td>
+<td>Afhankelijk van distributie, veel open source</td>
+<td>Alleen webapps en Android-apps, geen installeerbare programma's mogelijk.</td>
+</tr>
+<tr>
+<td>Geschikt voor: Voor welk type gebruiker is dit OS het meest geschikt?</td>
+<td>Algemeen gebruik, bedrijven, gamers</td>
+<td>Creatieven, Apple-gebruikers</td>
+<td>Technische gebruikers, programmeurs</td>
+<td>Scholieren, internetgebruikers, lichte taken</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Opdracht 11: Besturingssysteem van jouw telefoon of laptop</h3>
+<p>Zoek uit welk besturingsysteem jouw telefoon of laptop gebruikt, en welke versie van het besturingssysteem.</p>
+<p><i>Tips</i>:
+<ul>
+<li>Bij Android kun je die vinden onder 'Instellingen', 'Info telefoon' en dan 'Softwaregegevens'. 
+<li>Bij iPhone ga je naar 'Instellingen', 'Algemeen' en dan 'Info'.
+<li>Bij een Windows PC of laptop: Ga naar 'Instellingen', 'Systeem' en dan 'Info'. Onder Windows-specificaties zie je de editie en versie.
+<li>Bij macOS computer: Klik linksboven op het Apple-menu, kies 'Over deze Mac'. Je ziet meteen: De naam van het besturingssysteem
+<li>Bij Linux: Ga naar 'Instellingen' en 'Over' (kan verschillen per versie).
+</ul>
+</p>
+
+Antwoord opdracht 11:
+<ul>
+<li>Android-versie (bijv. Android 13, Android 14) en One UI-versie (de Samsung-schil bovenop Android, bijv. One UI 6.1)
+<li>iPhone: Softwareversie (bijv. iOS 17.5.1) en naam van het toestel (bijv. iPhone 13)
+<li>Windows: Besturingssysteem (bijv. Windows 11) en de versie en build-nummer (bijv. 22H2 – Build 22621.3447)
+<li>macOS: Besturingsysteem(bijv. macOS Sonoma) en versie (bijv. 14.5) 
+<li>Linux: Distributienaam (bijv. Ubuntu) en versienummer (bijv. 22.04 LTS)
+</ul>
+
+
+<h3>Opdracht 12: vergelijken iOS en Android</h3>
+
+<p>Vul de onderstaande tabel in. Zoek daarvoor op internet voor informatie over iOS en Android op het internet of in het lesmateriaal.</p>
+
+<p>
+
+<table border="1">
+<thead>
+<tr>
+<th>Kenmerk</th>
+<th>Toelichting</th>
+<th>iOS (Apple)<br>
+<img src="img/icoon_iOS.png" width="100"></th>
+<th>Android (Google / anderen)<br>
+<img src="img/icoon_Android.png" width="100"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gebruiksgemak</td>
+<td>Hoe makkelijk is het systeem voor beginners?</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>Aanpasbaarheid</td>
+<td>Kun je instellingen, apps en uiterlijk naar wens aanpassen?</td>
+<td>Beperkt; Apple bepaalt veel</td>
+<td>...</td>
+</tr>
+<tr>
+<td>App-aanbod</td>
+<td>Hoeveel apps zijn er beschikbaar in de app store?</td>
+<td>...</td>
+<td>Groot aanbod, meer variatie, wisselende kwaliteit</td>
+</tr>
+<tr>
+<td>Beveiliging</td>
+<td>Hoe goed beschermt het OS je gegevens en privacy?</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>Toestelkeuze</td>
+<td>Op hoeveel soorten toestellen is dit OS beschikbaar?</td>
+<td>Alleen op iPhones, iPads</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+
+</p>
+
+
+<p>Antwoord opdracht 12:</p>
+
+<table border="1">
+<thead>
+<tr>
+<th>Kenmerk</th>
+<th>Toelichting</th>
+<th>iOS (Apple)</th>
+<th>Android (Google / anderen)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gebruiksgemak</td>
+<td>Hoe makkelijk is het systeem voor beginners?</td>
+<td>Erg gebruiksvriendelijk en intuïtief</td>
+<td>Ook makkelijk, maar verschilt per merk</td>
+</tr>
+<tr>
+<td>Aanpasbaarheid</td>
+<td>Kun je instellingen, apps en uiterlijk naar wens aanpassen?</td>
+<td>Beperkt; Apple bepaalt veel</td>
+<td>Zeer aanpasbaar; veel instellingen en thema’s</td>
+</tr>
+<tr>
+<td>App-aanbod</td>
+<td>Hoeveel apps zijn er beschikbaar in de app store?</td>
+<td>Zeer groot, streng gecontroleerd</td>
+<td>Groot aanbod, meer variatie, wisselende kwaliteit</td>
+</tr>
+<tr>
+<td>Beveiliging</td>
+<td>Hoe goed beschermt het OS je gegevens en privacy?</td>
+<td>Goede privacy, streng beleid</td>
+<td>Redelijk goed, maar verschilt per fabrikant en instelling</td>
+</tr>
+<tr>
+<td>Toestelkeuze</td>
+<td>Op hoeveel soorten toestellen is dit OS beschikbaar?</td>
+<td>Alleen op iPhones, iPads</td>
+<td>Op meerdere modellen van verschillende merken</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
