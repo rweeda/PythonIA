@@ -1,0 +1,4 @@
+Images staan in: https://raw.githubusercontent.com/InformaticaActief/IAopenbaar/main/img_ArchComp/
+
+Bv:
+https://raw.githubusercontent.com/InformaticaActief/IAopenbaar/main/img_ArchComp/drielagen.png
