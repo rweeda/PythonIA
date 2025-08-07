@@ -1,17 +1,32 @@
 <html><body>
-<h2>1.1 Het drielagenmodel aan de hand van een voorbeeld</h2>
+<h2>2: Het drielagenmodel aan de hand van een voorbeeld</h2>
 
 <p>Wat gebeurt er als jij een foto maakt? Je opent de camera-app, richt je telefoon en drukt op de knop om een foto te maken. Op de achtergrond werken de apps, het besturingssysteem en de hardware samen in drie lagen:</p>
+
+<table><tr><td>
 
 <ul>
 <li><b>Fysieke laag:</b> de camera (hardware) legt het beeld vast;</li>
 <li><b>Logische laag:</b> het besturingssysteem slaat de foto op;</li>
 <li><b>Toepassingenlaag:</b> de app laat jou de foto maken en bewerken.</li>
 </ul>
+</td><td>
+
+<p>
+<img caption="Drielagenmodel" src="https://raw.githubusercontent.com/InformaticaActief/IAopenbaar/main/img_ArchComp/drielagen_fotomaken.png" width="400"/><br/>
+<i>Drielagenmodel</i>
+</p>
+
+
+
+</td></tr>
+</table>
+
+
   
 <p>Deze drie lagen werken samen zonder dat jij daar iets van merkt.</p>
 
-<h2>1.2 Het drielagenmodel</h2>
+<h2>3: Het drielagenmodel uitgelegd</h2>
 
 <p>Het <b>drielagenmodel</b> beschrijft hoe hardware, software en gebruiker samenwerken in een digitaal systeem.</p>
 
@@ -33,26 +48,7 @@
 </p>
 
 
-<h3>Opdracht 1: De lagen van een apparaat</h3>
-<p>In deze opdracht ga je voor een bepaald apparaat onderzoeken welke onderdelen er in elk van de drie lagen zitten.</p>
-
-<ol type="a">
-  <li>Kies uit een van de volgende apparaten: tablet, laptop, printer, smartwatch.</li>
-  <li>Noem voor ieder van de drie lagen 1 onderdeel.</li>
-</ol>
-
-<details>
-  <summary><strong>Antwoord Opdracht 1</strong></summary>
-  <p>Tablet:</p>
-  <ul>
-    <li><strong>Fysiek:</strong> Touchscreen, camera’s, batterij, speakers, microfoon.</li>
-    <li><strong>Logisch:</strong> Android, iOS</li>
-    <li><strong>Toepassing:</strong> Browser zoals Google Chrome/Safari, en apps zoals Roblox, Minecraft en Subway Surfers.</li>
-  </ul>
-</details>
-
-
-<h3>Opdracht 1: De lagen van een apparaat</h3>
+<h3>Opdracht 1.3.1: De lagen van een apparaat</h3>
 <p>In deze opdracht ga voor een bepaald apparaat onderzoeken welk onderdelen er in elk van de drie lagen zit.</p>
 
 <ol type="a">
@@ -61,7 +57,7 @@
 </li></ol>
 
 
-<h4>Antwoord Opdracht 1:</h4>
+<h4>Antwoord Opdracht 1.3.1:</h4>
 <p>Tablet:
 <ul>
 <li>Fysiek: Touchscreen, camera’s, batterij, speakers, microfoon.
@@ -93,7 +89,7 @@
 </li><li>Toepassing: Stappenteller-app, meldingen-app.
 </li></ul>
 
-<h3>Opdracht 2: Volgorde van de drie lagen</h3>
+<h3>Opdracht 1.3.2: Volgorde van de drie lagen</h3>
 
 
 <p>
@@ -108,7 +104,7 @@ PER MOGELIJKHEID EEN DROPDOWN met: toepassingenlaag, logische laag, fysieke laag
 </li></ol>
 
 
-<h4>Antwoord Opdracht 2:</h4>
+<h4>Antwoord Opdracht 1.3.2:</h4>
 <ol type="a">
 <li>Toepassingenlaag
 </li><li>Fysieke laag
@@ -118,7 +114,7 @@ PER MOGELIJKHEID EEN DROPDOWN met: toepassingenlaag, logische laag, fysieke laag
 
  
 
-<h3>Opdracht 3: Diensten</h3>
+<h3>Opdracht 1.3.3: Diensten</h3>
 
 
 <p>
@@ -130,12 +126,12 @@ Wat wordt bedoeld met een dienst in het drielagenmodel?</p>
 </li>Een netwerkverbinding tussen twee apparaten
 </ol>
 
-<h4>Antwoord opdracht 3:</h4>
+<h4>Antwoord opdracht 1.3.3:</h4>
 <p>C.</p>
 
 
 
-<h2>1.2 Interfaces: Communicatie tussen de lagen</h2>
+<h2>4: Communicatie tussen de lagen</h2>
 
 <p>Als jij een foto maakt met je smartphone, gebeurt er dus heel veel. De app voor het maken van de foto in de toepassingslaag gebruikt de camera in de fysieke laag. Het besturingssysteem in de logische laag controleert of de app toestemming heeft om de camera te gebruiken en zorgt dat de foto wordt opgeslagen. In de afbeelding hieronder zie je hoe dat werkt.</p>
 
@@ -174,7 +170,7 @@ je monitor en je pc.</li>
 
 <p>We bekijken nu twee soorten interfaces in meer detail: API's en drivers.</p>
 
-<h2>1.2.1 Application Programming Interfaces (API’s)</h2>
+<h2>5: Interface - API</h2>
 
 <p>Als je een app of programma maakt, wil je vaak gebruikmaken van functies van het apparaat: de camera, microfoon, het touchscreen of de locatie. Maar hoe doe je dat, zonder precies te weten hoe elk onderdeel technisch werkt?</p>
 
@@ -198,7 +194,7 @@ De versnellingssensor (in het Engels: accelerometer) is eigenlijk complexe hardw
 
 <p>Als programmeur geef je een opdracht, en de API zorgt voor de uitvoering. Een API is een soort afsprakenlijst die ervoor zorgt dat softwareonderdelen goed met elkaar kunnen communiceren, zonder dat ze hoeven te weten hoe de ander intern werkt. In de API-documentatie kun je opzoeken welke functies beschikbaar zijn, welke parameters je kunt meegeven en wat ze retourneren. Zo zie je in de <a href="https://python.microbit.org/v/3/api/microbit.accelerometer">API-documentatie</a> bijvoorbeeld welke andere gebaren beschikbaar zijn, zoals "left", "freefall" of "face down".</p>
 
-<h3>Opdracht 4: Een Wii-controller</h3>
+<h3>Opdracht 1.5.1: Een Wii-controller</h3>
 
 <p>Stel dat je de Micro:Bit wilt gebruiken als een soort Wii-controller, bijvoorbeeld voor het besturen van een vliegtuig. Dan moet het programma weten over welke as de Micro:Bit beweegt:</p>
 
@@ -218,14 +214,14 @@ De versnellingssensor (in het Engels: accelerometer) is eigenlijk complexe hardw
   <li>Wat betekent een waarde van 1800? En een waarde van 0?</li>
 </ol>
 
-<h4>Antwoorden opdracht 4:</h4>
+<h4>Antwoorden opdracht 1.5.1:</h4>
 <ol type="a">
   <li><code>accelerometer.get_y()</code></li>
   <li>Kleinste: -2000 mg, grootste: 2000 mg</li>
   <li>1800 betekent stevig naar rechts gekanteld. 0 betekent geen kanteling (vlak).</li>
 </ol>
 
-<h3>Opdracht 5: Verken de microfoon van de Micro:Bit</h3>
+<h3>Opdracht 1.5.2: Verken de microfoon van de Micro:Bit</h3>
 
 <p>In deze opdracht verken je de API van de microfoon (<em>microphone</em>) van de Micro:Bit.</p>
 
@@ -237,7 +233,7 @@ De versnellingssensor (in het Engels: accelerometer) is eigenlijk complexe hardw
   <li>Wat levert <code>microphone.was_event(SoundEvent.LOUD)</code> op? Wat betekent dat?</li>
 </ol>
 
-<h4>Antwoorden Opdracht 5:</h4>
+<h4>Antwoorden Opdracht 1.5.2:</h4>
 <ol type="a">
   <li><a href="https://python.microbit.org/v/3/api/microphone">https://python.microbit.org/v/3/api/microphone</a></li>
   <li><code>microphone.sound_level()</code></li>
@@ -247,7 +243,7 @@ De versnellingssensor (in het Engels: accelerometer) is eigenlijk complexe hardw
 </ol>
 
 
-<h3>Opdracht 6: Zoek zelf een Micro:Bit API-functie</h3>
+<h3>Opdracht 1.5.3: Zoek zelf een Micro:Bit API-functie</h3>
 <p>Gebruik de <a href="https://python.microbit.org/v/3/api">API-documentatie</a> van de Micro:Bit en zoek een functie die je nog niet eerder hebt gebruikt. Beantwoord de volgende vragen:</p>
 <ol type="a">
   <li>Wat is de naam van de functie?</li>
@@ -259,7 +255,7 @@ De versnellingssensor (in het Engels: accelerometer) is eigenlijk complexe hardw
 </ol>
 
 
-<h4>Antwoorden Opdracht 6:</h4>
+<h4>Antwoorden Opdracht 1.5.3:</h4>
 Bijvoorbeeld:
 <ol type="a"> 
 <li><b>Naam van de functie:</b> <code>display.set_pixel()</code></li> 
@@ -289,7 +285,7 @@ Deze regel code zet het middelste pixel, op coördinaat (2,2), op maximale helde
 
 
 
-<h3>Opdracht 7:</h3>
+<h3>Opdracht 1.5.4:</h3>
 Waarom is het voor een app niet toegestaan om direct met de hardware te communiceren?
 <ol type="A">
       <li>Omdat de app anders te veel geheugen gebruikt.</li>
@@ -299,10 +295,10 @@ Waarom is het voor een app niet toegestaan om direct met de hardware te communic
 </ol>
 
 
-<h4>Antwoord opdracht 7: C.</h4>
+<h4>Antwoord opdracht 1.5.4:</h4>C
 
 
-<h3>Opdracht 8:</h3>
+<h3>Opdracht 1.5.5:</h3>
 
 Wat is een juist voorbeeld van communicatie tussen een app en het besturingssysteem via een API?
 <ol type="A">
@@ -312,10 +308,10 @@ Wat is een juist voorbeeld van communicatie tussen een app en het besturingssyst
       <li>Het besturingssysteem geeft de app directe toegang tot de camera.</li>
 </ol>
 
-<h4>Antwoord Opdracht 8: C.</h4>
+<h4>Antwoord Opdracht 1.5.5:</h4>C
 
 
-<h3>Opdracht 9:</h3>
+<h3>Opdracht 1.5.6:</h3>
 Wat is een voordeel van het gebruik van API’s voor programmeurs?
 <ol type="A">
       <li>Programmeurs hoeven geen code te schrijven.</li>
@@ -324,10 +320,10 @@ Wat is een voordeel van het gebruik van API’s voor programmeurs?
       <li>De API controleert dat het programma geen fouten bevat.</li>
 </ol>
 
-<h4>Antwoord Opdracht 9: B.</h4>
+<h4>Antwoord Opdracht 1.5.6: </h4>B.
 
 
-<h2>1.2.2 Drivers</h2>
+<h2>6: Interfaces - Drivers</h2>
 <p>Een andere soort interface zijn drivers. <b>Drivers</b> zorgen ervoor dat hardware en het besturingssysteem met elkaar kunnen communiceren. Een driver is speciale software die het besturingssysteem alle informatie geeft die het nodig heeft om een hardware-onderdeel aan te sturen.</p>
 
 <p>
@@ -341,7 +337,7 @@ Als je een nieuw apparaat aansluit op je computer, zoals een printer, dan "ziet"
 
 
 
-<h3>Opdracht 10: Drivers en het besturingssysteem</h3>
+<h3>Opdracht 1.6.1: Drivers en het besturingssysteem</h3>
 <ol type="a">
 <li>Met welke lagen in het drielagenmodel hebben drivers te maken?</li>
 <li>Leg uit waarom je een driver kunt zien als een voorbeeld van een interface.</li>
@@ -350,7 +346,7 @@ Als je een nieuw apparaat aansluit op je computer, zoals een printer, dan "ziet"
 
 
 
-<h4>Antwoord Opdracht 10:</h4>
+<h4>Antwoord Opdracht 1.6.1:</h4>
 <ol type="a">
 <li>Drivers zijn betrokken bij de fysieke laag (hardware) en de logische laag (besturingssysteem). Ze vormen de schakel tussen het besturingssysteem en de hardware.</li>
 <li>Een driver vertaalt de commando’s van het besturingssysteem naar signalen die de hardware begrijpt, en andersom. Het is dus de verbinding tussen die twee lagen en zorgt ervoor dat de twee lagen met elkaar kunnen communiceren.</li>
@@ -358,7 +354,7 @@ Als je een nieuw apparaat aansluit op je computer, zoals een printer, dan "ziet"
 </ol>
 
 
-<h3>Opdracht 11: Begrippen koppelen</h3>
+<h3>Opdracht 1.6.2: Begrippen koppelen</h3>
 <p>koppel de juiste beschrijvingen aan de begrippen.</p>
 
 <p>
@@ -382,7 +378,7 @@ Hardware zoals de camera, het geheugen of het scherm</p>
 
 
 
-<h4>Antwoord Opdracht 11</h4>
+<h4>Antwoord Opdracht 1.6.2</h4>
 <ul>
 <li><b>Fysieke laag</b> – Hardware zoals de camera, het geheugen of het scherm</li>
 <li><b>Logische laag</b> – Besturingssysteem zoals Android of iOS</li>
@@ -393,13 +389,13 @@ Hardware zoals de camera, het geheugen of het scherm</p>
 </ul>
 
 
-<h1>1.3 Belang van de lagen</h1>
+<h1>7: Belang van de lagen</h1>
 
 <p>
 Je hebt geleerd dat een computersysteem is opgebouwd uit drie lagen: de fysieke laag, de logische laag en de toepassingenlaag. De fysieke laag bestaat uit alle hardware, zoals het scherm, de camera of het geheugen. De logische laag bevat het besturingssysteem, zoals Windows, iOS of Android, dat ervoor zorgt dat alle onderdelen samenwerken. In de toepassingenlaag zitten de programma’s en apps die je als gebruiker gebruikt. Deze lagen communiceren met elkaar via vaste afspraken, bijvoorbeeld met behulp van interfaces zoals API’s of drivers. Zo kan een app uit de toepassingenlaag bijvoorbeeld via een API aan het besturingssysteem vragen om een foto te maken. De app stuurt de opdracht, het besturingssysteem regelt de communicatie, en de hardware voert de actie uit. De app hoeft dus niet te weten hoe de camera precies werkt. In de volgende paragraven zie je waarom deze manier van samenwerking handig is en bovendien veilig en betrouwbaar.</p>
 
 
-<h2>Veiligheid en betrouwbaarheid</h2>
+<h2>7.1: Lagen voor veiligheid en betrouwbaarheid</h2>
 
 
 <img src="https://raw.githubusercontent.com/InformaticaActief/IAopenbaar/main/img_ArchComp/freepik_veiligBetrouwbaar.png" width="300"><br>
@@ -411,7 +407,7 @@ Het besturingssysteem (logische laag) bepaalt welke onderdelen met elkaar mogen 
 
 
 
-<h2>Onafhankelijkheid en flexibiliteit</h2>
+<h2>7.2: Lagen voor onafhankelijkheid en flexibiliteit</h2>
 
 
 
@@ -428,8 +424,32 @@ Het besturingssysteem (logische laag) bepaalt welke onderdelen met elkaar mogen 
 
 
 
+<h3>Opdracht 7.2.1: Het nut van het drielagenmodel</h3>
+<p>Waarom is het handig dat een computer werkt met een drielagenmodel?</p>
+<ol type="A">
+<li>Omdat de computer dan sneller werkt.
+</li><li>Omdat je dan precies moet weten hoe de hardware werkt voordat je software kunt maken.
+</li><li>Omdat elke laag zijn eigen taak heeft en je onderdelen kunt vervangen zonder dat je het hele systeem hoeft aan te passen.
+</li><li>Omdat het besturingssysteem dan overgeslagen kan worden bij het uitvoeren van programma’s.
+</li></ol>
 
-<h2>Ontwerpers en programmeurs</h2>
+<h4>Antwoord Opdracht 7.2.1:</h4>
+<p>C. Omdat elke laag zijn eigen taak heeft en je onderdelen kunt vervangen zonder dat je het hele systeem hoeft aan te passen.<br/>
+Toelichting: Het drielagenmodel zorgt voor een duidelijke taakverdeling. De lagen werken via vaste interfaces. Daardoor kun je bijvoorbeeld een nieuw toetsenbord aansluiten (verandering in de fysieke laag) zonder dat de toepassingen (zoals Word) hoeven te worden aangepast.</p>
+
+
+
+
+<h3>Opdracht 7.2.2: Veranderingen in één laag</h3>
+<p>Leg uit wat het voordeel is van het drielagenmodel als je bijvoorbeeld het toetsenbord vervangt door een touchscreen. Welke lagen veranderen, welke lagen blijven hetzelfde, en waarom is dat handig?</p>
+
+<h4>Antwoord Opdracht 7.2.2:</h4>
+<p>
+Alleen de fysieke laag verandert. De logische laag (zoals het besturingssysteem) en de toepassingenlaag (zoals een tekstverwerker) hoeven niet aangepast te worden. Dat maakt het systeem flexibel en makkelijker aan te passen.</p>
+</p>
+
+
+<h2>7.3: Lagen voor ontwerpers en programmeurs</h2>
 
 
 
@@ -440,28 +460,6 @@ Het besturingssysteem (logische laag) bepaalt welke onderdelen met elkaar mogen 
 
 
 
-
-<h3>Opdracht 12: Het nut van het drielagenmodel</h3>
-<p>Waarom is het handig dat een computer werkt met een drielagenmodel?</p>
-<ol type="A">
-<li>Omdat de computer dan sneller werkt.
-</li><li>Omdat je dan precies moet weten hoe de hardware werkt voordat je software kunt maken.
-</li><li>Omdat elke laag zijn eigen taak heeft en je onderdelen kunt vervangen zonder dat je het hele systeem hoeft aan te passen.
-</li><li>Omdat het besturingssysteem dan overgeslagen kan worden bij het uitvoeren van programma’s.
-</li></ol>
-
-<h4>Antwoord Opdracht 12:</h4>
-<p>C. Omdat elke laag zijn eigen taak heeft en je onderdelen kunt vervangen zonder dat je het hele systeem hoeft aan te passen.<br/>
-Toelichting: Het drielagenmodel zorgt voor een duidelijke taakverdeling. De lagen werken via vaste interfaces. Daardoor kun je bijvoorbeeld een nieuw toetsenbord aansluiten (verandering in de fysieke laag) zonder dat de toepassingen (zoals Word) hoeven te worden aangepast.</p>
-
-
-<h3>Opdracht 13: Veranderingen in één laag</h3>
-<p>Leg uit wat het voordeel is van het drielagenmodel als je bijvoorbeeld het toetsenbord vervangt door een touchscreen. Welke lagen veranderen, welke lagen blijven hetzelfde, en waarom is dat handig?</p>
-
-<h4>Antwoord Opdracht 13:</h4>
-<p>
-Alleen de fysieke laag verandert. De logische laag (zoals het besturingssysteem) en de toepassingenlaag (zoals een tekstverwerker) hoeven niet aangepast te worden. Dat maakt het systeem flexibel en makkelijker aan te passen.</p>
-</p>
 
 
 
