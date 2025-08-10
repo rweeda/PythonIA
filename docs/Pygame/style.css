@@ -1,0 +1,6 @@
+.opdracht {
+    background-color: blue; /* kleur van de balk */
+    color: white; /* tekstkleur */
+    padding: 10px; /* ruimte binnen de balk */
+    border-radius: 4px; /* optioneel: afgeronde hoeken */
+}
