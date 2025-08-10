@@ -10,11 +10,10 @@
 <h2>Usability en Heuristieken</h2>
 
 
-Waarom is usability belangrijk?
-Stel je voor: je hebt een prachtige game gemaakt, maar niemand snapt hoe ze moeten springen, het menu werkt verwarrend, en spelers raken gefrustreerd. Dan maakt het niet uit hoe mooi de graphics zijn – ze stoppen met spelen.
-Usability zorgt ervoor dat je game begrijpelijk, prettig en efficiënt is. Een goede interface laat spelers opgaan in de game in plaats van te worstelen met de bediening. Dat betekent meer plezier, minder frustratie, en uiteindelijk: meer succes voor jouw game.
+<p>Stel je voor: je hebt een prachtige game gemaakt, maar niemand snapt hoe ze moeten springen, het menu werkt verwarrend, en spelers raken gefrustreerd. Dan maakt het niet uit hoe mooi de graphics zijn – ze stoppen met spelen.
+Usability zorgt ervoor dat je game begrijpelijk, prettig en efficiënt is. Een goede interface laat spelers opgaan in de game in plaats van te worstelen met de bediening. Dat betekent meer plezier, minder frustratie, en uiteindelijk: meer succes voor jouw game.</p>
 
-      <p><strong>Usability</strong> is de mate waarin een digitaal product (zoals jouw 2D-game) <strong>makkelijk te begrijpen</strong> en <strong>prettig te bedienen</strong> is. Een product met goede usability is:</p>
+      <p><strong>Usability</strong> is de mate waarin een digitaal product (zoals jouw 2D-game) <em>makkelijk te begrijpen</em> en <em>prettig te bedienen</em> is. Een product met goede usability is:</p>
       <ul>
         <li><strong>Duidelijk</strong> (je snapt snel wat je kunt doen);</li>
         <li><strong>Efficiënt</strong> (je bereikt doelen zonder gedoe);</li>
@@ -22,7 +21,7 @@ Usability zorgt ervoor dat je game begrijpelijk, prettig en efficiënt is. Een g
         <li><strong>Consistent</strong> (bediening werkt overal hetzelfde);</li>
         <li><strong>Aangenaam</strong> om te gebruiken.</li>
       </ul>
-      <p class="small hint"><span class="badge">Tip</span> Usability gaat niet over “mooi” alleen; het gaat vooral over <em>begrijpelijk, voorspelbaar en helpend gedrag</em>.</p>
+      <p class="small hint"><span class="badge">Tip:</span> Usability gaat niet over “mooi” alleen; het gaat vooral over <em>begrijpelijk, voorspelbaar en helpend gedrag</em>.</p>
 
 
       <h3>Heuristieken</h3>
@@ -58,7 +57,7 @@ Jakob Nielsen is een expert op het gebied van gebruiksvriendelijkheid. Hij steld
 	
             <td>Laat <strong>altijd</strong> zien wat er gebeurt: score, health, level-progress, laadindicator, “game saved”.</td>
 			<td>
-			<img src="https://rweeda.github.io/PythonIA/docs/Pygame/img/Usability_stoplicht.emf" alt="Stoplicht"><br>
+			<img src="https://rweeda.github.io/PythonIA/docs/Pygame/img/Usability_stoplicht.png" alt="Stoplicht"><br>
 			Een timer laat zien hoe lang de gebruiker moet wachten.</td>
           </tr>
           <tr>
@@ -110,51 +109,109 @@ Jakob Nielsen is een expert op het gebied van gebruiksvriendelijkheid. Hij steld
       </table>
       <p class="hint">Lees de regels als <em>richtlijnen</em>. Je kunt ze afwegen: soms botst “minimalisme” met “zichtbaarheid” – kies wat het beste is voor de speler in dat moment.</p>
     </div>
-  </section>
+
+	
+<h2 id="kleurenpaletten">Kleurenpaletten & usability</h2>
+    <p>
+      Een goed <strong>kleurenpalet</strong> gaat niet alleen over esthetiek; het ondersteunt ook de 
+      <strong>usability</strong> van je game. Met een samenhangend palet creëer je consistentie, 
+      maak je belangrijke elementen sneller herkenbaar én verbeter je de leesbaarheid. 
+      Spelers begrijpen daardoor sneller wat ze zien en hoeven minder te zoeken.
+    </p>
+    <p>
+      Denk aan <strong>contrast</strong> tussen tekst en achtergrond (voor leesbaarheid), 
+      <strong>betekeniskleuren</strong> (<span style="color: green;">groen voor goed</span>, <span style="color: red;">rood voor waarschuwing</span>), 
+      en <strong>beperking van het aantal kleuren</strong> voor rust en duidelijkheid. 
+      Een palet helpt ook bij <strong>toegankelijkheid</strong>: je kunt kleuren kiezen die voor 
+      kleurenblinde spelers beter te onderscheiden zijn en je gebruikt niet alleen kleur, 
+      maar ook vorm of tekst om informatie over te brengen.
+    </p>
+    <p class="hint">
+      <span class="badge">Tip</span> Tools zoals 
+      <a href="https://coolors.co/" target="_blank" rel="noopener">coolors.co</a> 
+      helpen je een palet van 4–6 kleuren te maken. 
+      Check daarna het contrast (bijv. met 
+      <a href="https://contrastchecker.com/" target="_blank" rel="noopener">Contrast Checker</a>) 
+      zodat tekst en UI goed leesbaar blijven.
+    </p>
+  
+
+<h3>Toegankelijkheid</h3>
 
 
-    <h4 class="opdracht" id="usability_analyse_bestaaandeGame">Opdracht 1 Analyseer een bestaande game</h4>
+      <strong>Toegankelijkheid</strong> betekent dat je game ook goed speelbaar is voor mensen met een beperking, 
+      zoals kleurenblindheid, slechthorendheid of een motorische beperking. Door hier rekening mee te houden, vergroot je het bereik van je game en zorg je ervoor dat meer spelers een prettige ervaring hebben.
+    </p>
+
+    <p>
+      Een veelvoorkomend voorbeeld is <strong>kleurenblindheid</strong>. 
+      Ongeveer 1 op de 12 mannen en 1 op de 200 vrouwen heeft moeite om bepaalde kleuren te onderscheiden, 
+      vooral rood en groen. Als je in je game bijvoorbeeld een groene en een rode healthbar gebruikt, 
+      kan dit voor sommige spelers moeilijk te zien zijn. 
+      Het is daarom belangrijk om niet alleen kleur te gebruiken, maar ook andere signalen, 
+      zoals vormen, patronen of animaties. 
+      Zo kun je een healthbar laten trillen bij lage health, of een icoontje tonen naast de balk.
+    </p>
+
+    <p>
+      Toegankelijkheid gaat verder dan kleurkeuze. Andere voorbeelden van toegankelijkheidsopties in games zijn:
+	  <ul>
+	  <li>Ondertiteling voor geluiden en dialogen.</li>
+	  <li>Mogelijkheid om knoppen zelf te herconfigureren.</li>
+	  <li>Groot lettertype of zoomfunctie voor teksten.</li>
+	  <li>Visuele alternatieven voor geluidseffecten (bijv. knipperend scherm bij waarschuwingen).</li>
+		</ul> 
+    </p>
+
+    <p>
+      Door al tijdens het ontwerp van je game over toegankelijkheid na te denken, 
+      maak je niet alleen een vriendelijkere en inclusievere game, 
+      maar ook een product dat beter aansluit bij de behoeften van een gevarieerd publiek.
+    </p>
+	
+	
+
+
+
+
+
+
+    <h4 class="opdracht" id="usability_analyse_bestaaandeGame">Opdracht Usability 1: Analyseer usability van een bestaande game</h4>
     <p>Kies een game die je kent (bijv. <em>Minecraft</em>, <em>Among Us</em>, <em>Fortnite</em>). Beantwoord voor <strong>drie</strong> van Nielsen’s heuristieken hoe de game het doet.</p>
     <ol type="a">
       <li>Noem de heuristiek (nummer + naam).</li>
       <li>Beschrijf wat de game <strong>goed</strong> doet of wat <strong>beter</strong> kan.</li>
       <li>Geef een <strong>concreet voorbeeld</strong> uit de game.</li>
     </ol>
-
-
-    <h4 class="opdracht" id="usability">Opdracht 2 – Ontwerp & evalueer je eigen UI-element (bijv. healthbar)</h4>
-    <div class="grid">
-      <div class="card">
-        <h3>Opdracht</h3>
-        <ol type="a">
-          <li><strong>Ontwerp</strong> een UI-element voor je game (bijv. healthbar, stamina-meter, muntteller, minimap). Schets of beschrijf hoe het eruitziet en waar het staat.</li>
-          <li><strong>Koppel</strong> minimaal <strong>twee</strong> heuristieken en leg kort uit hoe je ontwerp daaraan voldoet.</li>
-          <li><strong>Test</strong> bij een klasgenoot (2–3 minuten spelen). Vraag: “Wat zie je? Wat mis je? Wat is onduidelijk?”</li>
-          <li><strong>Evalueer</strong>: noteer wat goed werkte, wat niet, en welke <strong>verbetering</strong> je doorvoert.</li>
-        </ol>
-        <p class="hint"><span class="badge">Tip</span> Maak feedback zichtbaar (kleur, animatie, geluid) en voorkom fouten (bv. bevestiging bij “Quit”).</p>
-      </div>
-      <div class="card">
-        <h3>Voorbeeldantwoord – Healthbar</h3>
-        <ul>
-          <li><strong>Ontwerp</strong>: Horizontale balk linksboven. Groen → geel → rood. Bij schade kort trillen/flashen.</li>
-          <li><strong>Heuristieken</strong>:
-            <ul>
-              <li><em>1. Zichtbaarheid</em> – Health is voortdurend zichtbaar en reageert direct op schade.</li>
-              <li><em>2. Overeenkomst met echte wereld</em> – Kleurcodering (groen = goed, rood = gevaar) is bekend en intuïtief.</li>
-            </ul>
-          </li>
-          <li><strong>Testresultaat</strong>: Tester begreep de balk direct; miste alleen een waarschuwing bij bijna dood.</li>
-          <li><strong>Verbetering</strong>: Bij &lt;20% health een pieptoon en knipperende rand toevoegen (ook toegankelijk zonder geluid door visuele knippering).</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p class="small hint">Gebruik deze pagina als referentie tijdens het bouwen en testen van je 2D-game. Succes!</p>
-  </footer>
-
 	
+	
+	
+
+    <h4 class="opdracht" id="usability_analyse_bestaaandeGame">Opdracht Usability 2: Analyseer kleurenkeuze van een bestaande game</h4>
+    <p>
+      In deze opdracht onderzoek je een bestaande game-interface eruitziet voor spelers met verschillende
+      vormen van kleurenblindheid met behulp van de
+      <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/" target="_blank" rel="noopener">
+        Coblis Color Blindness Simulator
+      </a>.
+      Je ontdekt welke elementen onduidelijk worden en hoe dat verbeterd kan worden.
+    </p>
+
+    <p>Stappen:</p>
+    <ol type="a">
+      <li>Maak een schermafbeeldingen van de interface van een game (bijvoorbeeld, met healthbar/muntteller/waarschuwing).</li>
+      <li>Open <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/" target="_blank" rel="noopener">Coblis</a> en upload de screenshot.</li>
+      <li>Bekijk minimaal deze simulaties: <em>Deuteranopia</em> (groen-blind), <em>Protanopia</em> (rood-blind),
+        <em>Tritanopia</em> (blauw-blind) en <em>Achromatopsia</em> (bijna geen kleur).</li>
+      <li>Wat wordt minder onderscheidbaar?
+        Denk aan: knoppen, statuskleuren (groen/rood), teksten, iconen, grafieken/balken.</li>
+      <li>Bedenk en noteer concrete aanpassingen:
+        meer contrast, andere kleurkeuze, extra vorm/icoon/patroon, labels/tekst, positie of grootte.</li>
+    </ol>
+	
+	
+	
+
+
 </body>
 </html>
