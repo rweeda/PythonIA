@@ -1,34 +1,26 @@
-<p><h2>Mechanics: Toestanden</h2>	<img src="https://rweeda.github.io/PythonIA/docs/Pygame/img/gaming_mechanics.png" alt="Mechanicss" width="255" align="right">
+<p><h2>Mechanics: Toestanden</h2>	<img src="https://rweeda.github.io/PythonIA/docs/Pygame/img/gamepijler_mechanics.png" alt="Mechanics" width="255" align="right">
 </p>	
 
 <p>In dit onderwerp leer je een game te omschrijven met behulp van een toestandsdiagrammen. 
 
 <br>Als inleiding op toestandsdiagrammen analyzeren we een game aan de hand van een videofragment.</p>
 
-<h3 class="opdracht">Opdracht: toestanden in games</h3>
+
+
+<h4 class="opdracht">Opdracht 7.1: Toestanden van de bewaker</h4>
 <ol style="list-style-type: lower-alpha">
     <li>Bekijk het volgende fragment uit een game waarin de hoofdrolspeler een bewaker moet proberen uit te schakelen.
 	<li>Kijk goed naar de bewaker en beschrijf in welke toestanden de bewaker kan zijn.</li>
 	<li>Beschrijf ook hoe de bewaker in elk van die toestanden terecht komt. Met andere woorden: wat moet er gebeuren voordat de bewaker in een bepaalde toestand terecht komt.</li>
 </ol>	
-<p><b><i>Film toestanden bewaker</i></b>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/it9t0whAyPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/it9t0whAyPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><br>
+	<i>Film toestanden bewaker</i>
 </p>
 	
 
-
-<h3 class="opdracht">Opdracht 7.1: Toestanden van de bewaker</h3>
-<ol style="list-style-type: lower-alpha">
-    <li>Bekijk het volgende fragment uit een game waarin de hoofdrolspeler een bewaker moet proberen uit te schakelen.
-	<li>Kijk goed naar de bewaker en beschrijf in welke toestanden de bewaker kan zijn.</li>
-	<li>Beschrijf ook hoe de bewaker in elk van die toestanden terecht komt. Met andere woorden: wat moet er gebeuren voordat de bewaker in een bepaalde toestand terecht komt.</li>
-</ol>	
-<p><b><i>Film toestanden bewaker</i></b>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/it9t0whAyPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-</p>
-
-
 <hr>
+<h2>Toestanden</h2>
 	
 <p>Wellicht heb je tijdens het bekijken van het filmpje over de bewaker de volgende toestanden gevonden, ook al noem je ze waarschijnlijk anders:</p>
 <p></p>
@@ -55,7 +47,7 @@
 <script src="https://moodle.informatica-actief.nl/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
 -->
 
-<h3 class="opdracht">Opdracht 7.2: Benoem de juiste toestanden</h3>
+<h4 class="opdracht">Opdracht 7.2: Benoem de juiste toestanden</h4>
 
 Vul de ontbrekende tekst in:
 <ol style="list-style-type: lower-alpha"> 
@@ -77,8 +69,9 @@ Vul de ontbrekende tekst in:
 </ol>
 
 -->
+<br>
 
-
+<h2>Toestandsdiagram</h2>
 <p>In games gebeurt er van alles tegelijk: een speler drukt op een toets, een vijand beweegt, een score verandert, of het spel eindigt plotseling. Om al dat gedrag goed te begrijpen én te ontwerpen, gebruiken game-ontwikkelaars vaak een <strong>toestandsdiagram</strong> (in het Engels: <em>state diagram</em>). Zo’n diagram laat zien in welke toestanden een spel zich kan bevinden (zoals “spel start”, “spel loopt”, “spel voorbij”) en hoe het spel van de ene naar de andere toestand gaat. Elke pijl in het diagram laat een gebeurtenis of actie zien die de overgang veroorzaakt.</p> 
 
 <p>Voor het maken van je eigen game is een toestandsdiagram erg handig. Het helpt je logisch nadenken over hoe je spel werkt, wat er moet gebeuren na een bepaalde actie, en hoe je het gedrag kunt programmeren. Zeker als je werkt met een game engine zoals <i>coderius-play</i>, waarin je met verschillende ‘scenes’ of spelstaten werkt, is zo’n schema een goed hulpmiddel om overzicht te houden. Het dwingt je om gestructureerd te denken en fouten in je ontwerp vroeg te herkennen. Ook kun je met een diagram makkelijker uitleggen aan anderen hoe je spel werkt. </p>
@@ -87,16 +80,16 @@ Vul de ontbrekende tekst in:
 
 
    	
-<h3 class="opdracht">Opdracht 7.3: Toestandsdiagram van pong</h3>
+<h4 class="opdracht">Opdracht 7.3: Toestandsdiagram van pong</h4>
 
 Je oefent nu om het gedrag van een game overzichtelijk wee te geven met een toestandsdiagram.
 
 <ol style="list-style-type: lower-alpha"> 
-<li>Speel of bekijk het klassieke spel <a href="https://freepong.org/">Pong</a> voor maximaal 2 minuten (kies eenspeler). Wat gebeurt er allemaal tijdens het spelen?</li>
+<li>Speel of bekijk het klassieke spel <a href="https://freepong.org/" target="_blank">Pong</a> voor maximaal 2 minuten (kies eenspeler). Wat gebeurt er allemaal tijdens het spelen?</li>
 <li>Bedenk wat een speler allemaal kan doen in jouw game (bijv. springen, schieten, bouwen).</li>
 <li>Noteer minstens 5 verschillende toestanden die het spel kan hebben (zoals: "Startscherm", "Game actief", "Bal raakt paddle", "Game over").</li>
 
-<li>Teken een toestandsdiagram. Gebruik hiervoor eventueel <a href="https://madebyevan.com/fsm/">deze online tool</a>:
+<li>Teken een toestandsdiagram. Gebruik hiervoor eventueel <a href="https://madebyevan.com/fsm/" target="_blank">deze online tool</a>:
 
 	<ul>
 	<li>Teken de toestanden als cirkels.</li>
