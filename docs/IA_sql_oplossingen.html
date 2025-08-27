@@ -774,9 +774,10 @@ FROM pizza;
 </code></pre>
 </ol>
 
-<h3 id="opgave712">Verwerkingsopdracht 6.1.2 Een nieuwe glutenvrije bodem</h3>
-Antwoord: B<br>
-Toelichting: <b>bodemcode</b> is een AUTOINCREMENT-veld en moet je dus NULL invullen.
+<h3 id="opgave712">Verwerkingsopdracht 6.1.2 Een nieuwe "New York style" bodem</h3>
+Antwoord: C<br>
+Toelichting: <b>bodemcode</b> (eerste veld) is een AUTOINCREMENT-veld en moet je dus NULL invullen.<br>
+Een kommagetal moet je met een . aangeven, dus 1.50<br>
 Bij antwoord D ontbreken aanhalingstekens en het euroteken is fout in SQL.
 
 
@@ -791,13 +792,17 @@ FROM formaat;
 
 
 <h3 id="opgave722"> Verwerkingsopdracht 6.2.2 Verwijder de Pazza pizza</h3>
-<pre><code class="language-sql">UPDATE pizza
-SET basisprijs = 8.00
+<pre><code class="language-sql">DELETE FROM pizza
 WHERE naam = "Pazza";
--- check:
-SELECT *
 FROM pizza;
 </code></pre>
+
+<h3 id="opgave722"> Verwerkingsopdracht 6.2.3 Verwijder bestelling</h3>
+<pre><code class="language-sql"DELETE FROM bestelling
+WHERE klantnummer = 413 AND bestel_datum = '2021-12-01';
+
+</code></pre>
+
 
 <h3 id="opgave731"> Verwerkingsopdracht 6.3.1 Pas de prijs van een pizza aan</h3>
 <pre><code class="language-sql">UPDATE pizza
