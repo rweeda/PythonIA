@@ -266,10 +266,26 @@ FROM bezorger;
 </code></pre>
 
 
-<h3 id="opgave261">Verwerkingsopdracht 2.6.1 Alle gegevens uit tabel <code>klant</code> tonen</h3>
+<h3 id="opgave261">Verwerkingsopdracht 2.6.1 Alle gegevens uit tabel <code>bezorger</code> tonen</h3>
 <pre><code class="language-sql">SELECT *
-FROM klant;
+FROM bezorger;
 </code></pre>
+
+<h3 id="opgave262">Verwerkingsopdracht 2.6.2 Alle wachtwoorden van bezorgers</h3>
+<pre><code class="language-sql">SELECT wachtwoord
+FROM bezorger;
+</code></pre>
+
+<h3 id="opgave263">Verwerkingsopdracht 2.6.3 Verjaardagen van bezorgers tonen</h3>
+<pre><code class="language-sql">SELECT naam, gebdatum AS geboortedatum
+FROM bezorger;
+</code></pre>
+
+
+
+
+
+
 
 
 <h3 id="opgave271">Verwerkingsopdracht 2.7.1 Prijs met bezorgkosten</h3>
