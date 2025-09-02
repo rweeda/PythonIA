@@ -218,9 +218,9 @@ while not goed_geraden: #herhaal zolang nog niet geraden
 <pre class="python">
 PINCODE = "1234"
 pogingen = 0
-pogingen_resterend = True
+mag_nog_raden = True
 
-while pogingen_resterend: #herhaal zolang niet juist ingevoerd is
+while mag_nog_raden: #herhaal zolang niet juist ingevoerd is
 
     print( "Voer pincode in: " )
     invoer = input() #vraag om de pincode
@@ -228,14 +228,15 @@ while pogingen_resterend: #herhaal zolang niet juist ingevoerd is
 
     if invoer == PINCODE:
         print("Toegang verleend")
-        pogingen_resterend = False
+        mag_nog_raden = False
     else:
         pogingen += 1
         if pogingen < 3:
             print("Fout... probeer het opnieuw")
         else: # te veel foute pogingen
             print(pogingen, "foutieve pogingen gedaan. Toegang geweigerd.")
-            pogingen_resterend = False
+            mag_nog_raden = False
+
 </pre>
 
 
