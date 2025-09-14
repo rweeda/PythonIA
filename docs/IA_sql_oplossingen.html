@@ -266,10 +266,26 @@ FROM bezorger;
 </code></pre>
 
 
-<h3 id="opgave261">Verwerkingsopdracht 2.6.1 Alle gegevens uit tabel <code>klant</code> tonen</h3>
+<h3 id="opgave261">Verwerkingsopdracht 2.6.1 Alle gegevens uit tabel <code>bezorger</code> tonen</h3>
 <pre><code class="language-sql">SELECT *
-FROM klant;
+FROM bezorger;
 </code></pre>
+
+<h3 id="opgave262">Verwerkingsopdracht 2.6.2 Alle wachtwoorden van bezorgers</h3>
+<pre><code class="language-sql">SELECT wachtwoord
+FROM bezorger;
+</code></pre>
+
+<h3 id="opgave263">Verwerkingsopdracht 2.6.3 Verjaardagen van bezorgers tonen</h3>
+<pre><code class="language-sql">SELECT naam, gebdatum AS geboortedatum
+FROM bezorger;
+</code></pre>
+
+
+
+
+
+
 
 
 <h3 id="opgave271">Verwerkingsopdracht 2.7.1 Prijs met bezorgkosten</h3>
@@ -566,14 +582,9 @@ LIMIT 3;
 <h3 id="opgave431">Verwerkingsopdracht 4.3.1 de drie duurste pizza's</h3>
 <pre><code class="language-sql">SELECT naam, basisprijs
 FROM pizza
-ORDER BY basisprijs;
+ORDER BY basisprijs DESC
+LIMIT 3;
 </code></pre>
-Ook goed:
-<pre><code class="language-sql">SELECT naam, basisprijs
-FROM pizza
-ORDER BY basisprijs ASC;
-</code></pre>
-
 
 <h3 id="opgave432">Verwerkingsopdracht 4.3.2 De vijf laatste bezorgingen</h3>
 <pre><code class="language-sql">SELECT bestelcode, bestel_datum
