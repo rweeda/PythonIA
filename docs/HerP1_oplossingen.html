@@ -213,16 +213,17 @@ def bepaalGehaald( cijfer ):
     return False
 	
 ### HOOFDPROGRAMMA #####
-cijfer = 6.3
-is_gehaald = bepaalGehaald( cijfer )
+is_gehaald = bepaalGehaald( 5.5 )
 print( is_gehaald )
 </pre>
 
 <h3 id="opgaveSamen3">OPDRACHT 3:</h3>
 <!-- GEGEVEN
+
 ##### FUNCTIE DEFINITIES ######
-def bepaalSom( ....  ,  ..... ): # welk twee getallen krijgt de functie binnen?
-  antwoord = ... # tel hier getal1 en getal2 bij elkaar op
+##### FUNCTIE DEFINITIES ######
+def bepaalSom( ....  ,  ..... ): # welke informtie krijgt de functie binnen?
+  antwoord = ... # tel hier die getallen bij elkaar op
   ...... # return hier het antwoord
 
 
@@ -232,14 +233,14 @@ getal1 = int (invoer1)
 invoer2 = #### vraag hier om een tweede getal
 #### verander invoer2 in een getal en sla dat op in variabele getal2
 
-antwoord = bepaalSom( ..... )  # Welke twee getallen geef je mee?
+som = bepaalSom( ..... )  # Welke twee getallen geef je mee?
 print("De som is", ..... ) # welk variabele druk je af?
 -->
 <pre class="python">
 ##### FUNCTIE DEFINITIES ######
-def bepaalSom( getal1, getal2 ): # welk twee getallen krijgt de functie binnen?
-  antwoord = getal1 + getal2 # tel hier getal1 en getal2 bij elkaar op
-  return antwoord # return hier het antwoord
+def bepaalSom( getal1, getal2 ): 	# welke informtie krijgt de functie binnen?
+  antwoord = getal1 + getal2 		# tel hier die getallen bij elkaar op
+  return antwoord 					# return hier het antwoord
 
 
 #### HOOFDPROGRAMMA #####
@@ -248,8 +249,8 @@ getal1 = int (invoer1)
 invoer2 = input ("Geef een tweedegetal")
 getal2 = int (invoer2)
 
-antwoord = bepaalSom( getal1, getal2 )  # Welke twee getallen geef je mee?
-print("De som is", antwoord ) # welk variabele druk je af?
+som = bepaalSom( getal1, getal2 )  # Welke twee getallen geef je mee?
+print("De som is", som ) # welk variabele druk je af?
 
 </pre>
 <h3 id="opgaveSamen4">OPDRACHT 4:</h3>
@@ -261,10 +262,10 @@ def berekenOpp(lengte, breedte):
 
 
 ### HOOFDPROGAMMA ####
-lengte = 2
-breedte = 4
-antwoord = berekenOpp(lengte, breedte)
-print(antwoord)
+zijde1 = 2
+zijde2 = 4
+oppervlakte = berekenOpp(zijde1, zijde2)
+print(oppervlakte)
 </pre>
 
 </body>
