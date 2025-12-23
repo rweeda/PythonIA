@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import requests
 import os
@@ -6,6 +7,15 @@ import os
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow all origins (OK for now)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 class HintRequest(BaseModel):
     task_md: str
