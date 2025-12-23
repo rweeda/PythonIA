@@ -15,6 +15,10 @@ class HintRequest(BaseModel):
     level: str = "beginner"
     mode: str = "hint"
 
+@app.get("/")
+def root():
+    return {"status": "ok"}
+
 @app.post("/api/hint")
 def hint(req: HintRequest):
     prompt = f"""
