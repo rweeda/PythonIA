@@ -30,6 +30,7 @@ In het volgende filmpje van 1,5 minuut geef ik een toelichting over de opdrachte
 <iframe width="732" height="412" src="https://www.youtube.com/embed/LGgenh7VQ5s" title="Miniles informatica - toelichting opdrachten" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </p>
+<!--
 <h2 id="import-turtle">Tekenen</h2>
 Hieronder staat een aantal commando's die we aan een turtle geven. Druk op de groene Playknop <img src="img/CreateCode_playknop.jpg" alt="Playknop" width="30"> rechtsonder de code om te zien wat de code doet. 
 <br>
@@ -37,7 +38,7 @@ Kun jij achterhalen wat elk commando doet?<br>
 <p style="color:brown;">De bruine tekst achter een # is alleen extra uitleg voor jou; daar doet de computer niets mee.</p>
 
 <iframe frameborder="0" width="100%" height="400px" src="https://create.withcode.uk/embed/Cba"><a target="_blank" href="https://create.withcode.uk/python/Cba">create.withcode.uk</a></iframe>
-
+-->
 <!--
 <pre class="python">
 import turtle       # aangeven dat we turtle gaan gebruiken
@@ -52,15 +53,34 @@ turtle.done()       # klaar met tekenen, maar sluit tekenvenster niet meteen af
 <p>Zoals je ziet begint je code altijd met <code>import turtle</code> en eindigt met <code>turtle.done</code>. De <code>done()</code> aan het einde van het programma zorgt ervoor dat het venster niet meteen afgesloten wordt.</p>
 -->
 
+<!--{create.withcode.uk}
+mycode.py Create new file
+import turtle           # aangeven dat we de turtle gaan gebruiken
+​
+turtle.pendown()        # zet pen neer
+turtle.fillcolor("red") # kleur va figuur
+​
+turtle.begin_fill()     # hier begint figuur
+turtle.circle(50)
+turtle.end_fill()       # hier eindigd figuur
+​
+​-->
+
 
 <!--WATCH THE VIDEO WITH EXPLANAIOTN
 -->
 
 
 <h3 id="opgave-vierkantje-tekenen"><span style="color:red">Opgave</span> Vierkantje tekenen</h3>
+Hieronder staat een aantal commando's die we aan een turtle geven. 
+<ol type="a">
+<li>Druk op de groene Playknop <img src="img/CreateCode_playknop.jpg" alt="Playknop" width="30"> rechtsonder de code om te zien wat de code doet. </li>
 
-Pas de code hieronder aan zodat de turtle een vierkant tekent.
-
+<li>Kun jij achterhalen wat elk commando doet?<br>
+<p style="color:brown;">De bruine tekst achter een # is alleen extra uitleg voor jou; daar doet de computer niets mee.</p>
+</li>
+<li>Pas de code hieronder aan zodat de turtle een vierkant tekent.</li>
+</ol>
 <iframe frameborder="0" width="100%" height="400px" src="https://create.withcode.uk/embed/Cba"><a target="_blank" href="https://create.withcode.uk/python/Cba">create.withcode.uk</a></iframe>
 
 
@@ -85,10 +105,20 @@ turtle.done()       # klaar
 -->
 <a href="INFvoorlichting_oplossingen.html#opgave-vierkantje-tekenen">Klik hier</a> voor een voorbeelduitwerking.
 
+<h3>Figuur inkleuren</h3>
+<p>Om een figuur in te kleuren:
+<ol type="a">
+<li>kies een kleur, bv. op regel 4: <code>turtle.fillcolor("red")</code>,
+<li>geef aan wanneer turtle begint met het figuur te tekenen, bv. op regel 6: <code>turtle.begin_fill()</code></li>
+<li>en wanneer die klaar is met tekenen, bv. op regel 8: <code>turtle.end_fill()</code>
+</li>
+</ol>
+
+<iframe frameborder="0" width="100%" height="400px" src="https://create.withcode.uk/embed/Y6A"><a target="_blank" href="https://create.withcode.uk/python/Y6A">create.withcode.uk</a></iframe>
 
 <h3 id="opgave-vierkantje-inkleuren"><span style="color:red">Opgave</span> Vierkantje inkleuren</h3>
 
-Pas je eigen code van hierboven aan zodat de turtle je vierkant inkleurt:<br>
+Pas je eigen code van de vorige opgave aan zodat de turtle je vierkant inkleurt:<br>
 <img src="img/CreateCode_blauweVierkant.jpg" alt="Blauwe vierkant"><br>
 
 Dat doe je zo:
