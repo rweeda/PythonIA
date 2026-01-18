@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python Coach</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <div class="left">
+      <iframe
+        id="nb"
+        title="Basthon Notebook"
+        src="https://basthon.informatica-actief.nl/?from=https://raw.githubusercontent.com/rweeda/PythonIA/main/test/TestruimtePython.ipynb"
+      ></iframe>
+    </div>
+
+    <aside class="right">
+      <h2>AI Coach</h2>
+      <div id="status" class="status">Waiting for notebook…</div>
+      <pre id="debug" class="debug"></pre>
+      <div id="feedback" class="feedback">Run code in the notebook to get feedback.</div>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

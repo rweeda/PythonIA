@@ -1,0 +1,14 @@
+https://basthon.informatica-actief.nl/?from=https://raw.githubusercontent.com/rweeda/PythonIA/main/test/TestruimtePython.ipynb
+
+https://basthon.informatica-actief.nl/?from=https://raw.githubusercontent.com/rweeda/PythonIA/main/test/TestruimteSQL.ipynb&kernel=sql&from=&module=https://raw.githubusercontent.com/rweeda/PythonIA/main/sql/daniloIA.db
+
+
+
+raw URL: https://raw.githubusercontent.com/rweeda/PythonIA/main/test/TestruimtePython.ipynb
+
+
+
+
+https://<your-username>.github.io/python-ai-coach/
+
+
