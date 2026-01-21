@@ -19,6 +19,7 @@
 
 
 <h3 id="opgave311">Opdracht 3.1 Rekenen met variabelen</h3>
+Als 7 afgedrukt moet worden, moet x de waarde 7 – 3 = 4 krijgen.
 <pre class="python">
 x = 4
 getal = x + 3
@@ -28,30 +29,33 @@ print( getal )
 
 
 <h3 id="opgave312">Opdracht 3.2 Fouten opsporen</h3>
+<p>a. getal_1 is een string en kan dus niet bij getal_2 opgeteld worden.</p>
 <pre class="python">
-#DEEL A:
+#DEEL a:
 getal_1 = 25 #25 is een getal, hoort daarom niet tussen aanhalingstekens
 getal_2 = 36
 totaal = getal_1 + getal_2
 print( totaal )
 </pre>
+<p>b. Python is hoofdlettergevoelig. In de laatste regel is ‘Totaal’ een andere variabele dan ‘totaal’. Verbetering: verander ‘Totaal’ in ‘totaal’.</p>
 <pre class="python">
-#DEEL B:
+#DEEL b:
 getal_1 = 25
 getal_2 = 36
 totaal = getal_1 + getal_2
 print( totaal ) #totaal moet met een kleine letter
 </pre>
-
+<p>c. In regel 4 staat ‘getl_1’. Er ontbreekt een ‘a’.</p>
 <pre class="python">
-#DEEL C:
+#DEEL c:
 getal_1 = 25
 getal_2 = 36
 totaal = getal_1 + getal_2 # getal_1 verkeerd gespeld
 print(totaal)
 </pre>
+<p>d. In regel 4 staat: ‘getal 2’. De variabele ‘getal’ is niet gedefinieerd, want zij heeft geen waarde. Oplossing: zet ‘_’ tussen ‘getal’ en ‘2’.</p>
 <pre class="python">
-#DEEL D:
+#DEEL d:
 getal_1 = 25
 getal_2 = 36
 totaal = getal_1 + getal_2 #getal 2 had een spatie wat niet mag
@@ -68,6 +72,7 @@ print( x )
 </pre>
 
 <h3 id="opgave314">Opdracht 3.4 Waarde van een variabele aanpassen en opslaan</h3>
+<p>Nu is het antwoord: 3 . Als het antwoord ‘14’ moet zijn, moet mijnGeluksgetal in regel 1 op 14-1 = 13 gezet worden.</p>
 <pre class="python">
 mijnGeluksgetal = 13
 mijnGeluksgetal = mijnGeluksgetal + 1
@@ -136,6 +141,12 @@ getal3 = getal2 * getal1              12        4      48
 -->
 <p>Dus aan het einde van het programma is de waarde van <code>getal1</code> gelijk aan 12, de waarde van <code>getal2</code> gelijk aan 4, en de waarde van <code>getal3</code> gelijk aan 48.</p>
 
+<p>De printregel (regel 6) kan er als volgt uitzien:</p>
+
+<pre class="python">
+print("getal1 is:", str(getal1)+", getal2 is:", getal2, "en getal3 is:", getal3 )
+</pre>
+
 <p>Je kunt de volgende code gebruiken om de werking van het programma te testen:</p>
 <pre class="python">
 getal1 = 2
@@ -157,7 +168,7 @@ getal3 is:",str(getal3))
 
 <h3 id="opgave331">Opdracht 3.6 Fout opsporen door waardes te bekijken</h3>
 Na regel 5:<code>getal1 = getal1 - 1</code> heeft <code>getal1</code> de waarde 0.<br>
-Op regel 7:<code>getal3 = getal2 / getal1</code> wil je dus door 0 delen. Dat kan niet. Het programma levert daarom de foutmelding op: "ZeroDivisionError: division by zero"
+Op regel 7:<code>getal3 = getal2 / getal1</code> wil je dus door 0 delen. Dat kan niet. Het programma levert daarom de foutmelding op: "ZeroDivisionError: division by zero" (delen door nul).
 <pre class="python">
 getal1 = 5
 getal2 = 4
@@ -186,7 +197,15 @@ d = "4"
 print( a + b )
 print( c + d )
 </pre> -->
-<pre class="python"></pre>
+a. Op de variabele verdubbelaar wordt een getal gezet dat de dubbele waarde heeft van de gevraagde invoer.<br>
+b. <pre class="python">
+    Geef een getal tussen de 1 en 6. 
+    4 
+    Het dubbele is 44
+    </pre><br>
+c. Het resultaat van <code>input()</code> is altijd een string. 
+Dus <code>invoer</code> is een string. In regel 3 wordt de string <code>invoer</code> een tweede keer herhaalt. Dat betekent dat <code>invoer</code> gelijk wordt aan: ‘4’ + ‘4’ = ‘44’.<br>
+<pre class="python">
 print("Geef een getal tussen de 1 en 6.")
 invoer = int(input()) # de type van input() is string, deze moet omgezet worden naar een int
 print( type(invoer) ) # check de type van invoer
@@ -237,12 +256,28 @@ print( score )
 </pre>
 
 <h3 id="opgave351">Opdracht 3.11 Berekeningen</h3>
-2, 3, -2, -8, 1.3
+<pre class="python">
+abs(-2) = 2
+max(-2, 3, 1.27) = 3
+min(-2, 3, 1.27) = -2
+pow(-2,3) = -2 * -2 * -2 = -8
+round(1.27,1) = 1.2
+</pre>
+
+
 
 
 <h3 id="opgave352">Opdracht 3.12 Hoeveel kost een Mars</h3>
+Stappenplan:
+<ul>
+<li>Kopieer de tekst van de opdracht naar het codevak.</li>
+<li>Verdeel de tekst zodat er per regel een opdracht staat.</li>
+<li>Selecteer alles en typ: Ctrl+/</li>
+<li>Plaats de juiste code voor het commentaar.</li>
+</ul>
+
 <pre class="python">
-per_mars = round( 3/2, 2)
+per_mars = round( (2/3), 2)
 print( "Prijs per Mars:", per_mars)
 </pre>
 <!--<pre class="python">
@@ -252,6 +287,8 @@ print( "Prijs per Mars:", per_mars)
 -->
 
 <h3 id="opgave353">Opdracht 3.13 Hoogste temperatuur</h3>
+
+Hoogste wordt bepaald door de functie <code>max()</code>:
 <pre class="python">
 temp_gisteren = 23
 temp_vandaag = 28
@@ -268,6 +305,12 @@ print( "De lengte van je gebruikersnaam is:", lengte_naam )
 </pre>
 
 <h3 id="opgave361">Opdracht 3.15 Dobbelsteen</h3>
+Stappenplan:
+<ul></ul>
+<li>Maak een variabele dobbelsteen en</li>
+<li>geef die een willekeurig getal tussen 1 en 6.</li>
+<li>Druk de variabele dobbelsteen af.</li>
+</ul>
 <pre class="python">
 import random
 dobbelsteen = random.randint (1, 6)	#kies een willekeurig getal tussen 1 en 6 (1 en 6 doen ook allebei mee)
@@ -282,7 +325,13 @@ print( "Gegooide steen:", dobbelsteen )
 
 
 
-<h3 id="AfOpgave31">Afsluitende Opdracht 3.1  Gemiddelde berekenen </h3>
+<h3 id="AfOpgave31">Afsluitende Opdracht 3.1  Gemiddelde berekenen</h3>
+Stappenplan:
+<ul>
+<li>Vraag de gebruiker om drie getallen,</li>
+<li>Bereken het gemiddelde van die drie getallen</li>
+<li>en druk daarna af: "Het gemiddelde is...".</li>
+</ul>
 <pre class="python">
 print( "Geef een getal:" )
 invoer = input()
@@ -302,29 +351,48 @@ print( "Het gemiddelde is", gemiddelde )
 
 
 <h3 id="AfOpgave32">Afsluitende Opdracht 3.2  Temperatuur </h3>
+Stappenplan:
+<ul>
+    <li>vraag om een temperatuur in Fahrenheit en zet die als float op variabele <code>Fahrenheit</code></li>
+    <li>zet op variabele Cels de uitkomst van de formule: <code>Celsius = (Fahrenheit - 32) * 5/9</code></li>
+    <li>druk deze af: <i>90 graden Fahrenheit is 32.2 graden Celsius.</i>, afgerond op 1 decimaal.</li>    
+</ul>
+
 <pre class="python">
 print("Geef een temp in Fahrenheit: ")
 invoer = input()
 temp_fahrenheit= float(invoer)
 temp_celsius = ((temp_fahrenheit) - 32) * 5/9
 temp_celsius = round( temp_celsius, 1 )
-print("Temperatuur in Celsius is:", temp_celsius)
+print(temp_fahrenheit, "graden Fahrenheit is", temp_celsius, "graden Celsius.")
 </pre>
 
 
 <h3 id="AfOpgave33">Afsluitende Opdracht 3.3 Verwisseltruc</h3>
+Stappenplan:
+<ul>
+    <li>Zet op variabele tijdelijk de waarde van beker1.</li>
+    <li>Zet op variabele beker1 de waarde van beker2.</li>
+    <li>Zet op variabele beker2 de waarde van tijdelijk.</li>
+</ul>
 <pre class="python">
 beker1 = "cola"
 beker2 = "sinas"
 beker_tijdelijk = beker1
 beker1 = beker2
 beker2 = beker_tijdelijk
-print( "nu heeft beker1:", beker1, "en beker2:", beker2 )
+print( "Nu heeft beker1:", beker1, "en beker2:", beker2 )
 </pre>
 
 
 
 <h3 id="AfOpgave34">Afsluitende Opdracht 3.4  Zielenknijper </h3>
+Stappenplan:
+<ul>
+    <li>Stel vraag</li>
+    <li>Verwerk antwoord in reactie</li>
+    <li>Doe dit nog vier keer</li>
+</ul>
 <pre class="python">
 print("Hallo, ik ben dr. Zielenknijper. Welkom.")
 print("Hoe heet jij?")
@@ -337,6 +405,16 @@ print("Je bent al" + str(ingevoerde_leeftijd) + "jaar oud.")
 </pre>
 
 <h3 id="AfOpgave35">Afsluitende Opdracht 3.5  Kortingsrad </h3>
+Stappenplan:
+<ul><li>Importeer de module random.
+    <li>Importeer de module random.</li>
+    <li>Vraag de gebruiker om zijn aankoopbedrag.</li>
+    <li>Bepaal een willekeurige korting tussen de 0% en 25% (Gebruik <code>randint()</code>) en</li>
+    <li>Bepaal het nieuwe bedrag: <code>nieuw_bedrag = bedrag -  (bedrag * kortings_percentage/100)</code>.</li>
+    <li>Rond het nieuwe bedrag af op twee decimalen met <code>round()</code>.</li>
+    <li>Print het kortingspercentage.</li>
+    <li>Print het nieuwe bedrag.</li>
+</ul>
 <pre class="python">
 import random
 
@@ -347,15 +425,24 @@ bedrag = float (invoer)
 kortings_percentage = random.randint(0,25)
 print("Je krijgt " + str(kortings_percentage) + "% korting op" + str(bedrag) + "euro.")
 
-nieuw_bedrag = bedrag * (1 - kortings_percentage/100)
+nieuw_bedrag = bedrag -  (bedrag * kortings_percentage/100)
 nieuw_bedrag = round (nieuw_bedrag, 2)
 print("Het nieuwe bedrag is " + str(nieuw_bedrag) + "euro")
 </pre>
 
 <h3 id="AfOpgave36">Afsluitende opgave 3.6  Bitcoins </h3>
+Stappenplan:
+<ul>
+    <li>Zoek eventueel op wat de bitcoin nu waard is.</li>
+<li>Gebruik een constante om de waarde van de bitcoin op te slaan. Denk aan hoofdletters.</li>
+<li>Vraag de gebruiker hoeveel euro die te besteden heeft en sla dit op in een variabele.</li>
+<li>Reken dit bedrag om naar bitcoins en gebruik <code>round()</code> om het resultaat af te ronden op twee cijfers achter de komma.</li>
+<li>Druk dit netjes af met een volzin, zoals: <i>Met 40000 euro kun je 2.06 bitcoins kopen.</i></li>
+<li>(Voeg ook commentaar toe).</li>
+</ul>
 <pre class="python">
 #rekent euro's om naar bitcoins
-BITCOIN_WAARDE = 59545.19
+BITCOIN_WAARDE = 75750.95
 
 print("Hoeveel euro heb je te besteden?")
 invoer = input()
