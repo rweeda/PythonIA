@@ -26,6 +26,11 @@ print( 3.14 )
 
 
 <h3 id="opgave222">Opdracht 2.2 Verbeter de fout</h3>
+Antwoord:<br>
+Regel 1: punt moet weg achter het sluithaakje;<br>
+Regel 2: het dubbele aanhalingsteken moet enkel worden of het enkele dubbel;<br>
+Regel 3: de regel is ingesprongen (er staan spaties links van de regel), die moet weggehaald worden.
+
 <pre class="python">
 print( "Een boodschap" )
 print( "Een boodschap" )
@@ -54,21 +59,26 @@ print( woord1 + woord2 )
 
 <h3 id="opgave225">
 Opdracht 2.5 Getallen en Strings aan elkaar plakken</h3>
+De foutmelding geeft al een tip. Van de int “2” moet je een string maken.
 <pre class="python">
 print( "Ik heb " + str(2) + " fietsen.")
 </pre>
 
 <h3 id="opgave226">
-Opdracht 2.6 (Komma)Getallen en Strings aan elkaar plakken</h3>
+Opdracht 2.6 (Komma)getallen en Strings aan elkaar plakken</h3>
+Als je geen spatie wilt, kun je de komma vervangen door een plus (<code>+</code>). Daarna moet je het getal 3.0 omzetten naar tekst (een string), anders werkt het niet.
+
 <pre class="python">
 print( str(3.0) + "gram")
 </pre>
 
 <h3 id="opgave227">
-Opdracht 2.7 Een getal in tekst omzetten</h3>
+Opdracht 2.7 Uren en minuten naar tijd omzetten</h3>
+Om getallen aan elkaar te plakken zonder spatie, gebruik je de plus (<code>+</code>). Daarnaast moet je de getallen omzetten naar tekst (strings), anders werkt het niet.
 <pre class="python">
-zakgeld = 20
-print( "Ik krijg " + str(zakgeld) + ".00 euro zakgeld.")
+uur = 3
+minuut = 40
+print("Het is " + str(uur) + ":" + str(minuut) + ".")
 </pre>
 
 
@@ -83,14 +93,19 @@ print ( "Hallo,", naam )			# print de variabele naam
 <h3 id="opgave232">Opdracht 2.9 Leeftijd vragen</h3>
 <pre class="python">
 print( "Hoe oud ben je?" )
+invoer = input( )
+leeftijd = int( invoer )
+print( "Je bent " , leeftijd, " jaar oud." )
+</pre>
+of
+<pre class="python">
 invoer = input( "Hoe oud ben je?" )
 leeftijd = int( invoer )
-print( "Je bent", leeftijd, "jaar oud." )
+print( "Je bent " , leeftijd, " jaar oud." )
 </pre>
 
 <h3 id="opgave233">Opdracht 2.10 Sterretjes afdrukken</h3>
 <pre class="python">
-print( "Hoeveel sterretjes wil je zien?" )
 invoer = input( "Hoeveel sterretjes wil je zien?" )
 aantal_sterretjes = int( invoer )
 print("Hier zijn de", aantal_sterretjes, "sterretjes:")
@@ -156,14 +171,23 @@ print( "De 12-uursaanduiding is: " + str(nieuwe_aanduiding) )
 
 <h3 id="AfOpgave21">Afsluitende Opdracht 2.1 Geld
 maakt gelukkig</h3>
+Nu moet je euro en cent omzetten naar strings, want anders denkt Python dat het een rekensom is. Dan telt hij ze op: 3 + 25 = 28.
 <pre class="python">
-euro = 10
+euro = 3
 cent = 25
 print("Dat kost " + str(euro) + "." + str(cent) , "euro.")
 </pre>
 
 
 <h3 id="AfOpgave22">Afsluitende Opdracht 2.2  Gebruiker kiest kleur</h3>
+<ul>
+<li>Zet op variabele kleur het antwoord op de inputvraag naar een kleur;</li>
+<li>Gebruik kleur als argument in <code>turtle.color()</code>: <code>turtle.color(kleur)</code></li>
+<li>Zet enkele aanhalingstekens om de variabele kleur in de laatste printregel. Anders
+ziet het Nederlands er vreemd uit met die Engelse kleurnaam.</li>
+</ul>
+
+
 <pre class="python">
 import turtle       # importeer turtle module
 
@@ -173,6 +197,7 @@ print("Je krijgt een " + kleur + " vierkant.")
 
 turtle.color(kleur) # geef pen de gekozen kleur
 
+turtle.begin_fill()   # begin met inkleuren
 turtle.pendown()    # zet pen neer
 turtle.forward(150) # 150 stappen vooruit
 turtle.right(90)    # draai 90 graden naar rechts
@@ -182,11 +207,18 @@ turtle.forward(150)
 turtle.right(90)
 turtle.forward(150)
 turtle.right(90)
+turtle.end_fill()     # stop met inkleuren
 
 turtle.done()       # klaar
 </pre>
 
 <h3 id="AfOpgave23">Afsluitende Opdracht 2.3 Bonus op de toets</h3>
+<ul>
+  <li>Zet het antwoord op de inputvraag naar het oude cijfer in de variabele <code>oud_cijfer</code> als <strong>float</strong>.</li>
+  <li>Print het oude cijfer.</li>
+  <li>Verhoog het cijfer met een half punt.</li>
+  <li>Print daarna het nieuwe cijfer. Kijk of <code>str()</code> nodig is.</li>
+</ul>
 <pre class="python">
 print( "Wat was jouw cijfer?" )
 invoer = input()
@@ -195,7 +227,7 @@ print("Jouw cijfer was" + str(cijfer) )
 
 print( "Gefeliciteerd, met de bonus heb je nu een" + str(cijfer + 0.5) + "!" )
 </pre>
-OF
+<b>of</b>
 <pre class="python">
 print( "Wat was jouw cijfer?" )
 invoer = input()
@@ -207,6 +239,13 @@ print( "Gefeliciteerd, met de bonus heb je nu een" + str(cijfer_met_bonus) + "!"
 </pre>
 
 <h3 id="AfOpgave24">Afsluitende Opdracht 2.4 Centimeters naar meters</h3>
+<ul>
+  <li>Dit programma rekent centimeters om naar meters.</li>
+  <li>Zet de invoer van de gebruiker in de variabele <code>centimeters</code> als <strong>float</strong>.</li>
+  <li>Bereken het aantal meters door <code>centimeters / 100</code> en zet dit in de variabele <code>meters</code>.</li>
+  <li>Druk het resultaat af.</li>
+</ul>
+
 <pre class="python">
 print("Hoeveel centimeters moet ik naar meters omrekenen?")
 invoer = input()
@@ -216,7 +255,7 @@ print( "Het aantal centimeters is:", aantal_centimeters )
 aantal_meters = aantal_centimeters / 100
 print( str(aantal_centimeters)= " is " + str(aantal_meters) , "meter" )
 </pre>
-OF
+<b>of</b>
 <pre class="python">
 print("Hoeveel centimeters moet ik naar meters omrekenen?")
 invoer = input()
@@ -227,6 +266,16 @@ print( "Dat is " + str(aantal_centimeters / 100) + "meter" )
 </pre>
 
 <h3 id="AfOpgave25">Afsluitende Opdracht 2.5: BMI berekenen</h3>
+Stappenplan:
+<ul>
+  <li>Vraag de gebruiker om zijn lengte in meters.</li>
+  <li>Toon de ingevoerde lengte.</li>
+  <li>Vraag de gebruiker om zijn gewicht in kilogram.</li>
+  <li>Toon het ingevoerde gewicht.</li>
+  <li>Bereken de BMI: <code>gewicht / (lengte * lengte)</code>.</li>
+  <li>Print de BMI.</li>
+</ul>
+
 <pre class="python">
 invoer = input( "Hoeveel kilogram weeg je? ")
 gewicht_in_kg = int(invoer)
@@ -259,29 +308,58 @@ print( "Je BMI is:", round( ( gewicht_in_kg / ( lengte_in_m*lengte_in_m ) ),1) )
 
 <h3 id="AfOpgave26">
 Afsluitende Opdracht 2.6: Invulverhaal</h3>
-<pre class="python">
-print( "Naam beste vriend" )
-naam_beste_vriend = input()
-print( "kleuterprogramma" )
-kleuterprogramma = input("kleuterprogramma")
+Stappenplan:
+<ul>
+  <li>Vraag de naam van je beste vriend.</li>
+  <li>Vraag om de titel van een kleuterprogramma.</li>
+  <li>Vraag om een vreemd voertuig.</li>
+  <li>Vraag een getal met drie nullen.</li>
+  <li>Vraag twee felle kleuren, gescheiden door een komma.</li>
+  <li>Vraag een kleur die daarbij vloekt.</li>
+  <li>Vraag wat de leukste carnavalskraker is.</li>
+  <li>Geef uitvoer van het verhaal.</li>
+</ul>
 
-print(naam_beste_vriend + " geeft een super pyjamafeestje met als thema " + kleuterprogramma + "kleuterprogramma) dat word dus de hele avond " + kleuterprogramma + " kijken.")
+
+
+<pre class="python">
+naam_vriend = input("Wat is de naam van je beste vriend? ") # Vraag naam van je beste vriend/vriendin 
+kleuterprogramma = input("Wat is een leuk kleuterprogramma? ") # Vraag om de titel van een kleuterprogramma 
+vreemd_voertuig = input("Geef een vreemd voertuig op: ") # Vraag om een vreemd voertuig 
+grootGetal = input("Voer een getal met drie nullen in: ") # Geef een getal met drie nullen 
+twee_kleuren = input("Geef twee felle kleuren, gescheiden door een komma: ") # Geef twee felle kleuren, gescheiden door een komma 
+vloekende_kleur = input("Welke kleur vloekt daarbij? ") # Geef een kleur die daarbij vloekt 
+carnavalslied = input("Wat vind je de leukste carnavalskraker? ") # Wat vind je de leukste carnavalskraker? 
+
+print(naam_vriend, "geeft een super pyjamafeestje met als thema", kleuterprogramma + ". Dat wordt dus de hele avond", kleuterprogramma, "kijken. Op je", vreemd_voertuig, "rijd je met een snelheid van", grootGetal, "km per uur naar haar huis. Het hele huis is versierd in de kleuren", twee_kleuren, "en", vloekende_kleur, "en door het hele huis galmt de beat van", carnavalslied+".") #  Geef uitvoer van verhaal
 </pre>
 
 
 <h3 id="AfOpgave27">
 Afsluitende Opdracht 2.7 Hoe lang duurt het nog?</h3>
-Op het scherm moet geprint zijn:<br>
-13:47.28<br>
+<p>Op het scherm moet geprint zijn:<br>
+13:47:28<br>
 Totaal aantal seconden: 49648
+</p>
+Stappenplan:
+
+<ul>
+  <li>Vraag het aantal seconden, minuten en seconden (dit is in de code hieronder al gegeven).</li>
+  <li>Toon de tijd op het scherm in het formaat <code>13:47.28</code>.</li>
+  <li>Bereken het totaal aantal seconden aan de hand van de variabelen.</li>
+  <li>Toon het aantal seconden op het scherm.</li>
+  <li>Voorzie de code van commentaar.</li>
+</ul>
+
+
 <pre class="python">
 #Dit programma berekent het aantal seconden.
 uren = 13
 minuten = 47
 seconden = 28
 
-#drukt tijdstip af als 13:47.28
-print( str(uren) + ":" + str(minuten) + "." + str(seconden) )
+#drukt tijdstip af als 13:47:28
+print( str(uren) + ":" + str(minuten) + ":" + str(seconden) )
 
 #bereken totaal aantal seconden
 totaal_aantal_seconden = uren * 60 * 60 + minuten * 60 + seconden
