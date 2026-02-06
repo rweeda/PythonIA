@@ -24,6 +24,9 @@
 <li>type van retourwaarde: int (gehele getal) of een float (kommagetal)
 </ol>
 
+<p>Omdat de variabele <code>kleur</code> binnen de functie aangemaakt wordt (regel 3), bestaat ze niet buiten de functie.  
+Ze is niet gedefinieerd en kan daarom niet gebruikt worden in het hoofdprogramma als argument in <code>print()</code>.</p>
+
 
 <h3 id="Opgave612">Opdracht 6.2 Bereik van variabelen</h3>
 
@@ -31,13 +34,37 @@ De variabele <code>kleur</code> wordt op regel 3 gedefinieerd, binnen de functie
 
 
 <h3 id="Opgave621">Opdracht 6.3 Dobbelen</h3>
+
+<p>Stappenplan voor functie en hoofdprogramma:</p>
+
+  <ol>
+    <li>
+      <strong>Functie:</strong>
+      <ul>
+        <li>Definieer <code>gooiDobbelsteen()</code></li>
+        <li>Bepaal worp tussen 1 en 6: <code>random.randint(1,6)</code></li>
+        <li>Return worp</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Hoofdprogramma:</strong>
+      <ul>
+        <li>Importeer <code>random</code></li>
+        <li><code>eersteWorp</code> wordt waarde <code>gooiDobbelsteen()</code></li>
+        <li><code>tweedeWorp</code> wordt waarde <code>gooiDobbelsteen()</code></li>
+        <li>Print de worpen</li>
+      </ul>
+    </li>
+  </ol>
+
 <pre class="python">
 import random
 
 #FUNCTIE DEFINITIES
 #gooit een willekeurige dobbelsteen
 def gooiDobbelsteen():
-	willekeurige_worp = random.randint(1,6) #kies een willekeurig getal: 1,2 of 3
+	willekeurige_worp = random.randint(1,6) #kies een willekeurig getal: 1 t/m 6
 	return willekeurige_worp
 
 ### HOOFDPROGRAMMA
@@ -47,10 +74,10 @@ print("Je hebt gegooid", eersteDobbelworp, "en", tweedeDobbelworp )
 </pre>
 
 <h3 id="opgave631">Opdracht 6.4 Een berekening retourneren</h3>
-<ol>
-<li>Het programma berekent de nieuwe prijs van een artikel, gegeven de oude prijs en het kortingspercentage.
-<li><code>berekenKorting</code>. Zie de code hieronder.
-<li>De variabele <code>korting</code> wordt aangemaakt op regel 3. Omdat ze binnen de functie wordt aangemaakt, bestaat ze niet meer na afloop van het programma. Dus, na regelnummer 5 bestaat ze niet meer en kun je het niet meer gebruiken. Hetzelfde geldt voor de andere variabelen die in de functie worden aangemaakt. Daarom is het nodig om de <code>nieuwe_prijs</code> te retourneren zodat deze daarna nog gebruikt kan worden (in de print).
+<ol type="a">
+<li>Het programma berekent de nieuwe prijs van een artikel, gegeven de oude prijs en het kortingspercentage. In regel 2 wordt een percentage korting berekend op het getal dat binnenkomt op de parameter.
+<li>Parameter <code>a</code> kan beter <code>oude_prijs</code> heten; lokale variabele <code>b</li>code> kan beter <code>nieuwe_prijs</code> heten.<code>berekenKorting</code>. Zie de code hieronder.
+<li>De variabele <code>korting</code> wordt aangemaakt op regel 3 en houdt op te bestaan na regel 5. Omdat ze binnen de functie wordt aangemaakt, bestaat ze niet meer na afloop van het programma. Dus, na regelnummer 5 bestaat ze niet meer en kun je het niet meer gebruiken. Hetzelfde geldt voor de andere variabelen die in de functie worden aangemaakt. Daarom is het nodig om de <code>nieuwe_prijs</code> te retourneren zodat deze daarna nog gebruikt kan worden (in de print).
 </ol>
 <pre class="python">
 ### FUNCTIEDEFINITIE
@@ -65,6 +92,15 @@ print("Met korting kost het product nu " + str(prijs_met_korting) + " euro" )
 </pre>
 
 <h3 id="opgave632">Opdracht 6.5 Fietsen en wielen</h3>
+<ol type="a">
+    <li>
+        Het probleem is dat <code>berekend_aantal_wielen</code> niet bestaat in het hoofdprogramma.
+    </li>
+    <li>Stap 1. plaats op regel 4: return aantal_wielen<br>
+         Stap 2. wijzig regel 7 in: <code>berekend_aantal_wielen = telAantalWielen( 10 )</code></li>
+</ol>
+
+
 <pre class="python">
 ### FUNCTIEDEFINITIE
 def telAantalWielen( aantal_fietsen ):
@@ -184,7 +220,7 @@ else:
 <h3 id="AfOpgave64">Afsluitende opdracht 6.4 Deelbaar door 7</h3>
 <pre class="python">
 ### FUNCTIEDEFINITIE
-# Doel van de functie is om te bepalen of een gegeven getal deelbaar is door 7. Werkt ook voor kommagetallen, 0 en negatieve getallen
+# Doel van de functie is om te bepalen of een gegeven getal deelbaar is door 7. Werkt ook voor kommagetallen, 0 en negatieve getallen.
 # Invoer: een int of float
 # Uitvoer: boolean (True of False)
 def isDeelbaarDoor7(getal):
@@ -241,7 +277,7 @@ gewicht = float( input() )
 berekende_BMI = BMI_berekenen (lengte, gewicht)
 print("BMI:", berekende_BMI)
 advies = advies_bepalen(berekende_BMI)
-print("Onze advies is:", advies)
+print("Ons advies is:", advies)
 </pre>
 
 
