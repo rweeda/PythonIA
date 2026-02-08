@@ -1,0 +1,51 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "hoofdprogramma",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "compliment wordt resultaat uit willekeurigCompliment",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "print \"Jij bent\" + compliment + \"!\"",
+                                "child": {
+                                    "id": 40,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "print \"Klaar!\"",
+                                        "child": {
+                                            "id": 1,
+                                            "basicTree": {
+                                                "basicTreeType": "End"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 60,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}
