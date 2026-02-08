@@ -24,13 +24,12 @@
 <li>type van retourwaarde: int (gehele getal) of een float (kommagetal)
 </ol>
 
-<p>Omdat de variabele <code>kleur</code> binnen de functie aangemaakt wordt (regel 3), bestaat ze niet buiten de functie.  
-Ze is niet gedefinieerd en kan daarom niet gebruikt worden in het hoofdprogramma als argument in <code>print()</code>.</p>
 
 
 <h3 id="Opgave612">Opdracht 6.2 Bereik van variabelen</h3>
 
-De variabele <code>kleur</code> wordt op regel 3 gedefinieerd, binnen de functie. De functie eindigt na regel 4. Dat zie je omdat daarna niet meer is ingesprongen. Na regel 4 bestaat de variabele <code>kleur</code> dan ook niet meer. Op regel 7 proberen we die af te drukken, maar omdat die daar buiten de functie is, bestaat die daar niet meer en kan die niet afgedrukt worden.
+<p>De variabele <code>kleur</code> wordt op regel 3 gedefinieerd, binnen de functie. De functie eindigt na regel 4. Dat zie je omdat daarna niet meer is ingesprongen. Na regel 4 bestaat de variabele <code>kleur</code> dan ook niet meer. Op regel 7 proberen we die af te drukken, maar omdat die daar buiten de functie is, bestaat die daar niet meer en kan die niet afgedrukt worden.</p>p>
+
 
 
 <h3 id="Opgave621">Opdracht 6.3 Dobbelen</h3>
@@ -58,6 +57,8 @@ De variabele <code>kleur</code> wordt op regel 3 gedefinieerd, binnen de functie
     </li>
   </ol>
 
+  <p>De code:</p>
+
 <pre class="python">
 import random
 
@@ -76,9 +77,10 @@ print("Je hebt gegooid", eersteDobbelworp, "en", tweedeDobbelworp )
 <h3 id="opgave631">Opdracht 6.4 Een berekening retourneren</h3>
 <ol type="a">
 <li>Het programma berekent de nieuwe prijs van een artikel, gegeven de oude prijs en het kortingspercentage. In regel 2 wordt een percentage korting berekend op het getal dat binnenkomt op de parameter.
-<li>Parameter <code>a</code> kan beter <code>oude_prijs</code> heten; lokale variabele <code>b</li>code> kan beter <code>nieuwe_prijs</code> heten.<code>berekenKorting</code>. Zie de code hieronder.
+<li>Parameter <code>a</code> kan beter <code>oude_prijs</code> heten; lokale variabele <code>b</code> kan beter <code>nieuwe_prijs</code> heten.<code>berekenKorting</code>. Zie de code hieronder.
 <li>De variabele <code>korting</code> wordt aangemaakt op regel 3 en houdt op te bestaan na regel 5. Omdat ze binnen de functie wordt aangemaakt, bestaat ze niet meer na afloop van het programma. Dus, na regelnummer 5 bestaat ze niet meer en kun je het niet meer gebruiken. Hetzelfde geldt voor de andere variabelen die in de functie worden aangemaakt. Daarom is het nodig om de <code>nieuwe_prijs</code> te retourneren zodat deze daarna nog gebruikt kan worden (in de print).
 </ol>
+<p>De code:</p>
 <pre class="python">
 ### FUNCTIEDEFINITIE
 def berekenKorting(oude_prijs, perc_korting):
@@ -96,7 +98,7 @@ print("Met korting kost het product nu " + str(prijs_met_korting) + " euro" )
     <li>
         Het probleem is dat <code>berekend_aantal_wielen</code> niet bestaat in het hoofdprogramma.
     </li>
-    <li>Stap 1. plaats op regel 4: return aantal_wielen<br>
+    <li>Stap 1. plaats op regel 4: <code>return aantal_wielen</code> in plaats van <code>print (aantal_wielen)</code><br>
          Stap 2. wijzig regel 7 in: <code>berekend_aantal_wielen = telAantalWielen( 10 )</code></li>
 </ol>
 
@@ -109,43 +111,141 @@ def telAantalWielen( aantal_fietsen ):
 
 ### HOOFDPROGRAMMA
 berekend_aantal_wielen = telAantalWielen( 10 ) # roep functie aan
-print("Met zoveel fietsen heb je", berekend_aantal_wielen, "wielen." )
+print("Je hebt", berekend_aantal_wielen, "wielen." )
 </pre>
 
 <h3 id="opgave633">Opdracht 6.6 Toetscijfer berekenen</h3>
 <pre class="python">
 ### FUNCTIEDEFINITIE
-def berekenCijfer(aantal_punten):
-    cijfer = (aantal_punten * 9) / 60 + 1
-    return( cijfer )
+def berekenCijfer(aantal_punten):       # functiedefinitie
+ cijfer = (aantal_punten*9) / 60 + 1    # Bereken cijfer op grond van invoer
+ return(cijfer)                         # retourneer het resultaat (werkt ook zonder haakjes)
 
 ### HOOFDPROGRAMMA MET AANROEP VAN FUNCTIE
-behaalde_cijfer = berekenCijfer( 40 )
-print(behaalde_cijfer)
+jouwScore = berekenCijfer(40)       # roep hier je functie aan en sla het resultaat op in een variabele
+print("Je scoort een: ",jouwScore)  # print jouw cijfer
 </pre>
 
 <h3 id="opgave634">Opdracht 6.7 Volume van een balk</h3>
+
+<h2 style="text-align:center;">Stappenplan met Code</h2>
+
+<table border="1px">
+    <tr>
+        <th>Stappenplan</th>
+        <th>Code</th>
+    </tr>
+
+    <!-- Functiedefinitie -->
+    <tr>
+        <td class="section" colspan="2">FUNCTIEDEFINITIE</td>
+    </tr>
+
+    <tr>
+        <td>
+            geef drie parameters mee:<br>
+            de lengte, breedte en hoogte.
+        </td>
+        <td>
+            <pre>
+def berekenBalkvolume(lengte, breedte, hoogte):
+            </pre>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            bereken volume door de lengte × breedte × hoogte
+        </td>
+        <td>
+            <pre>
+volume = lengte * breedte * hoogte
+            </pre>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            retourneer uitkomst
+        </td>
+        <td>
+            <pre>
+return volume
+            </pre>
+        </td>
+    </tr>
+
+    <!-- Hoofdprogramma -->
+    <tr>
+        <td class="section" colspan="2">HOOFDPROGRAMMA</td>
+    </tr>
+
+    <tr>
+        <td>
+            roep de functie aan en sla de retourwaarde op in een variabele.
+        </td>
+        <td>
+            <pre>
+balkvolume = berekenBalkvolume(3, 4, 5)
+            </pre>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            druk daarna het berekende volume af.
+        </td>
+        <td>
+            <pre>
+print("Het volume van de balk is:", balkvolume)
+            </pre>
+        </td>
+    </tr>
+
+</table>
+
+<p>De code:</p>
+
 <pre class="python">
 ### FUNCTIEDEFINITIE
 #deze functie levert het volume van een balk op
-def berekenVolumeBalk ( lengte, breedte, hoogte ):
-    volume = lengte * breedte * hoogte
+def berekenBalkvolume(lengte, breedte, hoogte): # geef drie parameters mee: de lengte, breedte en hoogte.
+    volume = lengte*breedte*hoogte # bereken volume door de lengte x breedte x hoogte
     return volume
 
 ### HOOFDPROGRAMMA MET AANROEP VAN FUNCTIE
-lengte = int(input("Geef de lengte van de balk: "))
-breedte = int(input("Geef de breedte van de balk: "))
-hoogte = int(input("Geef de hoogte van de balk: "))
-
-volume = berekenVolumeBalk(lengte,breedte,hoogte)
-print("Het volume van de balk is: ", volume)
+balkvolume = berekenBalkvolume(3,4,5) # roep de functie aan en sla je de retourwaarde op in een variabele.
+print("Het volume van de balk is:", balkvolume) # Druk daarna het berekende volume af
 </pre>
 
 <h3 id="Opgave641">Opdracht 6.8 Constanten</h3>
-<ul>
-<li>Constanten zijn bijvoorbeeld jullie namen en het kopje "keren gewonnen". Die veranderen niet gedurende het spel.
-<li>Variabelen zijn bijvoorbeeld de huidige score, die verandert gedurende het spel.
-</ul>
+
+<p>Constanten zijn de namen van de spelers. De variabelen zijn de scores van de spelers.
+Je kunt het beste een tabel gebruiken:</p>
+<table border="1">
+    <tr>
+        <th></th>
+        <th>NAAM_SPELER_1</th>
+        <th>NAAM_SPELER_2</th>
+    </tr>
+    <tr>
+        <td>winst</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>gelijkspel</td>
+        <td colspan="2"></td>
+    </tr>
+</table>
+
+<p>In Python zou je dan als constanten <code>NAAM_SPELER_1</code> en 
+<code>NAAM_SPELER_2</code> kunnen gebruiken. </p>
+<p>De variabelen, die immers van waarde moeten kunnen veranderen, zijn dan: 
+<code>winst_speler_1</code>, <code>winst_speler_2</code> en 
+<code>gelijkspel</code>.</p>
+
+
 
 <h1 id="H6AfOpgavenUitwerkingen">H6 - Afsluitende opdrachten: UITWERKINGEN</h1>
 
@@ -154,7 +254,7 @@ print("Het volume van de balk is: ", volume)
 <li>De fout in de code betreft het ontbreken van een returnwaarde in de functie.</li>
 <li>De variabele <code>berekendeOppervlakte</code> krijgt geen waarde vanwege de reden die bij de vorige onderdeel genoemd is. Daarom wordt <code>None</code> afgedrukt.</li>
 </ol>
-
+<p>De code:</p>
 <pre class="python">
 ### FUNCTIEDEFINITIE
 def oppervlakte_van_driehoek( basis, hoogte ):
@@ -168,16 +268,51 @@ print( "De berekende oppervlakte is:", berekende_oppervlakte )
 </pre>
 
 <h3 id="AfOpgave62">Afsluitende opdracht 6.2 Munt opgooien</h3>
+<h3>Antwoord:</h3>
+
+<p>Er is een functiedefinitie nodig voor <code>gooiMunt()</code></p>
+
+<ul>
+    <li>Kies willekeurig getal tussen 0 en 1 en zet dit op variabele <code>getal</code>. 
+        Importeer <code>random</code> hiervoor.</li>
+
+    <li>Als <code>getal</code> nul is:
+        <ul>
+            <li>Variabele <code>worp</code> wordt <code>"MUNT"</code></li>
+        </ul>
+    </li>
+
+    <li>Anders:
+        <ul>
+            <li>Variabele <code>worp</code> wordt <code>"KOP"</code></li>
+        </ul>
+    </li>
+
+    <li>Return <code>worp</code></li>
+</ul>
+
+<h3>Hoofdprogramma:</h3>
+
+<ul>
+    <li><code>worp</code> krijgt de returnwaarde van <code>gooiMunt()</code></li>
+    <li>Print <code>worp</code></li>
+</ul>
+
+<h3>In code, met commentaar:</h3>
+
 <pre class="python">
 import random
 
 ### FUNCTIEDEFINITIE
 def gooiMunt():
-  random_getal = random.randint (0, 1)
-  if random_getal == 0:
-    return("KOP")
-  else:
-    return("MUNT")
+    # Kies een willekeurig getal: 0 of 1
+    random_getal = random.randint (0, 1)
+
+    # Controleer of het getal nul is
+    if random_getal == 0:
+        return("KOP")
+    else:
+        return("MUNT")
 
 ### HOOFDPROGRAMMA MET AANROEP VAN FUNCTIE
 opgegooid = gooiMunt()
@@ -185,10 +320,44 @@ print( "Er is gegooid:", opgegooid )
 </pre>
 
 <h3 id="AfOpgave63">Afsluitende opdracht 6.3 Geldig emailadres</h3>
+<p><strong>Stappenplan:</strong></p>
+
+<ul>
+  <li>Definieer een functie voor controle met een parameter <code>emailadres</code>: <code>controleEmailadres( emailadres )</code></li>
+
+  <li>Als de parameter een lengte heeft van <code>&lt; 5</code> of <code>&gt; 20</code>:
+    <ul>
+      <li>print lengte niet goed</li>
+      <li>return <code>false</code></li>
+    </ul>
+  </li>
+
+  <li>Anders als: <code>"?"</code>, <code>"%"</code>, <code>"&amp;"</code> voorkomen in de parameter:
+    <ul>
+      <li>print verkeerde tekens op invoer</li>
+      <li>return <code>false</code></li>
+    </ul>
+  </li>
+
+  <li>Anders als: geen <code>@</code> of punt op invoer:
+    <ul>
+      <li>Er ontbreekt een <code>@</code> of punt</li>
+      <li>return <code>false</code></li>
+    </ul>
+  </li>
+
+  <li>Anders:
+    <ul>
+      <li>Print: het adres is oké.</li>
+      <li>Return <code>true</code></li>
+    </ul>
+  </li>
+</ul>
+<p>De code:</p>
 <pre class="python">
 ### FUNCTIEDEFINITIES	
 def vraagInvoer():
-    print("Geef je emailadres op:")
+    print("Geef je e-mailadres op:")
     invoer = input()
     print("Je hebt ingevoerd:", invoer)
     return invoer
