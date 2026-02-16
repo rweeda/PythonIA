@@ -1,7 +1,7 @@
 {
     "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
     "model": {
-        "flowchartName": "willekeurigComplimnt",
+        "flowchartName": "willekeurigCompliment",
         "tree": {
             "id": 0,
             "basicTree": {
@@ -10,24 +10,24 @@
                     "id": 2,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "kies willekeurig getal 1,2 of 3 ",
+                        "content": "Kies willekeurig getal 1, 2 of 3",
                         "child": {
-                            "id": 60,
+                            "id": 20,
                             "basicTree": {
                                 "basicTreeType": "If",
                                 "content": "willekeurig is 1?",
                                 "child1": {
-                                    "id": 70,
+                                    "id": 30,
                                     "basicTree": {
                                         "basicTreeType": "If",
                                         "content": "willekeurig is 2?",
                                         "child1": {
-                                            "id": 90,
+                                            "id": 50,
                                             "basicTree": {
                                                 "basicTreeType": "Statement",
                                                 "content": "gekozen_compliment wordt \"slim\"",
                                                 "child": {
-                                                    "id": 91,
+                                                    "id": 51,
                                                     "basicTree": {
                                                         "basicTreeType": "Void"
                                                     }
@@ -35,12 +35,12 @@
                                             }
                                         },
                                         "child2": {
-                                            "id": 92,
+                                            "id": 52,
                                             "basicTree": {
                                                 "basicTreeType": "Statement",
                                                 "content": "gekozen_compliment wordt \"leuk\"",
                                                 "child": {
-                                                    "id": 93,
+                                                    "id": 53,
                                                     "basicTree": {
                                                         "basicTreeType": "Void"
                                                     }
@@ -48,7 +48,7 @@
                                             }
                                         },
                                         "child3": {
-                                            "id": 71,
+                                            "id": 31,
                                             "basicTree": {
                                                 "basicTreeType": "Void"
                                             }
@@ -56,12 +56,12 @@
                                     }
                                 },
                                 "child2": {
-                                    "id": 72,
+                                    "id": 32,
                                     "basicTree": {
                                         "basicTreeType": "Statement",
                                         "content": "gekozen_compliment wordt \"lief\"",
                                         "child": {
-                                            "id": 73,
+                                            "id": 33,
                                             "basicTree": {
                                                 "basicTreeType": "Void"
                                             }
@@ -69,7 +69,7 @@
                                     }
                                 },
                                 "child3": {
-                                    "id": 20,
+                                    "id": 80,
                                     "basicTree": {
                                         "basicTreeType": "Statement",
                                         "content": "return gekozen_compliment",
@@ -87,17 +87,17 @@
                 }
             }
         },
-        "currentId": 130,
+        "currentId": 100,
         "highlightedBox": "Nothing",
         "precondition": {
             "nodeType": "PreConditionNode",
             "content": "",
-            "visible": false
+            "visible": true
         },
         "postcondition": {
             "nodeType": "PostConditionNode",
             "content": "",
-            "visible": false
+            "visible": true
         }
     }
 }
