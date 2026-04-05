@@ -1,0 +1,84 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "bereken3Dbril",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 190,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "prijs wordt 13 euro",
+                        "child": {
+                            "id": 2,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "vraag \"Wil je een 3D bril?\"",
+                                "child": {
+                                    "id": 130,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "wil_3Dbril wordt invoer",
+                                        "child": {
+                                            "id": 50,
+                                            "basicTree": {
+                                                "basicTreeType": "If",
+                                                "content": "wil_3Dbril is \"Ja\"",
+                                                "child1": {
+                                                    "id": 61,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                },
+                                                "child2": {
+                                                    "id": 62,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "prijs verhogen met 1,50 euro",
+                                                        "child": {
+                                                            "id": 63,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child3": {
+                                                    "id": 80,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print prijs\n",
+                                                        "child": {
+                                                            "id": 1,
+                                                            "basicTree": {
+                                                                "basicTreeType": "End"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 210,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}
