@@ -15,7 +15,7 @@
                             "id": 2,
                             "basicTree": {
                                 "basicTreeType": "Statement",
-                                "content": "vraag \"Heb je een CJP kortingspas\"",
+                                "content": "vraag \"Heb je een CJP kortingspas (Ja/Nee)?\"",
                                 "child": {
                                     "id": 130,
                                     "basicTree": {

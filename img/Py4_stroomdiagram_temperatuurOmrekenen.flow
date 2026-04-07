@@ -1,0 +1,65 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "temperatuurOmrekenen",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "print \"Geef een temperatuur in  Fahrenheit:\"",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "ingevoerde_fahrenheit wordt invoer omgezet naar float",
+                                "child": {
+                                    "id": 40,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "celsius wordt  (ingevoerde_fahrenheit - 32) * 5/9",
+                                        "child": {
+                                            "id": 60,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "afgeronde_celsius wordt celsius afgerond op 1 decimaal",
+                                                "child": {
+                                                    "id": 80,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print \"{ingevoerde_fahrenheit} graden Fahrenheit is {afgeronde_celsius} graden Celsius.\"",
+                                                        "child": {
+                                                            "id": 1,
+                                                            "basicTree": {
+                                                                "basicTreeType": "End"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 100,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}
