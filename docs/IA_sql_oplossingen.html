@@ -261,8 +261,8 @@ FROM pizza;
 </code></pre>
 
 <h3 id="opgave251">Verwerkingsopdracht 2.5.1 Kolom hernoemen</h3>
-<pre><code class="language-sql">SELECT naam AS bezorgernaam
-FROM bezorger;
+<pre><code class="language-sql">SELECT naam, basisprijs AS prijs
+FROM pizza;
 </code></pre>
 
 
@@ -394,7 +394,7 @@ WHERE telefoon LIKE '06%';
 <h3 id="opgave361">Verwerkingsopdracht 3.4.1 Pizza's tussen de 8,50 en 10 euro</h3>
 <pre><code class="language-sql">SELECT naam, basisprijs
 FROM pizza
-WHERE basisprijs >= 8.50 AND basisprijs <= 10;
+WHERE basisprijs >= 8.50 AND basisprijs < 9.50;
 </code></pre>
 
 <h3 id="opgave371">Verwerkingsopdracht 3.5.1 Bestellingen met bestelcode</h3>

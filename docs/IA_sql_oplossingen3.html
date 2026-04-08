@@ -1,0 +1,242 @@
+<html>
+<head>
+    <title>SQL - Informatica Actief</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="content">
+  <h1>UITWERKINGEN</h1>
+  <hr>
+
+  
+
+<h1 id="SQL3">Onderwerp 3: WHERE</h1>
+
+
+<h3 id="opgave311">Verwerkingsopdracht 3.1.1 Omschrijving van een Inferno pizza tonen </h3>
+<pre><code class="language-sql">SELECT omschrijving
+FROM pizza
+WHERE naam='Inferno'
+</code></pre>
+
+
+
+<!--
+
+<h3 id="opgave262">Verwerkingsopdracht 2.6.2 Alle klanten uit Enschede tonen</h3>
+<pre><code class="language-sql">SELECT adres, postcode, woonplaats
+FROM klant
+WHERE woonplaats='Enschede'; </code></pre>
+
+<h3 id="opgave263">Verwerkingsopdracht 2.6.3 Wachtwoord van een bezorger tonen</h3>
+<pre><code class="language-sql">SELECT wachtwoord
+FROM bezorger
+WHERE naam = 'Ronald Marbus';
+</code></pre>
+-->
+
+
+
+
+
+<h3 id="opgave321">Verwerkingsopdracht 3.2.1 Dure pizza's</h3>
+<pre><code class="language-sql">SELECT naam, basisprijs
+FROM pizza
+WHERE basisprijs >= 9.50;
+</code></pre>
+
+
+<h3 id="opgave322">Verwerkingsopdracht 3.2.2: Geen 8 euro pizza's</h3>
+<pre><code class="language-sql">SELECT naam, basisprijs
+FROM pizza
+WHERE basisprijs <> 8;
+</code></pre>
+
+
+<h3 id="opgave331">Verwerkingsopdracht 3.3.1 Alle pizza's waar de letter 'a' in voorkomt</h3>
+<pre><code class="language-sql">SELECT naam
+FROM pizza
+WHERE naam LIKE '%a%';
+</code></pre>
+
+
+<h3 id="opgave332">Verwerkingsopdracht 3.3.2 Alle klanten met een mobiele telefoonnummer</h3>
+<pre><code class="language-sql">SELECT naam, telefoon
+FROM klant
+WHERE telefoon LIKE '06%';
+</code></pre>
+
+
+
+<h3 id="opgave361">Verwerkingsopdracht 3.4.1 Pizza's tussen de 8,50 en 10 euro</h3>
+<pre><code class="language-sql">SELECT naam, basisprijs
+FROM pizza
+WHERE basisprijs >= 8.50 AND basisprijs < 9.50;
+</code></pre>
+
+<h3 id="opgave371">Verwerkingsopdracht 3.5.1 Bestellingen met bestelcode</h3>
+<pre><code class="language-sql">SELECT *
+FROM bestelling
+WHERE bestelcode = 13 OR bestelcode = 30;
+</code></pre>
+
+
+<h3 id="opgave352">Verwerkingsopdracht 3.5.2 Alle goedkope of gezonde pizza's</h3>
+<pre><code class="language-sql">SELECT *
+FROM pizza
+WHERE basisprijs < 7.50 OR omschrijving LIKE '%fruit%';
+</code></pre>
+
+
+
+<h3 id="opgave361">Verwerkingsopdracht 3.6.1 Alle pizza's zonder kip</h3>
+<pre><code class="language-sql">SELECT naam AS pizzanaam, omschrijving
+FROM pizza
+WHERE omschrijving NOT LIKE '%kip%';
+</code></pre>
+ook goed:
+<pre><code class="language-sql">SELECT naam, omschrijving
+FROM pizza
+WHERE NOT omschrijving LIKE '%kip%';
+</code></pre>
+
+
+<h3 id="opgave371">Verwerkingsopdracht 3.7.1 Alle pizza's zonder paprika of ui</h3>
+
+<ol type ="a">
+<li>De volgende pizza's worden getoond:
+        <ul>
+        <li>Prosciutto (ham)
+        <li>Funghi (champignons)
+        <li>Borromea (ham én champignons)
+        <li>Hawaii (ham)
+        <li>Calimero (champignons én salami) - Deze hoort er eigenlijk niet bij!
+        </ul>
+</li>
+<li>In SQL wordt de NOT als eerste uitgevoerd, dan AND en dan OR.<br>
+Hierdoor wordt de pizza Calimero, die champignons én salami bevat, toch meegenomen. Dat is niet wat de Luna wil.
+</li>
+<li><pre><code class="language-sql">SELECT naam, omschrijving
+FROM pizza
+WHERE (omschrijving LIKE '%ham%' OR omschrijving LIKE '%champignons%')
+  AND NOT omschrijving LIKE '%salami%';
+</code></pre></li>
+<li>Calimero staat nu terecht niet meer in het resultaat, omdat deze salami bevat.</li>
+</ol>
+
+<h3 id="opgave372">Verwerkingsopdracht 3.7.2 Toon pizza's die voldoen aan meerdere voorwaarden</h3>
+<pre><code class="language-sql">SELECT *
+FROM pizza
+WHERE basisprijs < 7.5 AND (naam LIKE 'M%' OR naam LIKE '%A');
+</code></pre>
+
+
+
+<h3 id="opgave391">Verwerkingsopdracht 3.9.1 Query netjes opschrijven</h3>
+<ol>
+<li>SQL commando in hoofdletters;
+<li>Elke SQL commando op een nieuwe regel;
+<li>Spatie na de komma: <code>SELECT naam, basisprijs</code> ;
+<li>En afsluiten met een ';': <code>WHERE basisprijs < 8;</code>;
+<li>Commentaar toevoegen met '--'.
+</ol>
+
+<pre><code class="language-sql">SELECT naam, basisprijs  -- spatie na de komma
+FROM pizza               -- Elke SQL commando op een nieuwe regel en in hoofdletters
+WHERE basisprijs < 8;    -- afsluiten met een ';'
+</code></pre>
+
+<h3 id="opgave3101">Verwerkingsopdracht 3.10.1 Fout in query (1) </h3>
+De fout zat in de volgorde van de regels code.
+<pre><code class="language-sql">SELECT naam
+FROM pizza
+WHERE basisprijs < 7.0;
+</code></pre>
+
+
+<h3 id="opgave3102">Verwerkingsopdracht 3.10.2 Fout in query (2)  </h3>
+<ol style="list-style-type: lower-alpha">
+<li>B. De woonplaatsen zijn met een hoofdletter geschreven (bv.
+'Nijmegen'). SQL vergelijkt tekst hoofdlettergevoelig. In dit geval zijn er
+klanten die in 'nijmegen' wonen, maar wel in 'Nijmegen'.
+<li>
+De juiste query is:<pre><code class="language-sql">SELECT *
+FROM klant
+WHERE woonplaats = 'Nijmegen'; </code></pre>
+</ol>
+
+<h3 id="opgave3103">Verwerkingsopdracht 3.10.3 Fout in query (3)  </h3>
+De fout zat in de naam van de tabel.
+<pre><code class="language-sql">SELECT naam
+FROM pizza
+WHERE basispijs < 7.0;
+</code></pre>
+
+<h3 id="opgave3104">Verwerkingsopdracht 3.10.4 Fout in query (4))  </h3>
+De fout zat in de kolomnaam.
+<pre><code class="language-sql">SELECT naam
+FROM pizza
+WHERE basispijs < 7.0; </code></pre>
+
+
+<h1 id="SQL3AfOpgaven">Afsluitende Opdrachten Onderwerp 3: WHERE</h1>
+
+<h3 id="opgave3121">Afsluitende Opdracht 3.12.1 Klanten in een specifieke plaats</h3>
+<pre><code class="language-sql">SELECT klantnummer, naam, woonplaats
+FROM klant
+WHERE woonplaats = 'Hengelo';
+</code></pre>
+
+
+
+<h3 id="opgave3122">Afsluitende Opdracht 3.12.2 Debuggen en herschrijven van slordige query</h3>
+<pre><code class="language-sql">-- Er ontbreekt een komma tussen de kolommen.
+-- Er ontbreekt een puntkomma aan het eind.
+SELECT naam, basisprijs
+FROM pizza
+WHERE basisprijs < 7;
+</code></pre>
+
+
+<h3 id="opgave3123">Afsluitende Opdracht 3.12.3 Alle goedkope pizza's met een 'C'</h3>
+<pre><code class="language-sql">SELECT naam
+FROM pizza
+WHERE naam LIKE 'C%' AND basisprijs <= 8.0;
+</code></pre>
+
+
+<h3 id="opgave3124">Afsluitende Opdracht 3.12.4 Dure salami</h3>
+<pre><code class="language-sql">SELECT naam, basisprijs
+FROM pizza
+WHERE basisprijs >= 9
+  AND omschrijving LIKE '%salami%';
+</code></pre>
+
+<h3 id="opgave3125">Afsluitende Opdracht 3.12.5 Toon 3 pizza's zonder vlees, met een 'a' in de naam</h3>
+<pre><code class="language-sql">SELECT naam, omschrijving
+FROM pizza
+WHERE omschrijving NOT LIKE '%ham%'
+  AND omschrijving NOT LIKE '%salami%'
+  AND omschrijving NOT LIKE '%kip%'
+  AND naam LIKE '%a%'
+</code></pre>
+
+
+<h3 id="opgave3126">Afsluitende Opdracht 3.12.6 Pizza's met 'special' of duurder dan €10</h3>
+<pre><code class="language-sql">SELECT naam
+FROM pizza
+WHERE omschrijving LIKE '%special%'
+   OR basisprijs > 9;
+</code></pre>
+
+
+<h3 id="opgave3127">Afsluitende Opdracht 3.12.7 Bezorgers met naam H maar die NIET met J begint</h3>
+<pre><code class="language-sql">SELECT naam AS bezorgernaam
+FROM bezorger
+WHERE (naam LIKE 'H%' OR naam LIKE 'J%') AND naam NOT LIKE '%A%';
+</code></pre>
+
+ </div>
+</body>
+</html>

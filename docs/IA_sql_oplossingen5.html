@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title>SQL - Informatica Actief</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="content">
+  <h1>UITWERKINGEN</h1>
+  <hr>
+
+
+<h1 id="SQL5">Onderwerp 5: JOIN</h1>
+<h3 id="opgave511">Verwerkingsopdracht 5.1.1 Koppelingen tussen tabellen </h3>
+C. <em>besteldepizza</em> en <em>formaat</em>
+
+
+<h3 id="opgave521">Verwerkingsopdracht 5.2.1 Nut van een JOIN</h3>
+
+C. Omdat de naam van de pizza niet in tabel <i>besteldepizza</i> staat.
+
+
+<h3 id="opgave522">Verwerkingsopdracht 5.2.2 BesteldePizza, besteldatum en bezorgtijd</h3>
+<pre><code class="language-sql">SELECT besteldePizza.besteldepizzacode, bestelling.bestel_datum, bestelling.bezorg_tijd
+FROM besteldePizza
+JOIN bestelling ON besteldePizza.bestelcode = bestelling.bestelcode;
+</code></pre>
+
+
+<h3 id="opgave523">Verwerkingsopdracht 5.2.3 JOIN uitleggen</h3>
+Een JOIN koppelt rijen van twee tabellen aan elkaar via een gemeenschappelijke kolom met gelijke waarden. Die kolommen moeten logisch bij elkaar horen en dezelfde soort informatie bevatten.
+
+
+<h3 id="opgave531">Verwerkingsopdracht 5.3.1: Overzicht van naam en bodem van alle bestelde pizza's</h3>
+<pre><code class="language-sql">SELECT besteldepizza.bestelcode, pizza.naam AS pizzanaam, bodem.omschrijving AS bodembeschrijving
+FROM besteldepizza
+JOIN pizza ON besteldepizza.pizzacode = pizza.pizzacode
+JOIN bodem ON besteldepizza.bodemcode = bodem.bodemcode;
+</code></pre>
+
+<h3 id="opgave532">Verwerkingsopdracht 5.3.2: Overzicht van alle pizza's dat elk klant heeft besteld</h3>
+<pre><code class="language-sql">SELECT klant.naam, klant.postcode, besteldePizza.pizzacode
+FROM klant
+JOIN bestelling ON klant.klantnummer = bestelling.klantnummer
+JOIN besteldePizza ON bestelling.bestelcode = besteldePizza.bestelcode;
+</code></pre>
+
+
+
+<h1 id="SQL5AfOpgaven">Afsluitende Opdrachten Onderwerp 5: JOIN</h1>
+
+<h3 id="opgave551">Afsluitende Opdracht 5.5.1 Omschrijving van de bodem bij een bestelling</h3>
+<pre><code class="language-sql">SELECT besteldepizza.besteldepizzacode, bodem.omschrijving
+FROM besteldepizza
+JOIN bodem ON besteldepizza.bodemcode = bodem.bodemcode;
+</code></pre>
+
+
+
+
+<h3 id="opgave552">Afsluitende Opdracht 5.5.2 Een overzicht van de bestelde pizza en het formaat</h3>
+<pre><code class="language-sql">SELECT besteldePizza.besteldepizzacode, pizza.naam AS pizzanaam, formaat.omschrijving AS formaat
+FROM besteldePizza
+JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode
+JOIN formaat ON besteldePizza.formaatcode = formaat.formaatcode;
+</code></pre>
+
+<h3 id="opgave553">Afsluitende Opdracht 5.5.3 Wie heeft welke pizza besteld?</h3>
+<pre><code class="language-sql">SELECT klant.naam, pizza.naam
+FROM klant
+JOIN bestelling ON klant.klantnummer = bestelling.klantnummer
+JOIN besteldePizza ON bestelling.bestelcode = besteldePizza.bestelcode
+JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode;
+</code></pre>
+
+<h3 id="opgave554">Afsluitende Opdracht 5.5.4 Bestellingen van klanten uit Enschede of Hengelo</h3>
+<pre><code class="language-sql">SELECT bestelcode, bestelling.klantnummer
+FROM bestelling
+JOIN klant  ON bestelling.klantnummer = klant.klantnummer
+WHERE woonplaats = 'Enschede' OR woonplaats = 'Hengelo'
+LIMIT 3;
+</code></pre>
+
+<h3 id="opgave535">Afsluitende Opdracht 5.5.5 Bezorgerinformatie</h3>
+<pre><code class="language-sql">SELECT bezorger.naam AS bezorgernaam, klant.naam AS klantnaam, klant.adres, klant.postcode, klant.woonplaats
+FROM bestelling
+JOIN bezorger ON bestelling.bezorgernummer = bezorger.bezorgernummer
+JOIN klant ON bestelling.klantnummer = klant.klantnummer
+LIMIT 5;
+</code></pre>
+
+<h3 id="opgave556">Afsluitende Opdracht 5.5.6 Voor de kok</h3>
+<pre><code class="language-sql">SELECT pizza.naam AS pizzanaam, formaat.omschrijving AS formaat, bodem.omschrijving AS bodem
+FROM besteldePizza
+JOIN pizza ON besteldePizza.pizzacode = pizza.pizzacode
+JOIN formaat ON besteldePizza.formaatcode = formaat.formaatcode
+JOIN bodem ON besteldePizza.bodemcode = bodem.bodemcode
+LIMIT 10;
+</code></pre>
+
+</div>
+</body>
+</html>

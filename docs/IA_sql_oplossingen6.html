@@ -1,0 +1,300 @@
+<html>
+<head>
+    <title>SQL - Informatica Actief</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="content">
+  <h1>UITWERKINGEN</h1>
+  <hr>
+
+
+<h1 id="SQL6">Onderwerp 6: Create - Read - Update - Delete</h1>
+
+
+<h3 id="opgave711">Verwerkingsopdracht 6.1.1 Pizza toevoegen en controleren</h3>
+<ol type="a">
+  <li><pre><code class="language-sql">INSERT INTO pizza
+VALUES (NULL, 'Pizza Hawaii', 'Ham en ananas', 8.50);
+</code></pre>
+<li><pre><code class="language-sql">-- check:
+SELECT *
+FROM pizza;
+</code></pre>
+</ol>
+
+<h3 id="opgave712">Verwerkingsopdracht 6.1.2 Een nieuwe "New York style" bodem</h3>
+Antwoord: C<br>
+Toelichting: <b>bodemcode</b> (eerste veld) is een AUTOINCREMENT-veld en moet je dus NULL invullen.<br>
+Een kommagetal moet je met een . aangeven, dus 1.50<br>
+Bij antwoord D ontbreken aanhalingstekens en het euroteken is fout in SQL.
+
+
+
+<h3 id="opgave713">Verwerkingsopdracht 6.1.3 Pan-bodem toevoegen</h3>
+<pre><code class="language-sql">INSERT INTO formaat
+VALUES (NULL, 'XXL', 2.00);
+-- check:
+SELECT *
+FROM formaat;
+</code></pre>
+
+
+<h3 id="opgave722"> Verwerkingsopdracht 6.2.2 Verwijder de Pazza pizza</h3>
+<pre><code class="language-sql">DELETE FROM pizza
+WHERE naam = "Pazza";
+FROM pizza;
+</code></pre>
+
+<h3 id="opgave722"> Verwerkingsopdracht 6.2.3 Verwijder bestelling</h3>
+<pre><code class="language-sql"DELETE FROM bestelling
+WHERE klantnummer = 413 AND bestel_datum = '2021-12-01';
+
+</code></pre>
+
+
+<h3 id="opgave731"> Verwerkingsopdracht 6.3.1 Pas de prijs van een pizza aan</h3>
+<pre><code class="language-sql">UPDATE pizza
+SET basisprijs = 8.00
+WHERE naam = "Margherita";
+</code></pre>
+
+
+<h3 id="opgave741"> Verwerkingsopdracht 6.4.1 Nieuwe tabel kortingsbon aanmaken</h3>
+<ol type="a">
+<li><pre><code class="language-sql">CREATE TABLE kortingsbon (
+    boncode INTEGER PRIMARY KEY AUTOINCREMENT,
+    korting REAL,
+    datum TEXT
+);
+</code></pre>
+</li>
+<li>
+Als de code geen foutmelding geeft, maar wel een lege tabel oplevert, dan is het aanmaken gelukt. Met <code>CREATE TABLE</code> heb je alleen de tabel aangemaakt. Met <code>INSERT INTO</code> kun je daarna gegevens invoeren.
+</li>
+<li><pre><code class="language-sql">INSERT INTO kortingsbon VALUES (NULL,0.50,"2025-12-20");</code></pre></li>
+
+</ol>
+
+
+
+<h3 id="opgave751"> Verwerkingsopdracht 6.5.1 Verwijder tabel bodem</h3>
+<ol type="a">
+<li>
+<pre><code class="language-sql">-- verwijderen:
+DROP TABLE bodem;
+</code></pre>
+<li>
+<pre><code class="language-sql">-- check:
+SELECT *
+FROM bodem;-- ophalen lukt niet omdat de tabel in de vorige stap verwijderd is.
+</code></pre>
+</ol>
+
+
+
+<h3 id="opgave761"> Verwerkingsopdracht 6.6.1 Kolom geboortedatum toevoegen</h3>
+<pre><code class="language-sql">ALTER TABLE klant
+ADD geboortedatum TEXT;
+</code></pre>
+
+<h3 id="opgave771"> Verwerkingsopdracht 6.7.1 Kolom <b>naam</b> hernoemen naar <b>klantnaam</b></h3>
+<pre><code class="language-sql">ALTER TABLE klant
+RENAME COLUMN naam TO klantnaam;
+</code></pre>
+
+<h3 id="opgave781"> Verwerkingsopdracht 6.8.1 Tabel hernoemen naar grootte</h3>
+<pre><code class="language-sql">ALTER TABLE formaat
+RENAME TO grootte;
+</code></pre>
+
+
+
+
+<h3 id="opgave7101">Verwerkingsopdracht 6.9.1 Foreign keys bij Danilo's Pizzeria</h3>
+<ol type="a">
+<li>De tabel <i>besteldepizza</i> heeft vier foreign keys, namelijk:
+	<ol><li><b>bestelcode</b> uit tabel <i>bestelling</i>
+<li><b>pizzacode</b> uit tabel <i>pizza</i>
+<li><b>bodemcode</b> uit tabel <i>bodem</i>
+<li><b>formaatcode</b> uit tabel <i>formaat</i>
+	</ol>
+<li>De tabel <i>formaat</i> heeft <b>geen</b> foreign key. Ze heeft een primary key <b>formaatcode</b> die vanuit tabel <i>besteldePizza</i> als foreign key gebruikt wordt, maar ze verwijst zelf niet naar een andere tabel en heeft dus geen foreign key.
+</ol>
+
+<h3 id="opgave7111">Verwerkingsopdracht 6.10.1 Foreign keys bij Danilo's Pizzeria</h3>
+<ol type="a">
+
+<li>Tabel <i>besteldePizza</i> heeft een kolom <b>formaatcode</b>. Daarvoor komen de gegevens uit de tabel <i>formaat</i> en de primary key-kolom <b>formaatcode</b>.
+<li>De foreign key verwijst naar kolom <b>omschrijving</b> uit de tabel <i>bodem</i>. Dit is niet correct, want een foreign key moet verwijzen naar de primary key van de tabel <i>bodem</i>, en dus <b>bodemcode</b>.
+</ol>
+
+<h3 id="opgave7112">Verwerkingsopdracht 6.10.2 Debuggen van een foutieve foreign key</h3>
+De <b>boncode</b> in de tabel <i>kortingsbon</i> is de primary key. Maar de code van de foreign key staat in de <code>CREATE TABLE</code> van de tabel <i>kortingsbon</i>. Dat is niet goed.<br>
+
+Deze primary key uit de tabel <i>kortingsbon</i> moet worden gekoppeld aan een kolom in een andere tabel, namelijk tabel <i>bestelling</i>. De code voor de foreign key moet dus in de <code>CREATE TABLE</code> van tabel <i>bestelling</i> worden toegevoegd.
+
+<h3 id="opgave7113">Verwerkingsopdracht 6.10.3 Foreign key teovoegen</h3>
+
+<ol type="a">
+<li>
+De code voor de ontbrekende foreign key is:
+<code>FOREIGN KEY(klantnummer) REFERENCES klant(klantnummer)</code>
+<br>
+
+De complete SQL code voor het maken van de tabel <i>bestelling</i> is dan:
+<pre><code class="language-sql">CREATE TABLE bestelling (
+  bestelcode INTEGER PRIMARY KEY NOT NULL,
+  bestel_datum TEXT,
+  bestel_tijd TEXT,
+  bezorg_tijd TEXT,
+  bezorgernummer INTEGER NOT NULL,
+  klantnummer INTEGER NOT NULL,
+  boncode INTEGER,
+  FOREIGN KEY(bezorgernummer) REFERENCES bezorger(bezorgernummer)
+  FOREIGN KEY(klantnummer) REFERENCES klant(klantnummer)
+) ;
+</code></pre>
+</li>
+<li>De kolom <b>bestelcode</b> is een primary key in de tabel <i>bestelling</i>. De foreign key moet dus in de <code>CREATE TABLE</code> van tabel <i>besteldePizza</i> staan.</li>
+</ol>
+
+
+
+
+<h1 id="SQL6AfOpgaven">Afsluitende Opdrachten Onderwerp 6: Create - Read - Update - Delete</h1>
+
+<h3 id="opgave7131">Afsluitende Opdracht 6.12.1 Keys bepalen</h3>
+<ol type="a">
+<li>Kolom <b>reviewcode</b></li>
+<li>De tabel <i>review</i></li>
+</ol>
+
+
+<h3 id="opgave7132">Afsluitende Opdracht 6.12.2 Tabel <i>review</i> aanmaken</h3>
+<ol type="a">
+<li><pre><code>CREATE TABLE review (
+    reviewcode INTEGER PRIMARY KEY AUTOINCREMENT,
+    pizzacode INTEGER,
+    beoordeling INTEGER,
+    opmerking TEXT,
+    FOREIGN KEY (pizzacode) REFERENCES pizza(pizzacode)
+);</code></pre>
+</li>
+<li><pre><code>INSERT INTO review (pizzacode, beoordeling, opmerking) VALUES
+(11, 8, 'Lekkere bodem en goed belegd.'),
+(7, 6, 'Beetje te pittig naar mijn smaak.'),
+(2, 9, 'Heerlijke kaascombinatie!');</code></pre>
+</li>
+<li><pre><code>SELECT *
+FROM review;</code></pre></li>
+</ol>
+
+
+
+<h3 id="opgave7133">Afsluitende Opdracht 6.12.3 Reviews verwijderen en aanpassen</h3>
+<ol type="a">
+<li><pre><code class="language-sql">DELETE FROM review WHERE reviewcode = 2;
+</pre></code>
+</li>
+<li><pre><code class="language-sql">UPDATE review
+SET beoordeling = 9
+WHERE reviewcode = 1;</pre></code>
+</li>
+<li><pre><code>SELECT *
+FROM review;</code></pre></li>
+<li>Als je een DELETE-query zonder WHERE gebruikt, worden alle rijen uit de tabel verwijderd. De hele tabel wordt dan geleegd, maar de tabel zelf blijft bestaan.</li>
+</ol>
+
+
+<h3 id="opgave7134">Afsluitende Opdracht 6.12.4 Kolom <b>datum</b> toevoegen</h3>
+<ol type="a">
+<li><pre><code class="language-sql">ALTER TABLE review ADD COLUMN datum TEXT;
+</code></pre>
+</li>
+<li><pre><code class="language-sql">UPDATE review SET datum = '2025-07-30' where reviewcode = 1;
+UPDATE review SET datum = '2025-08-15' where reviewcode = 3;
+</code></pre>
+</li>
+<li><pre><code>SELECT *
+FROM review;</code></pre></li>
+</ol>
+
+<h3 id="opgave7135">Afsluitende Opdracht 6.12.5 Kolom <b>opmerking</b> hernoemen</h3>
+<ol type="a">
+<li>
+<pre><code class="language-sql">ALTER TABLE review RENAME COLUMN opmerking TO toelichting;
+</code></pre>
+</li>
+<li><pre><code class="language-sql">SELECT *
+FROM beoordeling;
+</code></pre></li>
+</ol>
+
+<h3 id="opgave7136">Afsluitende Opdracht 6.12.6 Tabel <i>review</i> hernoemen</h3>
+<ol type="a">
+<li><pre><code class="language-sql">ALTER TABLE review RENAME TO beoordeling;
+</code></pre>
+</li>
+<li><pre><code class="language-sql">SELECT *
+FROM beoordeling;
+</code></pre></li>
+</ol>
+
+<h3 id="opgave7137">Afsluitende Opdracht 6.12.7 Tabel <i>beoordeling</i> verwijderen</h3>
+<ol type="a">
+<li><pre><code class="language-sql">
+DROP TABLE beoordeling;
+</code></pre>
+</li>
+<li><pre><code class="language-sql">SELECT *
+FROM beoordeling;
+</code></pre></li>
+</ol>
+
+
+<!--
+
+<h3 id="opgave7131">Afsluitende Opdracht 6.13.1 Nieuwe pizza</h3>
+<pre><code>INSERT INTO pizza
+VALUES (NULL, 'Pizza Tonno', 'Tomaat, kaas en tonijn', 7.90);</code></pre>
+
+
+
+      <td><strong>2. Verhoog prijs Margherita naar €6,50</strong></td>
+      <td><pre><code>UPDATE pizza
+SET basisprijs = 6.50
+WHERE naam = 'Margherita';</code></pre></td>
+    </tr>
+    <tr>
+      <td><strong>3. Verwijder bestelling met bestelcode 999</strong></td>
+      <td><pre><code>DELETE FROM bestelling
+WHERE bestelcode = 999;</code></pre></td>
+    </tr>
+    <tr>
+      <td><strong>4. Zoek naar pizza’s met "shoarma"</strong></td>
+      <td><pre><code>SELECT * FROM pizza
+WHERE naam LIKE '%shoarma%'
+   OR omschrijving LIKE '%shoarma%';</code></pre></td>
+    </tr>
+    <tr>
+      <td><strong>5. Voeg nieuwe bestelling toe voor klant 3 (pizza 8, bezorger 2)</strong></td>
+      <td>
+<pre><code>-- Stap 1: bestelling invoeren
+INSERT INTO bestelling
+VALUES (NULL, 3, 2, '2025-07-29 12:00:00');
+
+-- Stap 2: pizza koppelen (stel bestelcode = 105)
+INSERT INTO besteldePizza
+VALUES (NULL, 105, 8);</code></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+-->
+</div>
+</body>
+</html>

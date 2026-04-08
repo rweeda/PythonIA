@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>SQL - Informatica Actief</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="content">
+  <h1>UITWERKINGEN</h1>
+  <hr>
+<h1 id="SQL2">Onderwerp 2: SQL SELECT - FROM </h1>
+<hr>
+
+<h3 id="opgave221">Verwerkingsopdracht 2.2.1 Alle pizzacodes tonen </h3>
+<ol style="list-style-type: lower-alpha">
+<li><pre><code class="language-sql">SELECT pizzacode
+FROM pizza;</code></pre>
+<li>Elke pizzacode komt maar één keer voor. Dat betekent dat elke pizza een unieke code heeft. Zo’n unieke code noemen we een primary key. Een primary key zorgt ervoor dat je elk record in een tabel kunt herkennen. In dit geval herken je elke pizza aan zijn pizzacode.
+</ol>
+
+<h3 id="opgave231">Verwerkingsopdracht 2.3.1 Menu printen</h3>
+<pre><code class="language-sql">SELECT pizzanaam, omschrijving, basisprijs
+FROM pizza;
+</code></pre>
+
+<h3 id="opgave241">Verwerkingsopdracht 2.4.1 Alle gegevens van tabel <code>pizza</code> ophalen</h3>
+<pre><code class="language-sql">SELECT *
+FROM pizza;
+</code></pre>
+
+<h3 id="opgave251">Verwerkingsopdracht 2.5.1 Kolom hernoemen</h3>
+<pre><code class="language-sql">SELECT naam, basisprijs AS prijs
+FROM pizza;
+</code></pre>
+
+
+<h3 id="opgave261">Verwerkingsopdracht 2.6.1 Alle gegevens uit tabel <code>bezorger</code> tonen</h3>
+<pre><code class="language-sql">SELECT *
+FROM bezorger;
+</code></pre>
+
+<h3 id="opgave262">Verwerkingsopdracht 2.6.2 Alle wachtwoorden van bezorgers</h3>
+<pre><code class="language-sql">SELECT wachtwoord
+FROM bezorger;
+</code></pre>
+
+<h3 id="opgave263">Verwerkingsopdracht 2.6.3 Verjaardagen van bezorgers tonen</h3>
+<pre><code class="language-sql">SELECT naam, gebdatum AS geboortedatum
+FROM bezorger;
+</code></pre>
+
+
+
+
+
+
+
+
+<h3 id="opgave271">Verwerkingsopdracht 2.7.1 Prijs met bezorgkosten</h3>
+<pre><code class="language-sql">SELECT naam, basisprijs, basisprijs + 0.50 AS totaalprijs
+FROM pizza;
+</code></pre>
+
+<h3 id="opgave272">Verwerkingsopdracht 2.7.2 Totaalprijs per bestelling</h3>
+<pre><code class="language-sql">SELECT aantal, aantal * 8.00 AS totaalprijs
+FROM besteldePizza;
+</code></pre>
+
+
+<hr>
+<h1 id="SQL2AfOpgaven">Afsluitende Opdrachten Onderwerp 2: SQL SELECT-FROM</h1>
+
+
+<hr>
+<h3 id="opgave291">Afsluitende Opdracht 2.9.1 Kolomnamen opzoeken</h3>
+Met de volgende query krijg je een overzicht van de hele
+tabel, inclusief de kolomnamen:
+<pre><code class="language-sql">SELECT *
+FROM bestelling; </code></pre>
+
+
+<h3 id="opgave292">Afsluitende Opdracht 2.9.2 Menu</h3>
+<pre><code class="language-sql">SELECT omschrijving, naam
+FROM pizza;
+</code></pre>
+
+<h3 id="opgave293">Afsluitende Opdracht 2.9.3 Alle bezorgers bekijken</h3>
+<ol style="list-style-type: lower-alpha;">
+<li><pre><code class="language-sql">SELECT *
+FROM bezorger;
+</code></pre>
+<li>Mogelijke kolommen:
+<ul>
+<li>`bezorgernummer`: uniek nummer van elke bezorger
+<li>`naam`: de naam van de bezorger
+<li>`wachtwoord`: gebruikt voor inloggen in het systeem
+</ul>
+<li><pre><code class="language-sql">SELECT naam AS bezorgernaam
+FROM bezorger;
+</code></pre>
+</ol>
+
+  </div>
+</body>
+</html>

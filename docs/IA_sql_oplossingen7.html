@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>SQL - Informatica Actief</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="content">
+  <h1>UITWERKINGEN</h1>
+  <hr>
+
+
+
+
+<h1 id="SQL7">Onderwerp 7: GROUP BY, HAVING</h1>
+<h3 id="opgave661">Verwerkingsopdracht 7.1.1 Volgorde van onderdelen</h3>
+<ol>
+<li>SELECT</li>
+<li>FROM</li>
+<li>WHERE</li>
+<li>ORDER BY</li>
+<li>LIMIT</li>
+</ol>
+
+
+
+
+
+<h3 id="opgave621"> Verwerkingsopdracht 7.2.1 Bestelde pizzasoorten</h3>
+<pre><code class="language-sql">SELECT pizzacode, AVG(aantal) AS gemiddeld_aantal
+FROM besteldepizza
+GROUP BY pizzacode;
+</code></pre>
+
+
+
+<h3 id="opgave622"> Verwerkingsopdracht 7.2.2 Aantal bestellingen per bodemcode</h3>
+<pre><code class="language-sql">SELECT bodemcode, COUNT(*)
+FROM besteldepizza
+GROUP BY bodemcode;
+</code></pre>
+
+
+<h3 id="opgave623">Verwerkingsopdracht 7.2.3 Meest pizza's van één soort</h3>
+<pre><code class="language-sql">SELECT bestelcode, MAX(aantal) AS max_aantal
+FROM besteldePizza
+GROUP BY bestelcode;
+</code></pre>
+
+
+
+<h3 id="opgave631"> Verwerkingsopdracht 7.3.1 Bestelde bodems</h3>
+<pre><code class="language-sql">SELECT bodemcode, COUNT(*) as aantal_besteld_per_bodem
+FROM besteldepizza
+GROUP BY bodemcode
+HAVING COUNT(*) > 1;
+</code></pre>
+
+
+
+<h3 id="opgave632"> Verwerkingsopdracht 7.3.2 Ervaren bezorgers</h3>
+<pre><code class="language-sql">SELECT bezorgernummer
+FROM bestelling
+GROUP BY bezorgernummer
+HAVING COUNT(*) > 150;
+</code></pre>
+
+
+
+<h3 id="opgave633"> Verwerkingsopdracht 7.3.3 Bodems met meer dan 2000 bestellingen</h3>
+<pre><code class="language-sql">SELECT bodemcode, COUNT(*) AS aantal_bestellingen
+FROM besteldePizza
+GROUP BY bodemcode
+HAVING COUNT(*) > 2000;
+</code></pre>
+
+
+
+
+<h3 id="opgave641"> Verwerkingsopdracht 7.4.1 Verschil tussen WHERE en HAVING</h3>
+<ol type="a">
+<li>WHERE-filter op rij-niveau:<br><pre><code class="language-sql">SELECT *
+FROM besteldepizza
+WHERE bodemcode = 1;
+</code></pre></li>
+
+<li>HAVING-filter op groep-niveau:<br><pre><code class="language-sql">SELECT bodemcode, COUNT(*) AS aantal
+FROM besteldepizza
+GROUP BY bodemcode
+HAVING COUNT(*) > 1;</code></pre></li>
+<li>Her verschil tussen WHERE en HAVING:
+<ul>
+<li>WHERE gebruik je als je rijen wilt uitsluiten voordat je gaat tellen of groeperen.
+<li>HAVING gebruik je als je groepen wilt filteren nadat je hebt geteld of iets hebt samengevat.
+</ul></li>
+</ol>
+
+<h3 id="opgave642"> Verwerkingsopdracht 7.4.2 Bodems die vaak zijn besteld (maar zonder kleine bestellingen)</h3>
+<pre><code class="language-sql">SELECT bodemcode, SUM(aantal) AS totaal_besteld
+FROM besteldePizza
+WHERE aantal > 1             -- filter op rij-niveau vóór de GROUP BY
+GROUP BY bodemcode
+HAVING SUM(aantal) > 2000;    -- filter ná de GROUP BY
+</code></pre>
+
+
+<h1 id="SQL7AfOpgaven">Afsluitende Opdrachten Onderwerp 7: GROUP BY, HAVING</h1>
+
+<h3 id="opgave661">  Afsluitende Opdracht 7.6.1 Aantal bestellingen per bodem</h3>
+<pre><code class="language-sql">SELECT bodemcode, COUNT(*) AS aantal_besteld_per_bodem
+FROM besteldePizza
+GROUP BY bodemcode
+ORDER BY aantal_besteld_per_bodem DESC;
+</code></pre>
+
+<h3 id="opgave662">  Afsluitende Opdracht 7.6.2 Bekijk hoe vaak een specifieke bodem is gebruikt</h3>
+<pre><code>SELECT bodemcode, COUNT(*) AS aantal_besteld
+FROM besteldepizza
+WHERE bodemcode = 2
+GROUP BY bodemcode
+HAVING COUNT(*) > 1
+ORDER BY aantal_besteld DESC
+LIMIT 1;
+</code></pre>
+
+<h3 id="opgave663">Afsluitende Opdracht 7.6.3 Totale aantal pizza’s per klant</h3>
+<pre><code class="language-sql">SELECT bestelling.klantnummer, SUM(besteldePizza.aantal)
+FROM bestelling
+JOIN besteldePizza ON bestelling.bestelcode = besteldePizza.bestelcode
+GROUP BY bestelling.klantnummer;
+</code></pre>
+
+<h3 id="opgave664">Afsluitende Opdracht 7.6.4 Meest bestelde pizzabodem</h3>
+<pre><code class="language-sql">SELECT bodemcode, COUNT(*) as aantal_besteld
+FROM besteldepizza
+GROUP BY bodemcode
+ORDER BY aantal_besteld DESC
+LIMIT 1;
+</code></pre>
+
+</div>
+</body>
+</html>
