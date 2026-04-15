@@ -1,0 +1,91 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "budgetChecker",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "bedrag wordt het resultaat van geefZakgeld()",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "print \"Je hebt {bedrag} euro gekregen.\"",
+                                "child": {
+                                    "id": 40,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "bedrag wordt opgehoogd met 5",
+                                        "child": {
+                                            "id": 60,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print \"Met een extra klusje heb je nu {bedrag} euro.\"",
+                                                "child": {
+                                                    "id": 80,
+                                                    "basicTree": {
+                                                        "basicTreeType": "If",
+                                                        "content": "___B___",
+                                                        "child1": {
+                                                            "id": 90,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Statement",
+                                                                "content": "print \"Nog even sparen...\"",
+                                                                "child": {
+                                                                    "id": 91,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Void"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "child2": {
+                                                            "id": 92,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Statement",
+                                                                "content": "print \"Je kunt de game kopen!\"",
+                                                                "child": {
+                                                                    "id": 93,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Void"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "child3": {
+                                                            "id": 1,
+                                                            "basicTree": {
+                                                                "basicTreeType": "End"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 120,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

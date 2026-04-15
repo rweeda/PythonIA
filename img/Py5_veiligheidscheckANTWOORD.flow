@@ -1,7 +1,7 @@
 {
     "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
     "model": {
-        "flowchartName": "slimmeDeurBel",
+        "flowchartName": "veiligheidscheck",
         "tree": {
             "id": 0,
             "basicTree": {
@@ -10,17 +10,17 @@
                     "id": 2,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "iemand_aanwezig = True\nis_vriend = False",
+                        "content": "vraag \"Hoe lang bij jij (in meters)?\"",
                         "child": {
                             "id": 20,
                             "basicTree": {
                                 "basicTreeType": "Statement",
-                                "content": "cijfer wordt invoer omgezet naar een kommagetal",
+                                "content": "lengte wordt invoer omgezet naar kommagetal",
                                 "child": {
                                     "id": 40,
                                     "basicTree": {
                                         "basicTreeType": "If",
-                                        "content": "iemand_aanwezig",
+                                        "content": "lengte groter of gelijk aan 1,20",
                                         "child1": {
                                             "id": 51,
                                             "basicTree": {
@@ -31,50 +31,31 @@
                                             "id": 52,
                                             "basicTree": {
                                                 "basicTreeType": "Statement",
-                                                "content": "print \"Systeem geactiveerd. Er staat iemand voor de deur.\"",
+                                                "content": "print \"Je mag in de achtbaan.\"",
                                                 "child": {
-                                                    "id": 53,
-                                                    "basicTree": {
-                                                        "basicTreeType": "Void"
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        "child3": {
-                                            "id": 80,
-                                            "basicTree": {
-                                                "basicTreeType": "If",
-                                                "content": "is_vriend",
-                                                "child1": {
-                                                    "id": 91,
-                                                    "basicTree": {
-                                                        "basicTreeType": "Void"
-                                                    }
-                                                },
-                                                "child2": {
-                                                    "id": 92,
+                                                    "id": 70,
                                                     "basicTree": {
                                                         "basicTreeType": "Statement",
-                                                        "content": "print \"Welkom! De deur wordt ontgrendeld.\"",
+                                                        "content": "print \"Veel plezier!\"\n",
                                                         "child": {
-                                                            "id": 93,
+                                                            "id": 53,
                                                             "basicTree": {
                                                                 "basicTreeType": "Void"
                                                             }
                                                         }
                                                     }
-                                                },
-                                                "child3": {
-                                                    "id": 100,
+                                                }
+                                            }
+                                        },
+                                        "child3": {
+                                            "id": 90,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print \"Fijne dag verder.\"",
+                                                "child": {
+                                                    "id": 1,
                                                     "basicTree": {
-                                                        "basicTreeType": "Statement",
-                                                        "content": "print \"Bezig met bijwerken van het beveiligingslogboek...\"",
-                                                        "child": {
-                                                            "id": 1,
-                                                            "basicTree": {
-                                                                "basicTreeType": "End"
-                                                            }
-                                                        }
+                                                        "basicTreeType": "End"
                                                     }
                                                 }
                                             }
@@ -87,7 +68,7 @@
                 }
             }
         },
-        "currentId": 150,
+        "currentId": 120,
         "highlightedBox": "Nothing",
         "precondition": {
             "nodeType": "PreConditionNode",

@@ -1,7 +1,7 @@
 {
     "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
     "model": {
-        "flowchartName": "biosLeeftijdEnCJPpas",
+        "flowchartName": "biosLeeftijdKorting",
         "tree": {
             "id": 0,
             "basicTree": {
@@ -10,12 +10,12 @@
                     "id": 2,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "leeftijd wordt 16",
+                        "content": "leeftijd = 16",
                         "child": {
                             "id": 290,
                             "basicTree": {
                                 "basicTreeType": "Statement",
-                                "content": "print \"Dit is een 12+ film\"",
+                                "content": "print \"Dit is een 12+ film.\"",
                                 "child": {
                                     "id": 40,
                                     "basicTree": {
@@ -38,17 +38,17 @@
                                             "id": 210,
                                             "basicTree": {
                                                 "basicTreeType": "Statement",
-                                                "content": "print \"Heb je een CJP kortingspas? (Ja/Nee)\")",
+                                                "content": "print \"Heb je een kortingspas? (Ja/Nee)\")",
                                                 "child": {
                                                     "id": 240,
                                                     "basicTree": {
                                                         "basicTreeType": "Statement",
-                                                        "content": "heeft_CJPpas wordt invoer",
+                                                        "content": "heeft_kortingspas wordt invoer",
                                                         "child": {
                                                             "id": 100,
                                                             "basicTree": {
                                                                 "basicTreeType": "If",
-                                                                "content": "heeft_CJPpas is \"Ja\"",
+                                                                "content": "heeft_kortingspas is \"Ja\"",
                                                                 "child1": {
                                                                     "id": 110,
                                                                     "basicTree": {
@@ -88,9 +88,16 @@
                                             }
                                         },
                                         "child3": {
-                                            "id": 1,
+                                            "id": 310,
                                             "basicTree": {
-                                                "basicTreeType": "End"
+                                                "basicTreeType": "Statement",
+                                                "content": "print \"Fijne dag verder!\"",
+                                                "child": {
+                                                    "id": 1,
+                                                    "basicTree": {
+                                                        "basicTreeType": "End"
+                                                    }
+                                                }
                                             }
                                         }
                                     }
@@ -101,7 +108,7 @@
                 }
             }
         },
-        "currentId": 310,
+        "currentId": 330,
         "highlightedBox": "Nothing",
         "precondition": {
             "nodeType": "PreConditionNode",

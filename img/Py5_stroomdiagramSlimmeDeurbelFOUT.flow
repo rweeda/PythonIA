@@ -1,7 +1,7 @@
 {
     "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
     "model": {
-        "flowchartName": "leeftijdRijbewijs",
+        "flowchartName": "slimmeDeurBel",
         "tree": {
             "id": 0,
             "basicTree": {
@@ -10,32 +10,25 @@
                     "id": 2,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "vraag gebruiker leeftijd",
+                        "content": "iemand_aanwezig = True",
                         "child": {
-                            "id": 20,
+                            "id": 40,
                             "basicTree": {
                                 "basicTreeType": "If",
-                                "content": "leeftijd groter dan of gelijk aan 17",
+                                "content": "iemand_aanwezig",
                                 "child1": {
-                                    "id": 30,
+                                    "id": 51,
                                     "basicTree": {
-                                        "basicTreeType": "Statement",
-                                        "content": "print: \"Nee. Je moet nog even wachten\"",
-                                        "child": {
-                                            "id": 31,
-                                            "basicTree": {
-                                                "basicTreeType": "Void"
-                                            }
-                                        }
+                                        "basicTreeType": "Void"
                                     }
                                 },
                                 "child2": {
-                                    "id": 32,
+                                    "id": 52,
                                     "basicTree": {
                                         "basicTreeType": "Statement",
-                                        "content": "print: \"Ja. Je mag je rijbewijs halen\"",
+                                        "content": "print \"Systeem geactiveerd. Er staat iemand voor de deur.\"",
                                         "child": {
-                                            "id": 33,
+                                            "id": 53,
                                             "basicTree": {
                                                 "basicTreeType": "Void"
                                             }
@@ -43,10 +36,10 @@
                                     }
                                 },
                                 "child3": {
-                                    "id": 60,
+                                    "id": 100,
                                     "basicTree": {
                                         "basicTreeType": "Statement",
-                                        "content": "print: \"Klaar\"",
+                                        "content": "print \"Bezig met video opname...\"",
                                         "child": {
                                             "id": 1,
                                             "basicTree": {
@@ -61,7 +54,7 @@
                 }
             }
         },
-        "currentId": 80,
+        "currentId": 170,
         "highlightedBox": "Nothing",
         "precondition": {
             "nodeType": "PreConditionNode",
