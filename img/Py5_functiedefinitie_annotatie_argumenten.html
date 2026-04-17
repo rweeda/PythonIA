@@ -1,0 +1,75 @@
+<svg width="100%" viewBox="0 0 720 400" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Python functie-anatomie: Parameters en Argumenten</title>
+<desc>Diagram dat de onderdelen van een Python-functie toont met parameters en argumenten</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<!-- ### FUNCTIEDEFINITIE sectie -->
+
+<text font-size="12" font-family="sans-serif" x="48" y="18" fill="#534AB7" font-weight="500">### FUNCTIEDEFINITIE</text>
+<rect x="40" y="24" width="400" height="165" rx="12" fill="none" stroke="#534AB7" stroke-width="1.5" stroke-dasharray="6 3"/>
+
+<text font-size="12" font-family="monospace" x="60" y="45" fill="#3a7a3a"># Tekent een driehoek met variabele kleur en maat</text>
+
+<text font-size="14" font-family="monospace" x="60" y="70">
+<tspan fill="#CC5200">def </tspan><tspan fill="#1A6BAF">teken_driehoek</tspan><tspan fill="#333333">(</tspan><tspan fill="#d97706">kleur</tspan><tspan fill="#333333">, </tspan><tspan fill="#d97706">grootte</tspan><tspan fill="#333333">):</tspan>
+</text>
+
+<!-- Visuele markering onder code in definitie -->
+
+<rect x="83" y="75" width="105" height="3" rx="1.5" fill="#1A6BAF" opacity="0.7"/>
+<rect x="208" y="75" width="105" height="3" rx="1.5" fill="#E65100" opacity="0.7"/>
+
+<text font-size="12" font-family="monospace" x="80" y="95"  fill="#666666">turtle.color(<tspan fill="#d97706">kleur</tspan>)</text>
+<text font-size="12" font-family="monospace" x="80" y="115" fill="#666666">turtle.forward(<tspan fill="#d97706">grootte</tspan>)</text>
+<text font-size="12" font-family="monospace" x="80" y="135" fill="#666666">turtle.right(120)</text>
+<text font-size="12" font-family="monospace" x="80" y="155" fill="#666666">...</text>
+
+<!-- ### HOOFDPROGRAMMA sectie -->
+
+<text font-size="12" font-family="sans-serif" x="48" y="230" fill="#0F6E56" font-weight="500">### HOOFDPROGRAMMA</text>
+<rect x="40" y="236" width="400" height="55" rx="12" fill="none" stroke="#0F6E56" stroke-width="1.5" stroke-dasharray="6 3"/>
+
+<text font-size="14" font-family="monospace" x="60" y="268">
+<tspan fill="#1A6BAF">teken_driehoek</tspan><tspan fill="#333333">(</tspan><tspan fill="#059669" font-weight="bold">"blue"</tspan><tspan fill="#333333">, </tspan><tspan fill="#059669" font-weight="bold">120</tspan><tspan fill="#333333">)</tspan>
+</text>
+
+<!-- Visuele markering onder code in aanroep -->
+
+<rect x="60" y="272" width="110" height="3" rx="1.5" fill="#1A6BAF" opacity="0.7"/>
+<rect x="175" y="272" width="90" height="3" rx="1.5" fill="#E65100" opacity="0.7"/>
+
+<!-- LABELS RECHTS -->
+
+<!-- Label Functienaam met 90 graden pijl (iets korter omlaag) -->
+
+<rect x="470" y="30" width="160" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-size="13" font-weight="600" font-family="sans-serif" x="550" y="55" text-anchor="middle" fill="#0C447C">Functienaam</text>
+<path fill="none" stroke="#185FA5" stroke-width="1.2" marker-end="url(#arrow)" d="M470 50 H 135 V 62"/>
+
+<!-- Label Parameters met 90 graden pijl -->
+
+<rect x="470" y="90" width="160" height="40" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="0.5"/>
+<text font-size="13" font-weight="600" font-family="sans-serif" x="550" y="115" text-anchor="middle" fill="#92400E">Parameters (invoer)</text>
+<path fill="none" stroke="#D97706" stroke-width="1.2" marker-end="url(#arrow)" d="M470 110 H 260 V 78"/>
+
+<!-- Label Functiedefinitie -->
+
+<rect x="470" y="145" width="160" height="40" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-size="13" font-weight="600" font-family="sans-serif" x="550" y="170" text-anchor="middle" fill="#3C3489">Functiedefinitie</text>
+<path fill="none" stroke="#534AB7" stroke-width="1.2" marker-end="url(#arrow)" d="M470 165 L 445 145"/>
+
+<!-- Label Argumenten (pijl iets minder ver naar links) -->
+
+<rect x="470" y="243" width="160" height="40" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="0.5"/>
+<text font-size="13" font-weight="600" font-family="sans-serif" x="550" y="268" text-anchor="middle" fill="#065F46">Argumenten (waarden)</text>
+<path fill="none" stroke="#059669" stroke-width="1.2" marker-end="url(#arrow)" d="M470 263 L 285 263"/>
+
+<!-- Verbindingslijn: van Argument naar Parameter (Data stroomt omhoog de functie in) -->
+<path d="M240 245 L245 85" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 2" marker-end="url(#arrow)" opacity="0.6"/>
+<text font-size="8" font-family="sans-serif" x="245" y="220" fill="#64748b" font-style="italic">informatie aan functieaanroep meegeven</text>
+
+</svg>
