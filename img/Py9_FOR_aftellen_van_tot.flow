@@ -1,0 +1,103 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "aftellen_van_tot",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "getal1 wordt het resultaat uit vraag_gebruiker_getal()",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "getal2 wordt het resultaat uit vraag_gebruiker_getal()",
+                                "child": {
+                                    "id": 40,
+                                    "basicTree": {
+                                        "basicTreeType": "If",
+                                        "content": "getal1 groter dan getal2",
+                                        "child1": {
+                                            "id": 50,
+                                            "basicTree": {
+                                                "basicTreeType": "ForEach",
+                                                "content": "teller van getal2 tot getal1 met stapgrootte -1",
+                                                "child1": {
+                                                    "id": 100,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print teller",
+                                                        "child": {
+                                                            "id": 101,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child2": {
+                                                    "id": 51,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 80,
+                                            "basicTree": {
+                                                "basicTreeType": "ForEach",
+                                                "content": "teller van getal1 tot getal2 met stapgrootte -1",
+                                                "child1": {
+                                                    "id": 90,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print teller",
+                                                        "child": {
+                                                            "id": 91,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child2": {
+                                                    "id": 53,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child3": {
+                                            "id": 1,
+                                            "basicTree": {
+                                                "basicTreeType": "End"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 130,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}
