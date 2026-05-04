@@ -1,0 +1,71 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "aantal_even_getallen",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "print \"Hoeveel even getallen wil je hebben?\"",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "aantal_even_getallen wordt invoer omgezet naar int",
+                                "child": {
+                                    "id": 40,
+                                    "basicTree": {
+                                        "basicTreeType": "ForEach",
+                                        "content": "teller van 0 tot aantal_even_getallen",
+                                        "child1": {
+                                            "id": 50,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "even_getal wordt teller * 2",
+                                                "child": {
+                                                    "id": 70,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print even_getal",
+                                                        "child": {
+                                                            "id": 51,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 1,
+                                            "basicTree": {
+                                                "basicTreeType": "End"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 90,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

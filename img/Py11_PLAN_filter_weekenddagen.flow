@@ -1,0 +1,104 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "filter_weekenddagen",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "dagenlijst wordt [\"ma\", \"di\", \"wo\", \"do\", \"vr\", \"za\", \"zo\"]",
+                        "child": {
+                            "id": 120,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "weekenddagenlijst wordt een lege lijst",
+                                "child": {
+                                    "id": 40,
+                                    "basicTree": {
+                                        "basicTreeType": "ForEach",
+                                        "content": "elke dag in dagenlijst",
+                                        "child1": {
+                                            "id": 100,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print \"Vandaag is het {dag}\"",
+                                                "child": {
+                                                    "id": 50,
+                                                    "basicTree": {
+                                                        "basicTreeType": "If",
+                                                        "content": "als dag gelijk is aan \"za\" of \"zo\"",
+                                                        "child1": {
+                                                            "id": 61,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        },
+                                                        "child2": {
+                                                            "id": 62,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Statement",
+                                                                "content": "print \"Dit is een weekenddag!\"",
+                                                                "child": {
+                                                                    "id": 140,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Statement",
+                                                                        "content": "voeg dag toe aan weekenddagenlijst",
+                                                                        "child": {
+                                                                            "id": 63,
+                                                                            "basicTree": {
+                                                                                "basicTreeType": "Void"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "child3": {
+                                                            "id": 51,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 160,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print \"Lijst met weekenddagen: {weekenddagenlijst}\"",
+                                                "child": {
+                                                    "id": 1,
+                                                    "basicTree": {
+                                                        "basicTreeType": "End"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 180,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

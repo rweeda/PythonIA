@@ -1,0 +1,158 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "pincode_invoeren",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "PINCODE wordt \"1234\"",
+                        "child": {
+                            "id": 170,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "pogingen wordt 0",
+                                "child": {
+                                    "id": 20,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "mag_nog_raden wordt True",
+                                        "child": {
+                                            "id": 40,
+                                            "basicTree": {
+                                                "basicTreeType": "While",
+                                                "content": "mag_nog_raden",
+                                                "child1": {
+                                                    "id": 50,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print \"Voer pincode in:\"",
+                                                        "child": {
+                                                            "id": 190,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Statement",
+                                                                "content": "ingevoerde_pincode wordt invoer",
+                                                                "child": {
+                                                                    "id": 70,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "If",
+                                                                        "content": "ingevoerde_pincode is gelijk aan PINCODE",
+                                                                        "child1": {
+                                                                            "id": 80,
+                                                                            "basicTree": {
+                                                                                "basicTreeType": "Statement",
+                                                                                "content": "pogingen ophogen met 1",
+                                                                                "child": {
+                                                                                    "id": 230,
+                                                                                    "basicTree": {
+                                                                                        "basicTreeType": "If",
+                                                                                        "content": "pogingen is kleiner dan 3",
+                                                                                        "child1": {
+                                                                                            "id": 240,
+                                                                                            "basicTree": {
+                                                                                                "basicTreeType": "Statement",
+                                                                                                "content": "print \"Te veel foutieve pogingen gedaan. Toegang geweigerd.\"",
+                                                                                                "child": {
+                                                                                                    "id": 270,
+                                                                                                    "basicTree": {
+                                                                                                        "basicTreeType": "Statement",
+                                                                                                        "content": "mag_nog_raden wordt False",
+                                                                                                        "child": {
+                                                                                                            "id": 241,
+                                                                                                            "basicTree": {
+                                                                                                                "basicTreeType": "Void"
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        },
+                                                                                        "child2": {
+                                                                                            "id": 242,
+                                                                                            "basicTree": {
+                                                                                                "basicTreeType": "Statement",
+                                                                                                "content": "print \"Fout... probeer het opnieuw\"",
+                                                                                                "child": {
+                                                                                                    "id": 243,
+                                                                                                    "basicTree": {
+                                                                                                        "basicTreeType": "Void"
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        },
+                                                                                        "child3": {
+                                                                                            "id": 81,
+                                                                                            "basicTree": {
+                                                                                                "basicTreeType": "Void"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "child2": {
+                                                                            "id": 210,
+                                                                            "basicTree": {
+                                                                                "basicTreeType": "Statement",
+                                                                                "content": "print \"Toegang verleend\"",
+                                                                                "child": {
+                                                                                    "id": 82,
+                                                                                    "basicTree": {
+                                                                                        "basicTreeType": "Statement",
+                                                                                        "content": "mag_nog_raden wordt False",
+                                                                                        "child": {
+                                                                                            "id": 83,
+                                                                                            "basicTree": {
+                                                                                                "basicTreeType": "Void"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "child3": {
+                                                                            "id": 51,
+                                                                            "basicTree": {
+                                                                                "basicTreeType": "Void"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child2": {
+                                                    "id": 1,
+                                                    "basicTree": {
+                                                        "basicTreeType": "End"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 320,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}
