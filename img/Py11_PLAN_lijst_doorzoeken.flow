@@ -1,0 +1,123 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "lijst_doorzoeken",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 120,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "lijst wordt ...",
+                        "child": {
+                            "id": 240,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "gevonden wordt False",
+                                "child": {
+                                    "id": 260,
+                                    "basicTree": {
+                                        "basicTreeType": "ForEach",
+                                        "content": "elk element in lijst",
+                                        "child1": {
+                                            "id": 270,
+                                            "basicTree": {
+                                                "basicTreeType": "If",
+                                                "content": "element is gezochte element",
+                                                "child1": {
+                                                    "id": 281,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                },
+                                                "child2": {
+                                                    "id": 282,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "gevonden wordt True",
+                                                        "child": {
+                                                            "id": 283,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child3": {
+                                                    "id": 271,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 320,
+                                            "basicTree": {
+                                                "basicTreeType": "If",
+                                                "content": "gevonden is gelijk aan True",
+                                                "child1": {
+                                                    "id": 330,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print \"Niet gevonden.\"",
+                                                        "child": {
+                                                            "id": 331,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child2": {
+                                                    "id": 332,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print \"Gevonden!\"",
+                                                        "child": {
+                                                            "id": 333,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child3": {
+                                                    "id": 160,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print teller",
+                                                        "child": {
+                                                            "id": 1,
+                                                            "basicTree": {
+                                                                "basicTreeType": "End"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 360,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "gegeven lijst_met_onvoldoendes",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "voorkomens_tellen",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 120,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "lijst wordt ...",
+                        "child": {
+                            "id": 240,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "teller wordt 0",
+                                "child": {
+                                    "id": 260,
+                                    "basicTree": {
+                                        "basicTreeType": "ForEach",
+                                        "content": "elk element in lijst",
+                                        "child1": {
+                                            "id": 270,
+                                            "basicTree": {
+                                                "basicTreeType": "If",
+                                                "content": "element is gezochte element",
+                                                "child1": {
+                                                    "id": 281,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                },
+                                                "child2": {
+                                                    "id": 282,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "teller ophogen",
+                                                        "child": {
+                                                            "id": 283,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child3": {
+                                                    "id": 271,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 160,
+                                            "basicTree": {
+                                                "basicTreeType": "Statement",
+                                                "content": "print teller",
+                                                "child": {
+                                                    "id": 1,
+                                                    "basicTree": {
+                                                        "basicTreeType": "End"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 320,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "gegeven lijst_met_onvoldoendes",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}

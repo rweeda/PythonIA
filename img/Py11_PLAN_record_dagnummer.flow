@@ -1,0 +1,90 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "record_dagnummer",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 270,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "hoogste_tijd wordt ...",
+                        "child": {
+                            "id": 290,
+                            "basicTree": {
+                                "basicTreeType": "Statement",
+                                "content": "dag_nummer wordt 1",
+                                "child": {
+                                    "id": 40,
+                                    "basicTree": {
+                                        "basicTreeType": "ForEach",
+                                        "content": "meting in schermtijd_februari",
+                                        "child1": {
+                                            "id": 50,
+                                            "basicTree": {
+                                                "basicTreeType": "If",
+                                                "content": "meting gelijk is aan hoogste_tijd",
+                                                "child1": {
+                                                    "id": 61,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                },
+                                                "child2": {
+                                                    "id": 80,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print \"Record is gezet op dag {dag_nummer} van de maand.\"",
+                                                        "child": {
+                                                            "id": 63,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "child3": {
+                                                    "id": 320,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Statement",
+                                                        "content": "dag_nummer ophogen met 1",
+                                                        "child": {
+                                                            "id": 51,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child2": {
+                                            "id": 1,
+                                            "basicTree": {
+                                                "basicTreeType": "End"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 350,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}
