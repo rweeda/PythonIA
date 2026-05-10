@@ -15,7 +15,7 @@
   <div id='content'>
 
 
-<H1>Informatica: Kennismaken met programmeren</h1>
+<H1>Informatica: Kennismaken met programmeren</H1>
 
 <hr>
 
@@ -32,7 +32,7 @@ In het volgende filmpje van 1,5 minuut geef ik een toelichting over de opdrachte
 </p>
 <!--
 <h2 id="import-turtle">Tekenen</h2>
-Hieronder staat een aantal commando's die we aan een turtle geven. Druk op de groene Playknop <img src="img/CreateCode_playknop.jpg" alt="Playknop" width="30"> rechtsonder de code om te zien wat de code doet. 
+Hieronder staat een aantal commando's die we aan een turtle geven. Druk op de groene Play-knop <img src="img/CreateCode_playknop.jpg" alt="Play-knop" width="30"> rechtsonder de code om te zien wat de code doet. 
 <br>
 Kun jij achterhalen wat elk commando doet?<br>
 <p style="color:brown;">De bruine tekst achter een # is alleen extra uitleg voor jou; daar doet de computer niets mee.</p>
@@ -50,7 +50,7 @@ turtle.forward(100)
 
 turtle.done()       # klaar met tekenen, maar sluit tekenvenster niet meteen af
 </pre>
-<p>Zoals je ziet begint je code altijd met <code>import turtle</code> en eindigt met <code>turtle.done</code>. De <code>done()</code> aan het einde van het programma zorgt ervoor dat het venster niet meteen afgesloten wordt.</p>
+<p>Zoals je ziet begint je code altijd met <code>import turtle</code> en eindigt met <code>turtle.done()</code>. De <code>done()</code> aan het einde van het programma zorgt ervoor dat het venster niet meteen afgesloten wordt.</p>
 -->
 
 <!--{create.withcode.uk}
@@ -58,23 +58,19 @@ mycode.py Create new file
 import turtle           # aangeven dat we de turtle gaan gebruiken
 ​
 turtle.pendown()        # zet pen neer
-turtle.fillcolor("red") # kleur va figuur
+turtle.fillcolor("red") # kleur van figuur
 ​
 turtle.begin_fill()     # hier begint figuur
 turtle.circle(50)
-turtle.end_fill()       # hier eindigd figuur
+turtle.end_fill()       # hier eindigt figuur
 ​
 ​-->
-
-
-<!--WATCH THE VIDEO WITH EXPLANAIOTN
--->
 
 
 <h3 id="opgave-vierkantje-tekenen"><span style="color:red">Opgave</span> Vierkantje tekenen</h3>
 Hieronder staat een aantal commando's die we aan een turtle geven. 
 <ol type="a">
-<li>Druk op de groene Playknop <img src="img/CreateCode_playknop.jpg" alt="Playknop" width="30"> rechtsonder de code om te zien wat de code doet. </li>
+<li>Druk op de groene Play-knop <img src="img/CreateCode_playknop.jpg" alt="Play-knop" width="30"> rechtsonder de code om te zien wat de code doet. </li>
 
 <li>Kun jij achterhalen wat elk commando doet?<br>
 <p style="color:brown;">De bruine tekst achter een # is alleen extra uitleg voor jou; daar doet de computer niets mee.</p>
@@ -103,15 +99,14 @@ turtle.forward(150)
 
 turtle.done()       # klaar
 -->
-<a href="INFvoorlichting_oplossingen.html#opgave-vierkantje-tekenen">Klik hier</a> voor een voorbeelduitwerking.
+<a href="https://raw.githubusercontent.com/rweeda/PythonIA/main/voorlichting/INFvoorlichting_oplossingen.html#opgave-vierkantje-tekenen">Klik hier</a> voor een voorbeelduitwerking.
 
 <h3>Figuur inkleuren</h3>
 <p>Om een figuur in te kleuren:
 <ol>
-<li>Kies een kleur, bv. op regel 4: <code>turtle.fillcolor("red")</code>,
+<li>Kies een kleur, bv. op regel 4: <code>turtle.fillcolor("red")</code></li>
 <li>Geef aan wanneer turtle begint met het figuur te tekenen, bv. op regel 6: <code>turtle.begin_fill()</code></li>
-<li>Geef aan wanneer die klaar is met tekenen, bv. op regel 8: <code>turtle.end_fill()</code>
-</li>
+<li>Geef aan wanneer die klaar is met tekenen, bv. op regel 8: <code>turtle.end_fill()</code></li>
 </ol>
 
 <iframe frameborder="0" width="100%" height="400px" src="https://create.withcode.uk/embed/Y6A"><a target="_blank" href="https://create.withcode.uk/python/Y6A">create.withcode.uk</a></iframe>
@@ -147,7 +142,7 @@ Tips: Het kan lastig zijn om het dakje precies goed te krijgen. Teken eerst je h
 
 <iframe frameborder="0" width="100%" height="600px" src="https://create.withcode.uk/embed/Cbb"><a target="_blank" href="https://create.withcode.uk/python/Cbb">create.withcode.uk</a></iframe>
 
-<a href="INFvoorlichting_oplossingen.html#opgave-huisje-tekenen">Klik hier</a> voor een voorbeelduitwerking.
+<a href="https://raw.githubusercontent.com/rweeda/PythonIA/main/voorlichting/INFvoorlichting_oplossingen.html#opgave-huisje-tekenen">Klik hier</a> voor een voorbeelduitwerking.
 
 
 
@@ -155,22 +150,32 @@ Tips: Het kan lastig zijn om het dakje precies goed te krijgen. Teken eerst je h
 <h2 id="turtle-functies">Meer dingen met turtle</h2>
 <p>Hier zijn een paar andere dingen die turtle kan:</p>
 <pre class="python">
-turtle.pendown()               # Zet pen op papier. Alle bewegingen hierna worden zichtbaar
-turtle.penup()                 # Haal pen van papier. Bewegingen hierna worden niet zichtbaar
-turtle.pencolor("darkViolet")  # Kleur van de pen. Je kunt ook kiezen uit black, green, gold, blue, red, yellow...
-turtle.pensize(8)              # Dikte van de pen
+# Bewegen en draaien
+turtle.forward(10)          # loop 10 stappen vooruit
+turtle.right(90)            # draai 90 graden naar rechts
+turtle.left(45)             # draai 45 graden naar links
 
-turtle.shape("turtle")         # Maakt een schildpadje van de cursor in plaats van een pijltje
+# Verplaatsen en kijkrichting
+turtle.goto(40, 40)         # zet de schildpad op positie (x,y). (0,0) is het midden van het scherm
+turtle.setheading(90)       # kijkrichting. 90 is naar boven, 0 is naar rechts
+turtle.pendown()            # zet pen op papier, bewegingen hierna zijn zichtbaar
+turtle.penup()              # haal pen van papier, bewegingen hierna zijn onzichtbaar
 
-turtle.right(90)               # Draai 90 graden naar rechts
-turtle.left(45)                # Draai 45 graden naar links
-turtle.forward(10)             # Loop 10 stappen vooruit
-turtle.goto(40, 40)            # Zet de schildpad op positie (x,y). (0,0) is het midden van het scherm
-turtle.setheading(90)          # Kijkrichting: 90 is naar boven, 0 is naar rechts
+# Opmaak van lijnen
+turtle.pencolor("darkViolet")  # kleur van de pen, bijv. black, tan, gold, blue, red
+turtle.pensize(8)              # dikte van de pen
 
-turtle.circle(50)              # Teken een cirkel met een straal van 50 pixels
-turtle.circle(60, 180)         # Teken een halve cirkel (180 graden) met een straal van 60
+# Figuren inkleuren
+turtle.fillcolor("red")     # kleur waarmee het figuur wordt ingekleurd
+turtle.begin_fill()         # begin van het figuur dat ingekleurd wordt
+turtle.end_fill()           # einde van het figuur dat ingekleurd wordt
 
+# Tekst en Vormen tekenen
+turtle.write("Hallo")       # schrijf tekst op het scherm
+turtle.circle(50)           # teken een cirkel met straal 50
+turtle.circle(50, 180)      # teken een halve cirkel (180 graden) met straal 50
+
+turtle.shape("turtle")      # uiterlijk van de cursor, kan ook "arrow", "triangle", "circle", "square" zijn
 </pre>
 
 <h3 id="eigen-letter"><span style="color:red">Opgave</span> Voorletter</h3>
@@ -186,7 +191,7 @@ Laat turtle jouw voorletter schrijven. Gebruik verschillende diktes en kleuren. 
 
 <iframe frameborder="0" width="100%" height="800px" src="https://create.withcode.uk/embed/CbT"><a target="_blank" href="https://create.withcode.uk/python/CbT">create.withcode.uk</a></iframe>
 
-<a href="INFvoorlichting_oplossingen.html#opgave-nederlandse-vlag">Klik hier</a> voor een voorbeelduitwerking.
+<a href="https://raw.githubusercontent.com/rweeda/PythonIA/main/voorlichting/INFvoorlichting_oplossingen.html#opgave-nederlandse-vlag">Klik hier</a> voor een voorbeelduitwerking.
 
 <h3 id="opgave-eigen-creatie"><span style="color:red">Opgave</span> Eigen creatie</h3>
 Maak nu zelf je eigen creatie!

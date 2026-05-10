@@ -11,21 +11,19 @@
 </head>
 <body>
 <div class="container">
-  <img id='languagelogo' src='../img/pythonLogo.jpg'/>
+  <img id='languagelogo' src='https://raw.githubusercontent.com/rweeda/PythonIA/main/img/python_logo.jpg'/>
   <div id='content'>
 
 
 <H1>Informatica</h1>
-<h1 id="">Kennis maken met programmeren</h1>
-<h2>Voorbeeld oplossingen</h2>
+<h1 id="">Kennis maken met programmeren - Voorbeeld uitwerkingen</h1>
 <hr>
 
 
 <h3 id="opgave-vierkantje-tekenen"><span style="color:red">Opgave</span> Vierkantje tekenen</h3>
 <pre class="python">
-import turtle       # Aangeven dat we turtle gaan gebruiken
+import turtle       # aangeven dat we turtle gaan gebruiken
 
-turtle.pendown()    # zet pen neer
 turtle.forward(100) # 100 stappen vooruit
 turtle.right(90)    # draai 90 graden naar rechts
 turtle.forward(100)
@@ -38,22 +36,20 @@ turtle.forward(100)
 
 <h3 id="opgave-vierkantje-inkleuren"><span style="color:red">Opgave</span> Vierkantje inkleuren</h3>
 <pre class="python">
-import turtle       # Aangeven dat we turtle gaan gebruiken
+import turtle             # aangeven dat we turtle gaan gebruiken
 
-turtle.pendown()    # zet pen neer
+turtle.fillcolor("blue")  # kleur om figuur in te kleuren: blauw
+turtle.begin_fill()       # hier begint het figuur dat wordt ingekleurd
 
-turtle.fillcolor("blue") # Kleur om figuur in te kleuren: blauw
-turtle.begin_fill()     # Einde van figuur
-
-turtle.forward(100) # 100 stappen vooruit
-turtle.right(90)    # draai 90 graden naar rechts
+turtle.forward(100)       # 100 stappen vooruit
+turtle.right(90)          # draai 90 graden naar rechts
 turtle.forward(100)
 turtle.right(90)
 turtle.forward(100)
 turtle.right(90)
 turtle.forward(100)
 
-turtle.end_fill() 	# einde van figuur
+turtle.end_fill() 	      # hier eindigt het figuur dat wordt ingekleurd
 </pre>
 
 
@@ -61,13 +57,11 @@ turtle.end_fill() 	# einde van figuur
 <h3 id="opgave-huisje-tekenen"><span style="color:red">Opgave</span> Huisje tekenen</h3>
 
 <pre class="python">
-import turtle          # Aangeven dat we turtle gaan gebruiken
+import turtle           # aangeven dat we turtle gaan gebruiken
 
-turtle.pendown()
-
-                      #teken gele vierkant
+# teken gele muren
 turtle.fillcolor("yellow") 
-turtle.begin_fill() #begin van vierkant
+turtle.begin_fill()     # begin van vierkant
 turtle.forward(100)
 turtle.right(90)
 turtle.forward(100)
@@ -75,28 +69,24 @@ turtle.right(90)
 turtle.forward(100)
 turtle.right(90)
 turtle.forward(100)
-turtle.end_fill() 	# einde van figuur
+turtle.end_fill() 	    # einde van figuur
 							
-                        # teken rode dak
+# teken rode dak
 turtle.fillcolor("red") # vul met rood
-turtle.begin_fill()		# figuur om in te vullen begint hier
+turtle.begin_fill()		  # hier begint het figuur dat wordt ingekleurd
 turtle.right(30)
 turtle.forward(100)
 turtle.right(120)
 turtle.forward(100)
-turtle.end_fill()      # figuur om in te vullen eindigt hier
+turtle.end_fill()       # hier eindigt het figuur dat wordt ingekleurd
 </pre>
 
 <h3 id="opgave-nederlandse-vlag"><span style="color:red">Opgave</span> Nederlandse vlag</h3>
 <pre class="python">
 import turtle
 
-#naar beginpositie
-turtle.penup()
-turtle.goto(0, 0)
-turtle.pendown()
 
-                  # Rode streep
+# Rode streep
 turtle.color("red")
 turtle.begin_fill()
 turtle.forward(100)
@@ -109,7 +99,7 @@ turtle.forward(40)
 turtle.right(90)
 turtle.end_fill()
 
-                  # Witte streep
+# Witte streep
 turtle.penup()
 turtle.goto(0, -40)
 turtle.pendown()
@@ -126,7 +116,7 @@ turtle.forward(40)
 turtle.right(90)
 turtle.end_fill()
 
-                   # Blauwe streep
+# Blauwe streep
 turtle.penup()
 turtle.goto(0, -80)
 turtle.pendown()
@@ -143,7 +133,7 @@ turtle.forward(40)
 turtle.right(90)
 turtle.end_fill()
 
-                   # Omlijning
+# Omlijning
 turtle.penup()
 turtle.goto(0, 0)
 turtle.pendown()
@@ -161,4 +151,4 @@ turtle.forward(120)
 -- geen uitwerking beschikbaar --
 
 <hr>
-<i><a href="INFvoorlichting.html">Terug naar de opgaven</a></i>
+
