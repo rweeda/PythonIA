@@ -1,0 +1,63 @@
+Table klant {
+  klantnummer INTEGER [pk]
+  wachtwoord TEXT
+  naam TEXT
+  adres TEXT
+  postcode TEXT
+  woonplaats TEXT
+  telefoon TEXT
+}
+
+Table bestelling {
+  bestelcode INTEGER [pk]
+  bestel_datum TEXT
+  bestel_tijd TEXT
+  bezorg_tijd TEXT
+  bezorgernummer INTEGER
+  klantnummer INTEGER
+  korting REAL
+}
+
+Table besteldePizza {
+  besteldepizzacode INTEGER [pk]
+  pizzacode INTEGER
+  bestelcode INTEGER
+  bodemcode INTEGER
+  formaatcode INTEGER
+  aantal INTEGER
+}
+
+Table pizza {
+  pizzacode INTEGER [pk]
+  naam TEXT
+  omschrijving TEXT
+  basisprijs REAL
+}
+
+Table bodem {
+  bodemcode INTEGER [pk]
+  omschrijving TEXT
+  plusprijs REAL
+}
+
+Table formaat {
+  formaatcode INTEGER [pk]
+  omschrijving TEXT
+  plusprijs REAL
+}
+
+Table bezorger {
+  bezorgernummer INTEGER [pk]
+  wachtwoord TEXT
+  naam TEXT
+  gebdatum TEXT
+  telefoon TEXT
+}
+
+// Relationships
+Ref: klant.klantnummer < bestelling.klantnummer
+Ref: bezorger.bezorgernummer < bestelling.bezorgernummer
+Ref: bestelling.bestelcode < besteldePizza.bestelcode
+Ref: pizza.pizzacode < besteldePizza.pizzacode
+Ref: bodem.bodemcode < besteldePizza.bodemcode
+Ref: formaat.formaatcode < besteldePizza.formaatcode
