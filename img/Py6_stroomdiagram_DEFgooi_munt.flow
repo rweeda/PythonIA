@@ -1,0 +1,70 @@
+{
+    "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
+    "model": {
+        "flowchartName": "gooi_munt()",
+        "tree": {
+            "id": 0,
+            "basicTree": {
+                "basicTreeType": "Start",
+                "child": {
+                    "id": 2,
+                    "basicTree": {
+                        "basicTreeType": "Statement",
+                        "content": "getal wordt willekeurig 0 of 1",
+                        "child": {
+                            "id": 20,
+                            "basicTree": {
+                                "basicTreeType": "If",
+                                "content": "getal is gelijk aan 0",
+                                "child1": {
+                                    "id": 30,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "worp wordt \"MUNT\"",
+                                        "child": {
+                                            "id": 31,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child2": {
+                                    "id": 32,
+                                    "basicTree": {
+                                        "basicTreeType": "Statement",
+                                        "content": "worp wordt \"KOP\"",
+                                        "child": {
+                                            "id": 33,
+                                            "basicTree": {
+                                                "basicTreeType": "Void"
+                                            }
+                                        }
+                                    }
+                                },
+                                "child3": {
+                                    "id": 1,
+                                    "basicTree": {
+                                        "basicTreeType": "End"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "currentId": 60,
+        "highlightedBox": "Nothing",
+        "precondition": {
+            "nodeType": "PreConditionNode",
+            "content": "",
+            "visible": false
+        },
+        "postcondition": {
+            "nodeType": "PostConditionNode",
+            "content": "",
+            "visible": false
+        }
+    }
+}
