@@ -1,7 +1,7 @@
 {
     "_Easter_Egg": "Well done! You've opened the file in a texteditor! This is a JSON-file and it is used a lot throughout the internet to represent data. The best part is, is that it is quite humanreadable too! You can even edit the values right now and see how they've changed when you reupload the file. Don't forget to brag about your findings and have a nice day!",
     "model": {
-        "flowchartName": "spelRekenQuiz",
+        "flowchartName": "spel_rekenquiz",
         "tree": {
             "id": 0,
             "basicTree": {
@@ -10,7 +10,7 @@
                     "id": 50,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "zet ANTWOORD op 5",
+                        "content": "ANTWOORD wordt 5",
                         "child": {
                             "id": 2,
                             "basicTree": {
@@ -25,7 +25,7 @@
                                             "id": 30,
                                             "basicTree": {
                                                 "basicTreeType": "Statement",
-                                                "content": "print: \"wat is 3+2?\"",
+                                                "content": "print \"wat is 3+2?\"",
                                                 "child": {
                                                     "id": 70,
                                                     "basicTree": {
@@ -35,12 +35,12 @@
                                                             "id": 90,
                                                             "basicTree": {
                                                                 "basicTreeType": "If",
-                                                                "content": "is gebruikers_gok gelijk aan ANTWOORD?",
+                                                                "content": "gebruikers_gok is gelijk aan ANTWOORD?",
                                                                 "child1": {
                                                                     "id": 100,
                                                                     "basicTree": {
                                                                         "basicTreeType": "Statement",
-                                                                        "content": "print: \"jammer, probeer het nog een keer\"",
+                                                                        "content": "print \"jammer, probeer het nog een keer\"",
                                                                         "child": {
                                                                             "id": 101,
                                                                             "basicTree": {
@@ -53,7 +53,7 @@
                                                                     "id": 140,
                                                                     "basicTree": {
                                                                         "basicTreeType": "Statement",
-                                                                        "content": "print: \"goed geraden!\"",
+                                                                        "content": "print \"goed geraden!\"",
                                                                         "child": {
                                                                             "id": 102,
                                                                             "basicTree": {
@@ -85,7 +85,7 @@
                                             "id": 180,
                                             "basicTree": {
                                                 "basicTreeType": "Statement",
-                                                "content": "print: \"spel afgelopen\"",
+                                                "content": "print \"spel afgelopen\"",
                                                 "child": {
                                                     "id": 1,
                                                     "basicTree": {
