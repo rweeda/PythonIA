@@ -20,7 +20,7 @@
                                     "id": 30,
                                     "basicTree": {
                                         "basicTreeType": "Statement",
-                                        "content": "worp wordt \"MUNT\"",
+                                        "content": "return \"MUNT\"",
                                         "child": {
                                             "id": 31,
                                             "basicTree": {
@@ -33,7 +33,7 @@
                                     "id": 32,
                                     "basicTree": {
                                         "basicTreeType": "Statement",
-                                        "content": "worp wordt \"KOP\"",
+                                        "content": "return \"KOP\"",
                                         "child": {
                                             "id": 33,
                                             "basicTree": {
