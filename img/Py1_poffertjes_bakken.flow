@@ -25,12 +25,12 @@
                                             "id": 60,
                                             "basicTree": {
                                                 "basicTreeType": "Statement",
-                                                "content": "4. Keer de poffertjes om met een vork",
+                                                "content": "4.                   ",
                                                 "child": {
                                                     "id": 80,
                                                     "basicTree": {
                                                         "basicTreeType": "Statement",
-                                                        "content": "5.                   ",
+                                                        "content": "5.   Keer de poffertjes om met een vork                ",
                                                         "child": {
                                                             "id": 100,
                                                             "basicTree": {

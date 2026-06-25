@@ -10,7 +10,7 @@
                     "id": 2,
                     "basicTree": {
                         "basicTreeType": "ForEach",
-                        "content": "aantal_vierkantjes van 0 tot 25",
+                        "content": "vierkant_teller van 0 tot 25",
                         "child1": {
                             "id": 10,
                             "basicTree": {

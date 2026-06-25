@@ -10,12 +10,12 @@
                     "id": 2,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "uren = 13\nminuten = 47\nseconden = 28",
+                        "content": "uren     wordt 13\nminuten  wordt 47\nseconden wordt 28",
                         "child": {
                             "id": 20,
                             "basicTree": {
                                 "basicTreeType": "Statement",
-                                "content": "print uren:minuten.seconden",
+                                "content": "print \"{uren}:{minuten}:{seconden}\"",
                                 "child": {
                                     "id": 40,
                                     "basicTree": {
@@ -25,7 +25,7 @@
                                             "id": 60,
                                             "basicTree": {
                                                 "basicTreeType": "Statement",
-                                                "content": "print \"Totaal aantal seconden:\" totaal_seconden",
+                                                "content": "print \"Totaal aantal seconden:{totaal_seconden}\"",
                                                 "child": {
                                                     "id": 1,
                                                     "basicTree": {

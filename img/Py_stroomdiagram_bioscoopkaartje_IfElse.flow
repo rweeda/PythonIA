@@ -10,47 +10,54 @@
                     "id": 2,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "vraag \"Heb je een kortingsbon?\"",
+                        "content": "print \"Heb je een kortingsbon?\"",
                         "child": {
-                            "id": 50,
+                            "id": 130,
                             "basicTree": {
-                                "basicTreeType": "If",
-                                "content": "kortingsbon is \"Ja\"",
-                                "child1": {
-                                    "id": 110,
+                                "basicTreeType": "Statement",
+                                "content": "kortingsbon wordt invoer",
+                                "child": {
+                                    "id": 50,
                                     "basicTree": {
-                                        "basicTreeType": "Statement",
-                                        "content": "print \"Jammer\"",
-                                        "child": {
-                                            "id": 61,
+                                        "basicTreeType": "If",
+                                        "content": "kortingsbon is \"Ja\"",
+                                        "child1": {
+                                            "id": 110,
                                             "basicTree": {
-                                                "basicTreeType": "Void"
+                                                "basicTreeType": "Statement",
+                                                "content": "print \"Jammer\"",
+                                                "child": {
+                                                    "id": 61,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
                                             }
-                                        }
-                                    }
-                                },
-                                "child2": {
-                                    "id": 62,
-                                    "basicTree": {
-                                        "basicTreeType": "Statement",
-                                        "content": "prijs verlagen met 2 euro",
-                                        "child": {
-                                            "id": 63,
+                                        },
+                                        "child2": {
+                                            "id": 62,
                                             "basicTree": {
-                                                "basicTreeType": "Void"
+                                                "basicTreeType": "Statement",
+                                                "content": "prijs verlagen met 2 euro",
+                                                "child": {
+                                                    "id": 63,
+                                                    "basicTree": {
+                                                        "basicTreeType": "Void"
+                                                    }
+                                                }
                                             }
-                                        }
-                                    }
-                                },
-                                "child3": {
-                                    "id": 80,
-                                    "basicTree": {
-                                        "basicTreeType": "Statement",
-                                        "content": "print totaal_bedrag\n",
-                                        "child": {
-                                            "id": 1,
+                                        },
+                                        "child3": {
+                                            "id": 80,
                                             "basicTree": {
-                                                "basicTreeType": "End"
+                                                "basicTreeType": "Statement",
+                                                "content": "print totaal_bedrag\n",
+                                                "child": {
+                                                    "id": 1,
+                                                    "basicTree": {
+                                                        "basicTreeType": "End"
+                                                    }
+                                                }
                                             }
                                         }
                                     }
@@ -61,7 +68,7 @@
                 }
             }
         },
-        "currentId": 130,
+        "currentId": 150,
         "highlightedBox": "Nothing",
         "precondition": {
             "nodeType": "PreConditionNode",

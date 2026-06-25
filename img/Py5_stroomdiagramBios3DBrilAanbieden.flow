@@ -10,7 +10,7 @@
                     "id": 2,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "leeftijd = 16",
+                        "content": "leeftijd wordt 16",
                         "child": {
                             "id": 290,
                             "basicTree": {

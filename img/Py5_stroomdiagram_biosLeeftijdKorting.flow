@@ -10,7 +10,7 @@
                     "id": 2,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "leeftijd = 16",
+                        "content": "leeftijd wordt 16",
                         "child": {
                             "id": 290,
                             "basicTree": {
@@ -20,7 +20,7 @@
                                     "id": 40,
                                     "basicTree": {
                                         "basicTreeType": "If",
-                                        "content": "leeftijd is minimaal 12",
+                                        "content": "leeftijd is groter dan of gelijk aan 12",
                                         "child1": {
                                             "id": 50,
                                             "basicTree": {
