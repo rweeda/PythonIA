@@ -10,58 +10,65 @@
                     "id": 120,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "lijst wordt ...",
+                        "content": "lijst wordt ...\n ",
                         "child": {
-                            "id": 240,
+                            "id": 320,
                             "basicTree": {
                                 "basicTreeType": "Statement",
-                                "content": "teller wordt 0",
+                                "content": "gezochte_element wordt ...",
                                 "child": {
-                                    "id": 260,
+                                    "id": 240,
                                     "basicTree": {
-                                        "basicTreeType": "ForEach",
-                                        "content": "elk element in lijst",
-                                        "child1": {
-                                            "id": 270,
+                                        "basicTreeType": "Statement",
+                                        "content": "teller wordt 0",
+                                        "child": {
+                                            "id": 260,
                                             "basicTree": {
-                                                "basicTreeType": "If",
-                                                "content": "element is gezochte element",
+                                                "basicTreeType": "ForEach",
+                                                "content": "element in lijst",
                                                 "child1": {
-                                                    "id": 281,
+                                                    "id": 270,
                                                     "basicTree": {
-                                                        "basicTreeType": "Void"
-                                                    }
-                                                },
-                                                "child2": {
-                                                    "id": 282,
-                                                    "basicTree": {
-                                                        "basicTreeType": "Statement",
-                                                        "content": "teller ophogen",
-                                                        "child": {
-                                                            "id": 283,
+                                                        "basicTreeType": "If",
+                                                        "content": "element is gezochte_element",
+                                                        "child1": {
+                                                            "id": 281,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Void"
+                                                            }
+                                                        },
+                                                        "child2": {
+                                                            "id": 282,
+                                                            "basicTree": {
+                                                                "basicTreeType": "Statement",
+                                                                "content": "teller ophogen",
+                                                                "child": {
+                                                                    "id": 283,
+                                                                    "basicTree": {
+                                                                        "basicTreeType": "Void"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "child3": {
+                                                            "id": 271,
                                                             "basicTree": {
                                                                 "basicTreeType": "Void"
                                                             }
                                                         }
                                                     }
                                                 },
-                                                "child3": {
-                                                    "id": 271,
+                                                "child2": {
+                                                    "id": 160,
                                                     "basicTree": {
-                                                        "basicTreeType": "Void"
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        "child2": {
-                                            "id": 160,
-                                            "basicTree": {
-                                                "basicTreeType": "Statement",
-                                                "content": "print teller",
-                                                "child": {
-                                                    "id": 1,
-                                                    "basicTree": {
-                                                        "basicTreeType": "End"
+                                                        "basicTreeType": "Statement",
+                                                        "content": "print teller",
+                                                        "child": {
+                                                            "id": 1,
+                                                            "basicTree": {
+                                                                "basicTreeType": "End"
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
@@ -74,7 +81,7 @@
                 }
             }
         },
-        "currentId": 320,
+        "currentId": 340,
         "highlightedBox": "Nothing",
         "precondition": {
             "nodeType": "PreConditionNode",

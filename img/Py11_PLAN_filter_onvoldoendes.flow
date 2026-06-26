@@ -10,17 +10,17 @@
                     "id": 120,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "lijst_zonder_onvoldoendeswordt een lege lijst",
+                        "content": "lijst_met_voldoendes wordt een lege lijst",
                         "child": {
                             "id": 40,
                             "basicTree": {
                                 "basicTreeType": "ForEach",
-                                "content": "elk cijfer in lijst_met_onvoldoendes",
+                                "content": "cijfer in cijferlijst",
                                 "child1": {
                                     "id": 50,
                                     "basicTree": {
                                         "basicTreeType": "If",
-                                        "content": "als cijfer groter is dan 5.0",
+                                        "content": "cijfer is groter dan 5.0",
                                         "child1": {
                                             "id": 61,
                                             "basicTree": {
@@ -31,7 +31,7 @@
                                             "id": 140,
                                             "basicTree": {
                                                 "basicTreeType": "Statement",
-                                                "content": "voeg dag toe aan lijst_zonder_onvoldoende     ",
+                                                "content": "voeg dag toe aan lijst_met_voldoendes      ",
                                                 "child": {
                                                     "id": 63,
                                                     "basicTree": {
@@ -52,7 +52,7 @@
                                     "id": 160,
                                     "basicTree": {
                                         "basicTreeType": "Statement",
-                                        "content": "return lijst_zonder_onvoldoende ",
+                                        "content": "return lijst_met_voldoendes ",
                                         "child": {
                                             "id": 1,
                                             "basicTree": {
@@ -67,11 +67,11 @@
                 }
             }
         },
-        "currentId": 210,
+        "currentId": 230,
         "highlightedBox": "Nothing",
         "precondition": {
             "nodeType": "PreConditionNode",
-            "content": "gegeven lijst_met_onvoldoendes",
+            "content": "gegeven: cijferlijst",
             "visible": true
         },
         "postcondition": {

@@ -20,12 +20,12 @@
                                     "id": 260,
                                     "basicTree": {
                                         "basicTreeType": "ForEach",
-                                        "content": "elk element in lijst",
+                                        "content": "element in lijst",
                                         "child1": {
                                             "id": 270,
                                             "basicTree": {
                                                 "basicTreeType": "If",
-                                                "content": "element is gezochte element",
+                                                "content": "element is gelijk aan gezochte_element",
                                                 "child1": {
                                                     "id": 281,
                                                     "basicTree": {
@@ -57,7 +57,7 @@
                                             "id": 320,
                                             "basicTree": {
                                                 "basicTreeType": "If",
-                                                "content": "gevonden is gelijk aan True",
+                                                "content": "gevonden?",
                                                 "child1": {
                                                     "id": 330,
                                                     "basicTree": {
@@ -85,16 +85,9 @@
                                                     }
                                                 },
                                                 "child3": {
-                                                    "id": 160,
+                                                    "id": 1,
                                                     "basicTree": {
-                                                        "basicTreeType": "Statement",
-                                                        "content": "print teller",
-                                                        "child": {
-                                                            "id": 1,
-                                                            "basicTree": {
-                                                                "basicTreeType": "End"
-                                                            }
-                                                        }
+                                                        "basicTreeType": "End"
                                                     }
                                                 }
                                             }
@@ -107,12 +100,12 @@
                 }
             }
         },
-        "currentId": 360,
+        "currentId": 370,
         "highlightedBox": "Nothing",
         "precondition": {
             "nodeType": "PreConditionNode",
-            "content": "gegeven lijst_met_onvoldoendes",
-            "visible": false
+            "content": "gegeven: gezochte_element",
+            "visible": true
         },
         "postcondition": {
             "nodeType": "PostConditionNode",

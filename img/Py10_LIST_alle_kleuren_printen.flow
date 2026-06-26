@@ -15,7 +15,7 @@
                             "id": 40,
                             "basicTree": {
                                 "basicTreeType": "ForEach",
-                                "content": "elke kleur in kleurenlijst",
+                                "content": "kleur in kleurenlijst",
                                 "child1": {
                                     "id": 100,
                                     "basicTree": {

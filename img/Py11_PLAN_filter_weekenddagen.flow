@@ -20,7 +20,7 @@
                                     "id": 40,
                                     "basicTree": {
                                         "basicTreeType": "ForEach",
-                                        "content": "elke dag in dagenlijst",
+                                        "content": "dag in dagenlijst",
                                         "child1": {
                                             "id": 100,
                                             "basicTree": {
