@@ -22,7 +22,7 @@
                                         "basicTreeType": "Statement",
                                         "content": "print \"Hallo\"",
                                         "child": {
-                                            "id": 60,
+                                            "id": 90,
                                             "basicTree": {
                                                 "basicTreeType": "Statement",
                                                 "content": "print naam",
@@ -42,7 +42,7 @@
                 }
             }
         },
-        "currentId": 80,
+        "currentId": 110,
         "highlightedBox": "Nothing",
         "precondition": {
             "nodeType": "PreConditionNode",
