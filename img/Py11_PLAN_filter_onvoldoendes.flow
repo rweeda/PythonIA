@@ -10,12 +10,12 @@
                     "id": 120,
                     "basicTree": {
                         "basicTreeType": "Statement",
-                        "content": "lijst_met_voldoendes wordt een lege lijst",
+                        "content": "lijst_zonder_onvoldoendes wordt een lege lijst",
                         "child": {
                             "id": 40,
                             "basicTree": {
                                 "basicTreeType": "ForEach",
-                                "content": "cijfer in cijferlijst",
+                                "content": "cijfer in lijst_met_onvoldoendes",
                                 "child1": {
                                     "id": 50,
                                     "basicTree": {
@@ -31,7 +31,7 @@
                                             "id": 140,
                                             "basicTree": {
                                                 "basicTreeType": "Statement",
-                                                "content": "voeg dag toe aan lijst_met_voldoendes      ",
+                                                "content": "voeg dag toe aan lijst_zonder_onvoldoendes      ",
                                                 "child": {
                                                     "id": 63,
                                                     "basicTree": {
@@ -52,7 +52,7 @@
                                     "id": 160,
                                     "basicTree": {
                                         "basicTreeType": "Statement",
-                                        "content": "return lijst_met_voldoendes ",
+                                        "content": "return lijst_zonder_onvoldoendes",
                                         "child": {
                                             "id": 1,
                                             "basicTree": {
@@ -71,7 +71,7 @@
         "highlightedBox": "Nothing",
         "precondition": {
             "nodeType": "PreConditionNode",
-            "content": "gegeven: cijferlijst",
+            "content": "gegeven: lijst_met_onvoldoendes",
             "visible": true
         },
         "postcondition": {
